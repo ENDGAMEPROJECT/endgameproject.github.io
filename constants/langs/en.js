@@ -15,15 +15,43 @@ export const en = {
     description:
       "Escaping new disinformation through gamified cross-border media literacy education",
     "action-button": "CTA button",
-    section1Title: "About us",
-    section1Description:
-      "Our main research interests are focused on the last technologies in Internet and the WWW, such as HTML5. We have extensive experience in video-conferencing systems, Data Spaces, GenerativeAI and e-Learning. Our latest participation in research projects include ongoing EU-founded and national projects such as Eunomia and FIWARE.",
-
+    aboutSection: "What is ENDGAME",
+    about: {
+      title: "About the proyect",
+      content:
+        "ENDGAME is an innovative project aimed at ultivating critical thinking and responsible digital citizenship among European youth through educational escape rooms that simulate real-life scenarios of information consumption.",
+    },
+    mission: {
+      title: "Our mission",
+      content: {
+        card1: { icon: "icon", title: "title", description: "description" },
+        card2: { icon: "icon", title: "title", description: "description" },
+        card3: { icon: "icon", title: "title", description: "description" },
+        card4: { icon: "icon", title: "title", description: "description" },
+        card5: { icon: "icon", title: "title", description: "description" },
+      },
+    },
+    partners: {
+      title: 'Who we are',
+      universities: {
+        title: 'Universities',
+        card1: { icon: "icon", title: "title", description: "description" },
+        card2: { icon: "icon", title: "title", description: "description" },
+        card3: { icon: "icon", title: "title", description: "description" },
+      },
+      agencies: {
+        title: "Agencies",
+      },
+    },
     latestContent: {
       title: "Latest content",
       events: {
         title: "News and events",
         button: "See all activity",
+        event: {
+          title: "Event title",
+          date: "12.12.2025",
+        },
       },
       research: {
         title: "Impact and resaerch",

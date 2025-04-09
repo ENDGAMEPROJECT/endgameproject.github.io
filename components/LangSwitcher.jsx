@@ -13,14 +13,14 @@ const lngs = {
     nativeName: "Spanish",
     abbreviation: "ES",
   },
-  fi: {
-    nativeName: "Finnish",
-    abbreviation: "FI",
-  },
-  sr: {
-    nativeName: "Serbian",
-    abbreviation: "SR",
-  },
+  // fi: {
+  //   nativeName: "Finnish",
+  //   abbreviation: "FI",
+  // },
+  // sr: {
+  //   nativeName: "Serbian",
+  //   abbreviation: "SR",
+  // },
 };
 
 export default function LangSwitcher() {
@@ -43,8 +43,8 @@ export default function LangSwitcher() {
         >
           {lngs[lng].abbreviation}
           {lng == "en" && <span className="font-normal"> / </span>}
-          {lng == "es" && <span className="font-normal"> / </span>}
-          {lng == "fi" && <span className="font-normal"> / </span>}
+          {/* {lng == "fi" && <span className="font-normal"> / </span>}
+          {lng == "es" && <span className="font-normal"> / </span>} */}
         </a>
       ))}
     </div>

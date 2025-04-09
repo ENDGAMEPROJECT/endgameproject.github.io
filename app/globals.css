@@ -147,8 +147,7 @@ footer {
 
 .landing_cards {
   .card {
-    @apply  mx-auto md:mx-0 pb-12 place-items-center;
+    @apply mx-auto md:mx-0 pb-12 place-items-center;
     @apply flex flex-col justify-center justify-items-center gap-4;
-    @apply sm:grid sm:grid-cols-2 sm:items-start md:grid-cols-3 md:w-fit auto-rows-min xl:grid-cols-5;
   }
 }

@@ -12,36 +12,55 @@ export const es = {
     publicationstab: "Publicaciones",
   },
   home: {
-    title: "ENDGAME",
+    title: "",
     description:
-      "Escaping new disinformation through gamified cross-border media literacy education",
+      "Combatiendo la nueva desinformación con escaperooms educativas",
     "action-button": "CTA button",
-    section1Title: "Sobre nosotros",
-    section1Description:
-      "Nuestros principales intereses de investigación se centran en las últimas tecnologías de Internet y la WWW, como HTML5. Tenemos una amplia experiencia en sistemas de videoconferencia, espacios de datos, IA generativa y e-Learning. Nuestra última participación en proyectos de investigación incluye proyectos en curso financiados por la UE y nacionales como Eunomia y FIWARE.",
-    section1Subtitle: "Principios del proyecto",
-    latestPublicationsTitle: "Últimas publicaciones",
-    latestPublicationsButton: "Ver todas las publicaciones",
-    ResearchLines: {
-      sectionTitle: "Líneas de investigación",
-      button: "Ver proyectos",
-      ResearchLine1: {
-        ResearchLineTitle: "Datos",
-        ResearchLineBody:
-          "Esta línea aborda el estudio y desarrollo de tecnologías avanzadas para el procesamiento, gestión y análisis de datos, incluyendo espacios de datos y gemelos digitales.",
+    aboutSection: "Qué es ENDGAME",
+    about: {
+      title: "Sobre el proyecto",
+      content:
+        "ENDGAME is an innovative project aimed at ultivating critical thinking and responsible digital citizenship among European youth through educational escape rooms that simulate real-life scenarios of information consumption.",
+    },
+    mission: {
+      title: "Objetivos",
+      content: { // pasar a constants
+        card1: { icon: "icon", title: "title", description: "description" },
+        card2: { icon: "icon", title: "title", description: "description" },
+        card3: { icon: "icon", title: "title", description: "description" },
+        card4: { icon: "icon", title: "title", description: "description" },
+        card5: { icon: "icon", title: "title", description: "description" },
       },
-      ResearchLine2: {
-        ResearchLineTitle: "Tecnología educativa",
-        ResearchLineBody:
-          "Esta línea se centra en el diseño y desarrollo de tecnologías educativas avanzadas, incluyendo plataformas de aprendizaje, herramientas de autor, ia en educación y escape rooms educativas.",
+    },
+    partners: {
+      title: 'Quiénes somos',
+      universities: {  // pasar a constants
+        title: 'Universidades',
+        card1: { icon: "icon", title: "title", description: "description" },
+        card2: { icon: "icon", title: "title", description: "description" },
+        card3: { icon: "icon", title: "title", description: "description" },
       },
-      ResearchLine3: {
-        ResearchLineTitle: "Inteligencia Artificial",
-        ResearchLineBody:
-          "Esta línea se enfoca en la investigación y desarrollo de aplicaciones basadas en inteligencia artificial, incluyendo la evaluación de modelos de lenguaje de gran escala (LLMs), ajuste fino (fine-tuning), recuperación aumentada por generación (RAG).",
+      agencies: {
+        title: "Agencias",
+      },
+    },
+    latestContent: {
+      title: "Novedades",
+      events: {
+        title: "News and events",
+        button: "See all activity",
+        event: {
+          title: "Título de evento reciente",
+          date: "12 de diciembre de 2025",
+        },
+      },
+      research: {
+        title: "Últimas publicaciones",
+        button: "Ver todas las publicaciones",
       },
     },
   },
+
   research: {
     title: "Publicaciones",
     description:

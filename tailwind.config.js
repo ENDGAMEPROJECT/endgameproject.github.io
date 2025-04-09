@@ -44,13 +44,13 @@ module.exports = {
         black: "#0D0D1C",
 
         primary: { // azul genérico
-          DEFAULT: "#056dc1",
+          DEFAULT: "#0AFFDE",
           900: "#0e406c",
           800: "#094b83",
           700: "#05589f",
           600: "#056dc1",
           500: "#118de6",
-          400: "#3ba8f5",
+          400: "#0AFFDE", // default
           300: "#7fc5fa",
           200: "#bbdffc",
           100: "#e0effe",
