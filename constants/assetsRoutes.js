@@ -1,0 +1,1 @@
+export const endgameLogosPng = '/assets/images/logos/endgame/png/'

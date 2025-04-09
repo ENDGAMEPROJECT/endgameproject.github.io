@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  /* border: 1px solid salmon; */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/*TYPE*/
+/* .text-h5 {
+  color: inherit
+} */
+/*MARGINS*/
+
+
+.standard_margin {
+  @apply m-6 sm:my-6 sm:mx-8 md:my-8 md:mx-14 lg:my-12 lg:mx-24 xl:mx-32 2xl:mx-44 3xl:mx-72;
+}
+.standard_margin-s {
+ @apply m-4 sm:my-4 sm:mx-4 md:my-4 md:mx-10 lg:my-8 lg:mx-16 xl:mx-24 2xl:mx-32 3xl:mx-60; 
+}
+.standard_margin-xl {
+  @apply m-6 sm:my-6 sm:mx-12 md:my-12 md:mx-32 lg:my-24 lg:mx-40 xl:mx-72 2xl:mx-96;
+}
+
+/* MÁRGENES PARA CONTENEDORES CON IMÁGENES DE FONDO*/
+/* margen estandar pero solo en eje x (para elementos que encuentran en otros contenedores) */
+.standard_margin-x {
+  @apply mx-6 sm:mx-8 md:mx-14 lg:mx-24 xl:mx-44 2xl:mx-72;
+}
+.standard_margin-xl-x {
+  @apply m-6 sm:mx-12 md:mx-32 lg:mx-40 xl:mx-72 2xl:mx-96;
+}
+/* margen estandar pero solo en eje y (para elementos contenedores con otros elementos con margen dentro) */
+.standard_margin-y {
+  @apply my-6 sm:my-6 md:my-8 lg:my-12 xl:my-44 2xl:my-72;
+}
+
+/*PADDINGS*/
+.standard_padding {
+  @apply p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-12 lg:px-24 xl:px-44 2xl:px-72;
+}
+.standard_padding_xl {
+  @apply p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-12 lg:px-24 xl:px-44 2xl:px-72;
+}
+.padding_home {
+  @apply px-8 sm:p-12 md:px-20 lg:px-24 xl:px-32 2xl:px-48 py-6 sm:py-6 md:py-8 lg:py-12;
+}
+.padding_group_description {
+  @apply p-4 px-6 sm:py-4 sm:px-4 md:py-4 md:px-10 lg:py-8 lg:px-16 xl:px-24 2xl:px-44 3xl:px-72;
+}
+.narrow_padding {
+  @apply p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-10 xl:px-32 2xl:py-10 2xl:px-72;
+}
+
+/*GAPS*/
+.gap_grid {
+  @apply gap-3 sm:gap-4 md:gap-5 xl:gap-6;
+}
+/*esta clase es importante, porque los gaps con el responsive
+no son iguales, ni van in crecendo, porque la estructura
+del filter cambia de bloque a inline*/
+.gap_filter {
+  @apply gap-0 md:gap-5 xl:gap-6;
+}
+
+
+main {
+  min-height: 85dvh;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+/* 
+NEWWWWWWWWWWW ENDGAME
+*/
+footer {
+  @apply p-6 sm:px-8 md:py-8 md:px-14 lg:py-10 px-20 xl:px-28 xl:py-10;
+  /* p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-10 xl:px-32 2xl:py-10 2xl:px-72; */
+}
+
+
+.landing_cards {
+  .card {
+    @apply  mx-auto md:mx-0 pb-12 place-items-center;
+    @apply flex flex-col justify-center justify-items-center gap-4;
+    @apply sm:grid sm:grid-cols-2 sm:items-start md:grid-cols-3 md:w-fit auto-rows-min xl:grid-cols-5;
+  }
+}
