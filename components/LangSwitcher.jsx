@@ -36,7 +36,7 @@ export default function LangSwitcher() {
         <a
           key={lng}
           className={clsx("lang-link", "cursor-pointer", {
-            "font-bold text-cyan-400": i18n.language === lng,
+            "font-bold text-primary": i18n.language === lng,
             "font-normal": i18n.language !== lng,
           })}
           onClick={() => i18n.changeLanguage(lng)}

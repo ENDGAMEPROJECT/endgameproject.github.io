@@ -1,11 +1,13 @@
 "use client";
+import { cn } from "@/lib/utils";
+import clsx from "clsx";
+
 
 import React, { useState } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
 
-import clsx from "clsx";
 import LangSwitcher from "@/components/LangSwitcher";
 import { activeRoutes } from "@/constants/routes";
 
@@ -25,13 +27,13 @@ export default function Header(props) {
   const headerClasses = clsx(
     "h-fit",
     "px-8 py-4 sticky -top-[1px] w-full",
-    "flex justify-between items-center md:items-start",
+    "flex justify-between items-center",
     "bg-background text-text shadow-md",
 
     `header_${currentLang} z-50`,
     {
       "font-semibold": true,
-      underlined: true,
+      active: true,
     }
   );
 
@@ -65,7 +67,7 @@ export default function Header(props) {
   return (
     <header className={headerClasses + "z-50"} id="header_home">
       {/* route={routes.route} ?????*/}
-      <a href="/" className="h-7 py-1 sm:h-6 sm:py-0.5 flex gap-2">
+      <a href="/" className="h-10 flex gap-2">
         <Image
           className=''
           src={endgameLogosPng+"logo_ENDGAME_main_darkBg.png"}
@@ -102,7 +104,7 @@ export default function Header(props) {
                   href={route.route}
                   className={
                     currentPath == route.route
-                      ? " font-semibold underline"
+                      ? " font-semibold text-primary"
                       : " font-normal"
                   }
                 >

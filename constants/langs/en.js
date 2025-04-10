@@ -14,7 +14,7 @@ export const en = {
     title: "",
     description:
       "Escaping new disinformation through gamified cross-border media literacy education",
-    "action-button": "CTA button",
+    'action-button': "CTA button",
     aboutSection: "What is ENDGAME",
     about: {
       title: "About the proyect",

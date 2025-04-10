@@ -15,7 +15,7 @@ const Banner = React.forwardRef(({ className, ...props }, ref) => (
   <section
     ref={ref}
     className={cn(
-      " md:min-h-[85vh]",
+      "w-full md:min-h-[85vh]",
       "text-snow",
       // "gap-6 xl:gap-12",
       "flex justify-start items-center h-[85vh]",
@@ -31,7 +31,7 @@ const BannerContent = React.forwardRef(({ className, ...props }, ref) => (
     ref={ref}
     level="h1"
     className={cn(
-      "h-fit py-12 px-8 xs:px-10 md:px-20 xl:px-40 w-full md:w-2/3 z-10 ",
+      "h-fit md:max-w-[720px] md:max-w-[1000px] py-12 px-8 xs:px-10 md:px-20 xl:pl-40 z-10 ",
       className
     )}
     {...props}
@@ -57,8 +57,8 @@ BannerTitle.displayName = "BannerTitle";
 const BannerDescription = React.forwardRef(({ className, ...props }, ref) => (
   <Heading
     ref={ref}
-    level="h4"
-    className={cn("text-snow mb-4", className)}
+    level="h2"
+    className={cn("text-snow mb-4 text-xl sm:text-2xl md:text-3xl text-pretty", className)}
     {...props}
   />
 ));

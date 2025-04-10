@@ -5,14 +5,9 @@ import * as React from "react";
 import { useState } from "react";
 import Link from "next/link";
 
-import { Slot } from "@radix-ui/react-slot";
-import { cva } from "class-variance-authority";
-import { cn } from "@/lib/utils";
-
 
 // Data
 import { useTranslation } from "react-i18next";
-import { researchlines } from "@/constants/researchlines";
 
 // Components
 import { Badge, badgeVariants } from "../ui/badge";
@@ -29,7 +24,7 @@ import {
 } from "@/components/ui/customCard";
 
 // Icons
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import ArrowForwardSharpIcon from '@mui/icons-material/ArrowForwardSharp';
 
 const deleteSpaces = (string) => {
   let cleanStr = "";
@@ -112,27 +107,27 @@ const Card = React.forwardRef(
                 switch (deleteSpaces(researchline)) {
                   case "data":
                     researchLineColorStyles = "bg-data-500/40 text-data-300";
-                    backgroundIcon = "assets/img/icons/data_icon.svg";
+                    backgroundIcon = "ENDGAME_icon_placeholder.svg";
                     iconSpacing = "mb-[2px]"
                     break;
                   case "videoconference":
                     researchLineColorStyles = "bg-videoconference-600/60 text-videoconference-200"; 
                     backgroundIcon =
-                      "assets/img/icons/videoconference_icon.svg";
+                      "ENDGAME_icon_placeholder.svg";
                     break;
                   case "ai":
                     researchLineColorStyles = "bg-ai-700/40 text-ai-400";
-                    backgroundIcon = "assets/img/icons/ai_icon.svg";
+                    backgroundIcon = "ENDGAME_icon_placeholder.svg";
                     iconSpacing = "mb-.5"
                     break;
                   case "computing":
                     researchLineColorStyles = "bg-networks-600/60 text-networks-200";
-                    backgroundIcon = "assets/img/icons/networks_icon.svg";
+                    backgroundIcon = "ENDGAME_icon_placeholder.svg";
                     iconSpacing = "mb-.5"
                     break;
                   case "e-learning":
                     researchLineColorStyles = "bg-eLearning-600/60 text-eLearning-200";
-                    backgroundIcon = "assets/img/icons/e-learning_icon.svg";
+                    backgroundIcon = "ENDGAME_icon_placeholder.svg";
                     iconSpacing = "mb-1"
                     break;
                   default:
@@ -147,7 +142,7 @@ const Card = React.forwardRef(
                     className={`pt-1.5 ${researchLineColorStyles} text-white border-none tracking-widest`}
                   >
                     <Image
-                      className={`pr-2 mb- ${iconSpacing}`}
+                      className={`pr-2 !w-6 ${iconSpacing}`}
                       src={backgroundIcon}
                       alt={"Research line icon"}
                       fit="contain"
@@ -197,8 +192,7 @@ const Card = React.forwardRef(
             <Button asChild variant="outline" size="sm" radius="rounded_sm">
               <Link rel="noopener noreferrer" target="_blank" href={doi}>
                 {t("research.action-button")}
-
-                <ArrowRightIcon />
+                <ArrowForwardSharpIcon />
               </Link>
             </Button>
           ) : null}

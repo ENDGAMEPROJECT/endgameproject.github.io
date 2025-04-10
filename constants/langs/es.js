@@ -14,7 +14,7 @@ export const es = {
   home: {
     title: "",
     description:
-      "Combatiendo la nueva desinformación con escaperooms educativas",
+      "Lucha contra la desinformación a través de escaperooms educativas",
     "action-button": "CTA button",
     aboutSection: "Qué es ENDGAME",
     about: {
@@ -24,7 +24,8 @@ export const es = {
     },
     mission: {
       title: "Objetivos",
-      content: { // pasar a constants
+      content: {
+        // pasar a constants
         card1: { icon: "icon", title: "title", description: "description" },
         card2: { icon: "icon", title: "title", description: "description" },
         card3: { icon: "icon", title: "title", description: "description" },
@@ -33,9 +34,10 @@ export const es = {
       },
     },
     partners: {
-      title: 'Quiénes somos',
-      universities: {  // pasar a constants
-        title: 'Universidades',
+      title: "Quiénes somos",
+      universities: {
+        // pasar a constants
+        title: "Universidades",
         card1: { icon: "icon", title: "title", description: "description" },
         card2: { icon: "icon", title: "title", description: "description" },
         card3: { icon: "icon", title: "title", description: "description" },

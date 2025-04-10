@@ -18,7 +18,7 @@ import {
   CardDescription,
   CardFooter,
 } from "@/components/ui/customCard";
-import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import LaunchSharpIcon from '@mui/icons-material/LaunchSharp';
 
 const Card = React.forwardRef(
   (
@@ -87,7 +87,7 @@ const Card = React.forwardRef(
                     {title}
                   </CardTitle>
 
-                  <ExternalLinkIcon
+                  <LaunchSharpIcon
                     className="mt-1 flex-shrink-0"
                     width={24}
                     height={24}
@@ -134,3 +134,33 @@ const Card = React.forwardRef(
 Card.displayName = "ProjectCard";
 
 export default Card;
+
+
+
+// {filteredItems.map(
+//   (
+//     {
+//       year,
+//       title,
+//       description_en,
+//       description_es,
+//       researchLine,
+//       logo,
+//       route,
+//       projectType,
+//     },
+//     index
+//   ) => (
+//     <ProjectCard
+//       key={index}
+//       year={year}
+//       researchLine={researchLine}
+//       title={title}
+//       logo={logo}
+//       route={route}
+//       description_en={description_en}
+//       description_es={description_es}
+//       projectType={projectType}
+//     ></ProjectCard>
+//   )
+// )}

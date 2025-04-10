@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/customCard";
 
 // icons
-import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import LaunchSharpIcon from '@mui/icons-material/LaunchSharp';
 
 
 const Card = React.forwardRef(
@@ -59,7 +59,7 @@ const Card = React.forwardRef(
             </Badge>
           </span>
           <Button href={route} variant="ghost" size="lg" className="flex w-fit items-center px-10 py-0">
-            Ir al curso<ExternalLinkIcon className="h-8 min-w-6"/>
+            Ir al curso<LaunchSharpIcon className="h-8 min-w-6"/>
           </Button>
         </header>
         {/* <Image

@@ -66,6 +66,8 @@
 "use client";
 
 import React from "react";
+import { cn } from "@/lib/utils";
+
 
 const Heading = ({ level = "h1", children, className = "" }) => {
   const Component =
@@ -84,7 +86,7 @@ const Heading = ({ level = "h1", children, className = "" }) => {
   const baseClasses = "text-text font-title text-balance";
   const sizeClasses =
     {
-      h1: "text-36 sm:text-40 mt-8 mb-6 font-medium uppercase text-center !text-primary",
+      h1: "text-36 sm:text-40 mt-8 mb-6 font-medium uppercase text-center text-primary",
       h2: "text-32 sm:text-36 mb-4 font-medium",
       h3: "text-28 sm:text-32 mb-4 font-medium",
       h4: "text-24 sm:text-24 mb-2 font-medium",
@@ -96,7 +98,7 @@ const Heading = ({ level = "h1", children, className = "" }) => {
     }[level] || "";
 
   return (
-    <Component className={baseClasses + " " + sizeClasses + " " + className}>
+    <Component className={cn(baseClasses, sizeClasses, className)}>
       {children}
     </Component>
   );

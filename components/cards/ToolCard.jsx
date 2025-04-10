@@ -19,7 +19,6 @@ import {
 } from "@/components/ui/customCard";
 
 // icons
-import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { GitHub } from "@mui/icons-material";
 
 const Card = React.forwardRef(

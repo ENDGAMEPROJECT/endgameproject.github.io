@@ -17,7 +17,9 @@ html {
 
 
 .standard_margin {
-  @apply m-6 sm:my-6 sm:mx-8 md:my-8 md:mx-14 lg:my-12 lg:mx-24 xl:mx-32 2xl:mx-44 3xl:mx-72;
+  @apply m-6;
+  @apply sm:mx-8 md:mx-14 lg:mx-20 xl:mx-28 2xl:mx-32 3xl:mx-40;
+  @apply sm:my-6 md:my-8  lg:my-12;
 }
 .standard_margin-s {
  @apply m-4 sm:my-4 sm:mx-4 md:my-4 md:mx-10 lg:my-8 lg:mx-16 xl:mx-24 2xl:mx-32 3xl:mx-60; 
