@@ -28,7 +28,7 @@ export default function Header(props) {
     "h-fit",
     "px-8 py-4 sticky -top-[1px] w-full",
     "flex justify-between items-center",
-    "bg-background text-text shadow-md",
+    "bg-[#090909] text-text shadow-md",
 
     `header_${currentLang} z-50`,
     {
@@ -44,7 +44,6 @@ export default function Header(props) {
     "absolute top-[40px] -right-8 md:static",
     "flex flex-col lg:flex-row ",
     "gap-4 md:gap-2 lg:gap-8",
-    "bg-background bg-blend-darken md:bg-none",
     "border-t-2 border-t-gray md:border-none",
     "shadow-md md:shadow-none",
     {

@@ -1,40 +1,42 @@
+import { uniLogos, agenciesLogos } from "@/constants/assetsRoutes";
+
 export const partners = {
-    // unis
+  // unis
   upm: {
+    name: "Polytechnic University of Madrid",
     name_es: "Universidad Politécnica de Madrid",
-    name_en: "Polytechnic University of Madrid",
     name_fi: "Polytechnic University of Madrid",
     name_sr: "Polytechnic University of Madrid",
     shortname: "UPM",
-    logo: "placeholder.jpg",
+    logo: uniLogos + "upm_logo-vertical-color.png",
   },
   uef: {
+    name: "University of Eastern Finland",
     name_es: "University of Eastern Finland",
-    name_en: "University of Eastern Finland",
     name_fi: "University of Eastern Finland",
     name_sr: "University of Eastern Finland",
     shortname: "UEF",
-    logo: "placeholder.jpg",
+    logo: uniLogos + "uef_logo-vertical-darkBg.png",
   },
   bmu: {
-    name_es: "Belgrad Metropolitan University",
-    name_en: "Belgrad Metropolitan University",
-    name_fi: "Belgrad Metropolitan University",
+    name: "Belgrade Metropolitan University",
+    name_es: "Belgrade Metropolitan University",
+    name_fi: "Belgrade Metropolitan University",
     name_sr: "Univerzitet Metropolitan Beograd",
     shortname: "BMU",
-    logo: "placeholder.jpg",
+    logo: uniLogos + "bmu_logo-vertical-darkBg.png",
   },
-//   agencies
+  //   agencies
   maldita: {
     name: "Maldita",
-    logo: "placeholder.jpg",
+    logo: agenciesLogos + "maldita_logo-vertical-darkBg.png",
   },
   faktabaari: {
     name: "Faktabaari",
-    logo: "placeholder.jpg",
+    logo: agenciesLogos + "faktabaari_logo-darkBg.png",
   },
   fnt: {
     name: "Fake News Tragač",
-    logo: "placeholder.jpg",
+    logo: agenciesLogos + "fnt_logo-darkBg.png",
   },
 };

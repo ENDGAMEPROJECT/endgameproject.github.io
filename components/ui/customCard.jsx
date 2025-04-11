@@ -18,7 +18,7 @@ import { Button, ButtonVariants } from "@/components/ui/button";
  * ---------------------------------------
  */
 const CustomCard = React.forwardRef(({ className, ...props }, ref) => (
-  <article
+  <li
     ref={ref}
     className={cn(
       "h-full w-full flex flex-col justify-start gap-4 overflow-hidden",

@@ -12,6 +12,7 @@ import { Divider, DividerVariants } from "@/components/ui/divider";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Image from "../components/ui/image";
 import Text from "../components/ui/text";
+import PartnerCard from "../components/cards/PartnerCard";
 
 //Banner
 import {
@@ -30,6 +31,7 @@ import {
   CardBody,
 } from "@/components/ui/customCard";
 import { mission } from "@/constants/mission";
+import { partners } from "@/constants/partners";
 
 // UI
 export default function Page() {
@@ -81,7 +83,7 @@ export default function Page() {
 
       <Divider size="xl" />
 
-      {/* SECTION 1 */}
+      {/* SECTION ABOUT */}
       <Heading level="h1">{t("home.aboutSection")}</Heading>
       <section className="standard_margin-s ing_sm flex flex-col gap-24">
         <article>
@@ -90,39 +92,50 @@ export default function Page() {
         </article>
         <article>
           <Heading level="h3">{t("home.mission.title")}</Heading>
-          <section className="gap-4 justify-center grid sm:grid-cols-3 xl:grid-cols-5">
-            {mission.map(({ icon }, key) => {
+          <ul className="gap-4 justify-center grid sm:grid-cols-3 xl:grid-cols-5">
+            {mission.map(({ icon, title, description }, key) => {
               return (
-                <CustomCard className="h-full w-full p-4 bg-black" key={key}>
+                <CustomCard className=" w-full p-4 bg-black" key={key}>
                   <Image
                     className={"!h-20 opacity-50 p-2"}
-                    src={mission[key].icon || "placeholder.jpg"}
-                    alt={mission[key].title || "Image"}
+                    src={icon || "placeholder.jpg"}
+                    alt={title || "Image"}
                     fit="contain"
                   />
                   <CardContent className="place-content-center text-center">
                     <CardTitle level="h4" className="text-primary">
                       {/* {t("home.mission.content.card1.title")} */}
-                      {mission[key].title}
+                      {title}
                     </CardTitle>
                     <Text>
                       {/* {t("home.mission.content.card1.content")} */}
-                      {t(mission[key].description)}
+                      {description}
                     </Text>
                   </CardContent>
                 </CustomCard>
               );
             })}
-          </section>
+          </ul>
         </article>
+        {/* ABOUT partners */}
         <article>
           <Heading level="h3">{t("home.partners.title")}</Heading>
           <Heading level="h5" className="uppercase">
             {t("home.partners.universities.title")}
           </Heading>
+          <ul className="md:grid grid-cols-3 gap-8">
+            <PartnerCard partner={partners.uef} />
+            <PartnerCard partner={partners.upm} />
+            <PartnerCard partner={partners.bmu} />
+          </ul>
           <Heading level="h5" className="uppercase">
             {t("home.partners.agencies.title")}
           </Heading>
+          <ul className="md:grid grid-cols-3 gap-8">
+            <PartnerCard partner={partners.maldita} />
+            <PartnerCard partner={partners.faktabaari} />
+            <PartnerCard partner={partners.fnt} />
+          </ul>
         </article>
       </section>
       <Divider size="xl" />

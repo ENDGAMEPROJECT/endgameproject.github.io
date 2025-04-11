@@ -40,17 +40,17 @@ module.exports = {
       colors: {
         // whiteFull: "#ffffff",
         text: "#f8f8f8",
-        snow: "#EFF7FB",
-        black: "#0D0D1C",
+        'gray-10': "#FAFAFA",
+        black: "#131313",
 
-        primary: { // azul genérico
+        primary: { // cyan
           DEFAULT: "#0AFFDE",
           900: "#0e406c",
           800: "#094b83",
           700: "#05589f",
           600: "#056dc1",
           500: "#118de6",
-          400: "#0AFFDE", // default
+          400: "#0AFFDE", 
           300: "#7fc5fa",
           200: "#bbdffc",
           100: "#e0effe",
@@ -58,7 +58,7 @@ module.exports = {
           foreground: "#FFFFFF",
          
         },
-        secondary: { 
+        secondary: { // blue
           DEFAULT: "#9ca3af",
           700: "#374151",
           600: "#4b5563",
@@ -70,7 +70,7 @@ module.exports = {
           50: "#f9fafb",
           foreground: "#ffffff"
         },
-        orange: { 
+        accent: { // orange
           DEFAULT: "#9ca3af",
           900: "#374151",
           800: "#374151",

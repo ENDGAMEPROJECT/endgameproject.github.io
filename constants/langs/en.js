@@ -163,7 +163,7 @@ export const en = {
     direction3: "28040 Madrid",
   },
   footer: {
-    title1: "Sections",
+    title1: "Sitemap",
     title2: "Follow us!",
     title3: "Partners",
     logoSub: "Future Networks for Datacenters and Telcos",
