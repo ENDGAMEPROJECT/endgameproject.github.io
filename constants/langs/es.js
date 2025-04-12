@@ -13,14 +13,13 @@ export const es = {
   },
   home: {
     title: "",
-    description:
-      "Lucha contra la desinformación a través de escaperooms educativas",
+    description: "Escaping New Disinformation through GAmified cross-border Media literacy Education",
     "action-button": "CTA button",
     aboutSection: "Qué es ENDGAME",
     about: {
       title: "Sobre el proyecto",
       content:
-        "ENDGAME is an innovative project aimed at ultivating critical thinking and responsible digital citizenship among European youth through educational escape rooms that simulate real-life scenarios of information consumption.",
+        "ENDGAME es un proyecto Europeo innovador destinado a fomentar el pensamiento crítico y la ciudadanía digital responsable entre los jóvenes a través de escape rooms educativas que simulan escenarios reales de consumo de información.",
     },
     mission: {
       title: "Objetivos",
@@ -142,6 +141,10 @@ export const es = {
   },
 
   footer: {
+    projectRef: "Referencia del proyecto",
+    projectCall: "Call",
+    projectDuration: "Duración",
+    projectDurationContent: "marzo 2025 - febrero 2027",
     title1: "Secciones",
     title2: "Síguenos en:",
     title3: "Colaboran",

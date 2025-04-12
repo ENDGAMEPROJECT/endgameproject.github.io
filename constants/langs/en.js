@@ -13,13 +13,13 @@ export const en = {
   home: {
     title: "",
     description:
-      "Escaping new disinformation through gamified cross-border media literacy education",
+      "Escaping New Disinformation through GAmified cross-border Media literacy Education",
     'action-button': "CTA button",
     aboutSection: "What is ENDGAME",
     about: {
-      title: "About the proyect",
+      title: "About the project",
       content:
-        "ENDGAME is an innovative project aimed at ultivating critical thinking and responsible digital citizenship among European youth through educational escape rooms that simulate real-life scenarios of information consumption.",
+        "ENDGAME is an innovative European project aimed at ultivating critical thinking and responsible digital citizenship among European youth through educational escape rooms that simulate real-life scenarios of information consumption. We aim to immerse participants in time-sensitive, interactive, and challenging experiences, where they will develop their skills in identifying disinformation, recognizing AI-generated content, and understanding the implications of personal data exposure on social media platforms.",
     },
     mission: {
       title: "Our mission",
@@ -163,6 +163,10 @@ export const en = {
     direction3: "28040 Madrid",
   },
   footer: {
+    projectRef: "Project reference",
+    projectCall: "Call",
+    projectDuration: "Duration",
+    projectDurationContent: "march 2025 - february 2027",
     title1: "Sitemap",
     title2: "Follow us!",
     title3: "Partners",

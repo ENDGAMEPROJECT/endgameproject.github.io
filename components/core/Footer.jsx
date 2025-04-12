@@ -36,9 +36,18 @@ export default function Footer(props) {
           />
           <div className=" flex justify-center flex-col gap-0 xs:gap-2 md:flex-col md:gap-0">
             <Text className="pl-4 max-w-[35ch]">
-              Escaping new disinformation through gamified cross-border media
-              literacy education
+            {t("home.description")}            
             </Text>
+            <Text className="pl-4 max-w-[35ch]">
+            {t("footer.projectRef")}: <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-details/43251814/101185763/CREA2027?keywords=MEDIALITERACY&isExactMatch=false&order=DESC&pageNumber=1&pageSize=50&sortBy=title" target="_blank">101185763</a>
+            </Text>
+            <Text className="pl-4 max-w-[35ch]">
+            {t("footer.projectCall")}: Creative Europe (CREA)
+            </Text>
+            <Text className="pl-4 max-w-[35ch]">
+            {t("footer.projectDuration")}: {t("footer.projectDurationContent")}
+            </Text>
+
             {/* <div className="flex flex-row">
               <EmailOutlinedIcon
                 className="mr-2 mt-0.5"
