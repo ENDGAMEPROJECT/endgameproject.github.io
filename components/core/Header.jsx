@@ -40,8 +40,9 @@ export default function Header(props) {
   //
 
   const menuClasses = clsx(
+    "bg-[#090909]",
     "w-screen  md:p-0 md:w-fit",
-    "absolute top-[40px] -right-8 md:static",
+    "absolute top-[48px] -right-8 md:static",
     "flex flex-col lg:flex-row ",
     "gap-4 md:gap-2 lg:gap-8",
     "border-t-2 border-t-gray md:border-none",

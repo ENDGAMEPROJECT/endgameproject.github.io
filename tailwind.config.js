@@ -145,23 +145,7 @@ module.exports = {
   },
   plugins: [
     // require("@tailwindcss/line-clamp"),
-    plugin(function({ addBase, theme }) {
-      // addBase({
-      //   'h1': { fontFamily: theme('fontFamily.inter') },
-      //   'h2': { fontFamily: theme('fontFamily.inter') },
-      //   'h3': { fontFamily: theme('fontFamily.inter') },
-      //   'h4': { fontFamily: theme('fontFamily.inter') },
-      //   'h5': { fontFamily: theme('fontFamily.inter') },
-      //   'h6': { fontFamily: theme('fontFamily.inter') },
-      //   'p': { fontFamily: theme('fontFamily.arimo') },
-      //   'a': { fontFamily: theme('fontFamily.sourceSans') },
-      //   'button': { fontFamily: theme('fontFamily.sourceSans') },
-      // })
-    })
   ],
-  // corePlugins: {
-  //   preflight: false,
-  // },
 };
 
 // export default config;

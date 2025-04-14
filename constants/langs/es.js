@@ -13,7 +13,7 @@ export const es = {
   },
   home: {
     title: "",
-    description: "Escaping New Disinformation through GAmified cross-border Media literacy Education",
+    description: "Escaping New Disinformation through Gamified cross-border Media literacy Education",
     "action-button": "CTA button",
     aboutSection: "Qué es ENDGAME",
     about: {

@@ -2,6 +2,7 @@
 
 import React from "react";
 import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 /* 
   ------------------------------------------------------------------
@@ -29,11 +30,10 @@ const Text = React.forwardRef(({ type = "p", children, className, ...props }, re
 
   // clsx, aplica clases según el valor del atributo level de manera dinámica
   const classes = clsx([
-    "font-main text-text max-w-[70ch]",
-    {/*"text-balance"*/},
+    "font-main max-w-[70ch]",
     {
       " text-18 sm:text-base text-pretty": type === "p",
-      "text-base text-wrap leading-normal": type === "small",
+      "text-sm text-wrap leading-normal": type === "small",
       " text-18 sm:text-base": type === "short-p",
     },
     className

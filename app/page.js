@@ -13,6 +13,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Image from "../components/ui/image";
 import Text from "../components/ui/text";
 import PartnerCard from "../components/cards/PartnerCard";
+import MissionCard from "../components/cards/MissionCard";
 
 //Banner
 import {
@@ -39,6 +40,7 @@ export default function Page() {
 
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+  console.log(mission);
 
   // let title_translation = title;
   // if (currentLang === "es" && title_es) {
@@ -85,7 +87,7 @@ export default function Page() {
 
       {/* SECTION ABOUT */}
       <Heading level="h1">{t("home.aboutSection")}</Heading>
-      <section className="standard_margin-s ing_sm flex flex-col gap-24">
+      <section className="standard_margin ing_sm flex flex-col gap-24">
         <article>
           <Heading level="h3">{t("home.about.title")}</Heading>
           <Heading level="subtitle"> {t("home.about.content")}</Heading>
@@ -93,34 +95,15 @@ export default function Page() {
         <article>
           <Heading level="h3">{t("home.mission.title")}</Heading>
           <ul className="gap-4 justify-center grid sm:grid-cols-3 xl:grid-cols-5">
-            {mission.map(({ icon, title, description }, key) => {
-              return (
-                <CustomCard className=" w-full p-4 bg-black" key={key}>
-                  <Image
-                    className={"!h-20 opacity-50 p-2"}
-                    src={icon || "placeholder.jpg"}
-                    alt={title || "Image"}
-                    fit="contain"
-                  />
-                  <CardContent className="place-content-center text-center">
-                    <CardTitle level="h4" className="text-primary">
-                      {/* {t("home.mission.content.card1.title")} */}
-                      {title}
-                    </CardTitle>
-                    <Text>
-                      {/* {t("home.mission.content.card1.content")} */}
-                      {description}
-                    </Text>
-                  </CardContent>
-                </CustomCard>
-              );
-            })}
+            {mission.map((mission, key) => (
+              <MissionCard mission={mission} key={key} />
+            ))}
           </ul>
         </article>
         {/* ABOUT partners */}
         <article>
           <Heading level="h3">{t("home.partners.title")}</Heading>
-          <Heading level="h5" className="uppercase">
+          <Heading level="h5" className="uppercase !text-primary">
             {t("home.partners.universities.title")}
           </Heading>
           <ul className="md:grid grid-cols-3 gap-8">
@@ -128,7 +111,7 @@ export default function Page() {
             <PartnerCard partner={partners.upm} />
             <PartnerCard partner={partners.bmu} />
           </ul>
-          <Heading level="h5" className="uppercase">
+          <Heading level="h5" className="uppercase !text-primary">
             {t("home.partners.agencies.title")}
           </Heading>
           <ul className="md:grid grid-cols-3 gap-8">

@@ -22,32 +22,20 @@ export default function Footer(props) {
   return (
     <footer className="h-fit bg-black text-gray-300">
       {/* FOOTER UP */}
-      <div className="flex justify-between gap-12 md:gap-20 flex-wrap lg:flex-nowrap items-start">
+      <div className="min-w-[280px] flex justify-between gap-12 md:gap-20 flex-wrap lg:flex-nowrap items-start">
         <div
           className={
             "flex flex-col gap-4 items-start justify-start md:justify-center"
           }
         >
           <Image
-            className="max-w-[350px]"
+            className="max-w-[390px]"
             src={endgameLogosPng + "logo_ENDGAME_main_darkBg.png"}
             alt="ging logo"
             fit="contain"
           />
-          <div className=" flex justify-center flex-col gap-0 xs:gap-2 md:flex-col md:gap-0">
-            <Text className="pl-4 max-w-[35ch]">
-            {t("home.description")}            
-            </Text>
-            <Text className="pl-4 max-w-[35ch]">
-            {t("footer.projectRef")}: <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-details/43251814/101185763/CREA2027?keywords=MEDIALITERACY&isExactMatch=false&order=DESC&pageNumber=1&pageSize=50&sortBy=title" target="_blank">101185763</a>
-            </Text>
-            <Text className="pl-4 max-w-[35ch]">
-            {t("footer.projectCall")}: Creative Europe (CREA)
-            </Text>
-            <Text className="pl-4 max-w-[35ch]">
-            {t("footer.projectDuration")}: {t("footer.projectDurationContent")}
-            </Text>
-
+          <div className=" flex justify-center flex-col gap-0 xs:gap-2 md:flex-col md:gap-0 pl-4 max-w-[45ch]">
+            <Text>{t("home.description")}</Text>
             {/* <div className="flex flex-row">
               <EmailOutlinedIcon
                 className="mr-2 mt-0.5"
@@ -62,7 +50,7 @@ export default function Footer(props) {
           </div>
         </div>
 
-        <nav className="min-w-[200px]">
+        <nav className="min-w-fit">
           <div className={sectionTitleClasses}>{t("footer.title1")}</div>
           <ul
             className={`font-semibold columns-1 gap-x-4 inline-block ${
@@ -153,18 +141,31 @@ export default function Footer(props) {
           </Link>
         </ul> */}
 
-        <div className="min-w-[200px] font-sm flex flex-col">
-          <small className="mb-[1rem]">2025 © </small>
-          <small>University of Eastern Finland - UEF</small>
+        <div className="min-w-fit font-sm flex flex-col">
+          <Text type='small' className="mb-2">2025 © </Text>
+          <Text  type='small'>
+              {t("footer.projectRef")}:{" "}
+              <a
+                href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-details/43251814/101185763/CREA2027?keywords=MEDIALITERACY&isExactMatch=false&order=DESC&pageNumber=1&pageSize=50&sortBy=title"
+                target="_blank"
+              >
+                101185763
+              </a>
+            </Text>
+            <Text type='small'>{t("footer.projectCall")}: Creative Europe (CREA)</Text>
+            <Text type='small'>
+              {t("footer.projectDuration")}:{" "}
+              {t("footer.projectDurationContent")}
+            </Text>
+          {/* <small>University of Eastern Finland - UEF</small>
           <small>Universidad Politécnica de Madrid - UPM</small>
           <small>Belgrade Metropolitan University - BMU</small>
           <small>Maldita</small>
           <small>Faktabaari</small>
-          <small>Fake News Tragač</small>
+          <small>Fake News Tragač</small> */}
         </div>
-      </div> {/* FOOTER UP */}
-
-
+      </div>
+      {/* FOOTER UP */}
       {/* FOOTER LOGOS */}
       <div className="mt-8 flex flex-col gap-16 justify-between md:flex-row flex-wrap lg:flex-nowrap pt-8 border-t border-gray-400">
         <div className={"flex flex-col gap-4 items-start justify-start"}>

@@ -13,7 +13,7 @@ export const en = {
   home: {
     title: "",
     description:
-      "Escaping New Disinformation through GAmified cross-border Media literacy Education",
+      "Escaping New Disinformation through Gamified cross-border Media literacy Education",
     'action-button': "CTA button",
     aboutSection: "What is ENDGAME",
     about: {
@@ -171,9 +171,6 @@ export const en = {
     title2: "Follow us!",
     title3: "Partners",
     logoSub: "Future Networks for Datacenters and Telcos",
-    titleRight:
-      "Future Networks for Datacenters and Telcos (FuN4DaTe)  © 2024. All rights reserved.",
-    titleRight2: "",
     email: "Contact Email:",
   },
 };

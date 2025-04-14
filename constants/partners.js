@@ -9,6 +9,7 @@ export const partners = {
     name_sr: "Polytechnic University of Madrid",
     shortname: "UPM",
     logo: uniLogos + "upm_logo-vertical-color.png",
+    logoHorizontal: uniLogos + "upm_logo-horizontal-color.png",
   },
   uef: {
     name: "University of Eastern Finland",
@@ -25,11 +26,13 @@ export const partners = {
     name_sr: "Univerzitet Metropolitan Beograd",
     shortname: "BMU",
     logo: uniLogos + "bmu_logo-vertical-darkBg.png",
+    logoHorizontal: uniLogos + "bmu_logo-horizontal-darkBg.png",
   },
   //   agencies
   maldita: {
     name: "Maldita",
     logo: agenciesLogos + "maldita_logo-vertical-darkBg.png",
+    logoHorizontal: agenciesLogos + "maldita_logo-horizontal-darkBg.png",
   },
   faktabaari: {
     name: "Faktabaari",
