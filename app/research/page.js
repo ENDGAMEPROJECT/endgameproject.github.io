@@ -127,7 +127,7 @@ function ResearchPage() {
   };
 
   return (
-    <div className={"standard_margin research page_" + currentLang}>
+    <main className={"standard_margin research page_" + currentLang}>
       <div className="" id="banner-publications">
         <Heading level="h2">{t("research.title")}</Heading>
         <Text type="p">{t("research.description")}</Text>
@@ -206,6 +206,6 @@ function ResearchPage() {
         <Divider size="sm"/>
 
       </main>
-    </div>
+    </main>
   );
 }

@@ -1,9 +1,16 @@
-import React from 'react'
+"use client";
+import * as React from "react";
 
-const Escaperooms = () => {
+import { useTranslation } from "react-i18next";
+import Heading from "@/components/ui/Heading";
+
+export default function Page() {
+
+  const { t, i18n } = useTranslation();
+
   return (
-    <h1>Escaperooms</h1>
-  )
+    <main className="standard_margin">
+      <Heading level="h1">{t("escaperooms.title")}</Heading>
+    </main>
+  );
 }
-
-export default Escaperooms

@@ -1,9 +1,17 @@
-import React from 'react'
+"use client";
+import * as React from "react";
 
-const Events = () => {
+import { useTranslation } from "react-i18next";
+import Heading from "@/components/ui/Heading";
+
+export default function Page() {
+  const { t, i18n } = useTranslation();
+  // const currentLang = i18n.language;
+
   return (
-    <h1>Events and news page</h1>
-  )
-}
+    <main className="standard_margin">
+      <Heading level="h1">{t("events.title")}</Heading>
 
-export default Events
+    </main>
+  );
+}

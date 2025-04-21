@@ -35,11 +35,11 @@ export default function RootLayout({ children }) {
     // <html className={` ${sourceSans.variable} ${inter.variable} `}>
           <html className={` ${dmSans.variable} ${spaceGrotesk.variable} `}>
       <title>ENDGAME</title>
-      <body className="bg-background text-text">
+      <body className="bg-background text-text min-h-[70dvh] mx-auto">
         <Header route={"/"} />
-        <main className="min-h-[70dvh] mx-auto">
+        {/* <main className="min-h-[70dvh] mx-auto"> */}
           {children}
-        </main>
+        {/* </main> */}
         <Footer />
       </body>
     </html>

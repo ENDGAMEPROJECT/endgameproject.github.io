@@ -2,7 +2,6 @@
 import { cn } from "@/lib/utils";
 import clsx from "clsx";
 
-
 import React, { useState } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
@@ -25,10 +24,10 @@ export default function Header(props) {
 
   // classes
   const headerClasses = clsx(
-    "h-fit",
-    "px-8 py-4 sticky -top-[1px] w-full",
-    "flex justify-between items-center",
-    "bg-[#090909] text-text shadow-md",
+    "h-fit w-full px-8 py-4",
+    "z-50 sticky -top-[1px] ",
+    "flex justify-between items-center gap-8",
+    "bg-black text-text shadow-md",
 
     `header_${currentLang} z-50`,
     {
@@ -40,11 +39,11 @@ export default function Header(props) {
   //
 
   const menuClasses = clsx(
-    "bg-[#090909]",
-    "w-screen  md:p-0 md:w-fit",
+    "bg-black",
+    "w-screen md:p-0 md:w-fit",
     "absolute top-[48px] -right-8 md:static",
     "flex flex-col lg:flex-row ",
-    "gap-4 md:gap-2 lg:gap-8",
+    "gap-2 lg:gap-8",
     "border-t-2 border-t-gray md:border-none",
     "shadow-md md:shadow-none",
     {
@@ -69,11 +68,11 @@ export default function Header(props) {
       {/* route={routes.route} ?????*/}
       <a href="/" className="h-10 flex gap-2">
         <Image
-          className=''
-          src={endgameLogosPng+"logo_ENDGAME_main_darkBg.png"}
+          className=""
+          src={endgameLogosPng + "logo_ENDGAME_main_darkBg.png"}
           alt="endgame logo"
           fit="contain"
-          />
+        />
       </a>
       {/* menu container */}
       <div className="relative w-fit flex">
@@ -97,7 +96,9 @@ export default function Header(props) {
         <div className={menuClasses}>
           <ul className={menuItems}>
             {activeRoutes.map((route, index, page) => (
-              <li key={index} className={menuItemClasses}
+              <li
+                key={index}
+                className={menuItemClasses}
                 onClick={() => setState({ open: false })}
               >
                 <Link
@@ -113,7 +114,7 @@ export default function Header(props) {
               </li>
             ))}
           </ul>
-          <LangSwitcher/>
+          <LangSwitcher />
         </div>
         {/* /menu nav */}
       </div>

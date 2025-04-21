@@ -11,29 +11,54 @@ import FilterCategory from "./FilterCategory";
 import TabsResearchLineFilter from "./TabsResearchLineFilter";
 import { Divider } from "../ui/divider";
 
-export default function Filters({pathname, search, changeSearch, year, changeYear, items, category, changeCategory, results, categories, researchLines, researchLine, changeResearchLine }) {
+export default function Filters({
+  pathname,
+  search,
+  changeSearch,
+  year,
+  changeYear,
+  items,
+  category,
+  changeCategory,
+  results,
+  categories,
+  researchLines,
+  researchLine,
+  changeResearchLine,
+}) {
   const { t } = useTranslation();
 
   return (
     <>
       <div className="flex justify-center">
-        <TabsResearchLineFilter researchLines={researchLines} researchLine={researchLine} changeResearchLine={changeResearchLine} />
+        <TabsResearchLineFilter
+          researchLines={researchLines}
+          researchLine={researchLine}
+          changeResearchLine={changeResearchLine}
+        />
       </div>
-      <Divider size="sm"/>
+      <Divider size="sm" />
       <div className="filters">
         <div className="filter-block flex flex-col md:flex-row gap_filter">
-          <FilterText pathname={pathname} search={search} changeSearch={changeSearch} ></FilterText>
-        <div className="w-full md:w-1/2 flex gap_grid">
-            <FilterCategory category={category} changeCategory={changeCategory} categories={categories} />      
+          <FilterText
+            pathname={pathname}
+            search={search}
+            changeSearch={changeSearch}
+          ></FilterText>
+          <div className="w-full md:w-1/2 flex gap_grid">
+            <FilterCategory
+              category={category}
+              changeCategory={changeCategory}
+              categories={categories}
+            />
             <FilterDate items={items} year={year} changeYear={changeYear} />
-            </div>
+          </div>
         </div>
         {results === undefined ? null : (
           <Badge className="research_results bg-background-300/60 border-gray-500 text-gray-300">
             <p className="">
-              {" "}
-              {t("research.filter.text")}
-              <b> {results} </b>{" "}
+              {t("research.filters.text")}
+              <b> {results} </b>
             </p>
           </Badge>
         )}

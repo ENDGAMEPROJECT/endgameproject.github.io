@@ -20,7 +20,7 @@ export default function Footer(props) {
   const partnerLogoClasses = "min-w-20 max-h-20 md:w-fit";
 
   return (
-    <footer className="h-fit bg-black text-gray-300">
+    <footer className="h-fit bg-black text-gray-100">
       {/* FOOTER UP */}
       <div className="min-w-[280px] flex justify-between gap-12 md:gap-20 flex-wrap lg:flex-nowrap items-start">
         <div
@@ -142,27 +142,25 @@ export default function Footer(props) {
         </ul> */}
 
         <div className="min-w-fit font-sm flex flex-col">
-          <Text type='small' className="mb-2">2025 © </Text>
-          <Text  type='small'>
-              {t("footer.projectRef")}:{" "}
-              <a
-                href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-details/43251814/101185763/CREA2027?keywords=MEDIALITERACY&isExactMatch=false&order=DESC&pageNumber=1&pageSize=50&sortBy=title"
-                target="_blank"
-              >
-                101185763
-              </a>
-            </Text>
-            <Text type='small'>{t("footer.projectCall")}: Creative Europe (CREA)</Text>
-            <Text type='small'>
-              {t("footer.projectDuration")}:{" "}
-              {t("footer.projectDurationContent")}
-            </Text>
-          {/* <small>University of Eastern Finland - UEF</small>
-          <small>Universidad Politécnica de Madrid - UPM</small>
-          <small>Belgrade Metropolitan University - BMU</small>
-          <small>Maldita</small>
-          <small>Faktabaari</small>
-          <small>Fake News Tragač</small> */}
+          <Text type="small" className="mb-2">
+            2025 ©{" "}
+          </Text>
+          <Text type="small">
+            {t("footer.projectRef")}:{" "}
+            <a
+              href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-details/43251814/101185763/CREA2027?keywords=MEDIALITERACY&isExactMatch=false&order=DESC&pageNumber=1&pageSize=50&sortBy=title"
+              target="_blank"
+            >
+              <b>101185763</b>
+            </a>
+          </Text>
+          <Text type="small">
+            {t("footer.projectCall")}:{" "}
+            <b> Creative Europe (CREA) </b>
+          </Text>
+          <Text type="small">
+            {t("footer.projectDuration")}: <b>{t("footer.projectDurationContent")}</b>
+          </Text>
         </div>
       </div>
       {/* FOOTER UP */}
@@ -177,42 +175,80 @@ export default function Footer(props) {
           />
         </div>
         <div className="w-full grid grid-cols-3 gap-6 justify-between lg:justify-end md:flex">
-          <Image
-            className={partnerLogoClasses + " p-.5"}
-            src={partners.uef.logo}
-            alt={partners.uef.name_en + " logo"}
-            fit="contain"
-          />
-          <Image
-            className={partnerLogoClasses}
-            src={partners.upm.logo}
-            alt={partners.upm.name_en + " logo"}
-            fit="contain"
-          />
-          <Image
-            className={partnerLogoClasses}
-            src={partners.bmu.logo}
-            alt={partners.bmu.name_en + " logo"}
-            fit="contain"
-          />{" "}
-          <Image
-            className={partnerLogoClasses + " p-2"}
-            src={partners.maldita.logo}
-            alt={partners.maldita.name_en + " logo"}
-            fit="contain"
-          />{" "}
-          <Image
-            className={partnerLogoClasses + " brightness-125 contrast-110"}
-            src={partners.faktabaari.logo}
-            alt={partners.faktabaari.name_en + " logo"}
-            fit="contain"
-          />{" "}
-          <Image
-            className={partnerLogoClasses + " p-2"}
-            src={partners.fnt.logo}
-            alt={partners.fnt.name_en + " logo"}
-            fit="contain"
-          />
+          <Link
+            rel="noopener noreferrer"
+            target="_blank"
+            href={partners.uef.link}
+          >
+            <Image
+              className={partnerLogoClasses + " p-.5"}
+              src={partners.uef.logo}
+              alt={partners.uef.name_en + " logo"}
+              fit="contain"
+            />
+          </Link>
+          <Link
+            rel="noopener noreferrer"
+            target="_blank"
+            href={partners.upm.link}
+          >
+            <Image
+              className={partnerLogoClasses}
+              src={partners.upm.logo}
+              alt={partners.upm.name_en + " logo"}
+              fit="contain"
+            />
+          </Link>
+          <Link
+            rel="noopener noreferrer"
+            target="_blank"
+            href={partners.bmu.link}
+          >
+            <Image
+              className={partnerLogoClasses}
+              src={partners.bmu.logo}
+              alt={partners.bmu.name_en + " logo"}
+              fit="contain"
+            />
+          </Link>
+          <Link
+            rel="noopener noreferrer"
+            target="_blank"
+            href={partners.mdt.link}
+          >
+            <Image
+              className={partnerLogoClasses + " p-2"}
+              src={partners.mdt.logo}
+              alt={partners.mdt.name_en + " logo"}
+              fit="contain"
+            />
+          </Link>
+          <Link
+            rel="noopener noreferrer"
+            target="_blank"
+            href={partners.ftb.link}
+          >
+            <Image
+              className={
+                partnerLogoClasses + " p-4"
+              }
+              src={partners.ftb.logo}
+              alt={partners.ftb.name_en + " logo"}
+              fit="contain"
+            />
+          </Link>
+          <Link
+            rel="noopener noreferrer"
+            target="_blank"
+            href={partners.fnt.link}
+          >
+            <Image
+              className={partnerLogoClasses + " p-3"}
+              src={partners.fnt.logo}
+              alt={partners.fnt.name_en + " logo"}
+              fit="contain"
+            />
+          </Link>
         </div>
       </div>
     </footer>

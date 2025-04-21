@@ -40,21 +40,10 @@ export default function Page() {
 
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
-  console.log(mission);
-
-  // let title_translation = title;
-  // if (currentLang === "es" && title_es) {
-  //   title_translation = title_es;
-  // }
-
-  // let description_translation = description_en;
-  // if (currentLang === "es" && description_es) {
-  //   description_translation = description_es;
-  // }
 
   return (
     <main>
-      <Banner className="bg-black">
+      <Banner className="bg-grey-950">
         {/* <BannerImg></BannerImg> */}
 
         <BannerContent className="absolute">
@@ -104,7 +93,7 @@ export default function Page() {
         <article>
           <Heading level="h3">{t("home.partners.title")}</Heading>
           <Heading level="h5" className="uppercase !text-primary">
-            {t("home.partners.universities.title")}
+            {t("home.partners.universities")}
           </Heading>
           <ul className="md:grid grid-cols-3 gap-8">
             <PartnerCard partner={partners.uef} />
@@ -112,11 +101,11 @@ export default function Page() {
             <PartnerCard partner={partners.bmu} />
           </ul>
           <Heading level="h5" className="uppercase !text-primary">
-            {t("home.partners.agencies.title")}
+            {t("home.partners.agencies")}
           </Heading>
           <ul className="md:grid grid-cols-3 gap-8">
-            <PartnerCard partner={partners.maldita} />
-            <PartnerCard partner={partners.faktabaari} />
+            <PartnerCard partner={partners.mdt} />
+            <PartnerCard partner={partners.ftb} />
             <PartnerCard partner={partners.fnt} />
           </ul>
         </article>

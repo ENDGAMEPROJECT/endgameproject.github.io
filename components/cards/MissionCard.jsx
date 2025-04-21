@@ -15,14 +15,14 @@ const MissionCard = ({ mission }) => {
     lang === "es" && description_es ? description_es : description;
 
   return (
-    <li className="w-full p-4 bg-black">
+    <li className="w-full p-4 bg-grey-950">
       <Image
         className="!h-20 opacity-50 p-2"
         src={icon || "placeholder.jpg"}
         alt={translatedTitle || "Image"}
         fit="contain"
       />
-      <div className="place-content-center text-center">
+      <div className="mt-4 place-content-center text-center">
         <Heading level="h5" className="!text-primary">{translatedTitle}</Heading>
         <Text>{translatedDescription}</Text>
       </div>
