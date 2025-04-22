@@ -3,6 +3,7 @@
 import React from "react";
 import clsx from "clsx";
 import { Badge } from "./badge";
+import { cn } from "@/lib/utils";
 
 const Image = ({
   fit = "cover",
@@ -42,7 +43,7 @@ const Image = ({
   );
 
   return (
-    <div className={imageContainerClasses}>
+    <div className={cn(imageContainerClasses)}>
       {/* Se pinta si hay código svg */}
       {svgCode && (
         <div

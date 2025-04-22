@@ -92,15 +92,15 @@ export default function Page() {
         {/* ABOUT partners */}
         <article>
           <Heading level="h3">{t("home.partners.title")}</Heading>
-          <Heading level="h5" className="uppercase !text-primary">
+          <Heading level="h5" className="text-center mb-4 uppercase !text-primary">
             {t("home.partners.universities")}
           </Heading>
-          <ul className="md:grid grid-cols-3 gap-8">
+          <ul className="md:grid grid-cols-3 gap-8 !items-end">
             <PartnerCard partner={partners.uef} />
             <PartnerCard partner={partners.upm} />
             <PartnerCard partner={partners.bmu} />
           </ul>
-          <Heading level="h5" className="uppercase !text-primary">
+          <Heading level="h5" className="text-center my-4 uppercase !text-primary">
             {t("home.partners.agencies")}
           </Heading>
           <ul className="md:grid grid-cols-3 gap-8">

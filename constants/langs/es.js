@@ -14,7 +14,7 @@ export const es = {
   home: {
     title: "ENDGAME",
     description:
-      "Escaping New Disinformation through Gamified cross-border Media literacy Education",
+      "Lucha contra la desinformación a través de escaperooms educativas",
     "action-button": "CTA button",
     aboutSection: "Qué es ENDGAME",
     about: {

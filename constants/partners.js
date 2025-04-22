@@ -21,6 +21,7 @@ export const partners = {
     name_sr: "University of Eastern Finland",
     shortname: "UEF",
     logo: uniLogos + "uef_logo-vertical-darkBg.png",
+    logoHorizontal: uniLogos + "uef_logo-horizontal-darkBg.png",
     link: 'https://www.uef.fi/',
   },
   bmu: {

@@ -2,38 +2,49 @@ import React from "react";
 import Image from "../ui/image";
 import Heading from "../ui/heading";
 import Link from "next/link";
+import HighlightedHeader from "../ui/highlightedHeader";
 
 const PartnerCard = ({ partner }, key) => {
-  const paddingById = {
-    "uef": "p-5",
-    "upm": "p-4",
-    "bmu": "p-4",
-    "mdt": "p-6",
-    "ftb": "p-8",
-    "fnt": "p-6",
+  const paddingLogoById = {
+    uef: "p-5 md:p-4",
+    upm: "p-3",
+    bmu: "p-10 md:p-8",
+    mdt: "p-12 md:p-8 lg:p-12",
+    ftb: "p-9 md:p-8 lg:p-10",
+    fnt: "p-6 md:p-8 lg:p-7",
   };
+  const customPaddingLogo = paddingLogoById[partner.id] || "p-4";
 
-  const customPadding = paddingById[partner.id] || "p-4";
-
+  const paddingNameById = {
+    uef: "pr-8",
+    bmu: "pr-.5",
+  };
+  const customPaddingName = paddingNameById[partner.id] || "";
+  
   return (
-    <li className="mb-8 border border-primary h-52 flex flex-col" key={key}>
+    <li className="mb-8 mx-auto md:w-full flex flex-col" key={key}>
       <Link
         rel="noopener noreferrer"
         target="_blank"
         href={partner.link}
-        className="min-h-16 flex flex-col"
+        className="min-h-16 h-full flex flex-col"
       >
-        <Heading
+        {/* <Heading
           level="h6"
           className=" !mb-0 px-2 py-1 bg-primary !text-black min-h-16 place-content-center normal-case"
         >
           {partner.name}
-        </Heading>
+        </Heading> */}
+        <HighlightedHeader
+          level="h6"
+          string={partner.name}
+          className={customPaddingName}
+        />
         <Image
-          className={customPadding} // to do: add custom padding for visual balance
-          src={partner.logo}
+          className={customPaddingLogo + " h-40 border border-primary"} // to do: add custom padding for visual balance
+          // src={partner.logo}
           fit="contain"
-          // src={partner.logoHorizontal ? partner.logoHorizontal : partner.logo} // cambiar cuando se metan los custom paddings
+          src={partner.logoHorizontal ? partner.logoHorizontal : partner.logo} // cambiar cuando se metan los custom paddings
           alt={partner.logo + " logo"}
         />
       </Link>
