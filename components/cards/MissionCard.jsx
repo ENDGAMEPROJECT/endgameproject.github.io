@@ -10,8 +10,8 @@ const MissionCard = ({ mission }) => {
 
   const { icon, title, title_es, description, description_es } = mission;
 
-  const translatedTitle = lang === "es" && title_es ? title_es : title;
-  const translatedDescription =
+  const title_translation = lang === "es" && title_es ? title_es : title;
+  const description_translation =
     lang === "es" && description_es ? description_es : description;
 
   return (
@@ -19,12 +19,12 @@ const MissionCard = ({ mission }) => {
       <Image
         className="!h-20 opacity-50 p-2"
         src={icon || "placeholder.jpg"}
-        alt={translatedTitle || "Image"}
+        alt={title_translation || "Image"}
         fit="contain"
       />
       <div className="mt-4 place-content-center text-center">
-        <Heading level="h5" className="!text-primary">{translatedTitle}</Heading>
-        <Text>{translatedDescription}</Text>
+        <Heading level="h5" className="!text-primary">{title_translation}</Heading>
+        <Text>{description_translation}</Text>
       </div>
     </li>
   );

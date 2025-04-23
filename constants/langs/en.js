@@ -55,6 +55,12 @@ export const en = {
       current: "current",
       past: "past",
     },
+    event: {
+      "action-button": "event details",
+    },
+    new: {
+      "action-button": "read",
+    },
   },
   // page
   research: {

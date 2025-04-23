@@ -11,6 +11,7 @@ export const es = {
   header: {
     publicationstab: "Publicaciones",
   },
+  // PAGE
   home: {
     title: "ENDGAME",
     description:
@@ -24,27 +25,13 @@ export const es = {
     },
     mission: {
       title: "Objetivos",
-      content: {
-        // pasar a constants
-        card1: { icon: "icon", title: "title", description: "description" },
-        card2: { icon: "icon", title: "title", description: "description" },
-        card3: { icon: "icon", title: "title", description: "description" },
-        card4: { icon: "icon", title: "title", description: "description" },
-        card5: { icon: "icon", title: "title", description: "description" },
-      },
+      // constent: /constants/mission
     },
     partners: {
       title: "Quiénes somos",
-      mission: {
-        title: "Objetivos",
-        // constent: /constants/mission
-      },
-      partners: {
-        title: "Quiénes somos",
-        universities: "Universidades",
-        agencies: "Agencias",
-        // constent: /constants/partners
-      },
+      universities: "Universidades",
+      agencies: "Agencias",
+      // constent: /constants/partners
     },
     latestContent: {
       title: "Novedades",
@@ -62,6 +49,7 @@ export const es = {
       },
     },
   },
+  // PAGE
   escaperooms: {
     title: "Escaperooms",
   },
@@ -73,8 +61,16 @@ export const es = {
       events: "eventos",
       current: "futuros",
       past: "pasados",
+      // país
+    },
+    event: {
+      "action-button": "detalles del evento",
+    },
+    new: {
+      "action-button": "leer noticia",
     },
   },
+  // PAGE
   research: {
     title: "Investigación e impacto", // resultados?
     // publicationCards: {

@@ -47,7 +47,7 @@ CardHeader.displayName = "CardHeader";
  * ---------------------------------------
  */
 const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
-  <Heading ref={ref} level="h3" className={cn(" ", className)} {...props} />
+  <Heading ref={ref} level="h3" className={cn(" text-balance", className)} {...props} />
 ));
 CardTitle.displayName = "CardTitle";
 
@@ -176,7 +176,7 @@ CardContent.displayName = "CardContent";
 const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
   <footer
     ref={ref}
-    className={cn("pt-2 w-full flex gap-3 justify-end items-center", className)}
+    className={cn("p-2 w-full flex gap-3 justify-end items-center", className)}
     {...props}
   />
 ));

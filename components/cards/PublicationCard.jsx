@@ -5,7 +5,6 @@ import * as React from "react";
 import { useState } from "react";
 import Link from "next/link";
 
-
 // Data
 import { useTranslation } from "react-i18next";
 
@@ -24,7 +23,7 @@ import {
 } from "@/components/ui/customCard";
 
 // Icons
-import ArrowForwardSharpIcon from '@mui/icons-material/ArrowForwardSharp';
+import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
 
 const deleteSpaces = (string) => {
   let cleanStr = "";
@@ -93,10 +92,7 @@ const Card = React.forwardRef(
 
     return (
       // const publicationCard = (
-      <CustomCard
-        className=
-          " p-4 sm:py-4 whitespace-nowrap rounded-md font-body text-sm text-text bg-background-300 border-none shadow-md hover:scale-[101%] transition-all overflow-hidden"
-        >
+      <CustomCard className=" p-4 sm:py-4 whitespace-nowrap rounded-md font-body text-sm text-text bg-background-300 border-none shadow-md hover:scale-[101%] transition-all overflow-hidden">
         <CardHeader className="flex flex-wrap">
           {Array.isArray(researchLine)
             ? researchLine.map((researchline, index) => {
@@ -108,31 +104,33 @@ const Card = React.forwardRef(
                   case "data":
                     researchLineColorStyles = "bg-data-500/40 text-data-300";
                     backgroundIcon = "ENDGAME_icon_placeholder.svg";
-                    iconSpacing = "mb-[2px]"
+                    iconSpacing = "mb-[2px]";
                     break;
                   case "videoconference":
-                    researchLineColorStyles = "bg-videoconference-600/60 text-videoconference-200"; 
-                    backgroundIcon =
-                      "ENDGAME_icon_placeholder.svg";
+                    researchLineColorStyles =
+                      "bg-videoconference-600/60 text-videoconference-200";
+                    backgroundIcon = "ENDGAME_icon_placeholder.svg";
                     break;
                   case "ai":
                     researchLineColorStyles = "bg-ai-700/40 text-ai-400";
                     backgroundIcon = "ENDGAME_icon_placeholder.svg";
-                    iconSpacing = "mb-.5"
+                    iconSpacing = "mb-.5";
                     break;
                   case "computing":
-                    researchLineColorStyles = "bg-networks-600/60 text-networks-200";
+                    researchLineColorStyles =
+                      "bg-networks-600/60 text-networks-200";
                     backgroundIcon = "ENDGAME_icon_placeholder.svg";
-                    iconSpacing = "mb-.5"
+                    iconSpacing = "mb-.5";
                     break;
                   case "e-learning":
-                    researchLineColorStyles = "bg-eLearning-600/60 text-eLearning-200";
+                    researchLineColorStyles =
+                      "bg-eLearning-600/60 text-eLearning-200";
                     backgroundIcon = "ENDGAME_icon_placeholder.svg";
-                    iconSpacing = "mb-1"
+                    iconSpacing = "mb-1";
                     break;
                   default:
                     researchLineColorStyles = "bg-gray-500"; // Valor por defecto si no hay coincidencia
-                    iconSpacing = "mb-1"
+                    iconSpacing = "mb-1";
                     break;
                 }
 
@@ -150,8 +148,8 @@ const Card = React.forwardRef(
                     <div className="pb-0.5">
                       {t(
                         `projects.researchLines.${deleteSpaces(researchline)}`
-                      )}{" "}
-                    </div>{" "}
+                      )}
+                    </div>
                   </Badge>
                 );
               })
@@ -159,7 +157,9 @@ const Card = React.forwardRef(
         </CardHeader>
         <CardBody>
           <CardContent className="gap-1">
-            <CardTitle level="h5" className="text-pretty">{title}</CardTitle>
+            <CardTitle level="h5" className="text-pretty">
+              {title}
+            </CardTitle>
             <div className="flex">
               <Text type="small" className="font-bold text-sm">
                 {t(`research.filter.${category}`)}
