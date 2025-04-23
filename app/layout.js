@@ -12,6 +12,8 @@ import "./i18n";
 import Header from "@/components/core/Header";
 import Footer from "@/components/core/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import CookieConsentBanner from "../components/CookieConsentBanner";
+
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -43,6 +45,7 @@ export default function RootLayout({ children }) {
           {children}
         {/* </main> */}
         <Footer />
+        <CookieConsentBanner />
       </body>
     </html>
   );
