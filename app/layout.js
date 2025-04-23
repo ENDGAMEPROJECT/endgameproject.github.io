@@ -11,6 +11,7 @@ import "./i18n";
 
 import Header from "@/components/core/Header";
 import Footer from "@/components/core/Footer";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
   return (
     // <html className={` ${sourceSans.variable} ${inter.variable} `}>
           <html className={` ${dmSans.variable} ${spaceGrotesk.variable} `}>
+            <GoogleAnalytics gaId="G-N132LLPSLM" />
       <title>ENDGAME</title>
       <body className="bg-grey-900 text-text min-h-[70dvh] mx-auto">
         <Header route={"/"} />
