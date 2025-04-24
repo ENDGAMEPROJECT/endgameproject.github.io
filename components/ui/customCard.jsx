@@ -176,7 +176,7 @@ CardContent.displayName = "CardContent";
 const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
   <footer
     ref={ref}
-    className={cn("p-2 w-full flex gap-3 justify-end items-center", className)}
+    className={cn("mt-2 w-full flex gap-3 justify-end items-center", className)}
     {...props}
   />
 ));

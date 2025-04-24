@@ -89,6 +89,10 @@ export const en = {
     button: "Read publication",
     button2: "Load more",
   },
+  // PAGE
+  about: {
+    title: "About ENDGAME",
+  },
   footer: {
     projectRef: "Project reference",
     projectCall: "Call",

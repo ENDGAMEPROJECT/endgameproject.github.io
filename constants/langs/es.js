@@ -97,6 +97,10 @@ export const es = {
     button: "Leer publicación",
     button2: "Ver más",
   },
+    // PAGE
+    about: {
+      title: "Sobre ENDGAME",
+    },
   footer: {
     projectRef: "Referencia del proyecto",
     projectCall: "Call",

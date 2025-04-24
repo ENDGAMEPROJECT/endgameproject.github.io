@@ -11,7 +11,7 @@ const PartnerCard = ({ partner }, key) => {
     bmu: "p-10 md:p-8",
     mdt: "p-12 md:p-8 lg:p-12",
     ftb: "p-9 md:p-8 lg:p-10",
-    fnt: "p-6 md:p-8 lg:p-7",
+    fnt: "p-6 md:p-9 lg:p-8",
   };
   const customPaddingLogo = paddingLogoById[partner.id] || "p-4";
 

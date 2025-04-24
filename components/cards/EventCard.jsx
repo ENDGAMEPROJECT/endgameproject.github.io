@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 // Components
-import { Badge } from "../ui/badge";
+import { Badge, badgeVariants } from "../ui/badge";
 import Text from "../ui/Text";
 import { Button } from "../ui/button";
 import {
@@ -43,7 +43,7 @@ const EventCard = ({ event }) => {
     <CustomCard className="bg-black p-4">
       <CardHeader>
         {category && (
-          <Badge className="capitalize text-white bg-gray-700 border-none">
+          <Badge variant='primary' size={'lg'}>
             {category}
           </Badge>
         )}
@@ -68,8 +68,8 @@ const EventCard = ({ event }) => {
               {keywords.map((keyword, index) => (
                 <Badge
                   key={index}
+                  variant='secondary'
                   size="sm"
-                  className="bg-accent/10 border-none text-gray-300 capitalize"
                 >
                   {keyword}
                 </Badge>

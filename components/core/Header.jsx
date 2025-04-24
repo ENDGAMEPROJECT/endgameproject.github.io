@@ -28,6 +28,7 @@ export default function Header(props) {
     "z-50 sticky -top-[1px] ",
     "flex justify-between items-center gap-8",
     "bg-black text-text shadow-md",
+    'font-title',
 
     `header_${currentLang} z-50`,
     {

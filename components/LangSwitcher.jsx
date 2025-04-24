@@ -31,7 +31,7 @@ export default function LangSwitcher() {
         "flex flex-nowrap justify-center md:justify-end items-center gap-2 px-8 py-4 md:p-0 md:w-fit"
       }
     >
-      <LanguageIcon className="icon mt-0.5" sx={{ fontSize: 18 }} />
+      <LanguageIcon className="icon" sx={{ fontSize: 18 }} />
       {Object.keys(lngs).map((lng) => (
         <a
           key={lng}

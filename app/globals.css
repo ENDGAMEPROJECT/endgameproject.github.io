@@ -73,6 +73,7 @@ del filter cambia de bloque a inline*/
 
 main {
   min-height: 85dvh;
+  margin: auto;
 }
 
 @layer base {

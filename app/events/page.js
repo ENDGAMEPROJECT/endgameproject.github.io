@@ -10,13 +10,13 @@ import { events } from "@/constants/events";
 import Heading from "@/components/ui/Heading";
 import EventCard from "@/components/cards/EventCard";
 
-export default function Page() {
+export default function Events() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
   return (
     <main className="standard_margin ">
-      <Heading level="h1" className={"text-accent"}>
+      <Heading level="h1" className={"text-primary"}>
         {t("events.title")}
       </Heading>
       <div className="mt-20 grid grid-cols-2 gap-6">

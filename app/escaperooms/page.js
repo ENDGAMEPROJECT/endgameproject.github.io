@@ -4,7 +4,7 @@ import * as React from "react";
 import { useTranslation } from "react-i18next";
 import Heading from "@/components/ui/Heading";
 
-export default function Page() {
+export default function Escaperooms() {
 
   const { t, i18n } = useTranslation();
 
