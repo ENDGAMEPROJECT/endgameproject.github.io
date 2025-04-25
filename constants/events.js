@@ -1,6 +1,7 @@
 export const events = [
   // mock data de momento
   {
+    eventname: "WorkshopSpain",
     category: "webinar",
     date: "10/04/25",
     title_en: "Understanding the importance of media literacy in today’s fast-paced digital landscape",
@@ -13,6 +14,7 @@ export const events = [
     externalLink: "#",
   },
   {
+    eventname: "Event2",
     category: "webinar",
     date: "10/04/25",
     title_en: "Understanding the importance of media literacy in today’s fast-paced digital landscape",
@@ -25,6 +27,7 @@ export const events = [
     externalLink: "#",
   },
   {
+    eventname: "Event3",
     category: "webinar",
     date: "10/04/25",
     title_en: "Understanding the importance of media literacy in today’s fast-paced digital landscape",
@@ -35,7 +38,9 @@ export const events = [
       "En esta sesión, expertos analizarán el impacto de la desinformación y compartirán estrategias prácticas para evaluar los medios de forma crítica.",
     keywords: ["webinar", "hola", "tag", "misinformation"],
     externalLink: "#",
-  },  {
+  },  
+  {
+    eventname: "Event4",
     category: "webinar",
     date: "10/04/25",
     title_en: "Understanding the importance of media literacy in today’s fast-paced digital landscape",
