@@ -63,6 +63,7 @@ const EventFull = ({ eventname }) => {
 
     return (
         <div className="flex flex-col gap-4">
+            <p className="text-base">{eventname}</p>
             <h1 className="text-2xl font-bold">{title}</h1>
             <p className="text-sm text-gray-500">{dateFormatted}</p>
             <p className="text-sm text-gray-500">{categoryFormatted}</p>

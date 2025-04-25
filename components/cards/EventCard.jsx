@@ -28,7 +28,7 @@ const EventCard = ({ event }) => {
     description_en,
     description_es,
     keywords,
-    externalLink,
+    eventname,
   } = event;
 
   const { t, i18n } = useTranslation();
@@ -78,10 +78,11 @@ const EventCard = ({ event }) => {
           )}
         </CardContent>
       </CardBody>
-      {externalLink && (
+      {eventname && (
         <CardFooter className='p-0'>
           <Button asChild variant="outline" size="sm" radius="rounded_sm">
-            <Link rel="noopener noreferrer" target="_blank" href={externalLink}>
+            {/* <Link rel="noopener noreferrer" target="_blank" href={eventDetail}> */}
+            <Link rel="noopener noreferrer" href={`/events/${eventname}`}>
               {t("events.event.action-button")}
               <ArrowForwardSharpIcon />
             </Link>
