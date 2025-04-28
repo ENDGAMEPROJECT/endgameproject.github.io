@@ -64,7 +64,7 @@ module.exports = {
           DEFAULT: "#0AFFDE",
           900: "#00535C",
           800: "#007E8A",
-          700: "#009EA3",
+          700: "#0092A2",
           600: "#05BFBF", // parimary for light bg
           500: "#00D3C8",
           400: "#0AFFDE", // primary for dark bg
