@@ -43,7 +43,8 @@ const EventCard = ({ event }) => {
     <CustomCard className="bg-black p-4">
       <CardHeader>
         {category && (
-          <Badge variant='primary' size={'lg'}>
+          <Badge variant='primary' size={'lg'}
+            className='text-accent bg-accent/10 border-accent'>
             {category}
           </Badge>
         )}
@@ -70,6 +71,7 @@ const EventCard = ({ event }) => {
                   key={index}
                   variant='secondary'
                   size="sm"
+                  className='text-accent-400 bg-accent/15'
                 >
                   {keyword}
                 </Badge>

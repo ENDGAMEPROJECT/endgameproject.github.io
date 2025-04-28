@@ -16,10 +16,10 @@ export default function Events() {
 
   return (
     <main className="standard_margin ">
-      <Heading level="h1" className={"text-primary"}>
+      <Heading level="h1" className={"text-accent-500"}>
         {t("events.title")}
       </Heading>
-      <div className="mt-20 grid grid-cols-2 gap-6">
+      <div className="mt-20 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
         {events.map(( event , key) => {
           return <EventCard event={event} key={key} />;
         })}

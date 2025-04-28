@@ -3,9 +3,9 @@
 import * as React from "react";
 import clsx from "clsx";
 import { Slot } from "@radix-ui/react-slot";
+import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 
-import { cn } from "@/lib/utils";
 
 const ButtonVariants = cva(
   "w-fit min-w-20 h-fit inline-flex gap-2 items-center justify-center font-normal whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
@@ -13,7 +13,7 @@ const ButtonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow hover:bg-primary-800",
+          "bg-primary text-black shadow hover:bg-primary-800",
         outline:
           "border border-gray-300 text-gray-300 bg-transparent hover:bg-white/5 hover:text-white hover:border-white/20",
         outlineForeground: //for outline buttons over dark backgrounds
@@ -34,16 +34,21 @@ const ButtonVariants = cva(
         icon: "px-2.5 py-2.5 min-w-7 w-7 min-h-7 h-7",
         icon_sm:"w-6 h-6 min-w-6 min-h-6 p-0" 
       },
+      type: {
+        default: "border-primary bg-primary/10 text-primary",
+        activity: "border-accent bg-accent bg-opacity-10 text-accent",
+        info: "border-secondary bg-secondary/10 text-secondary",
+      },
       radius: {
+        default: 'rounded-none',
         rounded_sm: "rounded-sm",
         rounded_md: "rounded-md",
-        rounded_lg: "rounded-lg",
-        rounded_full: "rounded-full",
       },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
+      radius: 'rounded_sm'
     },
   }
 );

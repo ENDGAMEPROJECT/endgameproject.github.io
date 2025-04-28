@@ -76,7 +76,7 @@ export default function Page() {
 
       {/* SECTION ABOUT */}
       <Heading level="h1">{t("home.aboutSection")}</Heading>
-      <section className="standard_margin ing_sm flex flex-col gap-24">
+      <section className="standard_margin flex flex-col gap-24">
         <article>
           <Heading level="h3">{t("home.about.title")}</Heading>
           <Heading level="subtitle"> {t("home.about.content")}</Heading>
