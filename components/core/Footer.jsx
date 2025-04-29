@@ -20,7 +20,7 @@ export default function Footer(props) {
   const partnerLogoClasses = "min-w-20 max-h-20 md:w-fit";
 
   return (
-    <footer className="h-fit bg-black text-gray-100">
+    <footer className="h-fit bg-[#040404] text-gray-100">
       {/* FOOTER UP */}
       <div className="min-w-[280px] flex justify-between gap-12 md:gap-20 flex-wrap lg:flex-nowrap items-start">
         <div

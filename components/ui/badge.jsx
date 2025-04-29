@@ -7,9 +7,9 @@ const badgeVariants = cva(
   {
     variants: {
       variant: { // style
-        default: 'bg-grey-100/10 bg-opacity-10 text-text border-none capitalize font-body',
-        primary: " bg-opacity-10 border-primary text-primary uppercase font-title",
-        secondary: " bg-opacity-15 text-primary border-none capitalize font-body",
+        default: 'bg-grey-100 bg-opacity-10 text-text border-none font-body',
+        primary: " bg-opacity-10 border uppercase font-title",
+        secondary: " bg-opacity-15 border-none capitalize font-body",
       },
       size: {
         default: "border-1 text-[14px]",
@@ -21,9 +21,9 @@ const badgeVariants = cva(
         // success: "border-green-100 bg-green-100 text-green-800",
         // warn: "border-amber-100 bg-amber-100 text-amber-800",
         // error: "border-red-200 bg-red-200 text-red-800",
-        default: "border-primary bg-primary/10 text-primary",
-        activity: "border-accent bg-accent bg-opacity-10 text-accent",
-        info: "border-secondary bg-secondary/10 text-secondary",
+        default: "border-primary bg-primary text-primary",
+        activity: "border-accent bg-accent text-accent-400 bg-accent",
+        info: "border-secondary bg-secondary text-secondary",
       },
     },
     defaultVariants: {

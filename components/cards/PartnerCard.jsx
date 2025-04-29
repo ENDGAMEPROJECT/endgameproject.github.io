@@ -41,7 +41,7 @@ const PartnerCard = ({ partner }, key) => {
           className={customPaddingName}
         />
         <Image
-          className={customPaddingLogo + " h-40 border border-primary"} // to do: add custom padding for visual balance
+          className={customPaddingLogo + " h-40 border border-primary bg-grey-950"} // to do: add custom padding for visual balance
           // src={partner.logo}
           fit="contain"
           src={partner.logoHorizontal ? partner.logoHorizontal : partner.logo} // cambiar cuando se metan los custom paddings

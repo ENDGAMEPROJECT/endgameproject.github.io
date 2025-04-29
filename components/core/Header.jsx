@@ -27,7 +27,7 @@ export default function Header(props) {
     "h-fit w-full px-8 py-4",
     "z-50 sticky -top-[1px] ",
     "flex justify-between items-center gap-8",
-    "bg-black text-text shadow-md",
+    "bg-[#040404] text-text shadow-md",
     'font-title',
 
     `header_${currentLang} z-50`,
@@ -40,7 +40,7 @@ export default function Header(props) {
   //
 
   const menuClasses = clsx(
-    "bg-black",
+    "bg-[#040404]",
     "w-screen md:p-0 md:w-fit",
     "absolute top-[48px] -right-8 md:static",
     "flex flex-col lg:flex-row ",

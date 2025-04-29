@@ -16,7 +16,7 @@ export default function Events() {
 
   return (
     <main className="standard_margin ">
-      <Heading level="h1" className={"text-accent-500"}>
+      <Heading level="h1" className={"text-accent"}>
         {t("events.title")}
       </Heading>
       <div className="mt-20 grid md:grid-cols-2 xl:grid-cols-3 gap-6">

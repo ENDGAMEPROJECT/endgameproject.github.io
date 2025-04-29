@@ -5,6 +5,8 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { en } from '../constants/langs/en';
 import { es } from '../constants/langs/es';
+import { en2 } from '../constants/langs/en2';
+import { es2 } from '../constants/langs/es2';
 
   // init i18next
   // detect user language
@@ -17,10 +19,12 @@ import { es } from '../constants/langs/es';
     fallbackLng: 'en', // Set the fallback language to English
     resources: {
       en: {
-        translation: en
+        translation: en,
+        translation2: en2
       },
       es: {
-        translation: es
+        translation: es,
+        translation2: es2
       }
     },
     interpolation: {
@@ -33,5 +37,6 @@ import { es } from '../constants/langs/es';
       lookupLocalStorage: 'i18nextLng',
     }
   });
+  
 
 export default i18n;

@@ -1,5 +1,3 @@
-"use client";
-
 export const es = {
   nav: {
     home: "Home",
@@ -11,12 +9,10 @@ export const es = {
   header: {
     publicationstab: "Publicaciones",
   },
-  // PAGE
   home: {
     title: "ENDGAME",
     description:
       "Lucha contra la desinformación a través de escaperooms educativas",
-    "action-button": "CTA button",
     aboutSection: "Qué es ENDGAME",
     about: {
       title: "Sobre el proyecto",
@@ -25,23 +21,17 @@ export const es = {
     },
     mission: {
       title: "Objetivos",
-      // constent: /constants/mission
     },
     partners: {
       title: "Quiénes somos",
       universities: "Universidades",
       agencies: "Agencias",
-      // constent: /constants/partners
     },
     latestContent: {
       title: "Novedades",
       events: {
         title: "News and events",
         button: "See all activity",
-        event: {
-          title: "Título de evento reciente",
-          date: "12 de diciembre de 2025",
-        },
       },
       research: {
         title: "Últimas publicaciones",
@@ -49,19 +39,20 @@ export const es = {
       },
     },
   },
-  // PAGE
   escaperooms: {
     title: "Escaperooms",
+    escaperoom: {
+      "action-button": "ver más",
+    },
   },
   events: {
-    title: "Eventos y noticias", // actividad?
+    title: "Eventos y noticias",
     filters: {
-      search: 'buscar',
+      search: "buscar",
       news: "noticias",
       events: "eventos",
       current: "futuros",
       past: "pasados",
-      // país
     },
     event: {
       "action-button": "detalles del evento",
@@ -70,37 +61,14 @@ export const es = {
       "action-button": "leer noticia",
     },
   },
-  // PAGE
   research: {
-    title: "Investigación e impacto", // resultados?
-    // publicationCards: {
-    //   categories: {
-    //     "article-journal": "Artículo de revista",
-    //     "paper-conference": "Acta de congreso",
-    //     book: "Libro",
-    //     chapter: "Capítulo",
-    //   },
-    // },
-    // "action-button": "Leer publicación",
-    // filters: {
-    //   fieldTitle1: "Buscar",
-    //   fieldTitle2: "Tipo de publicación",
-    //   fieldTitle3: "Año",
-    //   "article-journal": "Artículos de revista",
-    //   "paper-conference": "Actas de congreso",
-    //   book: "Libro",
-    //   chapter: "Capítulo",
-    //   document: "Documento",
-    //   all: "Todos",
-    //   text: "Resultados",
-    // },
+    title: "Investigación e impacto",
     button: "Leer publicación",
     button2: "Ver más",
   },
-    // PAGE
-    about: {
-      title: "Sobre ENDGAME",
-    },
+  about: {
+    title: "Sobre ENDGAME",
+  },
   footer: {
     projectRef: "Referencia del proyecto",
     projectCall: "Call",
@@ -109,10 +77,5 @@ export const es = {
     title1: "Secciones",
     title2: "Síguenos en:",
     title3: "Colaboran",
-    logoSub:
-      "Redes Futuras para Centros de Datos y Empresas de Telecomunicaciones",
-    titleRight: "Departamento de Ingeniería de sistemas telemáticos",
-    titleRight2: "ETSI telecomunicación",
-    email: "Correo de contacto:",
   },
 };
