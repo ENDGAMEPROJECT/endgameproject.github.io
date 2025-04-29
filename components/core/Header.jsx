@@ -24,7 +24,7 @@ export default function Header(props) {
 
   // classes
   const headerClasses = clsx(
-    "h-fit w-full px-8 py-4",
+    "h-fit w-full px-4 lg:px-8 py-4",
     "z-50 sticky -top-[1px] ",
     "flex justify-between items-center gap-8",
     "bg-[#040404] text-text shadow-md",
@@ -43,7 +43,7 @@ export default function Header(props) {
     "bg-[#040404]",
     "w-screen md:p-0 md:w-fit",
     "absolute top-[48px] -right-8 md:static",
-    "flex flex-col lg:flex-row ",
+    "flex flex-col lg:flex-row items-center",
     "gap-2 lg:gap-8",
     "border-t-2 border-t-gray md:border-none",
     "shadow-md md:shadow-none",
@@ -76,7 +76,7 @@ export default function Header(props) {
         />
       </a>
       {/* menu container */}
-      <div className="relative w-fit flex">
+      <div className="relative w-fit flex gap-4 items-center">
         {/* menu icons */}
         <div className="block md:hidden">
           {!state.open ? (
@@ -115,9 +115,9 @@ export default function Header(props) {
               </li>
             ))}
           </ul>
-          <LangSwitcher />
         </div>
         {/* /menu nav */}
+          <LangSwitcher />
       </div>
       {/* menu container */}
     </header>

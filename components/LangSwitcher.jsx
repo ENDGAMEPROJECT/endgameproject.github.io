@@ -1,52 +1,57 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageIcon from "@mui/icons-material/Language";
 import clsx from "clsx";
 
 const lngs = {
-  en: {
-    nativeName: "English",
-    abbreviation: "EN",
-  },
-  es: {
-    nativeName: "Spanish",
-    abbreviation: "ES",
-  },
-  // fi: {
-  //   nativeName: "Finnish",
-  //   abbreviation: "FI",
-  // },
-  // sr: {
-  //   nativeName: "Serbian",
-  //   abbreviation: "SR",
-  // },
+  en: { nativeName: "English", abbreviation: "EN" },
+  es: { nativeName: "Español", abbreviation: "ES" },
+  fi: { nativeName: "Suomeksi", abbreviation: "FI" },
+  sr: { nativeName: "Srpski", abbreviation: "SR" },
 };
+
 
 export default function LangSwitcher() {
   const { i18n } = useTranslation();
+  const [open, setOpen] = useState(false);
+
+  const handleSelect = (lng) => {
+    i18n.changeLanguage(lng);
+    setOpen(false);
+  };
+
   return (
-    <div
-      className={
-        "flex flex-nowrap justify-center md:justify-end items-center gap-2 px-8 py-4 md:p-0 md:w-fit"
-      }
-    >
-      <LanguageIcon className="icon" sx={{ fontSize: 18 }} />
-      {Object.keys(lngs).map((lng) => (
-        <a
-          key={lng}
-          className={clsx("lang-link", "cursor-pointer", {
-            "font-bold text-primary": i18n.language === lng,
-            "font-normal": i18n.language !== lng,
-          })}
-          onClick={() => i18n.changeLanguage(lng)}
-        >
-          {lngs[lng].abbreviation}
-          {lng == "en" && <span className="font-normal"> / </span>}
-          {/* {lng == "fi" && <span className="font-normal"> / </span>}
-          {lng == "es" && <span className="font-normal"> / </span>} */}
-        </a>
-      ))}
+    <div className="relative inline-block">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-fit flex items-center gap-2 px-3 py-2 md:px-4 text-primary rounded-sm hover:bg-grey-100 dark:hover:bg-grey-900"
+      >
+        <LanguageIcon sx={{ fontSize: 18 }} />
+        <span>{lngs[i18n.language]?.abbreviation || "EN"}</span>
+      </button>
+
+      {open && (
+        <ul className="absolute right-0 z-10 mt-1 w-fit bg-white dark:bg-black border border-primary rounded-sm shadow">
+          {Object.entries(lngs).map(([lngKey, { abbreviation, nativeName }, ]) => (
+            
+            <li
+              key={lngKey}
+              onClick={() => handleSelect(lngKey)}
+              className={clsx(
+                "w-full whitespace-nowrap px-5 py-3 cursor-pointer hover:bg-grey-100 dark:hover:bg-grey-900",
+                {
+                  "font-bold text-primary": i18n.language === lngKey,
+                  "font-normal": i18n.language !== lngKey,
+                }
+              )}
+            >
+              {`${nativeName} - ${abbreviation}`}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

@@ -43,8 +43,7 @@ const EscaperoomCard = ({ escaperoom }) => {
     <CustomCard className="bg-black p-4">
       <CardHeader>
         {category && (
-          <Badge variant='primary' size={'lg'}
-            className='text-primary bg-primary/10 border-primary'>
+          <Badge variant='primary' size={'lg'} >
             {category}
           </Badge>
         )}
