@@ -45,7 +45,21 @@ module.exports = {
         text: "#FAFAFA",
         "gray-10": "#FAFAFA",
         black: "#090909",
-        grey: {
+        grey: { // deprecated, ir cambiando
+          DEFAULT: "#0AFFDE",
+          950: "#131313",
+          900: "#202323",
+          800: "#353A39",
+          700: "#495150",
+          600: "#5E6766",
+          500: "#727E7D",
+          400: "#889392",
+          300: "#9FA8A7",
+          200: "#B6BDBC",
+          100: "#CCD1D0",
+          50: "#E3E6E5",
+        },
+        dark: {
           DEFAULT: "#0AFFDE",
           950: "#131313",
           900: "#202323",
