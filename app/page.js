@@ -43,17 +43,17 @@ export default function Page() {
 
   return (
     <main>
-      <Banner className="bg-grey-950">
-        {/* <BannerImg></BannerImg> */}
+      <Banner className='relative flex flex-col'>
+        <BannerImg></BannerImg>
 
-        <BannerContent className="absolute">
+        <BannerContent className="absolute !w-full top-0 left-0 bg-gradient-to-r from-black to-black/50">
           <Image
-            className="mb-6 md:mb-6 max-w-[480px] md:max-w-[720px]"
+            className="h-fit mb-6 md:mb-6 max-w-[480px] md:max-w-[720px]"
             src={endgameLogosPng + "logo_ENDGAME_main_darkBg.png"}
             alt="Endgame logo"
             fit="contain"
           />
-          <BannerDescription className="h-full text-balance flex flex-col gap-2 font-normal">
+          <BannerDescription className="flex flex-col gap-2 font-normal">
             {t("home.description")}
           </BannerDescription>
           <Divider />

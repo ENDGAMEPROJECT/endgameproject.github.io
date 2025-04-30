@@ -42,7 +42,7 @@ export default function Header(props) {
   const menuClasses = clsx(
     "bg-[#040404]",
     "w-screen md:p-0 md:w-fit",
-    "absolute top-[48px] -right-8 md:static",
+    "absolute top-[48px] -right-4 md:static",
     "flex flex-col lg:flex-row items-center",
     "gap-2 lg:gap-8",
     "border-t-2 border-t-gray md:border-none",
@@ -76,7 +76,7 @@ export default function Header(props) {
         />
       </a>
       {/* menu container */}
-      <div className="relative w-fit flex gap-4 items-center">
+      <div className="relative w-fit flex gap-4 md:gap-8 items-center">
         {/* menu icons */}
         <div className="block md:hidden">
           {!state.open ? (

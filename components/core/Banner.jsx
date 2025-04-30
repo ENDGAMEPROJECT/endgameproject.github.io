@@ -15,7 +15,7 @@ const Banner = React.forwardRef(({ className, ...props }, ref) => (
   <section
     ref={ref}
     className={cn(
-      "w-full md:min-h-[85vh]",
+      "w-full h-[85dvh]",
       "text-snow",
       // "gap-6 xl:gap-12",
       "flex justify-start items-center h-[85vh]",
@@ -31,7 +31,7 @@ const BannerContent = React.forwardRef(({ className, ...props }, ref) => (
     ref={ref}
     level="h1"
     className={cn(
-      "h-fit md:max-w-[720px] md:max-w-[1000px] py-12 px-8 xs:px-10 md:px-20 xl:pl-40 z-10 ",
+      "h-full z-10 flex flex-col items-start justify-center px-8 xs:px-10 md:px-20",
       className
     )}
     {...props}
@@ -59,7 +59,7 @@ const BannerDescription = React.forwardRef(({ className, ...props }, ref) => (
     ref={ref}
     level="h3"
     className={cn(
-      "text-snow mb-4 text-xl sm:text-2xl md:text-3xl text-pretty",
+      "mb-4 text-20 sm:text-24 md:text-3xl text-pretty max-w-[40ch]",
       className
     )}
     {...props}
@@ -84,7 +84,7 @@ const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
   <div className={"relative top-0 md:relative flex w-full z-0 h-[85vh]"}>
     <Image
       className="md:h-[85vh] opacity-80"
-      src="assets/img/backgrounds/landing_4.svg"
+      src="assets/images/bannerBg-placeholder.png"
       alt="background illustration"
       fit="cover"
     />

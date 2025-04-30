@@ -43,19 +43,19 @@ const EventCard = ({ event }) => {
     <CustomCard className="bg-black p-4">
       <CardHeader>
         {category && (
-          <Badge variant='primary' size={'lg'}>
+          <Badge variant='primary' size={'lg'} type='activity'>
             {category}
           </Badge>
         )}
       </CardHeader>
       <CardBody>
         <CardContent className="gap-1">
-          <CardTitle level="h5" className="text-balance">
+          <CardTitle level="h5" className="text-pretty">
             {title_translation}
           </CardTitle>
           {date?.[0] && (
             <div className="flex">
-              <CardSubtitle className='text-accent'>{date}</CardSubtitle>
+              <CardSubtitle level='h5' className='text-accent'>{date}</CardSubtitle>
             </div>
           )}
           {description_translation && (

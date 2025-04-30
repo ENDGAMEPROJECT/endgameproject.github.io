@@ -1,7 +1,7 @@
 // Components
 import EscaperoomFull from "@/components/EscaperoomFull";
 
-import { escaperooms } from "@/constants/Escaperooms";
+import { escaperooms } from "@/constants/escaperooms";
 
 const EscaperoomPage = ({ params: { escaperoomname } }) => {   
     return (
