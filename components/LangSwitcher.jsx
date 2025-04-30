@@ -43,14 +43,14 @@ export default function LangSwitcher() {
       </Button>
 
       {open && (
-        <ul className="absolute right-0 z-10 mt-1 w-fit bg-white dark:bg-black border border-primary rounded-sm shadow">
+        <ul className="absolute right-0 z-10 mt-1 w-fit bg-black dark:bg-black border border-primary rounded-sm shadow">
           {Object.entries(lngs).map(
             ([lngKey, { abbreviation, nativeName }]) => (
               <li
                 key={lngKey}
                 onClick={() => handleSelect(lngKey)}
                 className={clsx(
-                  "w-full whitespace-nowrap px-5 py-3 cursor-pointer hover:bg-grey-100 dark:hover:bg-grey-900",
+                  "w-full whitespace-nowrap px-5 py-3 cursor-pointer hover:bg-grey-800 dark:hover:bg-grey-900",
                   {
                     "font-bold text-primary": i18n.language === lngKey,
                     "font-normal": i18n.language !== lngKey,
