@@ -1,9 +1,9 @@
 "use client";
 
-export const en2 = {
+export const sr2 = {
   events: {    
     event: {
-      "join": "Join us",
+      "join": "Pridruži nam se",
     }
   },
 };

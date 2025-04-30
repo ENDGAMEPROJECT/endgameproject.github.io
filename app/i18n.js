@@ -5,13 +5,19 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { en } from '../constants/langs/en';
 import { es } from '../constants/langs/es';
+import { sr } from '../constants/langs/sr';
+import { fi } from '../constants/langs/fi';
 import { en2 } from '../constants/langs/en2';
 import { es2 } from '../constants/langs/es2';
+import { sr2 } from '../constants/langs/sr2';
+import { fi2 } from '../constants/langs/fi2';
 
 
 //merge en and en2 into one object, without overwriting the keys
 const mergedEn = deepMerge({ ...en }, en2);
 const mergedEs = deepMerge({ ...es }, es2);
+const mergedSr = deepMerge({ ...sr }, sr2);
+const mergedFi = deepMerge({ ...fi }, fi2);
 
 
   // init i18next
@@ -29,6 +35,12 @@ const mergedEs = deepMerge({ ...es }, es2);
       },
       es: {
         translation: mergedEs
+      },
+      sr: {
+        translation: mergedSr
+      },
+      fi: {
+        translation: mergedFi
       }
     },
     interpolation: {

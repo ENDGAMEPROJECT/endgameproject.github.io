@@ -39,6 +39,12 @@ const EventCard = ({ event }) => {
   const description_translation =
     currentLang === "es" && description_es ? description_es : description_en;
 
+  const dateFormatted = new Date(date).toLocaleDateString(currentLang, {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
   return (
     <CustomCard className="bg-black p-4">
       <CardHeader>
@@ -55,7 +61,7 @@ const EventCard = ({ event }) => {
           </CardTitle>
           {date?.[0] && (
             <div className="flex">
-              <CardSubtitle level='h5' className='text-accent'>{date}</CardSubtitle>
+              <CardSubtitle level='h5' className='text-accent'>{dateFormatted}</CardSubtitle>
             </div>
           )}
           {description_translation && (

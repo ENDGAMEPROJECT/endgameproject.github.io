@@ -23,6 +23,9 @@ const Text = React.forwardRef(({ type = "p", children, className, ...props }, re
       case "short-p":
         Component = "p";
         break;
+    case "pre":
+      Component = "pre";
+      break;
     default:
       Component = "p"; // Por defecto, usar h1 si no se especifica nivel válido
       break;
@@ -35,6 +38,7 @@ const Text = React.forwardRef(({ type = "p", children, className, ...props }, re
       " text-18 sm:text-base text-pretty": type === "p",
       "text-sm text-wrap leading-normal": type === "small",
       " text-18 sm:text-base": type === "short-p",
+      " text-18 sm:text-base text-pretty": type === "pre",
     },
     className
   ])

@@ -3,7 +3,8 @@ import EscaperoomFull from "@/components/EscaperoomFull";
 
 import { escaperooms } from "@/constants/escaperooms";
 
-const EscaperoomPage = ({ params: { escaperoomname } }) => {   
+const EscaperoomPage = async ({ params }) => {   
+    const { escaperoomname } = await params;
     return (
         <main className="standard_margin ">
             <EscaperoomFull escaperoomname={escaperoomname} />

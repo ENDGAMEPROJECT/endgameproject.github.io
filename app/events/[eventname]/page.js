@@ -3,7 +3,8 @@ import EventFull from "@/components/EventFull";
 
 import { events } from "@/constants/events";
 
-const EventPage = ({ params: { eventname } }) => {   
+const EventPage = async ({ params }) => {   
+    const { eventname } = await params;
     return (
         <main className="standard_margin ">
             <EventFull eventname={eventname} />

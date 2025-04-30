@@ -1,9 +1,9 @@
 "use client";
 
-export const en2 = {
+export const fi2 = {
   events: {    
     event: {
-      "join": "Join us",
+      "join": "Liity joukkoomme",
     }
   },
 };

@@ -2,7 +2,7 @@ export const sr = {
     nav: {
       home: "Početna",
       about: "O ENDGAME-u",
-      escaperooms: "Escape sobe",
+      escaperooms: "Sobe za bekstvo",
       events: "Događaji i vesti",
       research: "Istraživanje i uticaj",
     },
@@ -12,12 +12,12 @@ export const sr = {
     home: {
       title: "ENDGAME",
       description:
-        "Bekstvo od nove dezinformacije kroz gamifikovano obrazovanje o medijskoj pismenosti preko granica",
+        "Bekstvo od dezinformacija kroz gejmifikovanu prekograničnu edukaciju o medijskoj pismenosti",
       aboutSection: "Šta je ENDGAME",
       about: {
         title: "O projektu",
         content:
-          "ENDGAME je inovativni evropski projekat usmeren na razvijanje kritičkog mišljenja i odgovornog digitalnog građanstva među mladima u Evropi kroz obrazovne escape sobe koje simuliraju stvarne scenarije konzumiranja informacija. Cilj nam je da učesnike uronimo u vremenski ograničene, interaktivne i izazovne situacije u kojima će razvijati veštine prepoznavanja dezinformacija, identifikovanja sadržaja generisanog veštačkom inteligencijom i razumevanja posledica deljenja ličnih podataka na društvenim mrežama.",
+          "ENDGAME je inovativni evropski projekat usmeren na razvijanje kritičkog mišljenja i odgovorne digitalne građanske angažovanosti među mladima u Evropi kroz edukativne sobe za bekstvo koje simuliraju stvarne scenarije konzumiranja informacija. Cilj nam je da učesnike uronimo u vremenski ograničene, interaktivne i izazovne situacije u kojima će razvijati veštine prepoznavanja dezinformacija, identifikovanja sadržaja generisanog veštačkom inteligencijom i razumevanja posledica deljenja ličnih podataka na društvenim mrežama.",
       },
       mission: {
         title: "Naša misija",
@@ -40,7 +40,7 @@ export const sr = {
       },
     },
     escaperooms: {
-      title: "Escape sobe",
+      title: "Sobe za bekstvo",
       escaperoom: {
         "action-button": "Pogledaj detalje",
       },
