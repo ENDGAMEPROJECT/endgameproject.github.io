@@ -23,7 +23,7 @@ const MissionCard = ({ mission }) => {
         fit="contain"
       />
       <div className="mt-4 place-content-center text-center">
-        <Heading level="h5" className="!text-primary">{title_translation}</Heading>
+        <Heading level="h5" className="text-primary !text-20">{title_translation}</Heading>
         <Text>{description_translation}</Text>
       </div>
     </li>
