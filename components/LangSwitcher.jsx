@@ -10,8 +10,8 @@ import { Button, ButtonVariants } from "@/components/ui/button";
 const lngs = {
   en: { nativeName: "English", abbreviation: "EN" },
   es: { nativeName: "Español", abbreviation: "ES" },
-  fi: { nativeName: "Suomeksi", abbreviation: "FI" },
-  sr: { nativeName: "Srpski", abbreviation: "SR" },
+  // fi: { nativeName: "Suomeksi", abbreviation: "FI" },
+  // sr: { nativeName: "Srpski", abbreviation: "SR" },
 };
 
 export default function LangSwitcher() {
