@@ -27,7 +27,7 @@ const mergedFi = deepMerge({ ...fi }, fi2);
   // pass the i18n instance to react-i18next.  
   i18n.use(initReactI18next).use(LanguageDetector).init({
     debug: true,
-    supportedLngs: ['en', 'es'],
+    supportedLngs: ['en', 'es', 'sr', 'fi'],
     fallbackLng: 'en', // Set the fallback language to English
     resources: {
       en: {
