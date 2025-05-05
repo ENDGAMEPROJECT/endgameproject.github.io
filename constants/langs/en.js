@@ -4,7 +4,7 @@ export const en = {
     about: "About ENDGAME",
     escaperooms: "Escaperooms",
     events: "Events and news",
-    research: "Research and impact",
+    research: "Results", // Research and impact
   },
   header: {
     publicationstab: "Research",
@@ -55,10 +55,10 @@ export const en = {
       past: "past",
     },
     event: {
-      "action-button": "event details",
+      "action-button": "Event details",
     },
     new: {
-      "action-button": "read",
+      "action-button": "Read",
     },
   },
   research: {
@@ -78,4 +78,8 @@ export const en = {
     title2: "Follow us!",
     title3: "Partners",
   },
+  buttons: {
+    toggleMore: 'See more',
+    toggleLess: 'See less'
+  }
 };

@@ -12,12 +12,14 @@ import {
   CardBody,
   CardContent,
   CardTitle,
+  CardDescription,
   CardFooter,
   CardHeader,
   CardSubtitle,
 } from "@/components/ui/customCard";
 
 import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
+import EventSharp from "@mui/icons-material/EventSharp";
 
 const EventCard = ({ event }) => {
   const {
@@ -40,16 +42,16 @@ const EventCard = ({ event }) => {
     currentLang === "es" && description_es ? description_es : description_en;
 
   const dateFormatted = new Date(date).toLocaleDateString(currentLang, {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   return (
     <CustomCard className="bg-black p-4">
       <CardHeader>
         {category && (
-          <Badge variant='primary' size={'lg'} type='activity'>
+          <Badge variant="primary" size={"lg"} type="activity">
             {category}
           </Badge>
         )}
@@ -61,22 +63,23 @@ const EventCard = ({ event }) => {
           </CardTitle>
           {date?.[0] && (
             <div className="flex">
-              <CardSubtitle level='h5' className='text-accent'>{dateFormatted}</CardSubtitle>
+              <CardSubtitle level="h5" className="text-accent flex gap-4 items-center">
+                <EventSharp className="h-7 w-7" />
+                {dateFormatted}
+              </CardSubtitle>
             </div>
           )}
           {description_translation && (
-            <Text className="text-gray-300/90 mb-4 lg:pr-16" type="small">
-              {description_translation}
-            </Text>
+            <CardDescription description={description_translation} />
           )}
           {Array.isArray(keywords) && (
             <div className="flex flex-wrap gap-1.5">
               {keywords.map((keyword, index) => (
                 <Badge
                   key={index}
-                  variant='secondary'
+                  variant="secondary"
                   size="sm"
-                  className='text-accent-400 bg-accent/15'
+                  className="text-accent-400 bg-accent/15"
                 >
                   {keyword}
                 </Badge>
@@ -86,7 +89,7 @@ const EventCard = ({ event }) => {
         </CardContent>
       </CardBody>
       {eventname && (
-        <CardFooter className='p-0'>
+        <CardFooter className="p-0 flex-wrap">
           <Button asChild variant="outline" size="sm" radius="rounded_sm">
             {/* <Link rel="noopener noreferrer" target="_blank" href={eventDetail}> */}
             <Link rel="noopener noreferrer" href={`/events/${eventname}`}>

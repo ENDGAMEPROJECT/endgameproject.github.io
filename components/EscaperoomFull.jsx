@@ -37,7 +37,9 @@ const escaperoomFull = ({ escaperoomname }) => {
   const [escaperoom, setescaperoom] = useState(null);
 
   useEffect(() => {
-    const escaperoomData = escaperooms.find((escaperoom) => escaperoom.escaperoomname === escaperoomname);
+    const escaperoomData = escaperooms.find(
+      (escaperoom) => escaperoom.escaperoomname === escaperoomname
+    );
     setescaperoom(escaperoomData);
   }, [escaperoomname]);
 
@@ -81,29 +83,31 @@ const escaperoomFull = ({ escaperoomname }) => {
       <HighlightedHeader
         string={title}
         variant={""}
-        level="h1"
-        // className="px-[5%] md:px-[10%] lg:px-[30%] xl:px-[40%] 2xl:px-[45%] color-primary"
-        className="mt-0 pt-0 justify-center px-[2.5%] md:px-[5%] lg:px-[15%] xl:px-[20%] 2xl:px-[25%] color-primary"
+        level="h2"
+        // className="mt-0 pt-0 justify-center px-[2.5%] md:px-[5%] lg:px-[15%] xl:px-[20%] 2xl:px-[25%] color-primary"
       >
         {title}
       </HighlightedHeader>
-        <Heading level="h4">{theme}</Heading>
-      <Button asChild variant="outline" size='lg' className='text-primary-300 border-primary-300'>
+      <Heading level="h4" className='capitalize'>{theme}</Heading>
+      <Button
+        asChild
+        variant="outline"
+        size="lg"
+        type='primary'
+        className="text-primary-300 border-primary-300"
+      >
         <Link href={externalLink} target="_blank" rel="noopener noreferrer">
           {externalLinkText}
           <NorthEastSharp />
         </Link>
       </Button>
-      <Badge variant="secondary" type='' size='lg'>{keywordsFormatted}</Badge>
+      {/* <Badge variant="secondary" type="" size="lg">
+        {keywordsFormatted}
+      </Badge> */}
       {Array.isArray(keywords) && (
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap justify-center gap-1.5">
           {keywords.map((keyword, index) => (
-            <Badge
-              key={index}
-              variant="secondary"
-              size="lg"
-              type=''
-            >
+            <Badge key={index} variant="secondary" size="lg" type="">
               {keyword}
             </Badge>
           ))}

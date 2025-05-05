@@ -18,7 +18,7 @@ export const escaperooms = [
     category: "escaperoom",
     theme_en: "media literacy",
     title_en:
-      "Escaperoom title",
+      "Escaperoom long title this is a longer title to test paddings",
     title_es: "Título de la Escaperoom",
     description_en:
       "In this session, experts will dissect the impact of misinformation and teach practical strategies for analyzing media critically.",

@@ -13,6 +13,7 @@ import { Button, ButtonVariants } from "@/components/ui/button";
 
 // icons
 import NorthEastSharp from "@mui/icons-material/NorthEastSharp";
+import EventSharp from "@mui/icons-material/EventSharp";
 
 /* eventinfo is like this:
 {
@@ -54,7 +55,7 @@ const EventFull = ({ eventname }) => {
     hour,
     category,
     keywords,
-    externalLinkJoin    
+    externalLinkJoin,
   } = event;
 
   const currentLang = i18n.language;
@@ -66,44 +67,47 @@ const EventFull = ({ eventname }) => {
     day: "numeric",
   });
 
-  const categoryFormatted = category.charAt(0).toUpperCase() + category.slice(1);
+  const categoryFormatted =
+    category.charAt(0).toUpperCase() + category.slice(1);
 
-
-    return (
+  return (
     <div className="flex flex-col gap-8 items-center">
       <Badge variant="primary" type="activity" size="xl" className="text-base">
         {categoryFormatted}
-      </Badge>      
+      </Badge>
       <HighlightedHeader
         string={title}
         variant={"activity"}
-        level="h1"
+        level="h2"
         // className="px-[5%] md:px-[10%] lg:px-[30%] xl:px-[40%] 2xl:px-[45%] color-accent"
-        className="mt-0 pt-0 justify-center px-[2.5%] md:px-[5%] lg:px-[15%] xl:px-[20%] 2xl:px-[25%] color-accent"
+        className=" color-accent"
       >
         {title}
       </HighlightedHeader>
-        <Heading level="h4">{dateFormatted + " - " + hour}</Heading>
-      
+      <Heading level="h5" className='flex items-center gap-4'>
+        <EventSharp className="h-7 w-7"/>
+        {dateFormatted + " - " + hour}
+      </Heading>
 
-      
       {Array.isArray(keywords) && (
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex justify-center flex-wrap gap-1.5">
           {keywords.map((keyword, index) => (
-            <Badge
-              key={index}
-              variant="secondary"
-              size="lg"
-              type='activity'
-            >
+            <Badge key={index} variant="secondary" size="lg" type="activity">
               {keyword}
             </Badge>
           ))}
         </div>
       )}
-      <Text className="text-base" type="pre">{description}</Text>
+      <Text className="text-base" type="pre">
+        {description}
+      </Text>
 
-      <Button asChild variant="outline" size='lg' className='text-accent-300 border-accent-300'>
+      <Button
+        asChild
+        variant="outline"
+        size="lg"
+        className="text-accent-300 border-accent-300"
+      >
         <Link href={externalLinkJoin} target="_blank" rel="noopener noreferrer">
           {t("events.event.join")}
           <NorthEastSharp />

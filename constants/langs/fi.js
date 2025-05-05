@@ -4,7 +4,7 @@ export const fi = {
       about: "Tietoa ENDGAME:sta",
       escaperooms: "Pakohuoneet",
       events: "Tapahtumat ja uutiset",
-      research: "Tutkimus ja vaikutus",
+      research: "Tulokset", // Tutkimus ja vaikutus
     },
     header: {
       publicationstab: "Tutkimus",
@@ -55,10 +55,10 @@ export const fi = {
         past: "menneet",
       },
       event: {
-        "action-button": "tapahtuman tiedot",
+        "action-button": "Tapahtuman tiedot",
       },
       new: {
-        "action-button": "lue",
+        "action-button": "Lue",
       },
     },
     research: {
@@ -78,5 +78,9 @@ export const fi = {
       title2: "Seuraa meitä!",
       title3: "Partnerit",
     },
+    buttons: {
+      toggleMore: 'Katso lisää',
+      toggleLess: 'Nähdä vähemmän'
+    }
   };
   

@@ -4,7 +4,7 @@ export const es = {
     about: "Sobre ENDGAME",
     escaperooms: "Escaperooms",
     events: "Eventos y noticias",
-    research: "Investigación e impacto",
+    research: "resultados", // Investigación e impacto
   },
   header: {
     publicationstab: "Publicaciones",
@@ -55,10 +55,10 @@ export const es = {
       past: "pasados",
     },
     event: {
-      "action-button": "detalles del evento",
+      "action-button": "Detalles del evento",
     },
     new: {
-      "action-button": "leer noticia",
+      "action-button": "Leer noticia",
     },
   },
   research: {
@@ -78,4 +78,8 @@ export const es = {
     title2: "Síguenos en:",
     title3: "Colaboran",
   },
+  buttons: {
+    toggleMore: 'Ver más',
+    toggleLess: 'Ver menos'
+  }
 };

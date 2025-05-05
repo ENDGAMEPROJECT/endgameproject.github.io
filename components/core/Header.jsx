@@ -49,7 +49,7 @@ export default function Header(props) {
     "shadow-md md:shadow-none",
     {
       "block md:flex": state.open,
-      "hidden md:flex": !state.open,
+      "hidden md:flex": !state.open, // all routes acive -> lg:flex
     }
   );
 
@@ -61,7 +61,7 @@ export default function Header(props) {
   const menuItemClasses = clsx(
     "w-full h-full text-center px-8 py-4 md:p-0 md:w-fit",
     "text-lg md:text-base",
-    " hover:text-blue-300"
+    " hover:text-primary-300"
   );
 
   return (
@@ -78,7 +78,8 @@ export default function Header(props) {
       {/* menu container */}
       <div className="relative w-fit flex gap-4 md:gap-8 items-center">
         {/* menu icons */}
-        <div className="block md:hidden">
+        <div className="block md:hidden"> 
+          {/* all routes acive -> lg:flex */}
           {!state.open ? (
             <MenuOutlinedIcon
               sx={{ fontSize: 28 }}

@@ -1,7 +1,7 @@
 export const events = [
   {
     eventname: "WorkshopSpain",
-    category: "Workshop",
+    category: "Workshop", // + online?
     date: "05/07/25",
     hour: "17:00 UTC+1",
     title_en: "Narratives under the Magnifying Glass: Designing Educational Tools against Disinformation",
@@ -17,6 +17,7 @@ Si te dedicas al periodismo o la docencia, eres estudiante o trabajas con jóven
 El miércoles 7 de mayo a las 17:00 h (hora Madrid) te invitamos a participar en una sesión online de una hora en la que conversaremos, compartiremos ideas y escucharemos tu experiencia para analizar los hábitos digitales y las narrativas desinformadoras a las que se enfrenta la juventud española.  
 
 En esta sesión, personas expertas aportarán su opinión y vivencias para ayudar a dar forma a diversos materiales educativos que ayuden a a juventud a reconocer la desinformación y a fortalecer su pensamiento crítico. Queremos que estos recursos sean verdaderamente útiles, accesibles y conectados con las necesidades reales de la sociedad. Para lograrlo, necesitamos contar con personas como tú. Contar contigo es una enorme ayuda para todas las personas que estamos diseñando este proyecto. `,
+// short description -> eventCard
     externalLinkJoin: "https://forms.gle/6HugpAZw7oSqDTc56",
     keywords: ["Workshop", "Media literacy", "misinformation"]
   }

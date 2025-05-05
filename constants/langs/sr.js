@@ -4,7 +4,7 @@ export const sr = {
       about: "O ENDGAME-u",
       escaperooms: "Sobe za bekstvo",
       events: "Događaji i vesti",
-      research: "Istraživanje i uticaj",
+      research: "Rezultati", // Istraživanje i uticaj
     },
     header: {
       publicationstab: "Istraživanje",
@@ -78,5 +78,9 @@ export const sr = {
       title2: "Pratite nas!",
       title3: "Partneri",
     },
+    buttons: {
+      toggleMore: 'Vidi više',
+      toggleLess: 'Vidi manje'
+    }
   };
   

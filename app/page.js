@@ -43,7 +43,7 @@ export default function Page() {
 
   return (
     <main>
-      <Banner className='relative flex flex-col'>
+      <Banner className="relative flex flex-col">
         <BannerImg></BannerImg>
 
         <BannerContent className="absolute !w-full top-0 left-0 bg-gradient-to-r from-black to-black/50">
@@ -92,7 +92,10 @@ export default function Page() {
         {/* ABOUT partners */}
         <article>
           <Heading level="h3">{t("home.partners.title")}</Heading>
-          <Heading level="h5" className="text-center mb-4 uppercase text-primary">
+          <Heading
+            level="h5"
+            className="text-center mb-4 uppercase text-primary"
+          >
             {t("home.partners.universities")}
           </Heading>
           <ul className="md:grid grid-cols-3 gap-8 items-end">
@@ -100,7 +103,10 @@ export default function Page() {
             <PartnerCard partner={partners.upm} />
             <PartnerCard partner={partners.bmu} />
           </ul>
-          <Heading level="h5" className="text-center my-4 uppercase text-primary">
+          <Heading
+            level="h5"
+            className="text-center my-4 uppercase text-primary"
+          >
             {t("home.partners.agencies")}
           </Heading>
           <ul className="md:grid grid-cols-3 gap-8">
@@ -173,6 +179,8 @@ export default function Page() {
 
         <Divider size="md"></Divider>
       </section> */}
+
+
     </main>
   );
 }

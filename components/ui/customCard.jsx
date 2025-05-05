@@ -106,10 +106,11 @@ const CardDescription = React.forwardRef(
       <div className="pb-3">
         <Text
           ref={textRef}
-          className={clsx("text-white", {
+          className={clsx("text-text/80", {
             "line-clamp-none": isExpanded,
             "line-clamp-3": !isExpanded,
           })}
+          type='small'
         >
           {description}
         </Text>
@@ -118,12 +119,12 @@ const CardDescription = React.forwardRef(
           <Button
             size="sm"
             variant="link"
-            className="min-w-fit p-0 font-bold hover:text-blue-300 text-white underline underline-offset-2"
+            className="min-w-fit p-0 text-text hover:text-accent-100 underline underline-offset-2"
             onClick={toggleDescription}
           >
             {isExpanded
-              ? t("projects.card.toggleLess")
-              : t("projects.card.toggleMore")}
+              ? t("buttons.toggleLess")
+              : t("buttons.toggleMore")}
           </Button>
         )}
       </div>
