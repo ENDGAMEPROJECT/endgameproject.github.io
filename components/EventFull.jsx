@@ -72,7 +72,7 @@ const EventFull = ({ eventname }) => {
 
   return (
     <div className="flex flex-col gap-8 items-center">
-      <Badge variant="primary" type="activity" size="xl" className="text-base">
+      <Badge variant="primary" type="activity" size="xl">
         {categoryFormatted}
       </Badge>
       <HighlightedHeader
@@ -105,8 +105,8 @@ const EventFull = ({ eventname }) => {
       <Button
         asChild
         variant="outline"
-        size="lg"
-        className="text-accent-300 border-accent-300"
+        size="xl"
+        className="text-accent-400 border-accent-400 hover:bg-accent hover:border-accent hover:text-black"
       >
         <Link href={externalLinkJoin} target="_blank" rel="noopener noreferrer">
           {t("events.event.join")}

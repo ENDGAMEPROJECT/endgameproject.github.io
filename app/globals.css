@@ -140,6 +140,10 @@ main {
   }
 }
 
+body {
+  @apply text-text;
+}
+
 /* 
 NEWWWWWWWWWWW ENDGAME
 */

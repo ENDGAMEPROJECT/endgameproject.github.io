@@ -4,9 +4,13 @@ import * as React from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
+import { events } from "@/constants/events";
+import EventCard from "@/components/cards/EventCard";
+
 import { endgameLogosPng } from "@/constants/assetsRoutes";
 
 import { Button, ButtonVariants } from "@/components/ui/button";
+import { Badge, BadgeVariants } from "@/components/ui/badge";
 import Heading from "@/components/ui/Heading";
 import { Divider, DividerVariants } from "@/components/ui/divider";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -26,6 +30,7 @@ import {
 } from "@/components/core/Banner";
 import {
   CustomCard,
+  CardHeader,
   CardTitle,
   CardSubtitle,
   CardContent,
@@ -119,17 +124,17 @@ export default function Page() {
       <Divider size="xl" />
 
       {/* LATEST CONTENT */}
-      {/* 
+{/* 
       <section
         className="standard_margin-s section-researchlines landing_cards"
         id="researchlines"
       >
         <Divider size="md"></Divider>
-        <Heading level="h1">{t("home.latestContent.title")}</Heading>
+        <Heading level="h1">{t("home.latestContent.title")}</Heading> *}
         {/* EVENTS AND NEWS */}
-      {/* 
+{/* 
         <section className="cards">
-          <header className="mb-4 w-full flex justify-between border-b border-cyan-400">
+          <header className="mb-4 w-full flex justify-between border-b border-accent">
             <Heading level="h4">{t("home.latestContent.events.title")}</Heading>
             <Button
               className={
@@ -144,43 +149,31 @@ export default function Page() {
             </Button>
           </header>
           <section className="flex gap-4">
-            <CustomCard className="min-h-40 w-fit min-w-80 p-4 bg-black">
-              <CardBody>
-                <CardTitle level="h5">
-                  {t("home.latestContent.events.event.title")}
-                </CardTitle>
-                <CardSubtitle>
-                  {t("home.latestContent.events.event.date")}
-                </CardSubtitle>
-              </CardBody>
-            </CustomCard>
-            <CustomCard className="min-h-40 w-fit p-4 bg-black">
-              <CardBody>
-                <CardTitle level="h5">
-                  {t("home.latestContent.events.event.title")}
-                </CardTitle>
-                <CardSubtitle>
-                  {t("home.latestContent.events.event.date")}
-                </CardSubtitle>
-              </CardBody>
-            </CustomCard>
-            <CustomCard className="min-h-40 w-fit p-4 bg-black">
-              <CardBody>
-                <CardTitle level="h5">
-                  {t("home.latestContent.events.event.title")}
-                </CardTitle>
-                <CardSubtitle>
-                  {t("home.latestContent.events.event.date")}
-                </CardSubtitle>
-              </CardBody>
-            </CustomCard>
+            {events.map((event, key) => {
+              return (
+                <CustomCard className="min-h-40 max-w-[33%] w-fit p-4 bg-black">
+                  <CardHeader>
+                    {event.category && (
+                      <Badge variant="primary" size={"lg"} type="activity">
+                        {event.category}
+                      </Badge>
+                    )}
+                  </CardHeader>
+                  <CardBody>
+                    <CardTitle level="h5">{t(event.title_en)}</CardTitle>
+                    <CardSubtitle>
+                      {t(event.date + " - " + event.hour)}
+                    </CardSubtitle>
+                  </CardBody>
+                </CustomCard>
+              );
+            })}
+
           </section>
-        </section>
+        </section> 
 
         <Divider size="md"></Divider>
-      </section> */}
-
-
+      </section>*/}
     </main>
   );
 }

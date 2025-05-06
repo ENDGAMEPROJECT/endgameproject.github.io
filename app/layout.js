@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
           <html className={` ${dmSans.variable} ${spaceGrotesk.variable} `}>
             <GoogleAnalytics gaId="G-N132LLPSLM" />
       <title>ENDGAME</title>
-      <body className="bg-grey-950 text-text min-h-[70dvh] mx-auto">
+      <body className="bg-grey-950 min-h-[70dvh] mx-auto">
         <Header route={"/"} />
         {/* <main className="min-h-[70dvh] mx-auto"> */}
           {children}

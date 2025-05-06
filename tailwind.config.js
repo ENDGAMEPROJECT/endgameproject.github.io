@@ -21,7 +21,7 @@ module.exports = {
         title: ["var(--font-space)", "sans-serif"],
         main: ["var(--font-dmSans)", "sans-serif"],
       },
-      fontSize: {
+      fontSize: { // no siempre funciona bien la prioridad de tw
         "2xs": ["0.625rem", { lineHeight: "1.4" }] /* 10px */,
         xs: ["0.75rem", { lineHeight: "1.4" }] /* 12px */,
         sm: ["0.875rem", { lineHeight: "1.4" }] /* 14px */,
@@ -58,6 +58,7 @@ module.exports = {
           200: "#B6BDBC",
           100: "#CCD1D0",
           50: "#E3E6E5",
+          10: "#FAFAFA",
         },
         dark: {
           DEFAULT: "#0AFFDE",
