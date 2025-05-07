@@ -80,11 +80,11 @@ const EventFull = ({ eventname }) => {
         variant={"activity"}
         level="h2"
         // className="px-[5%] md:px-[10%] lg:px-[30%] xl:px-[40%] 2xl:px-[45%] color-accent"
-        className=" color-accent"
+        className=" color-accent py-6"
       >
         {title}
       </HighlightedHeader>
-      <Heading level="h5" className='flex items-center gap-4'>
+      <Heading level="h4" className='flex items-center gap-4'>
         <EventSharp className="h-7 w-7"/>
         {dateFormatted + " - " + hour}
       </Heading>

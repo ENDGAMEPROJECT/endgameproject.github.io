@@ -39,7 +39,7 @@ export const en = {
       },
     },
   },
-  escaperooms: {
+  escaperooms: { 
     title: "Escaperooms",
     escaperoom: {
       "action-button": "See details",

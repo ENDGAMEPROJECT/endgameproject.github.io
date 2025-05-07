@@ -6,7 +6,7 @@ import { cva } from "class-variance-authority";
 
 import Heading from "./Heading";
 
-const wordVariants = cva("text-black px-2", {
+const wordVariants = cva("text-black px-1.5", {
   variants: {
     variant: {
       // style

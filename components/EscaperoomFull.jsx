@@ -77,33 +77,22 @@ const escaperoomFull = ({ escaperoomname }) => {
       <Badge variant="primary" type="" size="xl" className="text-base">
         {categoryFormatted}
       </Badge>
-      <Heading level="h5" className="w-full text-center text-primary-400">
+      {/* <Heading level="h5" className="w-full text-center text-primary">
         {escaperoomname}
-      </Heading>
+      </Heading> */}
       <HighlightedHeader
         string={title}
         variant={""}
         level="h2"
+        className={'py-6'}
         // className="mt-0 pt-0 justify-center px-[2.5%] md:px-[5%] lg:px-[15%] xl:px-[20%] 2xl:px-[25%] color-primary"
       >
         {title}
       </HighlightedHeader>
       <Heading level="h4" className='capitalize'>{theme}</Heading>
-      <Button
-        asChild
-        variant="outline"
-        size="lg"
-        type='primary'
-        className="text-primary-300 border-primary-300"
-      >
-        <Link href={externalLink} target="_blank" rel="noopener noreferrer">
-          {externalLinkText}
-          <NorthEastSharp />
-        </Link>
-      </Button>
       {/* <Badge variant="secondary" type="" size="lg">
         {keywordsFormatted}
-      </Badge> */}
+        </Badge> */}
       {Array.isArray(keywords) && (
         <div className="flex flex-wrap justify-center gap-1.5">
           {keywords.map((keyword, index) => (
@@ -113,6 +102,18 @@ const escaperoomFull = ({ escaperoomname }) => {
           ))}
         </div>
       )}
+        <Button
+          asChild
+          variant="outline"
+          size="xl"
+          type='primary'
+          className="mt-4 text-primary-300 border-primary-300 hover:bg-primary hover:text-black hover:border-primary"
+        >
+          <Link href={externalLink} target="_blank" rel="noopener noreferrer">
+            {externalLinkText}
+            <NorthEastSharp />
+          </Link>
+        </Button>
       <Text className="text-base">{description}</Text>
     </div>
   );

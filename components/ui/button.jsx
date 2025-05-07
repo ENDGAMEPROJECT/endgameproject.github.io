@@ -14,8 +14,10 @@ const ButtonVariants = cva(
         primary: "bg-grey-10 text-black shadow hover:bg-white",
         secondary:
         "bg-background-400 text-gray-300 hover:text-white hover:bg-background-200",
+        tertiary:
+        "border border-transparent bg-transparent text-text shadow-none py-0",
         outline:
-          "border border-grey-10 bg-black text-grey-10 hover:bg-white/5 hover:text-white hover:border-white",
+          "border border-grey-10 bg-transparent text-grey-10 hover:bg-white/5 hover:text-white hover:border-white",
         //for outline buttons over dark backgrounds
         // outlineForeground:
         //   "border border-input border-secondary text-secondary-100 shadow-sm hover:bg-primary/30 hover:text-accent-foreground",

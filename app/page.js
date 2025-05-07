@@ -7,8 +7,12 @@ import { useTranslation } from "react-i18next";
 import { events } from "@/constants/events";
 import EventCard from "@/components/cards/EventCard";
 
+// assets
 import { endgameLogosPng } from "@/constants/assetsRoutes";
+import ArrowForwardSharp from "@mui/icons-material/ArrowForwardSharp";
+import EventSharp from "@mui/icons-material/EventSharp";
 
+// components
 import { Button, ButtonVariants } from "@/components/ui/button";
 import { Badge, BadgeVariants } from "@/components/ui/badge";
 import Heading from "@/components/ui/Heading";
@@ -19,7 +23,6 @@ import Text from "../components/ui/text";
 import PartnerCard from "../components/cards/PartnerCard";
 import MissionCard from "../components/cards/MissionCard";
 
-//Banner
 import {
   Banner,
   BannerTitle,
@@ -34,6 +37,7 @@ import {
   CardTitle,
   CardSubtitle,
   CardContent,
+  CardFooter,
   CardBody,
 } from "@/components/ui/customCard";
 import { mission } from "@/constants/mission";
@@ -124,56 +128,85 @@ export default function Page() {
       <Divider size="xl" />
 
       {/* LATEST CONTENT */}
-{/* 
-      <section
-        className="standard_margin-s section-researchlines landing_cards"
-        id="researchlines"
-      >
+      <section className="standard_margin-s" id="researchlines">
         <Divider size="md"></Divider>
-        <Heading level="h1">{t("home.latestContent.title")}</Heading> *}
+        <Heading level="h1">{t("home.latestContent.title")}</Heading>
         {/* EVENTS AND NEWS */}
-{/* 
         <section className="cards">
-          <header className="mb-4 w-full flex justify-between border-b border-accent">
+          <header className="mb-4 w-full flex justify-between border-b border-primary">
             <Heading level="h4">{t("home.latestContent.events.title")}</Heading>
             <Button
               className={
                 ButtonVariants({
-                  variant: "ghost",
+                  variant: "tertiary",
                   size: "lg",
                   radius: "rounded_sm",
-                }) + ""
+                }) + " hover:text-primary"
               }
             >
-              {t("research.button2")}
+              <Link
+                href={"/events"}
+                rel="noopener noreferrer"
+                onClick={() => {
+                  window.scrollTo({ top: 0 });
+                }}
+              >
+                {t("home.latestContent.events.button")}
+                <ArrowForwardSharp />
+              </Link>
             </Button>
           </header>
-          <section className="flex gap-4">
+          <section className="grid grid-cols-3 gap-8">
             {events.map((event, key) => {
               return (
-                <CustomCard className="min-h-40 max-w-[33%] w-fit p-4 bg-black">
-                  <CardHeader>
-                    {event.category && (
-                      <Badge variant="primary" size={"lg"} type="activity">
-                        {event.category}
-                      </Badge>
-                    )}
-                  </CardHeader>
-                  <CardBody>
-                    <CardTitle level="h5">{t(event.title_en)}</CardTitle>
-                    <CardSubtitle>
-                      {t(event.date + " - " + event.hour)}
-                    </CardSubtitle>
-                  </CardBody>
-                </CustomCard>
+                <Link
+                  href={`/events/${event.eventname}`}
+                  className="min-h-40 p-4 bg-black border border-transparent hover:border-accent transition-all duration-200 ease-in-out"
+                  onClick={() => {
+                    window.scrollTo({ top: 0 });
+                  }}
+                >
+                  <CustomCard key={key}>
+                    <CardHeader className="pb-0">
+                      {event.category && (
+                        <Badge variant="primary" size="md" type="activity">
+                          {event.category}
+                        </Badge>
+                      )}
+                    </CardHeader>
+                    <CardBody>
+                      <CardTitle level="h5">{t(event.title_en)}</CardTitle>
+                      <CardSubtitle
+                        level="h6"
+                        className="text-accent flex gap-2 items-center"
+                      >
+                        <EventSharp className="h-5 w-5" />
+                        {event.date + " - " + event.hour}
+                      </CardSubtitle>
+                      {Array.isArray(event.keywords) && (
+                        <div className="flex flex-wrap gap-1.5 mt-2">
+                          {event.keywords.map((keyword, index) => (
+                            <Badge
+                              key={index}
+                              variant="secondary"
+                              size="sm"
+                              className="text-accent-400 bg-accent/15"
+                            >
+                              {keyword}
+                            </Badge>
+                          ))}
+                        </div>
+                      )}
+                    </CardBody>
+                  </CustomCard>
+                </Link>
               );
             })}
-
           </section>
-        </section> 
+        </section>
 
         <Divider size="md"></Divider>
-      </section>*/}
+      </section>
     </main>
   );
 }

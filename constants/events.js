@@ -20,5 +20,5 @@ En esta sesión, personas expertas aportarán su opinión y vivencias para ayuda
 // short description -> eventCard
     externalLinkJoin: "https://forms.gle/6HugpAZw7oSqDTc56",
     keywords: ["Workshop", "Media literacy", "misinformation"]
-  }
+  }  
 ];
