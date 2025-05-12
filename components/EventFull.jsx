@@ -46,11 +46,15 @@ const EventFull = ({ eventname }) => {
     return <div>Loading...</div>;
   }
 
-  const {
+  let {
     title_en,
     title_es,
+    title_sr,
+    title_fi,
     description_en,
     description_es,
+    description_sr,
+    description_fi,
     date,
     hour,
     category,
@@ -58,9 +62,32 @@ const EventFull = ({ eventname }) => {
     externalLinkJoin,
   } = event;
 
+  //only english is compulsory, the rest are optional
+  if(!title_es) {
+    title_es = title_en;
+  }
+  if (!title_sr) {
+    title_sr = title_en;
+  }
+  if (!title_fi) {
+    title_fi = title_en;
+  }
+  if (!description_es) {
+    description_es = description_en;
+  }
+  if (!description_sr) {
+    description_sr = description_en;
+  }
+  if (!description_fi) {
+    description_fi = description_en;
+  }
+
   const currentLang = i18n.language;
-  const title = currentLang === "es" ? title_es : title_en;
-  const description = currentLang === "es" ? description_es : description_en;
+
+  //set title depending on the language, if the language is not supported, set it to english
+  const title = currentLang === "es" ? title_es : currentLang === "sr" ? title_sr : currentLang === "fi" ? title_fi : title_en;
+  const description = currentLang === "es" ? description_es : currentLang === "sr" ? description_sr : currentLang === "fi" ? description_fi : description_en;
+
   const dateFormatted = new Date(date).toLocaleDateString(currentLang, {
     year: "numeric",
     month: "long",
