@@ -39,5 +39,17 @@ U sredu, 7. maja u 17:00 časova pozivamo vas da učestvujete u jednočasovnoj o
 U ovoj sesiji, stručnjaci će doprineti svojim razmišljanjima i iskustvom kako bi pomogli u oblikovanju različitih obrazovnih materijala koji će pomoći mladima da prepoznaju dezinformacije i ojačaju svoje kritičko rmišljenje. Želimo da ovi resursi budu zaista korisni, pristupačni i povezani sa stvarnim potrebama društva. Da bismo to postigli, potrebni su nam ljudi poput vas. Vaše prisustvo je ogromna pomoć svima nama koji radimo na ovom projektu. `,
     externalLinkJoin: "https://forms.gle/aL2x5URUz1sEbJLaA ",
     keywords: ["Workshop", "Media literacy", "misinformation"],
+  },
+  {
+    eventname: "WorkshopFinland",
+    category: "Workshop",
+    date: "05/16/25",
+    hour: "12:00 UTC+3",
+    title_en:  "Misinformation narratives in Finland",
+    description_en:  `We’re inviting participants to take part in a media literacy workshop as part of the EU-funded ENDGAME project. If you are between 18 and 30 years old and are tired of being exposed to misinformation (e.g., related to migrants, climate change, or cryptocurrency), we want to hear your experience! 
+
+    In this interactive session, you'll help identify the most pressing misinformation narratives and media literacy challenges facing young people today. The results will be used to design educational escape rooms that train critical thinking and digital resilience.`,
+    externalLinkJoin: "https://docs.google.com/forms/d/e/1FAIpQLScyhbCM1wKiRlkt-z8dfbtDKazVuA3T2Xh_1fJ3BZJMSWcLtg/viewform",
+    keywords: ["Workshop", "Media literacy", "misinformation"],
   }  
 ];
