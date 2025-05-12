@@ -15,7 +15,7 @@ const MissionCard = ({ mission }) => {
     lang === "es" && description_es ? description_es : description;
 
   return (
-    <li className="w-full p-6 sm:p-4 bg-black"> 
+    <li className="w-full p-6 sm:p-4 bg-black text-balance"> 
     {/* w-full p-4 bg-black flex items-center sm:flex-col */}
       <Image
         className="!h-20  opacity-50 p-2"

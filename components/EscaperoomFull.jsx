@@ -70,7 +70,7 @@ const escaperoomFull = ({ escaperoomname }) => {
 
   const externalLink = escaperoom.externalLink || "#";
   const externalLinkText =
-    currentLang === "es" ? "Más información" : "More information";
+    currentLang === "es" ? "Ir a la escaperoom" : "Play escaperoom";
 
   return (
     <div className="flex flex-col gap-8 items-center">
@@ -84,7 +84,7 @@ const escaperoomFull = ({ escaperoomname }) => {
         string={title}
         variant={""}
         level="h2"
-        className={'py-6'}
+        className={'py-12'}
         // className="mt-0 pt-0 justify-center px-[2.5%] md:px-[5%] lg:px-[15%] xl:px-[20%] 2xl:px-[25%] color-primary"
       >
         {title}
@@ -107,7 +107,7 @@ const escaperoomFull = ({ escaperoomname }) => {
           variant="outline"
           size="xl"
           type='primary'
-          className="mt-4 text-primary-300 border-primary-300 hover:bg-primary hover:text-black hover:border-primary"
+          className="mt-4 font-medium text-primary-300 border-primary-300 hover:bg-primary hover:text-black hover:border-primary"
         >
           <Link href={externalLink} target="_blank" rel="noopener noreferrer">
             {externalLinkText}

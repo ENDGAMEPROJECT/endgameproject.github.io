@@ -19,21 +19,18 @@ import {
 } from "@/components/ui/customCard";
 
 import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
-import EventSharp from "@mui/icons-material/EventSharp";
 
-const EventCard = ({ event }) => {
+const NewsCard = ({ newsItem }) => {
   const {
     category,
-    type,
-    country,
     date,
     title_en,
     title_es,
     description_en,
     description_es,
     keywords,
-    eventname,
-  } = event;
+    Newsname,
+  } = newsItem;
 
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
@@ -52,26 +49,25 @@ const EventCard = ({ event }) => {
   return (
     <CustomCard className="bg-black p-4">
       <CardHeader>
-        {/* {type && (
-          <Badge variant="type" size={"lg"} type="activity">
+        {type && (
+          <Badge variant="primary" size={"lg"} type="activity">
             {type}
           </Badge>
-        )} */}
+        )}
         {category && (
           <Badge variant="primary" size={"lg"} type="activity">
             {category}
           </Badge>
         )}
-        {/* {country && (
+        {country && (
           <Badge variant="primary" size={"lg"} type="activity">
             {country}
           </Badge>
-        )} */}
+        )}
       </CardHeader>
-      <CardBody className='h-full justify-start'>
-        <CardContent className="gap-1 h-full justify-start">
+      <CardBody>
+        <CardContent className="gap-1">
           <CardTitle level="h5" className="text-pretty">
-            {/* flex: grow */}
             {title_translation}
           </CardTitle>
           {date?.[0] && (
@@ -80,13 +76,12 @@ const EventCard = ({ event }) => {
                 level="h5"
                 className="text-accent flex gap-4 items-center"
               >
-                <EventSharp className="h-7 w-7" />
-                {dateFormatted + " - " + event.hour}
+                {dateFormatted}
               </CardSubtitle>
             </div>
           )}
           {description_translation && (
-            <CardDescription description={description_translation}/>
+            <CardDescription description={description_translation} />
           )}
           {Array.isArray(keywords) && (
             <div className="flex flex-wrap gap-1.5">
@@ -104,12 +99,12 @@ const EventCard = ({ event }) => {
           )}
         </CardContent>
       </CardBody>
-      {eventname && (
+      {Newsname && (
         <CardFooter className="p-0 flex-wrap">
           <Button asChild variant="outline" size="sm" radius="rounded_sm">
-            {/* <Link rel="noopener noreferrer" target="_blank" href={eventDetail}> */}
-            <Link rel="noopener noreferrer" href={`/events/${eventname}`}>
-              {t("events.event.action-button")}
+            {/* <Link rel="noopener noreferrer" target="_blank" href={NewsDetail}> */}
+            <Link rel="noopener noreferrer" href={`/Newss/${Newsname}`}>
+              {t("Newss.News.action-button")}
               <ArrowForwardSharpIcon />
             </Link>
           </Button>
@@ -119,4 +114,4 @@ const EventCard = ({ event }) => {
   );
 };
 
-export default EventCard;
+export default NewsCard;

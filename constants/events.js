@@ -2,6 +2,8 @@ export const events = [
   {
     eventname: "WorkshopSpain",
     category: "Workshop", // + online?
+    country: "Spain",
+    type: "Event",
     date: "05/07/25",
     hour: "17:00 UTC+1",
     title_en: "Narratives under the Magnifying Glass: Designing Educational Tools against Disinformation",
@@ -24,6 +26,8 @@ En esta sesión, personas expertas aportarán su opinión y vivencias para ayuda
      {
     eventname: "WorkshopSerbia",
     category: "Workshop",
+    country: "Serbia",
+    type: "Event",
     date: "05/14/25",
     hour: "18:00 UTC+1",
     title_en:  "Online workshop: Identifying disinformation",
@@ -43,6 +47,8 @@ U ovoj sesiji, stručnjaci će doprineti svojim razmišljanjima i iskustvom kak
   {
     eventname: "WorkshopFinland",
     category: "Workshop",
+    country: "Finland",
+    type: "Event",
     date: "05/16/25",
     hour: "12:00 UTC+3",
     title_en:  "Misinformation narratives in Finland",

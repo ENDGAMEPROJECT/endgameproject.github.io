@@ -128,7 +128,7 @@ export default function Page() {
       <Divider size="xl" />
 
       {/* LATEST CONTENT */}
-      <section className="standard_margin-s" id="researchlines">
+      <section className="standard_margin" id="researchlines">
         <Divider size="md"></Divider>
         <Heading level="h1">{t("home.latestContent.title")}</Heading>
         {/* EVENTS AND NEWS */}
@@ -156,7 +156,7 @@ export default function Page() {
               </Link>
             </Button>
           </header>
-          <section className="grid grid-cols-3 gap-8">
+          <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event, key) => {
               return (
                 <Link
@@ -168,14 +168,24 @@ export default function Page() {
                 >
                   <CustomCard key={key}>
                     <CardHeader className="pb-0">
+                      {/* {event.type && (
+                        <Badge variant="type" size="md" type="activity">
+                          {event.type}
+                        </Badge>
+                      )} */}
                       {event.category && (
                         <Badge variant="primary" size="md" type="activity">
                           {event.category}
                         </Badge>
                       )}
+                      {/* {event.country && (
+                        <Badge variant="primary" size="md" type="activity">
+                          {event.country}
+                        </Badge>
+                      )} */}
                     </CardHeader>
                     <CardBody>
-                      <CardTitle level="h5">{t(event.title_en)}</CardTitle>
+                      <CardTitle level="h5" className='grow text-pretty'>{t(event.title_en)}</CardTitle>
                       <CardSubtitle
                         level="h6"
                         className="text-accent flex gap-2 items-center"
@@ -184,7 +194,7 @@ export default function Page() {
                         {event.date + " - " + event.hour}
                       </CardSubtitle>
                       {Array.isArray(event.keywords) && (
-                        <div className="flex flex-wrap gap-1.5 mt-2">
+                        <div className="flex flex-wrap gap-1.5 mt-2 grow">
                           {event.keywords.map((keyword, index) => (
                             <Badge
                               key={index}
