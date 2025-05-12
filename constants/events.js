@@ -35,7 +35,7 @@ On Wednesday, May 14 at 6:00 pm we invite you to participate in a one-hour onlin
 In this session, experts will contribute their opinions and experiences to help shape various educational materials to help youth recognize disinformation and strengthen their critical thinking. We want these resources to be truly useful, accessible and connected to the real needs of society. To achieve this, we need people like you. Having you is a huge help to all of us who are designing this project.  `,
     description_sr: `Ako radite u novinarstvu ili nastavi, student ste ili radite sa mladima, potrebni ste nam!
 
-U sredu, 7. maja u 17:00 časova pozivamo vas da učestvujete u jednočasovnoj onlajn sesiji u kojoj ćemo razgovarati, deliti ideje i slušati vaša iskustva kako bismo analizirali digitalne navike i dezinformacije sa kojima se suočavaju mladi u Srbiji.
+U sredu, 14. maja u 18:00 časova pozivamo vas da učestvujete u jednočasovnoj onlajn sesiji u kojoj ćemo razgovarati, deliti ideje i slušati vaša iskustva kako bismo analizirali digitalne navike i dezinformacije sa kojima se suočavaju mladi u Srbiji.
 U ovoj sesiji, stručnjaci će doprineti svojim razmišljanjima i iskustvom kako bi pomogli u oblikovanju različitih obrazovnih materijala koji će pomoći mladima da prepoznaju dezinformacije i ojačaju svoje kritičko rmišljenje. Želimo da ovi resursi budu zaista korisni, pristupačni i povezani sa stvarnim potrebama društva. Da bismo to postigli, potrebni su nam ljudi poput vas. Vaše prisustvo je ogromna pomoć svima nama koji radimo na ovom projektu. `,
     externalLinkJoin: "https://forms.gle/aL2x5URUz1sEbJLaA ",
     keywords: ["Workshop", "Media literacy", "misinformation"],
