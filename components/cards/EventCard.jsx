@@ -22,15 +22,19 @@ import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
 import EventSharp from "@mui/icons-material/EventSharp";
 
 const EventCard = ({ event }) => {
-  const {
+  let {
     category,
     type,
     country,
     date,
     title_en,
     title_es,
+    title_sr,
+    title_fi,
     description_en,
     description_es,
+    description_sr,
+    description_fi,
     keywords,
     eventname,
   } = event;
@@ -38,11 +42,32 @@ const EventCard = ({ event }) => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  const title_translation =
-    currentLang === "es" && title_es ? title_es : title_en;
-  const description_translation =
-    currentLang === "es" && description_es ? description_es : description_en;
 
+  //only english is compulsory, the rest are optional
+  if(!title_es) {
+    title_es = title_en;
+  }
+  if (!title_sr) {
+    title_sr = title_en;
+  }
+  if (!title_fi) {
+    title_fi = title_en;
+  }
+  if (!description_es) {
+    description_es = description_en;
+  }
+  if (!description_sr) {
+    description_sr = description_en;
+  }
+  if (!description_fi) {
+    description_fi = description_en;
+  }
+
+  //set title depending on the language, if the language is not supported, set it to english
+  const title_translation = currentLang === "es" ? title_es : currentLang === "sr" ? title_sr : currentLang === "fi" ? title_fi : title_en;
+  const description_translation = currentLang === "es" ? description_es : currentLang === "sr" ? description_sr : currentLang === "fi" ? description_fi : description_en;
+
+  
   const dateFormatted = new Date(date).toLocaleDateString(currentLang, {
     year: "numeric",
     month: "long",
