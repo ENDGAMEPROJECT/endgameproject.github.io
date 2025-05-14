@@ -2,7 +2,7 @@ export const events = [
   { 
     eventname: "ParticipatoryDesignWorkshop",
     category: "Workshop",
-        country: "Spain",
+        country: "International",
     type: "Event",
     date: "05/20/25",
     hour: "15:00 UTC+1",
