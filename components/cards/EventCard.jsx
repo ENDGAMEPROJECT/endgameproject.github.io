@@ -77,21 +77,21 @@ const EventCard = ({ event }) => {
   return (
     <CustomCard className="bg-black p-4">
       <CardHeader>
-        {/* {type && (
+        {type && (
           <Badge variant="type" size={"lg"} type="activity">
             {type}
           </Badge>
-        )} */}
+        )}
         {category && (
           <Badge variant="primary" size={"lg"} type="activity">
             {category}
           </Badge>
         )}
-        {/* {country && (
+        {country && (
           <Badge variant="primary" size={"lg"} type="activity">
             {country}
           </Badge>
-        )} */}
+        )}
       </CardHeader>
       <CardBody className='h-full justify-start'>
         <CardContent className="gap-1 h-full justify-start">
@@ -131,7 +131,7 @@ const EventCard = ({ event }) => {
       </CardBody>
       {eventname && (
         <CardFooter className="p-0 flex-wrap">
-          <Button asChild variant="outline" size="sm" radius="rounded_sm">
+          <Button asChild variant="outline" size="sm" radius="rounded_sm" className='hover:bg-black hover:border-accent-400 hover:text-accent-300'>
             {/* <Link rel="noopener noreferrer" target="_blank" href={eventDetail}> */}
             <Link rel="noopener noreferrer" href={`/events/${eventname}`}>
               {t("events.event.action-button")}

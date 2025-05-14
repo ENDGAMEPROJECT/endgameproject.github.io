@@ -8,7 +8,7 @@ const badgeVariants = cva(
     variants: {
       variant: { // style
         default: 'bg-grey-100 bg-opacity-10 text-text border-none font-body',
-        type: " bg-opacity-100 border uppercase font-title !text-black font-bold",
+        type: " bg-opacity-100 border uppercase font-title !text-black !font-bold",
         primary: " bg-opacity-10 border uppercase font-title",
         secondary: " bg-opacity-15 border-none capitalize font-body",
       },

@@ -157,32 +157,32 @@ export default function Page() {
             </Button>
           </header>
           <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {events.map((event, key) => {
+            {events.slice(0, 3).map((event, key) => {
               return (
-                <Link
+                <Link  key={key}
                   href={`/events/${event.eventname}`}
                   className="min-h-40 p-4 bg-black border border-transparent hover:border-accent transition-all duration-200 ease-in-out"
                   onClick={() => {
                     window.scrollTo({ top: 0 });
                   }}
                 >
-                  <CustomCard key={key}>
+                  <CustomCard>
                     <CardHeader className="pb-0">
-                      {/* {event.type && (
+                      {event.type && (
                         <Badge variant="type" size="md" type="activity">
                           {event.type}
                         </Badge>
-                      )} */}
+                      )}
                       {event.category && (
                         <Badge variant="primary" size="md" type="activity">
                           {event.category}
                         </Badge>
                       )}
-                      {/* {event.country && (
+                      {event.country && (
                         <Badge variant="primary" size="md" type="activity">
                           {event.country}
                         </Badge>
-                      )} */}
+                      )}
                     </CardHeader>
                     <CardBody>
                       <CardTitle level="h5" className='grow text-pretty'>{t(event.title_en)}</CardTitle>
@@ -194,7 +194,7 @@ export default function Page() {
                         {event.date + " - " + event.hour}
                       </CardSubtitle>
                       {Array.isArray(event.keywords) && (
-                        <div className="flex flex-wrap gap-1.5 mt-2 grow">
+                        <div className="flex flex-wrap gap-1.5 mt-2">
                           {event.keywords.map((keyword, index) => (
                             <Badge
                               key={index}

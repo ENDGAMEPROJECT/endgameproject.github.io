@@ -2,6 +2,8 @@ export const events = [
   { 
     eventname: "ParticipatoryDesignWorkshop",
     category: "Workshop",
+        country: "Spain",
+    type: "Event",
     date: "05/20/25",
     hour: "15:00 UTC+1",
      title_en:  "Designing Educational Escape Rooms to Combat Disinformation",
