@@ -12,19 +12,19 @@ const EventPage = async ({ params }) => {
   // Recuperar el tipo de evento para luego cargar una página u otra
   console.log(event.type);
 
-  // if (condition) {
-  return (
-    <main className="standard_margin ">
-      <EventFull eventname={eventname} />
-    </main>
-  );
-  // } else {
-//   return (
-//     <main className="standard_margin ">
-//       <NewsFull eventname={eventname} />
-//     </main>
-//   );
-  // }
+  if (event.type === "Event") {
+    return (
+      <main className="standard_margin ">
+        <EventFull eventname={eventname} />
+      </main>
+    );
+  } else {
+    return (
+      <main className="standard_margin ">
+        <NewsFull eventname={eventname} />
+      </main>
+    );
+  }
 };
 
 export default EventPage;

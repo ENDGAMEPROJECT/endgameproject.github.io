@@ -191,7 +191,7 @@ export default function Page() {
                         className="text-accent flex gap-2 items-center"
                       >
                         <EventSharp className="h-5 w-5" />
-                        {event.date + " - " + event.hour}
+                        {event.date + (event.hour ? " - " + event.hour : "")}
                       </CardSubtitle>
                       {Array.isArray(event.keywords) && (
                         <div className="flex flex-wrap gap-1.5 mt-2">

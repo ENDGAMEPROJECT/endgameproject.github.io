@@ -42,9 +42,8 @@ const EventCard = ({ event }) => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-
   //only english is compulsory, the rest are optional
-  if(!title_es) {
+  if (!title_es) {
     title_es = title_en;
   }
   if (!title_sr) {
@@ -64,10 +63,23 @@ const EventCard = ({ event }) => {
   }
 
   //set title depending on the language, if the language is not supported, set it to english
-  const title_translation = currentLang === "es" ? title_es : currentLang === "sr" ? title_sr : currentLang === "fi" ? title_fi : title_en;
-  const description_translation = currentLang === "es" ? description_es : currentLang === "sr" ? description_sr : currentLang === "fi" ? description_fi : description_en;
+  const title_translation =
+    currentLang === "es"
+      ? title_es
+      : currentLang === "sr"
+      ? title_sr
+      : currentLang === "fi"
+      ? title_fi
+      : title_en;
+  const description_translation =
+    currentLang === "es"
+      ? description_es
+      : currentLang === "sr"
+      ? description_sr
+      : currentLang === "fi"
+      ? description_fi
+      : description_en;
 
-  
   const dateFormatted = new Date(date).toLocaleDateString(currentLang, {
     year: "numeric",
     month: "long",
@@ -93,7 +105,7 @@ const EventCard = ({ event }) => {
           </Badge>
         )}
       </CardHeader>
-      <CardBody className='h-full justify-start'>
+      <CardBody className="h-full justify-start">
         <CardContent className="gap-1 h-full justify-start">
           <CardTitle level="h5" className="text-pretty">
             {/* flex: grow */}
@@ -106,12 +118,12 @@ const EventCard = ({ event }) => {
                 className="text-accent flex gap-4 items-center"
               >
                 <EventSharp className="h-7 w-7" />
-                {dateFormatted + " - " + event.hour}
+                {dateFormatted + (event.hour ? " - " + event.hour : "")}
               </CardSubtitle>
             </div>
           )}
           {description_translation && (
-            <CardDescription description={description_translation}/>
+            <CardDescription description={description_translation} />
           )}
           {Array.isArray(keywords) && (
             <div className="flex flex-wrap gap-1.5">
@@ -131,10 +143,20 @@ const EventCard = ({ event }) => {
       </CardBody>
       {eventname && (
         <CardFooter className="p-0 flex-wrap">
-          <Button asChild variant="outline" size="sm" radius="rounded_sm" className='hover:bg-black hover:border-accent-400 hover:text-accent-300'>
+          <Button
+            asChild
+            variant="outline"
+            size="sm"
+            radius="rounded_sm"
+            className="hover:bg-black hover:border-accent-400 hover:text-accent-300"
+          >
             {/* <Link rel="noopener noreferrer" target="_blank" href={eventDetail}> */}
             <Link rel="noopener noreferrer" href={`/events/${eventname}`}>
-              {t("events.event.action-button")}
+              {t(
+                event.type === "Event"
+                  ? "events.event.action-button"
+                  : "events.new.action-button"
+              )}
               <ArrowForwardSharpIcon />
             </Link>
           </Button>

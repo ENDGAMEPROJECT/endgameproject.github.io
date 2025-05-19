@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import clsx from "clsx";
 import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";

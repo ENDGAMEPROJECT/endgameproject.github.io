@@ -14,6 +14,10 @@ import { Button, ButtonVariants } from "@/components/ui/button";
 // icons
 import NorthEastSharp from "@mui/icons-material/NorthEastSharp";
 import EventSharp from "@mui/icons-material/EventSharp";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import TikTokIcon from "@mui/icons-material/MusicNote";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 /* eventinfo is like this:
 {
@@ -60,10 +64,11 @@ const NewsFull = ({ eventname }) => {
     category,
     keywords,
     externalLinkJoin,
+    socialLinks,
   } = event;
 
   //only english is compulsory, the rest are optional
-  if(!title_es) {
+  if (!title_es) {
     title_es = title_en;
   }
   if (!title_sr) {
@@ -85,35 +90,55 @@ const NewsFull = ({ eventname }) => {
   const currentLang = i18n.language;
 
   //set title depending on the language, if the language is not supported, set it to english
-  const title = currentLang === "es" ? title_es : currentLang === "sr" ? title_sr : currentLang === "fi" ? title_fi : title_en;
-  const description = currentLang === "es" ? description_es : currentLang === "sr" ? description_sr : currentLang === "fi" ? description_fi : description_en;
+  const title =
+    currentLang === "es"
+      ? title_es
+      : currentLang === "sr"
+      ? title_sr
+      : currentLang === "fi"
+      ? title_fi
+      : title_en;
+  const description =
+    currentLang === "es"
+      ? description_es
+      : currentLang === "sr"
+      ? description_sr
+      : currentLang === "fi"
+      ? description_fi
+      : description_en;
 
   const dateFormatted = new Date(date).toLocaleDateString(currentLang, {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
+  const iconMap = {
+    InstagramIcon: InstagramIcon,
+    TwitterIcon: TwitterIcon,
+    TikTokIcon: TikTokIcon,
+    LinkedInIcon: LinkedInIcon,
+  };
 
   const categoryFormatted =
     category.charAt(0).toUpperCase() + category.slice(1);
 
   return (
-    <div className="flex flex-col gap-8 items-center">
-      <Badge variant="primary" type="activity" size="xl">
+    <div className="flex flex-col gap-8 items-center standard_margin">
+      {/* <Badge variant="primary" type="activity" size="xl">
         {categoryFormatted}
-      </Badge>
+      </Badge> */}
       <HighlightedHeader
         string={title}
         variant={"activity"}
         level="h2"
         // className="px-[5%] md:px-[10%] lg:px-[30%] xl:px-[40%] 2xl:px-[45%] color-accent"
-        className=" color-accent py-6"
+        className="color-accent py-6"
       >
         {title}
       </HighlightedHeader>
-      <Heading level="h4" className='flex items-center gap-4'>
-        <EventSharp className="h-7 w-7"/>
-        {dateFormatted + " - " + hour}
+      <Heading level="h4" className="flex items-center gap-4">
+        <EventSharp className="h-7 w-7" />
+        {dateFormatted}
       </Heading>
 
       {Array.isArray(keywords) && (
@@ -125,11 +150,17 @@ const NewsFull = ({ eventname }) => {
           ))}
         </div>
       )}
-      <Text className="text-base" type="pre">
-        {description}
-      </Text>
 
-      <Button
+      <Heading className="text-base text-center text-balance text-text mt-4" level="h4">
+        {description}
+      </Heading>
+
+      <div
+        className="news"
+        dangerouslySetInnerHTML={{ __html: event.htmlbody_en }}
+      />
+
+      {/* <Button
         asChild
         variant="outline"
         size="xl"
@@ -139,8 +170,38 @@ const NewsFull = ({ eventname }) => {
           {t("events.event.join")}
           <NorthEastSharp />
         </Link>
-      </Button>
-    </div>
+      </Button> */}
+
+{/* SOCIAL ICONS */}
+      {/* {Array.isArray(event.socialLinks) && (
+        <div className="w-full">
+          <Heading level="h4" className="mb-4">
+            Follow us on Social Media!
+          </Heading>
+          <ul className="flex flex-col md:flex-row justify-center gap-4">
+            {event.socialLinks.map(({ name, icon, url, handle }) => {
+              const IconComponent = iconMap[icon];
+              return (
+                <li
+                  key={name}
+                  className="flex items-center gap-2 justify-center"
+                >
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover:underline"
+                  >
+                    {IconComponent && <IconComponent />}
+                    <span className="font-semibold">{handle}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )} */}
+    </div> 
   );
 };
 
