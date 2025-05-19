@@ -1,10 +1,10 @@
-export const fi = {
+  export const fi = {
     nav: {
       home: "Etusivu",
       about: "Tietoa ENDGAME:sta",
       escaperooms: "Pakohuoneet",
       events: "Tapahtumat ja uutiset",
-      research: "Tulokset", // Tutkimus ja vaikutus
+      research: "Tutkimus ja vaikutus",
     },
     header: {
       publicationstab: "Tutkimus",
@@ -12,12 +12,12 @@ export const fi = {
     home: {
       title: "ENDGAME",
       description:
-        "Uusien disinformaatiomuotojen pako pelillistetyn rajat ylittävän medialukutaidon koulutuksen avulla",
+        "Pako uusista disinformaation muodoista pelilistetyn, kansalliset rajat ylittävän medialukutaitokoulutuksen alla",
       aboutSection: "Mikä on ENDGAME",
       about: {
         title: "Tietoa projektista",
         content:
-          "ENDGAME on innovatiivinen eurooppalainen projekti, jonka tavoitteena on kehittää kriittistä ajattelua ja vastuullista digitaalista kansalaisuutta Euroopan nuorten keskuudessa koulutuksellisten pakohuoneiden avulla, jotka simuloivat todellisen elämän tiedonkulutustilanteita. Tavoitteenamme on upottaa osallistujat aikaan sidottuihin, interaktiivisiin ja haastaviin kokemuksiin, joissa he kehittävät taitojaan disinformaation tunnistamisessa, tekoälyn tuottaman sisällön havaitsemisessa sekä ymmärtävät henkilötietojen jakamisen vaikutuksia sosiaalisessa mediassa.",
+          "ENDGAME on innovatiivinen eurooppalainen projekti, jonka tavoitteena on kehittää kriittistä ajattelua ja vastuullista digitaalista kansalaisuutta Eurooppalaisten nuorten keskuudessa koulutuksellisten pakohuonepelien avulla, jotka simuloivat todellisen elämän mediankäyttötilanteita. Tavoitteenamme on johdatella osallistujat aikaan sidottuihin, interaktiivisiin ja haastaviin kokemuksiin, joissa he kehittävät taitojaan disinformaation tunnistamisessa, tekoälyn tuottaman sisällön havaitsemisessa sekä ymmärtävät henkilötietojen jakamisen vaikutuksia sosiaalisessa mediassa.",
       },
       mission: {
         title: "Missiomme",
@@ -25,7 +25,7 @@ export const fi = {
       partners: {
         title: "Keitä me olemme",
         universities: "Yliopistot",
-        agencies: "Virastot",
+        agencies: "Järjestöt",
       },
       latestContent: {
         title: "Uusimmat sisällöt",
@@ -55,10 +55,10 @@ export const fi = {
         past: "menneet",
       },
       event: {
-        "action-button": "Tapahtuman tiedot",
+        "action-button": "tapahtuman tiedot",
       },
       new: {
-        "action-button": "Lue",
+        "action-button": "lue",
       },
     },
     research: {
