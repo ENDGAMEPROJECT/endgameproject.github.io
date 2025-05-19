@@ -12,7 +12,7 @@
     home: {
       title: "ENDGAME",
       description:
-        "Pako uusista disinformaation muodoista pelilistetyn, kansalliset rajat ylittävän medialukutaitokoulutuksen alla",
+        "Pako uusista disinformaation muodoista pelilistetyn, kansalliset rajat ylittävän medialukutaitokoulutuksen avulla",
       aboutSection: "Mikä on ENDGAME",
       about: {
         title: "Tietoa projektista",
