@@ -163,7 +163,7 @@ footer {
 
 .news {
   h2 {
-    @apply text-accent-400 font-title text-pretty;
+    @apply text-text font-title text-pretty;
     @apply text-24 sm:text-28 mb-2 font-medium mt-6;
   }
   p {

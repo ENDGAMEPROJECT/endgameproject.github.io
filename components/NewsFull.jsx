@@ -10,6 +10,7 @@ import Text from "../components/ui/text";
 import Heading from "../components/ui/Heading";
 import { Badge } from "./ui/badge";
 import { Button, ButtonVariants } from "@/components/ui/button";
+import Image from "@/components/ui/image";
 
 // icons
 import NorthEastSharp from "@mui/icons-material/NorthEastSharp";
@@ -60,9 +61,9 @@ const NewsFull = ({ eventname }) => {
     description_sr,
     description_fi,
     date,
-    hour,
     category,
     keywords,
+    image,
     externalLinkJoin,
     socialLinks,
   } = event;
@@ -151,7 +152,17 @@ const NewsFull = ({ eventname }) => {
         </div>
       )}
 
-      <Heading className="text-base text-center text-balance text-text mt-4" level="h4">
+      <Image
+        className={"w-full"}
+        fit="contain"
+        src={image}
+        alt={"imagen de la noticia"}
+      />
+
+      <Heading
+        className="text-base text-center text-balance text-accent-400 mt-4"
+        level="h4"
+      >
         {description}
       </Heading>
 
@@ -172,7 +183,7 @@ const NewsFull = ({ eventname }) => {
         </Link>
       </Button> */}
 
-{/* SOCIAL ICONS */}
+      {/* SOCIAL ICONS */}
       {/* {Array.isArray(event.socialLinks) && (
         <div className="w-full">
           <Heading level="h4" className="mb-4">
@@ -201,7 +212,7 @@ const NewsFull = ({ eventname }) => {
           </ul>
         </div>
       )} */}
-    </div> 
+    </div>
   );
 };
 

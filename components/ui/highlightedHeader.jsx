@@ -26,7 +26,7 @@ const HighlightedHeader = ({ string, level, className, variant }) => {
 
   const levelSpecificClasses =
     level === "h2"
-      ? "mt-0 pt-0 justify-center md:px-[2%] lg:px-[5%] xl:px-[10%] 2xl:px-[12%] 3xl:px-[20%]"
+      ? "mt-0 pt-0 justify-center md:px-[2%] lg:px-[5%] xl:px-[10%] 2xl:px-[12.5%] 3xl:px-[16%]"
       : "";
   return (
     <Heading

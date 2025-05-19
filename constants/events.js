@@ -18,6 +18,7 @@ export const events = [
     description_sr: "",
     description_es: "",
     description_fi: "",
+    image: "/newsENDGAME_imagePlaceholder.png",
     // html
     htmlbody_en: `
   <p>
