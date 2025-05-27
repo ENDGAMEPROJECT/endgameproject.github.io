@@ -40,13 +40,13 @@ export const partners = {
     id: 'mdt',
     name: "Maldita",
     logo: agenciesLogos + "maldita_logo-vertical-darkBg.png",
-    logoHorizontal: agenciesLogos + "maldita_logo-horizontal-darkBg.png",
+    logoHorizontal: agenciesLogos + "malditaFundacion_logo-horizontal-darkBg.png",
     link: 'https://maldita.es/',
   },
   ftb: {
     id: 'ftb',
     name: "Faktabaari",
-    logo: agenciesLogos + "faktabaari_logo-darkBg.png",
+    logo: agenciesLogos + "faktabaariEdu_logo-darkBg.png",
     link: 'https://faktabaari.fi/',
   },
   fnt: {

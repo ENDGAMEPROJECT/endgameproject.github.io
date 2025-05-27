@@ -156,7 +156,7 @@ export default function Page() {
               </Link>
             </Button>
           </header>
-          <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {events.slice(0, 3).map((event, key) => {
               return (
                 <Link  key={key}

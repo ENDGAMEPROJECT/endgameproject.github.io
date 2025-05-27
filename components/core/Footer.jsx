@@ -230,7 +230,7 @@ export default function Footer(props) {
           >
             <Image
               className={
-                partnerLogoClasses + " p-4"
+                partnerLogoClasses + " p-3"
               }
               src={partners.ftb.logo}
               alt={partners.ftb.name_en + " logo"}
