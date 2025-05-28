@@ -9,7 +9,7 @@ export const events = [
     title_en: "ENDGAME: a new EU project to strengthen media literacy through educational escape rooms",
     title_sr: "ENDGAME: novi projekat EU za jačanje medijske pismenosti kroz obrazovne sobe za bekstvo",
     title_es: "ENDGAME: un nuevo proyecto de la UE para fortalecer la alfabetización mediática a través de escape rooms educativas",
-    title_fi: "ENDGAME: uusi EU-hanke vahvistamaan medialukutaitoa opetuksellisten pakopelien avulla",
+    title_fi: "Kuusi järjestöä Suomesta, Serbiasta ja Espanjasta yhdistävät voimansa nuorten disinformaation torjumiseksi pelipohjaisen oppimisen avulla",
     description_en: "Six organisations from Finland, Serbia, and Spain join forces to fight disinformation among young people using game-based learning",
     description_sr: "Šest organizacija iz Finske, Srbije i Španije udružuju snage u borbi protiv dezinformacija među mladima kroz učenje zasnovano na igri",
     description_es: "Seis organizaciones de Finlandia, Serbia y España unen fuerzas para combatir la desinformación entre los jóvenes utilizando el aprendizaje basado en juegos",
@@ -131,9 +131,8 @@ export const events = [
     <a href="https://sonsoles.me" target="_blank">https://sonsoles.me</a>
   </p>`,
     htmlbody_fi: `<p>
-    ENDGAME-hanke – Escaping New Disinformation through Gamified cross-border Media literacy Education on virallisesti käynnistynyt konsortion verkkotapaamisella, joka merkitsee tämän 24 kuukauden aloitusta. Euroopan luovan Euroopan ohjelman (CREA-CROSS
--2024-MEDIALITERACY) rahoittama ENDGAME pyrkii antamaan Euroopan nuorille taidot kriittiseen tiedon käsittelyyn, disinformaation tunnistamiseen ja vastuulliseen digitaalisen median ympäristöissä navigointiin.
-  </p>
+    Eurooppalainen hanke ENDGAME – Escaping New Disinformation through Gamified cross-border Media literacy Education on virallisesti käynnistynyt verkkotapaamisella, joka toimi lähtölaukauksena tälle 24 kuukautta kestävälle aloitteelle. EU:n Luovan Euroopan ohjelman (CREA-CROSS -2024-MEDIALITERACY) rahoittama ENDGAME pyrkii antamaan eurooppalaisille nuorille taidot kriittiseen informaation käsittelyyn, disinformaation tunnistamiseen sekä vastuulliseen navigointiin digitaalisen median ympäristöissä.
+    </p>
     <h2 className='news'>Projektikumppanit</h2>
     <ul>
       <li><strong>University of Eastern Finland (UEF)</strong> – (Suomi) Projektin koordinaattori</li>
@@ -145,13 +144,12 @@ export const events = [
     </ul>
     <h2>Projektista</h2>
     <p>
-    ENDGAME hyödyntää opettavien pakohuoneiden voimaa simuloidakseen todellisia media-skenaarioita, joissa pelaajien on ratkaistava pulmia ja suoritettava haasteita samalla kehittäen kriittistä ajattelua ja medialukutaitojaan. Nämä innovatiiviset työkalut käsittelevät ajankohtaisia aiheita, kuten tekoälyn tuottamaa disinformaatiota, henkilötietojen riskejä ja manipuloitua sisältöä, ja ne räätälöidään kunkin kumppanimaan tarpeisiin osallistavan suunnittelun prosessien kautta, jotka ottavat huomioon paikalliset yhteisöt ja sidosryhmät.
+      ENDGAME hyödyntää opetuksellisten pakohuoneiden toimivuutta simuloidakseen todellisia mediankäyttöskenaarioita, joissa pelaajien on ratkaistava pulmia ja suoritettava haasteita samalla kehittäen kriittistä ajattelua ja medialukutaitoaan. Nämä innovatiiviset opetuskeinot käsittelevät ajankohtaisia aiheita, kuten tekoälyn tuottamaa disinformaatiota, henkilötietojen riskejä ja manipuloitua sisältöä, ja ne räätälöidään kunkin kumppanimaan tarpeisiin osallistavan suunnittelun prosessien kautta, jotka huomioivat paikalliset yhteisöt ja sidosryhmät.
   </p>    
     <p>
-    Kick-off-kokouksessa, joka pidettiin verkossa maaliskuussa 2025, kumppanit määrittelivät strategisen tiekartan projektin ensimmäiselle vaiheelle, mukaan lukien maakohtaisten narratiivien yhteisluominen ja osallistavien työpajojen järjestäminen Suomessa, Serbiassa ja Espanjassa. Pakohuoneet ovat pelattavissa kouluissa, julkisissa tiloissa ja verkossa, ja niitä täydentävät kilpailut, opettajakoulutustapahtumat, suoratoimintatoiminnot Twitchissä sekä esitykset konferensseilla ja koulutustapahtumissa.
-  </p>    
+      Kick-off-kokouksessa, joka pidettiin verkossa maaliskuussa 2025, kumppanit määrittelivät strategisen tiekartan projektin ensimmäiselle vaiheelle mukaanlukien maakohtaisten narratiivien yhteiskehittely ja osallistavien työpajojen järjestäminen Suomessa, Serbiassa ja Espanjassa. Pakohuoneet tulevat olemaan pelattavissa kouluissa, julkisissa paikoissa ja verkossa, ja niitä täydentävät kilpailut, opettajankoulutustapahtumat, suoratoistona pelautus Twitchissä sekä esitykset konferensseissa ja koulutustapahtumissa.  </p>    
     <p>
-    ENDGAME: hankkeen  kokonaisbudjetti on <strong>712 831,86 €</strong>, josta <strong>498 982,30 €</strong> on Euroopan unionin rahoittamaa. Projekti tavoittaa satoja nuoria, opettajia ja muita sidosryhmiä käytännönläheisten ja osallistavien toimintojen kautta, samalla kun se tuottaa tutkimukseen perustuvia näkemyksiä medialukutaidon puutteista oppimisanalytikan avulla.
+      ENDGAME-hankkeen kokonaisbudjetti on <strong>712 831,86 €</strong>, josta <strong>498 982,30 €</strong> on Euroopan unionin rahoittamaa. Projekti tavoittaa satoja nuoria, opettajia ja muita sidosryhmiä käytännönläheisten ja osallistavien toimintojen kautta, tuottaen samalla tutkimukseen perustuvia näkemyksiä medialukutaidon tarpeista oppimisanalytikan avulla.
   </p>
     <h2>Seuraa meitä sosiaalisessa mediassa!</h2>
     <ul>
