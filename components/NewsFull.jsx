@@ -60,6 +60,10 @@ const NewsFull = ({ eventname }) => {
     description_es,
     description_sr,
     description_fi,
+    htmlbody_en,
+    htmlbody_es,
+    htmlbody_sr,
+    htmlbody_fi,
     date,
     category,
     keywords,
@@ -87,6 +91,16 @@ const NewsFull = ({ eventname }) => {
   if (!description_fi) {
     description_fi = description_en;
   }
+  if (!htmlbody_es) {
+    htmlbody_es = htmlbody_en;
+  }
+  if (!htmlbody_sr) {
+    htmlbody_sr = htmlbody_en;
+  }
+  if (!htmlbody_fi) {
+    htmlbody_fi = htmlbody_en;
+  }
+
 
   const currentLang = i18n.language;
 
@@ -107,6 +121,14 @@ const NewsFull = ({ eventname }) => {
       : currentLang === "fi"
       ? description_fi
       : description_en;
+  const eventBody =
+    currentLang === "es"
+      ? htmlbody_es
+      : currentLang === "sr"
+      ? htmlbody_sr
+      : currentLang === "fi"
+      ? htmlbody_fi
+      : htmlbody_en;
 
   const dateFormatted = new Date(date).toLocaleDateString(currentLang, {
     year: "numeric",
@@ -168,7 +190,7 @@ const NewsFull = ({ eventname }) => {
 
       <div
         className="news"
-        dangerouslySetInnerHTML={{ __html: event.htmlbody_en }}
+        dangerouslySetInnerHTML={{ __html: eventBody }}
       />
 
       {/* <Button
