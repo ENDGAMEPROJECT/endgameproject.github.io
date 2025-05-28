@@ -9,11 +9,11 @@ export const events = [
     title_en: "ENDGAME: a new EU project to strengthen media literacy through educational escape rooms",
     title_sr: "ENDGAME: novi projekat EU za jačanje medijske pismenosti kroz obrazovne sobe za bekstvo",
     title_es: "ENDGAME: un nuevo proyecto de la UE para fortalecer la alfabetización mediática a través de escape rooms educativas",
-    title_fi: "Kuusi järjestöä Suomesta, Serbiasta ja Espanjasta yhdistävät voimansa nuorten disinformaation torjumiseksi pelipohjaisen oppimisen avulla",
+    title_fi: "ENDGAME – uusi EU-hanke vahvistamaan medialukutaitoa opetuksellisten pakopelien kautta",
     description_en: "Six organisations from Finland, Serbia, and Spain join forces to fight disinformation among young people using game-based learning",
     description_sr: "Šest organizacija iz Finske, Srbije i Španije udružuju snage u borbi protiv dezinformacija među mladima kroz učenje zasnovano na igri",
     description_es: "Seis organizaciones de Finlandia, Serbia y España unen fuerzas para combatir la desinformación entre los jóvenes utilizando el aprendizaje basado en juegos",
-    description_fi: "Kuusi järjestöä Finskasta, Serbiasta ja Espanjasta yhdistävät voimansa nuorten disinformaation torjumiseksi pelipohjaisen oppimisen avulla",
+    description_fi: "Kuusi järjestöä Suomesta, Serbiasta ja Espanjasta yhdistävät voimansa nuorten disinformaation torjumiseksi pelipohjaisen oppimisen avulla",
     image: "/newsENDGAME_imagePlaceholder.png",
     htmlbody_en: `
   <p>
