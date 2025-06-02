@@ -25,7 +25,7 @@ const badgeVariants = cva(
         // error: "border-red-200 bg-red-200 text-red-800",
         default: "border-primary bg-primary text-primary",
         activity: "border-accent bg-accent text-accent-400 bg-accent",
-        info: "border-secondary bg-secondary text-secondary",
+        info: "border-secondary-400 bg-secondary-400 text-secondary-400",
       },
     },
     defaultVariants: {

@@ -4,7 +4,7 @@ export const es = {
     about: "Sobre ENDGAME",
     escaperooms: "Escaperooms",
     events: "Eventos y noticias",
-    research: "resultados", // Investigación e impacto
+    research: "Resultados", // Investigación e impacto
   },
   header: {
     publicationstab: "Publicaciones",

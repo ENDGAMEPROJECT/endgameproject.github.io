@@ -9,7 +9,7 @@ export const routes = [
     { route: "/", key: "nav.home", page:<Page/>, active: true },
     { route: "/escaperooms", key: "nav.escaperooms", page:<Escaperooms/>, active: false },
     { route: "/events", key: "nav.events", page:<Events/>, active: true },
-    { route: "/research", key: "nav.research", page:<Research/>, active: false },
+    { route: "/research", key: "nav.research", page:<Research/>, active: true },
     { route: "/about", key: "nav.about", page:<About/>, active: false },
   ];
 
