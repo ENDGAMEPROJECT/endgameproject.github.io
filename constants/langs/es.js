@@ -30,8 +30,8 @@ export const es = {
     latestContent: {
       title: "Novedades",
       events: {
-        title: "News and events",
-        button: "See all activity",
+        title: "Noticias y eventos",
+        button: "Ver toda la actividad",
       },
       research: {
         title: "Últimas publicaciones",
@@ -63,8 +63,11 @@ export const es = {
   },
   research: {
     title: "Investigación e impacto",
-    button: "Leer publicación",
-    button2: "Ver más",
+    buttons: {
+      read: "Leer publicación",
+      download: "Descargar",
+      button2: "Ver más",
+    }
   },
   about: {
     title: "Sobre ENDGAME",
@@ -75,7 +78,7 @@ export const es = {
     projectDuration: "Duración",
     projectDurationContent: "marzo 2025 - febrero 2027",
     title1: "Secciones",
-    title2: "Síguenos en:",
+    title2: "Síguenos",
     title3: "Colaboran",
   },
   buttons: {

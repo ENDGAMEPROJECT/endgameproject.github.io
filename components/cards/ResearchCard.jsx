@@ -14,7 +14,7 @@ import {
   CardBody,
   CardContent,
   CardTitle,
-  CardDescription,
+  Cardsubtitle,
   CardFooter,
   CardHeader,
   CardSubtitle,
@@ -22,7 +22,7 @@ import {
 
 // Icons
 import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
-import EventSharp from "@mui/icons-material/EventSharp";
+import SaveAltSharpIcon from '@mui/icons-material/SaveAltSharp';
 
 const ResearchCard = ({ publication }) => {
   // Desestructuración del objeto `publication`
@@ -36,12 +36,14 @@ const ResearchCard = ({ publication }) => {
     title_es,
     title_sr,
     title_fi,
-    description_en,
-    description_es,
-    description_sr,
-    description_fi,
+    subtitle_en,
+    subtitle_es,
+    subtitle_sr,
+    subtitle_fi,
     keywords,
     publicationname,
+    externalLinkJoin,
+    downloadLinkJoin,
   } = publication;
 
   const { t, i18n } = useTranslation();
@@ -52,9 +54,9 @@ const ResearchCard = ({ publication }) => {
   title_sr ??= title_en;
   title_fi ??= title_en;
 
-  description_es ??= description_en;
-  description_sr ??= description_en;
-  description_fi ??= description_en;
+  subtitle_es ??= subtitle_en;
+  subtitle_sr ??= subtitle_en;
+  subtitle_fi ??= subtitle_en;
 
   // Selección de traducción según idioma
   const title_translation =
@@ -66,14 +68,14 @@ const ResearchCard = ({ publication }) => {
       ? title_fi
       : title_en;
 
-  const description_translation =
+  const subtitle_translation =
     currentLang === "es"
-      ? description_es
+      ? subtitle_es
       : currentLang === "sr"
-      ? description_sr
+      ? subtitle_sr
       : currentLang === "fi"
-      ? description_fi
-      : description_en;
+      ? subtitle_fi
+      : subtitle_en;
 
   const dateFormatted = new Date(date).toLocaleDateString(currentLang, {
     year: "numeric",
@@ -84,8 +86,6 @@ const ResearchCard = ({ publication }) => {
   return (
     // 📦 Contenedor principal de la tarjeta
     <CustomCard className="bg-black p-4">
-
-      {/* 🔖 Cabecera de la tarjeta con etiquetas */}
       <CardHeader>
         {type && (
           <Badge variant="type" size="lg" type="info">
@@ -99,36 +99,29 @@ const ResearchCard = ({ publication }) => {
         )}
       </CardHeader>
 
-      {/* 📄 Cuerpo de la tarjeta */}
       <CardBody className="h-full justify-start">
         <CardContent className="gap-1 h-full justify-start">
-
-          {/* 📝 Título */}
           <CardTitle level="h5" className="text-pretty">
             {title_translation}
           </CardTitle>
 
-          {/* 📅 Fecha y metainformación */}
           {date?.[0] && (
-            <div className="flex">
-              {/* 📍 Categoría y fecha corta */}
-                <Text type="small" className="font-bold text-sm !text-secondary-200">
-                  {/* {t(`research.filter.${category}`)} */}
-                  {category}
-                </Text>
-                <span className="mx-2 mb-2 text-secondary-200">·</span>
-                <Text type="small" className='!text-secondary-200'>
-                  {date}
-                </Text>
+            <div className="flex items-center !text-secondary-200">
+              <Text type="small" className="font-bold text-sm !text-current">
+                {/* {t(`research.filter.${category}`)} */}
+                {category}
+              </Text>
+              <span className="mx-2">·</span>
+              <Text type="small" className="!text-current">
+                {date}
+              </Text>
             </div>
           )}
 
-          {/* 👥 Autores */}
           <Text className="text-gray-300/90 mb-4 lg:pr-16" type="small">
             {authors}
           </Text>
 
-          {/* 🏷️ Palabras clave */}
           {Array.isArray(keywords) && (
             <div className="flex flex-wrap gap-1.5">
               {keywords.map((keyword, index) => (
@@ -146,28 +139,52 @@ const ResearchCard = ({ publication }) => {
         </CardContent>
       </CardBody>
 
-      {/* 🔗 Pie de la tarjeta con botón de enlace */}
-      {publicationname && (
+      {publicationname && externalLinkJoin || downloadLinkJoin && (
         <CardFooter className="p-0 flex-wrap">
-          <Button
-            asChild
-            variant="outline"
-            size="sm"
-            radius="rounded_sm"
-            className="hover:bg-black hover:border-secondary-400 hover:text-secondary-300"
-          >
-            <Link
-              rel="noopener noreferrer"
-              href={`/publications/${publicationname}`}
+          {/* Leer online BTN */}
+          {externalLinkJoin && (
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              radius="rounded_sm"
+              className="hover:bg-black hover:border-secondary-400 hover:text-secondary-300"
             >
-              {t(
-                publication.type === "publication"
-                  ? "research.button"
-                  : "research.button"
-              )}
-              <ArrowForwardSharpIcon />
-            </Link>
-          </Button>
+              <Link
+                rel="noopener noreferrer"
+                href={`/publications/${publicationname}`}
+              >
+                {t(
+                  publication.type === "publication"
+                    ? "research.buttons.read"
+                    : "research.buttons.read"
+                )}
+                <ArrowForwardSharpIcon />
+              </Link>
+            </Button>
+          )}
+          {downloadLinkJoin && (
+            <Button
+              asChild
+              variant="primary"
+              size="sm"
+              radius="rounded_sm"
+              type='info'
+              className="hover:bg-black hover:bg-secondary-400 hover:text-black"
+            >
+              <Link download={downloadLinkJoin}
+                rel="noopener noreferrer"
+                href={`/publications/${publicationname}`}
+              >
+                {t(
+                  publication.type === "publication"
+                    ? "research.buttons.download"
+                    : "research.buttons.download"
+                )}
+                <SaveAltSharpIcon />
+              </Link>
+            </Button>
+          )}
         </CardFooter>
       )}
     </CustomCard>

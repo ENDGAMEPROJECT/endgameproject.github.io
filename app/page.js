@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 
 import { events } from "@/constants/events";
 import EventCard from "@/components/cards/EventCard";
+import { publications } from "@/constants/results";
 
 // assets
 import { endgameLogosPng } from "@/constants/assetsRoutes";
@@ -151,6 +152,7 @@ export default function Page() {
                   window.scrollTo({ top: 0 });
                 }}
               >
+                {/* <Heading level="h6">{t("home.latestContent.title")}</Heading> */}
                 {t("home.latestContent.events.button")}
                 <ArrowForwardSharp />
               </Link>
@@ -159,7 +161,8 @@ export default function Page() {
           <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {events.slice(0, 3).map((event, key) => {
               return (
-                <Link  key={key}
+                <Link
+                  key={key}
                   href={`/events/${event.eventname}`}
                   className="min-h-40 p-4 bg-black border border-transparent hover:border-accent transition-all duration-200 ease-in-out"
                   onClick={() => {
@@ -167,25 +170,29 @@ export default function Page() {
                   }}
                 >
                   <CustomCard>
+                    {/*  */}
                     <CardHeader className="pb-0">
                       {event.type && (
                         <Badge variant="type" size="md" type="activity">
                           {event.type}
                         </Badge>
                       )}
-                      {event.category && (
+                      {/* {event.category && (
                         <Badge variant="primary" size="md" type="activity">
                           {event.category}
                         </Badge>
-                      )}
+                      )} */}
                       {event.country && (
                         <Badge variant="primary" size="md" type="activity">
                           {event.country}
                         </Badge>
                       )}
                     </CardHeader>
+                    {/*  */}
                     <CardBody>
-                      <CardTitle level="h5" className='grow text-pretty'>{t(event.title_en)}</CardTitle>
+                      <CardTitle level="h5" className="grow text-pretty">
+                        {t(event.title_en)}
+                      </CardTitle>
                       <CardSubtitle
                         level="h6"
                         className="text-accent flex gap-2 items-center"
@@ -207,6 +214,103 @@ export default function Page() {
                           ))}
                         </div>
                       )}
+                    </CardBody>
+                  </CustomCard>
+                </Link>
+              );
+            })}
+          </section>
+        </section>
+        {/* --------------------------------------------------------------------
+        RESEARCH AND RESULTS 
+        --------------------------------------------------------------------*/}
+        <section className="cards mt-8">
+          <header className="mb-4 w-full flex justify-between border-b border-primary">
+            <Heading level="h4">
+              {t("home.latestContent.research.title")}
+            </Heading>
+            <Button
+              className={
+                ButtonVariants({
+                  variant: "tertiary",
+                  size: "lg",
+                  radius: "rounded_sm",
+                }) + " hover:text-primary"
+              }
+            >
+              <Link
+                href={"/research"}
+                rel="noopener noreferrer"
+                onClick={() => {
+                  window.scrollTo({ top: 0 });
+                }}
+              >
+                {t("home.latestContent.research.button")}
+                <ArrowForwardSharp />
+              </Link>
+            </Button>
+          </header>
+          <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {publications.slice(0, 3).map((publication, key) => {
+              return (
+                <Link // aquí quizás no tiene sentido el link, ya que no habrá un single de publicación
+                  key={key}
+                  href={`/research`}
+                  className="min-h-40 p-4 bg-black border border-transparent hover:border-secondary transition-all duration-200 ease-in-out"
+                  onClick={() => {
+                    window.scrollTo({ top: 0 });
+                  }}
+                >
+                  <CustomCard className="bg-black">
+                    <CardHeader>
+                      {publication.type && (
+                        <Badge variant="type" size="lg" type="info">
+                          {publication.type}
+                        </Badge>
+                      )}
+                      {publication.country && (
+                        <Badge variant="primary" size="lg" type="info">
+                          {publication.country}
+                        </Badge>
+                      )}
+                    </CardHeader>
+                    <CardBody className="h-full justify-start">
+                      <CardContent className="gap-1 h-full justify-start">
+                        <CardTitle level="h5" className="text-pretty">
+                          {publication.title_en}
+                        </CardTitle>
+
+                        {publication.date?.[0] && (
+                          <div className="flex items-center !text-secondary-200">
+                            <Text
+                              type="small"
+                              className="font-bold text-sm !text-current"
+                            >
+                              {/* {t(`research.filter.${category}`)} */}
+                              {publication.category}
+                            </Text>
+                            <span className="mx-2">·</span>
+                            <Text type="small" className="!text-current">
+                              {publication.date}
+                            </Text>
+                          </div>
+                        )}
+
+                        {Array.isArray(publication.keywords) && (
+                          <div className="flex flex-wrap gap-1.5">
+                            {publication.keywords.map((keyword, index) => (
+                              <Badge
+                                key={index}
+                                variant="secondary"
+                                size="sm"
+                                className="text-secondary-400 bg-secondary/15"
+                              >
+                                {keyword}
+                              </Badge>
+                            ))}
+                          </div>
+                        )}
+                      </CardContent>
                     </CardBody>
                   </CustomCard>
                 </Link>

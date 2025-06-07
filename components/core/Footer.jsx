@@ -12,11 +12,15 @@ import Link from "next/link";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import ArticleIcon from "@mui/icons-material/Article";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import XIcon from "@mui/icons-material/X";
 
 export default function Footer(props) {
   const { t } = useTranslation();
 
-  const sectionTitleClasses = clsx("uppercase text-left-2 text-[14px] mb-3 ");
+  const sectionTitleClasses = clsx(
+    "uppercase text-left-2 text-[14px] mb-3 font-normal"
+  );
   const partnerLogoClasses = "min-w-20 max-h-20 md:w-fit";
 
   return (
@@ -74,11 +78,12 @@ export default function Footer(props) {
           </ul>
         </nav>
 
-        {/* <ul className="font-semibold flex flex-col gap-0.5">
+        <ul className="font-semibold min-w-fit">
           <div className={sectionTitleClasses}>{t("footer.title2")}</div>
+          {/* Instagram */}
           <Link
             target="_blank"
-            href="https://www.youtube.com/user/FirefoxOSHTML5/featured"
+            href="https://www.instagram.com/endgame.project?utm_source=ig_web_button_share_sheet&igsh=MXZ2Z3ZnY2Z3emRmcw=="
             className={
               "text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
             }
@@ -90,16 +95,17 @@ export default function Footer(props) {
                   variant: "default",
                   size: "icon_sm",
                   radius: "rounded_full",
-                }) + " bg-red-600 hover:bg-red-600 mr-2"
+                }) + " p-[14px] rounded-full bg-accent/30 hover:bg-accent/60 mr-2"
               }
             >
-              <ArticleIcon sx={{ fontSize: 18 }} />
+              <InstagramIcon sx={{ fontSize: 20 }} />
             </Button>
-            <p>Youtube</p>
+            <p> Instagram</p>
           </Link>
+          {/* Twitter */}
           <Link
             target="_blank"
-            href="https://www.researchgate.net/lab/Next-Generation-Internet-Group-Juan-Quemada"
+            href="https://x.com/endgame_project"
             className={
               "text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
             }
@@ -111,16 +117,17 @@ export default function Footer(props) {
                   variant: "default",
                   size: "icon_sm",
                   radius: "rounded_full",
-                }) + " bg-blue-600 hover:bg-blue-600 mr-2"
+                }) + " p-[14px] rounded-full bg-secondary/30 hover:bg-secondary/60 mr-2"
               }
             >
-              <ArticleIcon sx={{ fontSize: 18 }} />
+              <XIcon sx={{ fontSize: 18 }} />
             </Button>
-            <p>ResearchGate</p>
+            <p>X</p>
           </Link>
+          {/* Tik tok */}
           <Link
             target="_blank"
-            href="https://github.com/ging"
+            href="https://www.tiktok.com/@endgame.project"
             className={
               "text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
             }
@@ -131,15 +138,27 @@ export default function Footer(props) {
                 ButtonVariants({
                   variant: "default",
                   size: "icon_sm",
-                  radius: "rounded_full",
-                }) + " bg-orange-500 hover:bg-orange-500 mr-2"
+                }) + " p-[14px] rounded-full bg-purple-500/30 hover:bg-purple-500/60 mr-2"
               }
             >
-              <ArticleIcon sx={{ fontSize: 18 }} />
+              <i>
+                <svg
+                  width="14"
+                  height="16"
+                  viewBox="0 0 16 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.6002 2.82C11.9167 2.03953 11.5401 1.0374 11.5402 0H8.45016V12.4C8.42682 13.0712 8.14368 13.7071 7.66046 14.1735C7.17725 14.6399 6.53175 14.9004 5.86016 14.9C4.44016 14.9 3.26016 13.74 3.26016 12.3C3.26016 10.58 4.92016 9.29 6.63016 9.82V6.66C3.18016 6.2 0.160156 8.88 0.160156 12.3C0.160156 15.63 2.92016 18 5.85016 18C8.99016 18 11.5402 15.45 11.5402 12.3V6.01C12.7932 6.90985 14.2975 7.39265 15.8402 7.39V4.3C15.8402 4.3 13.9602 4.39 12.6002 2.82Z"
+                    fill="white"
+                  />
+                </svg>
+              </i>
             </Button>
-            <p> Github</p>
+            <p>TikTok</p>
           </Link>
-        </ul> */}
+        </ul>
 
         <div className="min-w-fit font-sm flex flex-col">
           <Text type="small" className="mb-2">
@@ -155,11 +174,11 @@ export default function Footer(props) {
             </a>
           </Text>
           <Text type="small">
-            {t("footer.projectCall")}:{" "}
-            <b> Creative Europe (CREA) </b>
+            {t("footer.projectCall")}: <b> Creative Europe (CREA) </b>
           </Text>
           <Text type="small">
-            {t("footer.projectDuration")}: <b>{t("footer.projectDurationContent")}</b>
+            {t("footer.projectDuration")}:{" "}
+            <b>{t("footer.projectDurationContent")}</b>
           </Text>
         </div>
       </div>
@@ -229,9 +248,7 @@ export default function Footer(props) {
             href={partners.ftb.link}
           >
             <Image
-              className={
-                partnerLogoClasses + " p-3"
-              }
+              className={partnerLogoClasses + " p-3"}
               src={partners.ftb.logo}
               alt={partners.ftb.name_en + " logo"}
               fit="contain"

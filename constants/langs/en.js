@@ -63,8 +63,11 @@ export const en = {
   },
   research: {
     title: "Research and impact",
-    button: "Read publication",
-    button2: "Load more",
+    buttons: {
+      read: "Read publication",
+      download: "Download",
+      button2: "Ver más",
+    }
   },
   about: {
     title: "About ENDGAME",
