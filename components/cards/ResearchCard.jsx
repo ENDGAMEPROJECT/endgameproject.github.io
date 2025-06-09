@@ -139,7 +139,7 @@ const ResearchCard = ({ publication }) => {
         </CardContent>
       </CardBody>
 
-      {publicationname && externalLinkJoin || downloadLinkJoin && (
+      {publicationname && (
         <CardFooter className="p-0 flex-wrap">
           {/* Leer online BTN */}
           {externalLinkJoin && (
@@ -152,7 +152,8 @@ const ResearchCard = ({ publication }) => {
             >
               <Link
                 rel="noopener noreferrer"
-                href={`/publications/${publicationname}`}
+                href={externalLinkJoin}
+                target="_blank"
               >
                 {t(
                   publication.type === "publication"
@@ -174,7 +175,7 @@ const ResearchCard = ({ publication }) => {
             >
               <Link download={downloadLinkJoin}
                 rel="noopener noreferrer"
-                href={`/publications/${publicationname}`}
+                href={`/documents/${downloadLinkJoin}`}
               >
                 {t(
                   publication.type === "publication"
