@@ -52,7 +52,7 @@ export const publications = [
   },
   {
     publicationname: "efml052125",
-    category: "Deliverable",
+    category: "Article",
     type: "Paper",
     date: "05/21/25",
     country: "International",

@@ -118,7 +118,7 @@ const ResearchCard = ({ publication }) => {
             </div>
           )}
 
-          <Text className="text-gray-300/90 mb-4 lg:pr-16" type="small">
+          <Text className="text-gray-300/90 text-balance mb-4 lg:pr-16" type="small">
             {authors}
           </Text>
 
