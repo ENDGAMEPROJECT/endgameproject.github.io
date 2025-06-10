@@ -16,7 +16,7 @@ export const publications = [
     title_sr: "Disinformation narratives report",
     subtitle_sr:
       "Identification and creation of contextualized media literacy scenarios",
-    title_fi: "Disinformation narratives report",
+    // title_fi: "Raportti disinformaationarratiiveista",
     subtitle_fi:
       "Identification and creation of contextualized media literacy scenarios",
     // externalLinkJoin: "#",
@@ -41,7 +41,7 @@ export const publications = [
     subtitle_es: "Educational Escape room development",
     title_sr: "Escape Room Design Guidelines",
     subtitle_sr: "Educational Escape room development",
-    title_fi: "Escape Room Design Guidelines",
+    // title_fi: "Pakohuonepelien suunnitteluohje",
     subtitle_fi: "Educational Escape room development",
     // externalLinkJoin: "#",
     downloadLinkJoin: "/ENDGAME_edg053125.pdf",
@@ -61,7 +61,7 @@ export const publications = [
     subtitle_es: "",
     title_sr: "Escape Rooms for Media Literacy: A Systematic Literature Review",
     subtitle_sr: "",
-    title_fi: "Escape Rooms for Media Literacy: A Systematic Literature Review",
+    // title_fi: "Pakohuoneet medialukutaidon opettamisessa: systemaattinen kirjallisuuskatsaus",
     subtitle_fi: "",
     externalLinkJoin: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5263173",
     downloadLinkJoin: "",
