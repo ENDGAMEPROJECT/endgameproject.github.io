@@ -17,7 +17,7 @@ export const en = {
     about: {
       title: "About the project",
       content:
-        "ENDGAME is an innovative European project aimed at ultivating critical thinking and responsible digital citizenship among European youth through educational escape rooms that simulate real-life scenarios of information consumption. We aim to immerse participants in time-sensitive, interactive, and challenging experiences, where they will develop their skills in identifying disinformation, recognizing AI-generated content, and understanding the implications of personal data exposure on social media platforms.",
+        "ENDGAME is an innovative European project aimed at cultivating critical thinking and responsible digital citizenship among European youth through educational escape rooms that simulate real-life scenarios of information consumption. We aim to immerse participants in time-sensitive, interactive, and challenging experiences, where they will develop their skills in identifying disinformation, recognizing AI-generated content, and understanding the implications of personal data exposure on social media platforms.",
     },
     mission: {
       title: "Our mission",
