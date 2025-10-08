@@ -54,7 +54,7 @@ export default function Header(props) {
   );
 
   const menuItems = clsx(
-    "flex flex-col justify-end items-center md:flex-row",
+    "flex flex-col justify-end items-center md:flex-row text-nowrap",
     "gap-1 md:gap-4"
   );
 
@@ -69,7 +69,7 @@ export default function Header(props) {
       {/* route={routes.route} ?????*/}
       <a href="/" className="h-10 flex gap-2">
         <Image
-          className=""
+          className="w-fit"
           src={endgameLogosPng + "logo_ENDGAME_main_darkBg.png"}
           alt="endgame logo"
           fit="contain"

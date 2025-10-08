@@ -53,6 +53,7 @@ const escaperoomFull = ({ escaperoomname }) => {
     description_en,
     description_es,
     theme_en,
+    theme_es,
     category,
     keywords,
   } = escaperoom;
@@ -60,7 +61,8 @@ const escaperoomFull = ({ escaperoomname }) => {
   const currentLang = i18n.language;
   const title = currentLang === "es" ? title_es : title_en;
   const description = currentLang === "es" ? description_es : description_en;
-  const theme = currentLang === "es" ? theme_en : theme_en; // falta traduccion en constants
+  const theme = currentLang === "es" && theme_es ? theme_es : theme_en;
+    
 
   const categoryFormatted =
     category.charAt(0).toUpperCase() + category.slice(1);

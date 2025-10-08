@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 // Components
 import { Badge, badgeVariants } from "../ui/badge";
-import Text from "../ui/Text";
+import Text from "../ui/text";
 import { Button } from "../ui/button";
 import {
   CustomCard,

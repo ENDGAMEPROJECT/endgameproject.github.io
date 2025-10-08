@@ -13,7 +13,7 @@ export default function Escaperooms() {
     <main className="standard_margin ">
       <Heading level="h1">{t("escaperooms.title")}</Heading>
 
-      <div className="mt-20 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div className="mt-20 w-full flex gap-6">
         {escaperooms.map((escaperoom, key) => {
           return <EscaperoomCard escaperoom={escaperoom} key={key} />;
         })}

@@ -8,7 +8,7 @@ import ArrowForwardSharp from "@mui/icons-material/ArrowForwardSharp";
 
 // Components
 import { Badge, badgeVariants } from "../ui/badge";
-import Text from "@/components/ui/Text";
+import Text from "@/components/ui/text";
 import { Button, ButtonVariants } from "../ui/button";
 
 import {
@@ -21,6 +21,8 @@ import {
   CardSubtitle,
 } from "@/components/ui/customCard";
 
+import Image from "../ui/image";
+
 import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
 import HighlightedHeader from "../ui/highlightedHeader";
 import Heading from "../ui/Heading";
@@ -28,13 +30,15 @@ import Heading from "../ui/Heading";
 const EscaperoomCard = ({ escaperoom }) => {
   const {
     category,
-    theme,
+    theme_en,
+    theme_es,
     title_en,
     title_es,
     description_en,
     description_es,
     keywords,
     escaperoomname,
+    image
   } = escaperoom;
 
   const { t, i18n } = useTranslation();
@@ -49,26 +53,35 @@ const EscaperoomCard = ({ escaperoom }) => {
     <Link
       href={`/escaperooms/${escaperoomname}`}
       rel="noopener noreferrer"
-      className="flex gap-4 items-center"
+      className="flex w-full gap-4 items-center"
       onClick={() => {
         window.scrollTo({ top: 0 });
       }}
     >
-      <CustomCard className="mb-8 gap-0 mx-auto md:w-full flex flex-col">
+      <CustomCard className="gap-0 mx-auto w-full flex flex-col">
         <HighlightedHeader
           level="h3"
           string={title_translation}
           // className={}
         />
-        <div className="h-[50dvh] flex justify-center items-center border border-primary bg-black">
+        <div className="h-[50dvh] flex justify-center items-center hover:border border-primary bg-black group">
+          <Image
+            className="group-hover:opacity-[.60] transition duration-300 ease-in-out"
+            src={image}
+            alt={title_translation}
+            fit="cover"
+          />
+          {/* <img src={image} alt={title_translation} className="object-coverw-full h-full opacity-[1] group-hover:opacity-[.60] transition duration-300 ease-in-out"/> */}
+          {/* Este Heading hay que cambiarlo por un link */}
           <Heading
             level="h4"
             className={
-              "text-primary bg-primary/20 border border-primary px-4 py-2"
+              "group-hover:opacity-[1] absolute opacity-[0]  text-primary bg-primary/20 border border-primary px-4 py-2 transition duration-300 ease-in-out"
             }
           >
-            15d : 20h : 10m : 56s
+            Play!
           </Heading>
+          
         </div>
         <Button
           className={

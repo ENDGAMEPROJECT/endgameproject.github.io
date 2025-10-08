@@ -7,7 +7,7 @@ import { activeRoutes } from "@/constants/routes";
 import { endgameLogosPng } from "@/constants/assetsRoutes";
 import { partners } from "@/constants/partners";
 import Image from "../ui/image";
-import Text from "../ui/Text";
+import Text from "../ui/text";
 import Link from "next/link";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import ArticleIcon from "@mui/icons-material/Article";

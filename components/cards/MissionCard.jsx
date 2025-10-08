@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "../ui/image";
-import Heading from "../ui/heading";
+import Heading from "../ui/Heading";
 import Text from "../ui/text";
 import { useTranslation } from "react-i18next";
 

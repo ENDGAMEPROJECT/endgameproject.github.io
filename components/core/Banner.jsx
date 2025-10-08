@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import Heading from "../ui/Heading";
-import Text from "../ui/Text";
+import Text from "../ui/text";
 import { Button, ButtonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
