@@ -43,6 +43,7 @@ export const sr = {
     title: "Sobe za bekstvo",
     escaperoom: {
       "action-button": "Pogledaj detalje",
+      "play-button": "Igraj"
     },
   },
   events: {

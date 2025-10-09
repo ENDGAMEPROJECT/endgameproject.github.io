@@ -43,6 +43,7 @@ export const en = {
     title: "Escaperooms",
     escaperoom: {
       "action-button": "See details",
+      "play-button": "Play"
     },
   },
   events: {

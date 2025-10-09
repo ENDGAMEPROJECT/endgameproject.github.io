@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 
 // assets
 import ArrowForwardSharp from "@mui/icons-material/ArrowForwardSharp";
+import PlayArrowSharp from "@mui/icons-material/PlayArrowSharp";
+
 
 // Components
 import { Badge, badgeVariants } from "../ui/badge";
@@ -27,6 +29,8 @@ import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
 import HighlightedHeader from "../ui/highlightedHeader";
 import Heading from "../ui/Heading";
 
+
+
 const EscaperoomCard = ({ escaperoom }) => {
   const {
     category,
@@ -38,7 +42,7 @@ const EscaperoomCard = ({ escaperoom }) => {
     description_es,
     keywords,
     escaperoomname,
-    image
+    image,
   } = escaperoom;
 
   const { t, i18n } = useTranslation();
@@ -71,18 +75,25 @@ const EscaperoomCard = ({ escaperoom }) => {
             alt={title_translation}
             fit="cover"
           />
-          {/* <img src={image} alt={title_translation} className="object-coverw-full h-full opacity-[1] group-hover:opacity-[.60] transition duration-300 ease-in-out"/> */}
-          {/* Este Heading hay que cambiarlo por un link */}
-          <Heading
-            level="h4"
-            className={
-              "group-hover:opacity-[1] absolute opacity-[0]  text-primary bg-primary/20 border border-primary px-4 py-2 transition duration-300 ease-in-out"
-            }
+          {/* Esto habrá que cambiarlo, juegar en el embed habría que pasarlo al detalle pq 
+          ahora con 1 ok pero luego con 3 va a ser un lío */}
+          <Button
+            asChild
+            variant="outline"
+            size="xl"
+            className="group-hover:opacity-[1] absolute opacity-[0]  text-primary-400 border-primary-400 hover:bg-primary hover:border-primary hover:text-black"
           >
-            Play!
-          </Heading>
-          
+            <Link
+              href={"#"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("escaperooms.escaperoom.play-button")}
+              <PlayArrowSharp />
+            </Link>
+          </Button>
         </div>
+
         <Button
           className={
             ButtonVariants({

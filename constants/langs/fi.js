@@ -43,6 +43,7 @@ export const fi = {
     title: "Pakohuoneet",
     escaperoom: {
       "action-button": "Näytä tiedot",
+      "play-button": "Pelata"
     },
   },
   events: {

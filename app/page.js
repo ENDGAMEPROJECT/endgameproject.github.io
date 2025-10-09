@@ -85,7 +85,7 @@ export default function Page() {
       <Divider size="xl" />
 
       {/* SECTION ABOUT */}
-      <Heading level="h1">{t("home.aboutSection")}</Heading>
+      <Heading level="h2" className="text-primary">{t("home.aboutSection")}</Heading>
       <section className="standard_margin flex flex-col gap-24">
         <article>
           <Heading level="h3">{t("home.about.title")}</Heading>
@@ -128,10 +128,16 @@ export default function Page() {
       </section>
       <Divider size="xl" />
 
+      {/* Leo -> ESCAPEROOMS SECTION*/}
+      {/* Hay que meter escaperromCard mapeada con las escaperooms, que de momento sólo hay una,
+      y luego un link a la página de las escaperroms general */}
+
+
+
       {/* LATEST CONTENT */}
       <section className="standard_margin" id="researchlines">
         <Divider size="md"></Divider>
-        <Heading level="h1">{t("home.latestContent.title")}</Heading>
+        <Heading level="h2" className="text-primary">{t("home.latestContent.title")}</Heading>
         {/* EVENTS AND NEWS */}
         <section className="cards">
           <header className="mb-4 w-full flex justify-between border-b border-primary">
