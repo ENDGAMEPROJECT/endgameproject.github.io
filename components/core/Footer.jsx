@@ -24,7 +24,7 @@ export default function Footer(props) {
   const partnerLogoClasses = "min-w-20 max-h-20 md:w-fit";
 
   return (
-    <footer className="h-fit bg-[#040404] text-gray-100">
+    <footer className="h-fit bg-myBackground text-gray-100">
       {/* FOOTER UP */}
       <div className="min-w-[280px] flex justify-between gap-12 md:gap-20 flex-wrap lg:flex-nowrap items-start">
         <div
@@ -66,8 +66,8 @@ export default function Footer(props) {
                 key={index}
                 className={
                   route.route === props.route
-                    ? "li-selected text-left mb-1 lg:mb-1.5 hover:underline"
-                    : "text-left mb-1 lg:mb-1.5 hover:underline"
+                    ? "li-selected text-left mb-1 lg:mb-1.5 hover:underline text-myText"
+                    : "text-left mb-1 lg:mb-1.5 hover:underline text-myText"
                 }
               >
                 <Link className="text-base" href={route.route}>

@@ -6,35 +6,30 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
+    "/events/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/events/page.js"
     ],
     "/escaperooms/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/escaperooms/page.js"
     ],
-    "/events/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/events/page.js"
-    ],
-    "/events/[eventname]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/events/[eventname]/page.js"
-    ],
-    "/escaperooms/[escaperoomname]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/escaperooms/[escaperoomname]/page.js"
+      "static/chunks/app/page.js"
     ],
     "/research/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/research/page.js"
+    ],
+    "/escaperooms/[escaperoomname]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/escaperooms/[escaperoomname]/page.js"
     ]
   }
 }

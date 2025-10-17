@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
 
 import LangSwitcher from "@/components/LangSwitcher";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { activeRoutes } from "@/constants/routes";
 
 // icons
@@ -26,8 +27,10 @@ export default function Header(props) {
   const headerClasses = clsx(
     "h-fit w-full px-4 lg:px-8 py-4",
     "z-50 sticky -top-[1px] ",
-    "flex justify-between items-center gap-8",
-    "bg-[#040404] text-text shadow-md",
+    "flex justify-between items-center gap-8 ",
+    // "bg-[#040404] text-text shadow-md",
+    // "dark:bg-[#fafafa]",
+    "bg-myBackground",
     'font-title',
 
     `header_${currentLang} z-50`,
@@ -40,7 +43,8 @@ export default function Header(props) {
   //
 
   const menuClasses = clsx(
-    "bg-[#040404]",
+    // "bg-[#fafafa]",
+    "bg-myBackground",
     "w-screen md:p-0 md:w-fit",
     "absolute top-[48px] -right-4 md:static",
     "flex flex-col lg:flex-row items-center",
@@ -61,21 +65,24 @@ export default function Header(props) {
   const menuItemClasses = clsx(
     "w-full h-full text-center px-8 py-4 md:p-0 md:w-fit",
     "text-lg md:text-base",
+    // "text-black",
     " hover:text-primary-300"
+    // " hover:text-primary-300"
   );
 
   return (
     <header className={headerClasses + "z-50"} id="header_home">
       {/* route={routes.route} ?????*/}
-      <a href="/" className="h-10 flex gap-2">
+      <a href="/" className="h-10 flex gap-2 w-fit">
         <Image
-          className="w-fit"
+          // className="w-auto"
           src={endgameLogosPng + "logo_ENDGAME_main_darkBg.png"}
           alt="endgame logo"
           fit="contain"
         />
       </a>
       {/* menu container */}
+      <div className="w-full h-full min-h-[50px]"></div>
       <div className="relative w-fit flex gap-4 md:gap-8 items-center">
         {/* menu icons */}
         <div className="block md:hidden"> 
@@ -107,8 +114,9 @@ export default function Header(props) {
                   href={route.route}
                   className={
                     currentPath == route.route
-                      ? " font-semibold text-primary"
-                      : " font-normal"
+                      ? " font-semibold text-myPrimary"
+                      // " font-semibold text-primary-600"
+                      : " font-normal text-myText hover:text-myPrimary"
                   }
                 >
                   {t(route.key)}
@@ -118,7 +126,10 @@ export default function Header(props) {
           </ul>
         </div>
         {/* /menu nav */}
+        <div className="flex gap-4">
+          <ThemeSwitcher/>
           <LangSwitcher />
+        </div>
       </div>
       {/* menu container */}
     </header>

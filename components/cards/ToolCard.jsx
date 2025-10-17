@@ -35,12 +35,12 @@ const Card = React.forwardRef(
     }
 
     return (
-      <CustomCard className="p-3 rounded-2xl border border-white">
+      <CustomCard className="p-3 rounded-2xl border border-myForeground">
         {img && (
           <Image
             src={process.env.PUBLIC_URL + img || "placeholder.jpg"}
             alt={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
-            className={"!h-[250px] p-6 bg-primary-500 rounded-md"}
+            className={"!h-[250px] p-6 bg-primary500 rounded-md"}
             fit="contain"
           />
         )}

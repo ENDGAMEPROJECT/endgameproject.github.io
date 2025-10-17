@@ -14,7 +14,7 @@ export const escaperooms = [
       "En esta escape room el jugador aprenderá sobre los mecanismos que se usan para generar bulos y desinformación poniéndose en la piel de un periodista infiltrado a modo de conserje en una empresa dedicada a ello.",
     keywords: ["escaperoom", "Media literacy", "misinformation"],
     externalLink: "https://play.unity.com/en/games/76daba76-1c1e-4d25-9b7a-3d64009d80fb/the-click-trap",
-    image: `/assets/images/theClickTrap.png`
+    image: `/assets/images/EndgameBackground.png`
   },
   // {
   //   escaperoomname: "escaperoom2",

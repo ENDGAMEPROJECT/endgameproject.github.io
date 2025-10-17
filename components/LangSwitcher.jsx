@@ -30,30 +30,29 @@ export default function LangSwitcher() {
         variant="secondary"
         size="lg"
         className={clsx(
-          "border font-medium px-2 py-1.5 ",
+          "border font-medium px-2 py-1.5 bg-myBackground hover:bg-myBackground",
           {
-            "!text-primary  border-primary bg-opacity-100": open,
-            "text-text border border-text bg-opacity-0": !open,
+            "!text-myText  border border-myPrimary bg-opacity-100 hover:bg-myBackground": open,
+            "text-myText border border-myText bg-opacity-0 hover:text-myText": !open,
           }
         )}
-        // className="w-fit flex items-center gap-2 px-3 py-2 md:px-4 text-text rounded-sm hover:bg-grey-100 dark:hover:bg-grey-900"
       >
         <LanguageIcon sx={{ fontSize: 18 }} className="mr-1" />
         <span>{lngs[i18n.language]?.abbreviation || "EN"}</span>
       </Button>
 
       {open && (
-        <ul className="absolute right-0 z-10 mt-1 w-fit bg-black dark:bg-black border border-primary rounded-sm shadow">
+        <ul className="absolute right-0 z-10 mt-1 w-fit bg-myBackground border border-myPrimary rounded-sm shadow">
           {Object.entries(lngs).map(
             ([lngKey, { abbreviation, nativeName }]) => (
               <li
                 key={lngKey}
                 onClick={() => handleSelect(lngKey)}
                 className={clsx(
-                  "w-full whitespace-nowrap px-5 py-3 cursor-pointer hover:bg-grey-800 dark:hover:bg-grey-900",
+                  "w-full whitespace-nowrap px-5 py-3 cursor-pointer hover:bg-grey800 dark:hover:bg-grey900",
                   {
-                    "font-bold text-primary": i18n.language === lngKey,
-                    "font-normal": i18n.language !== lngKey,
+                    "font-bold text-myText": i18n.language === lngKey,
+                    "font-normal text-myText": i18n.language !== lngKey,
                   }
                 )}
               >

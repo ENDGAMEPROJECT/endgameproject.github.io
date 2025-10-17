@@ -68,7 +68,7 @@ const EscaperoomCard = ({ escaperoom }) => {
           string={title_translation}
           // className={}
         />
-        <div className="h-[50dvh] flex justify-center items-center hover:border border-primary bg-black group">
+        <div className="h-[50dvh] flex justify-center items-center border border-myPrimary bg-background200 group">
           <Image
             className="group-hover:opacity-[.60] transition duration-300 ease-in-out"
             src={image}
@@ -81,7 +81,7 @@ const EscaperoomCard = ({ escaperoom }) => {
             asChild
             variant="outline"
             size="xl"
-            className="group-hover:opacity-[1] absolute opacity-[0]  text-primary-400 border-primary-400 hover:bg-primary hover:border-primary hover:text-black"
+            className="group-hover:opacity-[1] absolute opacity-[0]  text-primary400 border-primary400 hover:bg-myPrimary hover:border-myPrimary hover:text-myTextInverse"
           >
             <Link
               href={"#"}
@@ -100,7 +100,7 @@ const EscaperoomCard = ({ escaperoom }) => {
               variant: "tertiary",
               size: "lg",
               radius: "rounded_sm",
-            }) + " w-full justify-end  bg-black text-primary hover:text-primary"
+            }) + " w-full justify-end  bg-myBackground text-myText hover:text-myPrimary"
           }
         >
           {t("escaperooms.escaperoom.action-button")}

@@ -81,15 +81,15 @@ export default function Page() {
           </Link> */}
         </BannerContent>
       </Banner>
-
+      
       <Divider size="xl" />
 
       {/* SECTION ABOUT */}
-      <Heading level="h2" className="text-primary">{t("home.aboutSection")}</Heading>
-      <section className="standard_margin flex flex-col gap-24">
+      <Heading level="h2" className="text-myPrimary">{t("home.aboutSection")}</Heading>
+      <section className="standard_margin flex flex-col gap-24 bg-background300 text-myText">
         <article>
-          <Heading level="h3">{t("home.about.title")}</Heading>
-          <Heading level="subtitle"> {t("home.about.content")}</Heading>
+          <Heading level="h3" className>{t("home.about.title")}</Heading> {/* ///////////////////////////////////////////////// */}
+          <Heading level="subtitle" className="text-myText"> {t("home.about.content")}</Heading>
         </article>
         <article>
           <Heading level="h3">{t("home.mission.title")}</Heading>
@@ -104,7 +104,7 @@ export default function Page() {
           <Heading level="h3">{t("home.partners.title")}</Heading>
           <Heading
             level="h5"
-            className="text-center mb-4 uppercase text-primary"
+            className="text-center mb-4 uppercase text-myPrimary"
           >
             {t("home.partners.universities")}
           </Heading>
@@ -115,7 +115,7 @@ export default function Page() {
           </ul>
           <Heading
             level="h5"
-            className="text-center my-4 uppercase text-primary"
+            className="text-center my-4 uppercase text-myPrimary"
           >
             {t("home.partners.agencies")}
           </Heading>
@@ -137,18 +137,18 @@ export default function Page() {
       {/* LATEST CONTENT */}
       <section className="standard_margin" id="researchlines">
         <Divider size="md"></Divider>
-        <Heading level="h2" className="text-primary">{t("home.latestContent.title")}</Heading>
+        <Heading level="h2" className="text-myPrimary">{t("home.latestContent.title")}</Heading>
         {/* EVENTS AND NEWS */}
         <section className="cards">
-          <header className="mb-4 w-full flex justify-between border-b border-primary">
+          <header className="mb-4 w-full flex justify-between border-b border-myPrimary">
             <Heading level="h4">{t("home.latestContent.events.title")}</Heading>
             <Button
               className={
                 ButtonVariants({
-                  variant: "tertiary",
+                  variant: "terciary",
                   size: "lg",
                   radius: "rounded_sm",
-                }) + " hover:text-primary"
+                }) + " hover:text-myPrimary"
               }
             >
               <Link
@@ -170,7 +170,7 @@ export default function Page() {
                 <Link
                   key={key}
                   href={`/events/${event.eventname}`}
-                  className="min-h-40 p-4 bg-black border border-transparent hover:border-accent transition-all duration-200 ease-in-out"
+                  className="min-h-40 p-4 bg-myBackground border border-transparent hover:border-accent400 transition-all duration-200 ease-in-out"
                   onClick={() => {
                     window.scrollTo({ top: 0 });
                   }}
@@ -213,7 +213,7 @@ export default function Page() {
                               key={index}
                               variant="secondary"
                               size="sm"
-                              className="text-accent-400 bg-accent/15"
+                              className="text-accent400 bg-accent/15"
                             >
                               {keyword}
                             </Badge>
@@ -231,8 +231,8 @@ export default function Page() {
         RESEARCH AND RESULTS 
         --------------------------------------------------------------------*/}
         <section className="cards mt-8">
-          <header className="mb-4 w-full flex justify-between border-b border-primary">
-            <Heading level="h4">
+          <header className="mb-4 w-full flex justify-between border-b border-myPrimary">
+            <Heading level="h4" className="text-myText">
               {t("home.latestContent.research.title")}
             </Heading>
             <Button
@@ -241,7 +241,7 @@ export default function Page() {
                   variant: "tertiary",
                   size: "lg",
                   radius: "rounded_sm",
-                }) + " hover:text-primary"
+                }) + " hover:text-myPrimary"
               }
             >
               <Link
@@ -262,12 +262,12 @@ export default function Page() {
                 <Link // aquí quizás no tiene sentido el link, ya que no habrá un single de publicación
                   key={key}
                   href={`/research`}
-                  className="min-h-40 p-4 bg-black border border-transparent hover:border-secondary transition-all duration-200 ease-in-out"
+                  className="min-h-40 p-4 bg-myBackground border border-transparent hover:border-secondary400 transition-all duration-200 ease-in-out"
                   onClick={() => {
                     window.scrollTo({ top: 0 });
                   }}
                 >
-                  <CustomCard className="bg-black">
+                  <CustomCard>
                     <CardHeader>
                       {publication.type && (
                         <Badge variant="type" size="lg" type="info">

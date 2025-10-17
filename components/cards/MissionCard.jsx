@@ -52,7 +52,7 @@ const MissionCard = ({ mission }) => {
   //   lang === "es" && description_es ? description_es : description;
 
   return (
-    <li className="w-full p-6 sm:p-4 bg-black text-balance">
+    <li className="w-full p-6 sm:p-4 bg-background200 text-balance">
       {/* w-full p-4 bg-black flex items-center sm:flex-col */}
       <Image
         className="!h-20  opacity-50 p-2"
@@ -63,7 +63,7 @@ const MissionCard = ({ mission }) => {
       />
       <div className="mt-4 place-content-center text-center">
         {/* mt-4 w-[120%] sm:place-content-center sm:text-center sm:w-full */}
-        <Heading level="h5" className="text-primary !text-20 text-pretty">
+        <Heading level="h5" className="text-myPrimary !text-20 text-pretty">
           {title_translation}
         </Heading>
         <Text>{description_translation}</Text>

@@ -1,4 +1,4 @@
-// File: /home/ubu/Escritorio/endgameproject.github.io/app/research/page.js
+// File: /Users/leo/Desktop/UPM/endgameproject.github.io/app/research/page.js
 import * as entry from '../../../../app/research/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

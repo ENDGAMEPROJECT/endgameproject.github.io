@@ -26,6 +26,7 @@ const dmSans = DM_Sans({
   variable: "--font-dmSans",
 });
 
+
 export default function RootLayout({ children }) {
   //disable SSR whole project, this will make the project to be rendered only on client side
   const [isClient, setIsClient] = useState(false);
@@ -36,10 +37,10 @@ export default function RootLayout({ children }) {
 
   return (
     // <html className={` ${sourceSans.variable} ${inter.variable} `}>
-          <html className={` ${dmSans.variable} ${spaceGrotesk.variable} `}>
+          <html className={` ${dmSans.variable} ${spaceGrotesk.variable} dark`}>
             <GoogleAnalytics gaId="G-N132LLPSLM" />
       <title>ENDGAME</title>
-      <body className="bg-grey-950 min-h-[70dvh] mx-auto">
+      <body className="bg-background300 min-h-[70dvh] mx-auto">
         <Header route={"/"} />
         {/* <main className="min-h-[70dvh] mx-auto"> */}
           {children}

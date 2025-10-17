@@ -3,14 +3,14 @@ import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 
 const badgeVariants = cva(
-  "inline-flex px-3 py-1 pt-[5px] text-center border h-fit w-fit transition-colors bg-grey",
+  "inline-flex px-3 py-1 pt-[5px] text-center border h-fit w-fit transition-colors bg-grey400",
   {
     variants: {
       variant: { // style
-        default: 'bg-grey-100 bg-opacity-10 text-text border-none font-body',
-        type: " bg-opacity-100 border uppercase font-title !text-black !font-bold",
-        primary: " bg-opacity-10 border uppercase font-title",
-        secondary: " bg-opacity-15 border-none capitalize font-body",
+        default: 'bg-grey100 bg-opacity-10 text-myText border-none font-body',
+        type: " bg-opacity-100 border uppercase font-title !text-myTextInverse !font-bold",
+        primary: " bg-opacity-10 border uppercase font-title text-myText",
+        secondary: " bg-opacity-15 border-none capitalize font-body text-myText",
       },
       size: {
         default: "border-1 text-[14px]",
@@ -23,9 +23,9 @@ const badgeVariants = cva(
         // success: "border-green-100 bg-green-100 text-green-800",
         // warn: "border-amber-100 bg-amber-100 text-amber-800",
         // error: "border-red-200 bg-red-200 text-red-800",
-        default: "border-primary bg-primary text-primary",
-        activity: "border-accent bg-accent text-accent-400 bg-accent",
-        info: "border-secondary-400 bg-secondary-400 text-secondary-400",
+        default: "border-myPrimary bg-myPrimary text-myPrimary",
+        activity: "border-accent400 bg-accent400 text-accent400",
+        info: "border-secondary400 bg-secondary400 text-secondary400", ////////////////////////////////
       },
     },
     defaultVariants: {
