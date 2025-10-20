@@ -9,6 +9,7 @@ import ArrowForwardSharp from "@mui/icons-material/ArrowForwardSharp";
 // Components
 import { Badge, badgeVariants } from "../ui/badge";
 import Text from "@/components/ui/Text";
+import Image from "@/components/ui/Image";
 import { Button, ButtonVariants } from "../ui/button";
 
 import {
@@ -35,6 +36,7 @@ const EscaperoomCard = ({ escaperoom }) => {
     description_es,
     keywords,
     escaperoomname,
+    image
   } = escaperoom;
 
   const { t, i18n } = useTranslation();
@@ -49,7 +51,7 @@ const EscaperoomCard = ({ escaperoom }) => {
     <Link
       href={`/escaperooms/${escaperoomname}`}
       rel="noopener noreferrer"
-      className="flex gap-4 items-center"
+      className="flex gap-4 items-center w-full"
       onClick={() => {
         window.scrollTo({ top: 0 });
       }}
@@ -61,14 +63,15 @@ const EscaperoomCard = ({ escaperoom }) => {
           // className={}
         />
         <div className="h-[50dvh] flex justify-center items-center border border-primary bg-black">
-          <Heading
+          <Image src={image}/>
+          {/* <Heading
             level="h4"
             className={
               "text-primary bg-primary/20 border border-primary px-4 py-2"
             }
           >
-            15d : 20h : 10m : 56s
-          </Heading>
+            
+          </Heading> */}
         </div>
         <Button
           className={
