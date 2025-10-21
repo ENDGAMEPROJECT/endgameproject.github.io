@@ -45,6 +45,16 @@ export const en = {
       "action-button": "See details",
     },
   },
+  escaperoomfull:{
+    escaperoomInfo: "Escaperoom info",
+    relatedMaterials: "Related materials",
+    littleBoxes: {
+            "theme": "theme",
+            "duration": "duration",
+            "level": "level",
+            "other": "other"
+          }
+  },
   events: {
     title: "Events and news",
     filters: {

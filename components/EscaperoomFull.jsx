@@ -7,7 +7,7 @@ import { escaperooms } from "@/constants/escaperooms";
 import HighlightedHeader from "@/components/ui/highlightedHeader";
 import Link from "next/link";
 import Text from "../components/ui/text";
-import Heading from "../components/ui/Heading";
+import Heading from "@/components/ui/Heading";
 import { Badge } from "./ui/badge";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import ResourceCard from "@/components/cards/ResourceCard";
@@ -32,17 +32,6 @@ import ArrowForwardSharp from "@mui/icons-material/ArrowForwardSharp";
   },
 */
 
-const pruebaArray = {
-  resourceName : "Ey yo",
-  resourceName_es : "Nombre del recurso",
-  resourceName_sr : "Naziv resursa",                      // TODO: review translations
-  resourceName_fi : "Resurssin nimi",                     // TODO: review translations
-  additionalInfo : "More info about this resource",
-  additionalInfo_es : "Más información sobre este recurso",
-  additionalInfo_sr : "Više informacija o ovom resursu",          // TODO: review translations
-  additionalInfo_fi : "Lisätietoja tästä resurssista",            // TODO: review translations
-  tag : "Resource tag",
-}
 
 
 const escaperoomFull = ({ escaperoomname }) => {
@@ -65,7 +54,19 @@ const escaperoomFull = ({ escaperoomname }) => {
   const {
     title_en,
     title_es,
-    claim,
+    duration,
+    level_en,
+    level_es,
+    level_fi,
+    level_sr,
+    moreInfo_es,
+    moreInfo_en,
+    moreInfo_fi,
+    moreInfo_sr,
+    claim_en,
+    claim_es,
+    claim_fi,
+    claim_sr,
     description_en,
     description_es,
     longdescription_en,
@@ -81,13 +82,40 @@ const escaperoomFull = ({ escaperoomname }) => {
   const longdescription = currentLang === "es" ? longdescription_es : longdescription_en;
   const theme = currentLang === "es" ? theme_en : theme_en; // falta traduccion en constants
 
+  const level_translation =
+    currentLang === "es"
+      ? level_es
+      : currentLang === "sr"
+        ? level_sr
+        : currentLang === "fi"
+          ? level_fi
+          : level_en;
+  
+  const claim_translation =
+    currentLang === "es"
+      ? claim_es
+      : currentLang === "sr"
+        ? claim_sr
+        : currentLang === "fi"
+          ? claim_fi
+          : claim_en; 
+
+  const moreInfo_translation =
+    currentLang === "es"
+      ? moreInfo_es
+      : currentLang === "sr"
+        ? moreInfo_sr
+        : currentLang === "fi"
+          ? moreInfo_fi
+          : moreInfo_en;
+
   const categoryFormatted =
     category.charAt(0).toUpperCase() + category.slice(1);
   const keywordsFormatted = keywords
     .map((keyword) => keyword.charAt(0).toUpperCase() + keyword.slice(1))
     .join(", ");
   const resourcesFormatted = escaperoom.resources
-    .map((resource) => <ResourceCard resource={resource} />);
+    .map((resource, key) => <ResourceCard resource={resource} key={key}/>);
 
   const externalLink = escaperoom.externalLink || "#";
   const externalLinkText =
@@ -102,7 +130,7 @@ const escaperoomFull = ({ escaperoomname }) => {
         {escaperoomname}
       </Heading> */}
       <HighlightedHeader
-        string={claim}
+        string={claim_translation}
         variant={""}
         level="h2"
         className={'py-12 justify-start w-full'}
@@ -126,34 +154,34 @@ const escaperoomFull = ({ escaperoomname }) => {
       {/* *********ESCAPE ROOM INFO********* */}
       <section className="mb-4 w-full">
         <header className="mb-4 w-full flex justify-between border-b border-primary">
-          <Heading level="h5" className="text-primary">Escaperoom info
+          <Heading level="h5" className="text-primary">{t("escaperoomfull.escaperoomInfo")}
           </Heading>
         </header>
         <div className="w-full md:grid md:grid-cols-[2fr_1fr] flex flex-col gap-4">
           <Text className="text-base w-full">{longdescription}</Text>
           <div className="grid grid-cols-2 grid-rows-2 gap-4">
             <div className="bg-primary/20 border border-primary flex flex-col items-center py-2 gap-1">
-              <HighlightedHeader string={"Theme"} variant={""} level="h6" className={"w-fit"}></HighlightedHeader>
+              <HighlightedHeader string={t("escaperoomfull.littleBoxes.theme")} variant={""} level="h6" className={"w-fit capitalize"}></HighlightedHeader>
               <div className="h-full flex items-center">
                 <Heading level="h4" className="text-center capitalize text-primary">{theme}</Heading>
               </div>
             </div>
             <div className="bg-primary/20 border border-primary flex flex-col items-center py-2 gap-1">
-              <HighlightedHeader string={"Duration"} variant={""} level="h6" className={"w-fit"}></HighlightedHeader>
+              <HighlightedHeader string={t("escaperoomfull.littleBoxes.duration")} variant={""} level="h6" className={"w-fit capitalize"}></HighlightedHeader>
               <div className="h-full flex items-center">
-                <Heading level="h4" className="text-center capitalize text-primary">45 min</Heading>
+                <Heading level="h4" className="text-center capitalize text-primary">{duration}</Heading>
               </div>
             </div>
             <div className="bg-primary/20 border border-primary flex flex-col items-center py-2 gap-1">
-              <HighlightedHeader string={"Level"} variant={""} level="h6" className={"w-fit"}></HighlightedHeader>
+              <HighlightedHeader string={t("escaperoomfull.littleBoxes.level")} variant={""} level="h6" className={"w-fit capitalize"}></HighlightedHeader>
               <div className="h-full flex items-center">
-                <Heading level="h4" className="text-center capitalize text-primary">Medium</Heading>
+                <Heading level="h4" className="text-center capitalize text-primary">{level_translation}</Heading>
               </div>
             </div>
             <div className="bg-primary/20 border border-primary flex flex-col items-center py-2 gap-1">
-              <HighlightedHeader string={"Other"} variant={""} level="h6" className={"w-fit"}></HighlightedHeader>
+              <HighlightedHeader string={t("escaperoomfull.littleBoxes.other")} variant={""} level="h6" className={"w-fit capitalize"}></HighlightedHeader>
               <div className="h-full flex items-center">
-                <Heading level="h4" className="text-center capitalize text-primary">More info?</Heading>
+                <Heading level="h4" className="text-center capitalize text-primary">{moreInfo_translation}</Heading>
               </div>
             </div>
           </div>
@@ -164,7 +192,7 @@ const escaperoomFull = ({ escaperoomname }) => {
       {/* *********RELATED MATERIALS********* */}
       <section className="mb-4 w-full">
         <header className="mb-4 w-full flex justify-between border-b border-primary">
-          <Heading level="h5" className="text-primary">Related materials
+          <Heading level="h5" className="text-primary">{t("escaperoomfull.relatedMaterials")}
           </Heading>
         </header>
         <div className="w-full flex flex-col gap-4">

@@ -1,24 +1,38 @@
+import { duration } from "@mui/material";
+
 export const escaperooms = [
   // mock data de momento
   {
     escaperoomname: "theClickTrap",
     category: "escaperoom",
-    theme_en: "media literacy",
+    theme_en: "media literacy",       //Placeholder
     title_en:
       "The Click Trap",
     title_es: "The Click Trap",
-    description_en:
+    duration: "47 min",               //Placeholder
+    level_en: "hard",                 //Placeholder
+    level_es: "difícil",    
+    level_fi: "?????",                
+    level_sr: "?????",
+    moreInfo_en: "more info",         //Placeholder
+    moreInfo_es: "más info",
+    moreInfo_fi: "?????",
+    moreInfo_sr: "?????",
+    description_en:                   //Placeholder
       "In this session, experts will dissect the impact of misinformation and teach practical strategies for analyzing media critically.",
     description_es:
       "En esta sesión, expertos analizarán el impacto de la desinformación y compartirán estrategias prácticas para evaluar los medios de forma crítica.",
-    keywords: ["escaperoom", "Media literacy", "misinformation"],
+    keywords: ["escaperoom", "Media literacy", "misinformation"],   //Placeholder
     image: "/assets/images/EndgameBackground.png",
-    claim: "Can you clean this world out of misinformation?",
-    longdescription_en:
+    claim_en: "Can you clean up the misinformation in this world?",
+    claim_es: "¿Puedes limpiar la desinformación de este mundo?", 
+    claim_fi: "Voitko puhdistaa tämän maailman disinformaatiosta?", 
+    claim_sr: "Možeš li očistiti dezinformacije iz ovog sveta?",        //Placeholder
+    longdescription_en:                                             //Placeholder
       "In this session, experts will dissect the impact of misinformation and teach practical strategies for analyzing media critically. In this session, experts will dissect the impact of misinformation and teach practical strategies for analyzing media critically. In this session, experts will dissect the impact of misinformation and teach practical strategies for analyzing media critically.",
     longdescription_es:
       "En esta sesión, expertos analizarán el impacto de la desinformación y compartirán estrategias prácticas para evaluar los medios de forma crítica. En esta sesión, expertos analizarán el impacto de la desinformación y compartirán estrategias prácticas para evaluar los medios de forma crítica. En esta sesión, expertos analizarán el impacto de la desinformación y compartirán estrategias prácticas para evaluar los medios de forma crítica.",
-    resources:
+    resources:                                                      //Placeholder
     [
       {
         resourceName : "Hola",

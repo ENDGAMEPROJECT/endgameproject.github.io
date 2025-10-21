@@ -45,6 +45,16 @@ export const sr = {
       "action-button": "Pogledaj detalje",
     },
   },
+  escaperoomfull:{                     //TODO: Review escaperoomfull
+    escaperoomInfo: "Informacije o sobi za beg",
+    relatedMaterials: "Povezani materijali",
+    littleBoxes: {
+            "theme": "tema",
+            "duration": "trajanje",
+            "level": "nivo",
+            "other": "drugi"
+          }
+  },
   events: {
     title: "Događaji i vesti",
     filters: {

@@ -3,6 +3,7 @@ import * as React from "react";
 
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { escaperooms } from "@/constants/escaperooms";
 
 import { events } from "@/constants/events";
 import EventCard from "@/components/cards/EventCard";
@@ -18,11 +19,13 @@ import { Button, ButtonVariants } from "@/components/ui/button";
 import { Badge, BadgeVariants } from "@/components/ui/badge";
 import Heading from "@/components/ui/Heading";
 import { Divider, DividerVariants } from "@/components/ui/divider";
+import HighlightedHeader from "@/components/ui/highlightedHeader";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Image from "../components/ui/image";
 import Text from "../components/ui/text";
 import PartnerCard from "../components/cards/PartnerCard";
 import MissionCard from "../components/cards/MissionCard";
+import EscaperoomCard from "../components/cards/EscaperoomCard";
 
 import {
   Banner,
@@ -81,7 +84,6 @@ export default function Page() {
           </Link> */}
         </BannerContent>
       </Banner>
-
       <Divider size="xl" />
 
       {/* SECTION ABOUT */}
@@ -99,6 +101,50 @@ export default function Page() {
             ))}
           </ul>
         </article>
+        <article>
+          <Heading level="h3">Escaperooms</Heading>
+          <div className="flex flex-col md:grid md:grid-cols-[2fr_1fr] gap-8">
+            <div>
+              {escaperooms.map((escaperoom, key) => {
+                return <EscaperoomCard escaperoom={escaperoom} key={key} />;
+              })}
+            </div>
+            <ul className="flex flex-col gap-4">
+              <Heading level="h5" className="text-primary uppercase">On coming escaperooms</Heading>
+              <li className="flex justify-start gap-4 wrap">
+                <Text
+                  type="pre"
+                  className="text-wrap"
+                ><HighlightedHeader
+                    level="h6"
+                    string="March '26"
+                    className="w-fit inline mr-4"
+                  />Escaperoom title to be anounced
+                <Text
+                  type="pre"
+                  className="text-primary inline mx-2 text-wrap"
+                >by FNE & Maldita · FI</Text>
+                </Text>
+              </li>
+              <li className="flex justify-start gap-4 wrap">
+                <Text
+                  type="pre"
+                  className="text-wrap"
+                ><HighlightedHeader
+                    level="h6"
+                    string="June '26"
+                    className="w-fit inline mr-4"
+                  />Escaperoom title to be anounced
+                <Text
+                  type="pre"
+                  className="text-primary inline mx-2 text-wrap"
+                >by UPM & Maldita · ES</Text>
+                </Text>
+              </li>
+            </ul>
+          </div>
+        </article>
+
         {/* ABOUT partners */}
         <article>
           <Heading level="h3">{t("home.partners.title")}</Heading>
@@ -127,7 +173,6 @@ export default function Page() {
         </article>
       </section>
       <Divider size="xl" />
-
       {/* LATEST CONTENT */}
       <section className="standard_margin" id="researchlines">
         <Divider size="md"></Divider>
