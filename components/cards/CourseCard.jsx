@@ -1,6 +1,7 @@
 import React from "react";
 
 import { useTranslation } from "react-i18next";
+import { translator } from "@/lib/utils.js";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -26,21 +27,15 @@ import LaunchSharpIcon from '@mui/icons-material/LaunchSharp';
 
 const Card = React.forwardRef(
   (
-    {title, title_es, subtitle, description_en, description_es, date, category, route},
+    {title_en, title_es, subtitle, description_en, description_es, date, category, route},
     ref
   ) => {
     const { t, i18n } = useTranslation();
     const currentLang = i18n.language;
 
-    let description_translation = description_en;
-    if (currentLang === "es" && description_es) {
-      description_translation = description_es;
-    }
-
-    let title_translation = title;
-    if (currentLang === "es" && description_es) {
-      title_translation = title_es;
-    }
+    
+    const description_translation = translator(currentLang, description_en, description_es)
+    const title_translation = translator(currentLang, title_en, title_es)
 
     return (
       <CustomCard

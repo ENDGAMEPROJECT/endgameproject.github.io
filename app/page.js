@@ -56,8 +56,8 @@ export default function Page() {
 
   return (
     <main>
-      <Banner className="relative flex flex-col">
-        <BannerImg></BannerImg>
+      <Banner className="relative flex flex-col ">
+        <BannerImg className=""></BannerImg>
 
         <BannerContent className="absolute !w-full top-0 left-0 bg-gradient-to-r from-black to-black/50">
           <Image
@@ -110,7 +110,7 @@ export default function Page() {
               })}
             </div>
             <ul className="flex flex-col gap-4">
-              <Heading level="h5" className="text-primary uppercase">On coming escaperooms</Heading>
+              <Heading level="h5" className="text-primary uppercase">{t("escaperooms.oncoming")}</Heading>
               <li className="flex justify-start gap-4 wrap">
                 <Text
                   type="pre"

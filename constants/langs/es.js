@@ -41,6 +41,7 @@ export const es = {
   },
   escaperooms: {
     title: "Escaperooms",
+    oncoming: "Próximas escaperooms",
     escaperoom: {
       "action-button": "Ver detalles",
     },

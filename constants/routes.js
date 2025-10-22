@@ -7,7 +7,7 @@ import { Route, Routes } from "react-router-dom";
 
 export const routes = [
     { route: "/", key: "nav.home", page:<Page/>, active: true },
-    { route: "/escaperooms", key: "nav.escaperooms", page:<Escaperooms/>, active: true },
+    { route: "/escaperooms/theClickTrap", key: "nav.escaperooms", page:<Escaperooms/>, active: true },
     { route: "/events", key: "nav.events", page:<Events/>, active: true },
     { route: "/research", key: "nav.research", page:<Research/>, active: true },
     { route: "/about", key: "nav.about", page:<About/>, active: false },

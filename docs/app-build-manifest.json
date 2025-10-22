@@ -16,11 +16,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/escaperooms/page.js"
     ],
-    "/events/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/events/page.js"
-    ],
     "/escaperooms/[escaperoomname]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",

@@ -41,6 +41,7 @@ export const sr = {
   },
   escaperooms: {
     title: "Sobe za bekstvo",
+    oncoming: "O nadolazećim sobama za bekstvo",
     escaperoom: {
       "action-button": "Pogledaj detalje",
     },

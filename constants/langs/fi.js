@@ -41,6 +41,7 @@ export const fi = {
   },
   escaperooms: {
     title: "Pakohuoneet",
+    oncoming: "Tulossa olevat pakohuoneet",
     escaperoom: {
       "action-button": "Näytä tiedot",
     },

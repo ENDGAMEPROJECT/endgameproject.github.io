@@ -5,7 +5,8 @@ export const escaperooms = [
   {
     escaperoomname: "theClickTrap",
     category: "escaperoom",
-    theme_en: "media literacy",       //Placeholder
+    theme_en: "media literacy",
+    theme_es: "alfabetización mediática",      //Placeholder
     title_en:
       "The Click Trap",
     title_es: "The Click Trap",

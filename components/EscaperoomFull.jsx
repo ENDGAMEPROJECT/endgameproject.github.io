@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { translator } from "@/lib/utils.js";
 
 import { escaperooms } from "@/constants/escaperooms";
 import HighlightedHeader from "@/components/ui/highlightedHeader";
@@ -11,6 +12,7 @@ import Heading from "@/components/ui/Heading";
 import { Badge } from "./ui/badge";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import ResourceCard from "@/components/cards/ResourceCard";
+import EscaperoomCard from "@/components/cards/EscaperoomCard";
 
 // icons
 import NorthEastSharp from "@mui/icons-material/NorthEastSharp";
@@ -52,62 +54,28 @@ const escaperoomFull = ({ escaperoomname }) => {
   }
 
   const {
-    title_en,
-    title_es,
+    title_en, title_es,
     duration,
-    level_en,
-    level_es,
-    level_fi,
-    level_sr,
-    moreInfo_es,
-    moreInfo_en,
-    moreInfo_fi,
-    moreInfo_sr,
-    claim_en,
-    claim_es,
-    claim_fi,
-    claim_sr,
-    description_en,
-    description_es,
-    longdescription_en,
-    longdescription_es,
-    theme_en,
+    level_en, level_es, level_fi, level_sr,
+    moreInfo_es, moreInfo_en, moreInfo_fi, moreInfo_sr,
+    claim_en, claim_es, claim_fi, claim_sr,
+    description_en, description_es,
+    longdescription_en, longdescription_es,
+    theme_en, theme_es, 
     category,
     keywords,
   } = escaperoom;
 
   const currentLang = i18n.language;
-  const title = currentLang === "es" ? title_es : title_en;
-  const description = currentLang === "es" ? description_es : description_en;
-  const longdescription = currentLang === "es" ? longdescription_es : longdescription_en;
-  const theme = currentLang === "es" ? theme_en : theme_en; // falta traduccion en constants
 
-  const level_translation =
-    currentLang === "es"
-      ? level_es
-      : currentLang === "sr"
-        ? level_sr
-        : currentLang === "fi"
-          ? level_fi
-          : level_en;
-  
-  const claim_translation =
-    currentLang === "es"
-      ? claim_es
-      : currentLang === "sr"
-        ? claim_sr
-        : currentLang === "fi"
-          ? claim_fi
-          : claim_en; 
+  const title = translator(currentLang, title_en, title_es)
+  const description = translator(currentLang, description_en, description_es)
+  const longdescription = translator(currentLang, longdescription_en, longdescription_es) // falta traduccion en constants
+  const theme = translator(currentLang, theme_en, theme_es) // falta traduccion en constants
+  const level_translation = translator(currentLang, level_en, level_es, level_sr, level_fi)
+  const claim_translation = translator(currentLang, claim_en, claim_es, claim_sr, claim_fi)
+  const moreInfo_translation = translator(currentLang, moreInfo_en, moreInfo_es, moreInfo_sr, moreInfo_fi)
 
-  const moreInfo_translation =
-    currentLang === "es"
-      ? moreInfo_es
-      : currentLang === "sr"
-        ? moreInfo_sr
-        : currentLang === "fi"
-          ? moreInfo_fi
-          : moreInfo_en;
 
   const categoryFormatted =
     category.charAt(0).toUpperCase() + category.slice(1);
@@ -115,7 +83,7 @@ const escaperoomFull = ({ escaperoomname }) => {
     .map((keyword) => keyword.charAt(0).toUpperCase() + keyword.slice(1))
     .join(", ");
   const resourcesFormatted = escaperoom.resources
-    .map((resource, key) => <ResourceCard resource={resource} key={key}/>);
+    .map((resource, key) => <ResourceCard resource={resource} key={key} />);
 
   const externalLink = escaperoom.externalLink || "#";
   const externalLinkText =
@@ -138,6 +106,7 @@ const escaperoomFull = ({ escaperoomname }) => {
       >
         {title}
       </HighlightedHeader>
+      <EscaperoomCard escaperoom={escaperoom} seeDetails={false}/>
       <Button
         asChild
         variant="outline"
