@@ -1,7 +1,5 @@
 {
-  "/events/page": "app/events/page.js",
-  "/escaperooms/[escaperoomname]/page": "app/escaperooms/[escaperoomname]/page.js",
-  "/escaperooms/page": "app/escaperooms/page.js",
-  "/research/page": "app/research/page.js",
-  "/page": "app/page.js"
+  "/icon.svg/route": "app/icon.svg/route.js",
+  "/page": "app/page.js",
+  "/escaperooms/page": "app/escaperooms/page.js"
 }

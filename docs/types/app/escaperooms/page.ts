@@ -1,4 +1,4 @@
-// File: /Users/leo/Desktop/UPM/endgameproject.github.io/app/escaperooms/page.js
+// File: C:\Users\barra\trabajo\endgame.github.io\app\escaperooms\page.js
 import * as entry from '../../../../app/escaperooms/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
