@@ -1,7 +1,7 @@
 {
-  "/events/page": "app/events/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/escaperooms/[escaperoomname]/page": "app/escaperooms/[escaperoomname]/page.js",
-  "/escaperooms/page": "app/escaperooms/page.js",
-  "/research/page": "app/research/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/events/page": "app/events/page.js",
+  "/research/page": "app/research/page.js"
 }

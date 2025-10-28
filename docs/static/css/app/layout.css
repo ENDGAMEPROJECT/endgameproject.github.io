@@ -1076,6 +1076,9 @@ video {
 .mr-2 {
   margin-right: 0.5rem;
 }
+.mr-4 {
+  margin-right: 1rem;
+}
 .mt-0 {
   margin-top: 0px;
 }
@@ -1184,11 +1187,8 @@ video {
 .h-\[50dvh\] {
   height: 50dvh;
 }
-.h-\[85dvh\] {
-  height: 85dvh;
-}
-.h-\[85vh\] {
-  height: 85vh;
+.h-\[calc\(80vh-5rem\)\] {
+  height: calc(80vh - 5rem);
 }
 .h-\[var\(--radix-select-trigger-height\)\] {
   height: var(--radix-select-trigger-height);
@@ -1362,6 +1362,9 @@ video {
 }
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 .flex-row {
   flex-direction: row;
@@ -1540,9 +1543,8 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(93 254 227 / var(--tw-border-opacity, 1));
 }
-.border-primary-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(10 255 222 / var(--tw-border-opacity, 1));
+.border-primary400 {
+  border-color: var(--primary400);
 }
 .border-red-200 {
   --tw-border-opacity: 1;
@@ -1557,9 +1559,6 @@ video {
 }
 .border-transparent {
   border-color: transparent;
-}
-.border-primary400 {
-  border-color: var(--primary400);
 }
 .border-b-gray-400 {
   --tw-border-opacity: 1;
@@ -1654,6 +1653,15 @@ video {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(10 255 222 / var(--tw-bg-opacity, 1));
+}
+.bg-primary\/10 {
+  background-color: rgb(10 255 222 / 0.1);
+}
+.bg-primary\/20 {
+  background-color: rgb(10 255 222 / 0.2);
+}
+.bg-primary\/30 {
+  background-color: rgb(10 255 222 / 0.3);
 }
 .bg-primary500 {
   background-color: var(--primary500);
@@ -2071,10 +2079,6 @@ video {
   --tw-text-opacity: 1;
   color: rgb(93 254 227 / var(--tw-text-opacity, 1));
 }
-.text-primary-400 {
-  --tw-text-opacity: 1;
-  color: rgb(10 255 222 / var(--tw-text-opacity, 1));
-}
 .text-primary-600 {
   --tw-text-opacity: 1;
   color: rgb(5 191 191 / var(--tw-text-opacity, 1));
@@ -2082,6 +2086,9 @@ video {
 .text-primary-foreground {
   --tw-text-opacity: 1;
   color: rgb(250 250 250 / var(--tw-text-opacity, 1));
+}
+.text-primary400 {
+  color: var(--primary400);
 }
 .text-red-800 {
   --tw-text-opacity: 1;
@@ -2105,9 +2112,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-.text-primary400 {
-  color: var(--primary400);
 }
 .underline {
   text-decoration-line: underline;
@@ -3030,6 +3034,10 @@ footer {
   border-color: var(--foreground);
 }
 
+.hover\:border-myPrimary:hover {
+  border-color: var(--primary400);
+}
+
 .hover\:border-primary:hover {
   --tw-border-opacity: 1;
   border-color: rgb(10 255 222 / var(--tw-border-opacity, 1));
@@ -3042,10 +3050,6 @@ footer {
 
 .hover\:border-secondary400:hover {
   border-color: var(--secondary400);
-}
-
-.hover\:border-myPrimary:hover {
-  border-color: var(--primary400);
 }
 
 .hover\:bg-accent:hover {
@@ -3087,6 +3091,10 @@ footer {
   background-color: var(--foreground);
 }
 
+.hover\:bg-myPrimary:hover {
+  background-color: var(--primary400);
+}
+
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(10 255 222 / var(--tw-bg-opacity, 1));
@@ -3115,10 +3123,6 @@ footer {
 
 .hover\:bg-transparent:hover {
   background-color: transparent;
-}
-
-.hover\:bg-myPrimary:hover {
-  background-color: var(--primary400);
 }
 
 .hover\:text-accent-300:hover {
@@ -3157,9 +3161,8 @@ footer {
   color: var(--text);
 }
 
-.hover\:text-primary:hover {
-  --tw-text-opacity: 1;
-  color: rgb(10 255 222 / var(--tw-text-opacity, 1));
+.hover\:text-myTextInverse:hover {
+  color: var(--textInverse);
 }
 
 .hover\:text-primary-300:hover {
@@ -3175,10 +3178,6 @@ footer {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-myTextInverse:hover {
-  color: var(--textInverse);
 }
 
 .hover\:underline:hover {
@@ -3558,8 +3557,8 @@ footer {
     display: none;
   }
 
-  .md\:h-\[85vh\] {
-    height: 85vh;
+  .md\:h-\[calc\(80vh-5rem\)\] {
+    height: calc(80vh - 5rem);
   }
 
   .md\:h-full {
@@ -3591,12 +3590,20 @@ footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-\[2fr_1fr\] {
+    grid-template-columns: 2fr 1fr;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
 
   .md\:flex-col {
     flex-direction: column;
+  }
+
+  .md\:items-start {
+    align-items: flex-start;
   }
 
   .md\:justify-center {
