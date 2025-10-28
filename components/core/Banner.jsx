@@ -15,10 +15,10 @@ const Banner = React.forwardRef(({ className, ...props }, ref) => (
   <section
     ref={ref}
     className={cn(
-      "w-full h-[85dvh]",
+      "w-full h-[calc(80vh-5rem)]",
       "text-snow",
       // "gap-6 xl:gap-12",
-      "flex justify-start items-center h-[85vh]",
+      "flex justify-start items-center",
       className
     )}
     {...props}
@@ -81,9 +81,9 @@ const BannerButton = React.forwardRef(({ className, ...props }, ref) => (
 BannerButton.displayName = "BannerButton";
 
 const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
-  <div className={"relative top-0 md:relative flex w-full z-0 h-[85vh]"}>
+  <div className={"relative top-0 md:relative flex w-full z-0 h-[calc(80vh-5rem)]"}>
     <Image
-      className="md:h-[85vh] opacity-80"
+      className="md:h-[calc(80vh-5rem)] opacity-80"
       src="assets/images/bannerBg-placeholder.png"
       alt="background illustration"
       fit="cover"

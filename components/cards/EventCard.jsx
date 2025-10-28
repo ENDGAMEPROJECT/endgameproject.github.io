@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { translator } from "@/lib/utils.js";
 
 // Components
 import { Badge, badgeVariants } from "../ui/badge";
@@ -43,42 +44,8 @@ const EventCard = ({ event }) => {
   const currentLang = i18n.language;
 
   //only english is compulsory, the rest are optional
-  if (!title_es) {
-    title_es = title_en;
-  }
-  if (!title_sr) {
-    title_sr = title_en;
-  }
-  if (!title_fi) {
-    title_fi = title_en;
-  }
-  if (!description_es) {
-    description_es = description_en;
-  }
-  if (!description_sr) {
-    description_sr = description_en;
-  }
-  if (!description_fi) {
-    description_fi = description_en;
-  }
-
-  //set title depending on the language, if the language is not supported, set it to english
-  const title_translation =
-    currentLang === "es"
-      ? title_es
-      : currentLang === "sr"
-      ? title_sr
-      : currentLang === "fi"
-      ? title_fi
-      : title_en;
-  const description_translation =
-    currentLang === "es"
-      ? description_es
-      : currentLang === "sr"
-      ? description_sr
-      : currentLang === "fi"
-      ? description_fi
-      : description_en;
+  const description_translation = translator(currentLang, description_en, description_es, description_fi, description_sr)
+  const title_translation = translator(currentLang, title_en, title_es, title_fi, title_sr)
 
   const dateFormatted = new Date(date).toLocaleDateString(currentLang, {
     year: "numeric",

@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { translator } from "@/lib/utils.js";
 
 // assets
 import ArrowForwardSharp from "@mui/icons-material/ArrowForwardSharp";
@@ -10,7 +11,8 @@ import PlayArrowSharp from "@mui/icons-material/PlayArrowSharp";
 
 // Components
 import { Badge, badgeVariants } from "../ui/badge";
-import Text from "@/components/ui/text";
+import Text from "@/components/ui/Text";
+import Image from "@/components/ui/Image";
 import { Button, ButtonVariants } from "../ui/button";
 
 import {
@@ -23,15 +25,13 @@ import {
   CardSubtitle,
 } from "@/components/ui/customCard";
 
-import Image from "../ui/image";
-
 import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
 import HighlightedHeader from "../ui/highlightedHeader";
 import Heading from "../ui/Heading";
 
 
 
-const EscaperoomCard = ({ escaperoom }) => {
+const EscaperoomCard = ({ escaperoom, seeDetails = true }) => {
   const {
     category,
     theme_en,
@@ -42,22 +42,20 @@ const EscaperoomCard = ({ escaperoom }) => {
     description_es,
     keywords,
     escaperoomname,
-    image,
+    image
   } = escaperoom;
 
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  const title_translation =
-    currentLang === "es" && title_es ? title_es : title_en;
-  const description_translation =
-    currentLang === "es" && description_es ? description_es : description_en;
+  const title_translation = translator(currentLang, title_en, title_es);
+  // const description_translation = translator(currentLang, description_en, description_es);
 
   return (
     <Link
       href={`/escaperooms/${escaperoomname}`}
       rel="noopener noreferrer"
-      className="flex w-full gap-4 items-center"
+      className="flex gap-4 items-center w-full"
       onClick={() => {
         window.scrollTo({ top: 0 });
       }}
@@ -93,8 +91,7 @@ const EscaperoomCard = ({ escaperoom }) => {
             </Link>
           </Button>
         </div>
-
-        <Button
+        {seeDetails ==true? <Button
           className={
             ButtonVariants({
               variant: "tertiary",
@@ -105,7 +102,8 @@ const EscaperoomCard = ({ escaperoom }) => {
         >
           {t("escaperooms.escaperoom.action-button")}
           <ArrowForwardSharp className="w-7 h-7" />
-        </Button>
+        </Button>: null}
+        
       </CustomCard>
     </Link>
   );

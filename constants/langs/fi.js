@@ -41,10 +41,21 @@ export const fi = {
   },
   escaperooms: {
     title: "Pakohuoneet",
+    oncoming: "Tulossa olevat pakohuoneet",
     escaperoom: {
       "action-button": "Näytä tiedot",
       "play-button": "Pelata"
     },
+  },
+  escaperoomfull:{                     //TODO: Review escaperoomfull
+    escaperoomInfo: "Pakohuoneen tiedot",
+    relatedMaterials: "Aiheeseen liittyvät materiaalit",
+    littleBoxes: {
+            "theme": "aihe",
+            "duration": "kesto",
+            "level": "vaikeustaso",
+            "other": "toinen"
+          }
   },
   events: {
     title: "Tapahtumat ja uutiset",

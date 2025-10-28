@@ -3,6 +3,7 @@ import Image from "../ui/image";
 import Heading from "../ui/Heading";
 import Text from "../ui/text";
 import { useTranslation } from "react-i18next";
+import { translator } from "@/lib/utils.js";
 
 const MissionCard = ({ mission }) => {
   const { i18n } = useTranslation();
@@ -29,23 +30,8 @@ const MissionCard = ({ mission }) => {
   description_fi ??= description;
 
   // Selección de traducción según idioma
-  const title_translation =
-    currentLang === "es"
-      ? title_es
-      : currentLang === "sr"
-      ? title_sr
-      : currentLang === "fi"
-      ? title_fi
-      : title;
-
-  const description_translation =
-    currentLang === "es"
-      ? description_es
-      : currentLang === "sr"
-      ? description_sr
-      : currentLang === "fi"
-      ? description_fi
-      : description;
+  const description_translation = translator(currentLang, description, description_es, description_fi, description_sr)
+  const title_translation = translator(currentLang, title, title_es, title_fi, title_sr)
 
   // const title_translation = lang === "es" && title_es ? title_es : title;
   // const description_translation =

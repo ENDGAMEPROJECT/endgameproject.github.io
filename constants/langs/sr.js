@@ -41,10 +41,21 @@ export const sr = {
   },
   escaperooms: {
     title: "Sobe za bekstvo",
+    oncoming: "O nadolazećim sobama za bekstvo",
     escaperoom: {
       "action-button": "Pogledaj detalje",
       "play-button": "Igraj"
     },
+  },
+  escaperoomfull:{                     //TODO: Review escaperoomfull
+    escaperoomInfo: "Informacije o sobi za beg",
+    relatedMaterials: "Povezani materijali",
+    littleBoxes: {
+            "theme": "tema",
+            "duration": "trajanje",
+            "level": "nivo",
+            "other": "drugi"
+          }
   },
   events: {
     title: "Događaji i vesti",

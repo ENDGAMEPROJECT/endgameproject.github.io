@@ -41,10 +41,21 @@ export const es = {
   },
   escaperooms: {
     title: "Escaperooms",
+    oncoming: "Próximas escaperooms",
     escaperoom: {
       "action-button": "Ver detalles",
       "play-button": "Jugar"
     },
+  },
+  escaperoomfull:{
+    escaperoomInfo: "Información de la escaperoom",
+    relatedMaterials: "Materiales relacionados",
+    littleBoxes: {
+            "theme": "tema",
+            "duration": "duración",
+            "level": "nivel",
+            "other": "otro"
+          }
   },
   events: {
     title: "Eventos y noticias",
