@@ -80,10 +80,7 @@ const ResourceCard = ({ resource }) => {
             <div className="flex gap-2">
                 <Badge variant="secondary" size="md" className="bg-primary/10">
                     {tag}
-                </Badge>
-                <Badge variant="secondary" size="md" className="bg-primary/30">
-                    {howtouse_translation}
-                </Badge>
+                </Badge>                
             </div>
             <div className="h-full w-fit">
                 <Button

@@ -48,12 +48,10 @@ const EscaperoomCard = ({ escaperoom, seeDetails = true }) => {
 
   return (
     <Link
-      href={`/escaperooms/${escaperoomname}`}
+      href={escaperoom.externalLink}
       rel="noopener noreferrer"
       className="flex gap-4 items-center w-full"
-      onClick={() => {
-        window.scrollTo({ top: 0 });
-      }}
+      target="_blank"     
     >
       <CustomCard className="mb-8 gap-0 mx-auto md:w-full flex flex-col">
         <HighlightedHeader
