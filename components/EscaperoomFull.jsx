@@ -55,7 +55,7 @@ const escaperoomFull = ({ escaperoomname }) => {
 
   const {
     title_en, title_es, title_fi, title_sr,
-    duration,
+    duration_en, duration_es, duration_fi, duration_sr,
     level_en, level_es, level_fi, level_sr,
     moreInfo_es, moreInfo_en, moreInfo_fi, moreInfo_sr,
     claim_en, claim_es, claim_fi, claim_sr,
@@ -67,9 +67,10 @@ const escaperoomFull = ({ escaperoomname }) => {
 
   const currentLang = i18n.language;
 
-  const title = translator(currentLang, title_en, title_es, title_fi, title_sr)
-  const longdescription = translator(currentLang, longdescription_en, longdescription_es, longdescription_fi, longdescription_sr) 
-  const theme = translator(currentLang, theme_en, theme_es, theme_fi, theme_sr)
+  const title = translator(currentLang, title_en, title_es, title_sr, title_fi)
+  const duration = translator(currentLang, duration_en, duration_es, duration_sr, duration_fi)
+  const longdescription = translator(currentLang, longdescription_en, longdescription_es, longdescription_sr, longdescription_fi) 
+  const theme = translator(currentLang, theme_en, theme_es, theme_sr, theme_fi)
   const level_translation = translator(currentLang, level_en, level_es, level_sr, level_fi)
   const claim_translation = translator(currentLang, claim_en, claim_es, claim_sr, claim_fi)
   const moreInfo_translation = translator(currentLang, moreInfo_en, moreInfo_es, moreInfo_sr, moreInfo_fi)

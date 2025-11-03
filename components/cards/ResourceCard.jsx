@@ -56,9 +56,9 @@ const ResourceCard = ({ resource }) => {
         currentLang === "es"
             ? "Leer recurso"
             : currentLang === "sr"
-                ? "Pročitati žalbu"                 // TODO: review translations
+                ? "Pročitaj materijal"                 // TODO: review translations
                 : currentLang === "fi"
-                    ? "Lue aineisto2"             // TODO: review translations
+                    ? "Lue aineisto"             // TODO: review translations
                     : "Read resource";
 
     const howtouse_translation =

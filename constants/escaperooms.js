@@ -13,7 +13,10 @@ export const escaperooms = [
     title_es: "The Click Trap",
     title_fi: "The Click Trap",
     title_sr: "The Click Trap",
-    duration: "1 hour",               
+    duration_en: "1 hour",  
+    duration_es: "1 hora",
+    duration_fi: "1 tunti",
+    duration_sr: "1 sat",                 
     level_en: "easy",                 
     level_es: "fácil",    
     level_fi: "helppo",      
@@ -36,14 +39,14 @@ export const escaperooms = [
    resources:                                                      
     [
       {
-        resourceName : "Guía didáctica",
+        resourceName : "Teacher's Guide",
         resourceName_es : "Guía didáctica",
         resourceName_en : "Teacher's Guide",
         resourceName_sr : "Vodič za nastavnike",                     
         resourceName_fi : "Opettajan opas",                       
         additionalInfo : "Teacher's Guide for educators to facilitate the escaperoom activity",
         additionalInfo_es : "Guía didáctica para educadores para facilitar la actividad de escaperoom",
-        additionalInfo_sr : "Vodič za nastavnike za edukatore kako bi se olakšala aktivnost u sobi za bekstvo",
+        additionalInfo_sr : "Vodič za nastavnike i edukatore kako bi se olakšala aktivnost u sobi za bekstvo",
         additionalInfo_fi : "Opettajan opas kouluttajille pakohuonetoiminnan helpottamiseksi",
         tag : "Docs",
         resourceLink_es : "https://docs.google.com/document/d/1QMLHAEaBetoKYbuLx2xALDGbi1-96IgJ/export?format=pdf",
