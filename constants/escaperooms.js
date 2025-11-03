@@ -32,7 +32,7 @@ export const escaperooms = [
     claim_es: "Conviértete en el infiltrado que destapa la verdad: frena la desinformación.", 
     claim_fi: "Ryhdy sisäpiiriläiseksi, joka paljastaa totuuden: lopeta väärän tiedon levittäminen.", 
     claim_sr: "Postanite insajder koji otkriva istinu: zaustavite dezinformacije.",   
-    externalLink: "https://play.unity.com/en/games/f16e2dcc-fadf-4bc9-ba46-f29b2f71450d/endgame-escape-room",  
+    externalLink: "https://play.unity.com/en/games/3e199a2b-03aa-44c1-9ecd-5f9a308280cc/webgl-builds",  
    resources:                                                      
     [
       {
