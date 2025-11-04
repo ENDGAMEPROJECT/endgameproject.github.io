@@ -5,71 +5,52 @@ export const escaperooms = [
   {
     escaperoomname: "theClickTrap",
     category: "escaperoom",
-    theme_en: "Hoaxes and fake news",
-    theme_es: "Bulos y noticias falsas",
-    title_en:
-      "The Click Trap",
+    theme_en: "media literacy",
+    theme_es: "alfabetización mediática",
+    theme_fi: "medialukutaito",
+    theme_sr: "medijska pismenost",
+    title_en: "The Click Trap",
     title_es: "The Click Trap",
-    duration: "47 min",               //Placeholder
-    level_en: "hard",                 //Placeholder
-    level_es: "difícil",    
-    level_fi: "?????",                
-    level_sr: "?????",
-    moreInfo_en: "more info",         //Placeholder
+    title_fi: "The Click Trap",
+    title_sr: "The Click Trap",
+    duration_en: "1 hour",  
+    duration_es: "1 hora",
+    duration_fi: "1 tunti",
+    duration_sr: "1 sat",                 
+    level_en: "easy",                 
+    level_es: "fácil",    
+    level_fi: "helppo",      
+    level_sr: "lako",
+    moreInfo_en: "more info",         
     moreInfo_es: "más info",
-    moreInfo_fi: "?????",
-    moreInfo_sr: "?????",
-    description_en:                   //Placeholder
-      "In this session, experts will dissect the impact of misinformation and teach practical strategies for analyzing media critically.",
-    description_es:
-      "En esta sesión, expertos analizarán el impacto de la desinformación y compartirán estrategias prácticas para evaluar los medios de forma crítica.",
-    keywords: ["escaperoom", "Media literacy", "misinformation"],   //Placeholder
+    moreInfo_fi: "lisätietoja",
+    moreInfo_sr: "više informacija",
+    longdescription_en: "At ConnectNow, a well-known influencer agency and content producer, rumours are beginning to circulate about suspicious activities: secret meetings, restricted areas and unethical agreements. Your friend Lena, an independent influencer who works with them, suspects that some people are promoting a supplement called GlowUp+ using misleading health and nutrition information, putting young people at risk. To help her, you infiltrate the company as a janitor to obtain evidence from within—documents, photos, and digital records—before they are deleted. The goal of the game is to uncover and expose how economic interests and irresponsible content creation fuel misinformation, encouraging critical thinking and source verification.",
+    longdescription_es: "En ConnectNow, una conocida agencia de influencers y productora de contenidos, comienzan a circular rumores sobre actividades sospechosas: reuniones secretas, áreas restringidas y acuerdos poco éticos. Tu amiga Lena, una influencer independiente que colabora con ellos, sospecha que algunos están promoviendo un suplemento llamado GlowUp+ mediante información engañosa sobre salud y alimentación, poniendo en riesgo a los jóvenes. Para ayudarla, te infiltras como conserje para obtener pruebas desde dentro —documentos, fotos y registros digitales— antes de que los borren. El objetivo del juego es descubrir y exponer cómo los intereses económicos y la creación irresponsable de contenido alimentan la desinformación, fomentando el pensamiento crítico y la verificación de fuentes.",
+    longdescription_fi: "ConnectNow, tunnettu vaikuttajien agentuuri ja sisällöntuottaja, on alkanut kiertää huhuja epäilyttävistä toimista: salaisista kokouksista, rajoitetuista alueista ja epäeettisistä sopimuksista. Ystäväsi Lena, itsenäinen vaikuttaja, joka tekee yhteistyötä heidän kanssaan, epäilee, että jotkut mainostavat GlowUp+ -nimistä ravintolisää antamalla harhaanjohtavaa tietoa terveydestä ja ravitsemuksesta, mikä vaarantaa nuorten terveyden. Auttaaksesi häntä soluttaudut talonmieheksi keräämään todisteita sisältäpäin – asiakirjoja, valokuvia ja digitaalisia tietoja – ennen kuin ne tuhotaan. Pelin tavoitteena on paljastaa, kuinka taloudelliset intressit ja vastuuton sisällöntuotanto ruokkivat väärää tietoa, ja kannustaa kriittiseen ajatteluun ja lähteiden tarkistamiseen.",
+    longdescription_sr: "Tunnetussa vaikuttajatoimistossa ja sisällöntuottajassa ConnectNow’ssa alkaa kiertää huhuja epäilyttävistä toimista: salaisista tapaamisista, rajoitetuista alueista ja epäeettisistä sopimuksista. Ystäväsi Lena, heidän kanssaan työskentelevä itsenäinen vaikuttaja, epäilee, että jotkut mainostavat GlowUp+-nimistä lisäravinnetta harhaanjohtavilla terveys- ja ravitsemustiedoilla, mikä asettaa nuoret vaaraan. Auttaaksesi häntä soluttaudut yritykseen vahtimestarina hankkiaksesi todisteita sisältä – asiakirjoja, valokuvia ja digitaalisia tallenteita – ennen kuin ne poistetaan. Pelin tavoitteena on paljastaa, miten taloudelliset edut ja vastuuton sisällöntuotanto ruokkivat väärää tietoa, kannustaen kriittiseen ajatteluun ja lähteiden varmentamiseen.", //Placeholder
+    keywords: ["escaperoom", "Media literacy", "misinformation"],   
     image: "/assets/images/EndgameBackground.png",
-    claim_en: "Can you clean up the misinformation in this world?",
-    claim_es: "¿Puedes limpiar la desinformación de este mundo?", 
-    claim_fi: "Voitko puhdistaa tämän maailman disinformaatiosta?", 
-    claim_sr: "Možeš li očistiti dezinformacije iz ovog sveta?",        //Placeholder
-    longdescription_en:                                             //Placeholder
-      "In this session, experts will dissect the impact of misinformation and teach practical strategies for analyzing media critically. In this session, experts will dissect the impact of misinformation and teach practical strategies for analyzing media critically. In this session, experts will dissect the impact of misinformation and teach practical strategies for analyzing media critically.",
-    longdescription_es:
-      "En esta sesión, expertos analizarán el impacto de la desinformación y compartirán estrategias prácticas para evaluar los medios de forma crítica. En esta sesión, expertos analizarán el impacto de la desinformación y compartirán estrategias prácticas para evaluar los medios de forma crítica. En esta sesión, expertos analizarán el impacto de la desinformación y compartirán estrategias prácticas para evaluar los medios de forma crítica.",
-    resources:                                                      //Placeholder
+    claim_en: "Become the insider who uncovers the truth: stop misinformation.",
+    claim_es: "Conviértete en el infiltrado que destapa la verdad: frena la desinformación.", 
+    claim_fi: "Ryhdy sisäpiiriläiseksi, joka paljastaa totuuden: lopeta väärän tiedon levittäminen.", 
+    claim_sr: "Postanite insajder koji otkriva istinu: zaustavite dezinformacije.",   
+    externalLink: "https://play.unity.com/en/games/3e199a2b-03aa-44c1-9ecd-5f9a308280cc/webgl-builds",  
+   resources:                                                      
     [
       {
-        resourceName : "Hola",
-        resourceName_es : "Recurso 1",
-        resourceName_sr : "Resursa 1",                      // TODO: review translations
-        resourceName_fi : "Resurssin 1",                     // TODO: review translations
-        additionalInfo : "More info about this resource",
-        additionalInfo_es : "Más información sobre este recurso",
-        additionalInfo_sr : "Više informacija o ovom resursu",          // TODO: review translations
-        additionalInfo_fi : "Lisätietoja tästä resurssista",            // TODO: review translations
+        resourceName : "Teacher's Guide",
+        resourceName_es : "Guía didáctica",
+        resourceName_en : "Teacher's Guide",
+        resourceName_sr : "Vodič za nastavnike",                     
+        resourceName_fi : "Opettajan opas",                       
+        additionalInfo : "Teacher's Guide for educators to facilitate the escaperoom activity",
+        additionalInfo_es : "Guía didáctica para educadores para facilitar la actividad de escaperoom",
+        additionalInfo_sr : "Vodič za nastavnike i edukatore kako bi se olakšala aktivnost u sobi za bekstvo",
+        additionalInfo_fi : "Opettajan opas kouluttajille pakohuonetoiminnan helpottamiseksi",
         tag : "Docs",
-        resourceLink : "https://endgameproject.github.io"
-      },
-      {
-        resourceName : "esto sirve de",
-        resourceName_es : "Recurso 2",
-        resourceName_sr : "Resursa 2",                      // TODO: review translations
-        resourceName_fi : "Resurssin 2",                     // TODO: review translations
-        additionalInfo : "More info about this resource",
-        additionalInfo_es : "Más información sobre este recurso",
-        additionalInfo_sr : "Više informacija o ovom resursu",          // TODO: review translations
-        additionalInfo_fi : "Lisätietoja tästä resurssista",            // TODO: review translations
-        tag : "Printable",
-        resourceLink : "https://endgameproject.github.io"
-      },
-      {
-        resourceName : "prueba",
-        resourceName_es : "Recurso 3",
-        resourceName_sr : "Resursa 3",                      // TODO: review translations
-        resourceName_fi : "Resurssin 3",                     // TODO: review translations
-        additionalInfo : "More info about this resource",
-        additionalInfo_es : "Más información sobre este recurso",
-        additionalInfo_sr : "Više informacija o ovom resursu",          // TODO: review translations
-        additionalInfo_fi : "Lisätietoja tästä resurssista",            // TODO: review translations
-        tag : "Something",
-        resourceLink : "https://endgameproject.github.io"
+        resourceLink_es : "https://docs.google.com/document/d/1QMLHAEaBetoKYbuLx2xALDGbi1-96IgJ/export?format=pdf",
+        resourceLink_en : "https://docs.google.com/document/d/1VSxRpjjeqkFae5qvW-HxNOaAEf7FfdkI/export?format=pdf"
       }
     ]
   },

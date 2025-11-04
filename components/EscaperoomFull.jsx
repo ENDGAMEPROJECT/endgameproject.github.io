@@ -25,9 +25,9 @@ import ArrowForwardSharp from "@mui/icons-material/ArrowForwardSharp";
     date: "10/04/25",
     title_en: "Understanding the importance of media literacy in today’s fast-paced digital landscape",
     title_es: "Comprendiendo la Alfabetización Mediática en la Era Digital",
-    description_en:
+    longdescription_en:
       "In this session, experts will dissect the impact of misinformation and teach practical strategies for analyzing media critically.",
-    description_es:
+    longdescription_es:
       "En esta sesión, expertos analizarán el impacto de la desinformación y compartirán estrategias prácticas para evaluar los medios de forma crítica.",
     keywords: ["webinar", "hola", "tag", "misinformation"],
     externalLink: "#",
@@ -54,24 +54,23 @@ const escaperoomFull = ({ escaperoomname }) => {
   }
 
   const {
-    title_en, title_es,
-    duration,
+    title_en, title_es, title_fi, title_sr,
+    duration_en, duration_es, duration_fi, duration_sr,
     level_en, level_es, level_fi, level_sr,
     moreInfo_es, moreInfo_en, moreInfo_fi, moreInfo_sr,
     claim_en, claim_es, claim_fi, claim_sr,
-    description_en, description_es,
-    longdescription_en, longdescription_es,
-    theme_en, theme_es, 
+    longdescription_en, longdescription_es, longdescription_fi, longdescription_sr,
+    theme_en, theme_es, theme_fi, theme_sr,
     category,
     keywords,
   } = escaperoom;
 
   const currentLang = i18n.language;
 
-  const title = translator(currentLang, title_en, title_es)
-  const description = translator(currentLang, description_en, description_es)
-  const longdescription = translator(currentLang, longdescription_en, longdescription_es) // falta traduccion en constants
-  const theme = translator(currentLang, theme_en, theme_es) // falta traduccion en constants
+  const title = translator(currentLang, title_en, title_es, title_sr, title_fi)
+  const duration = translator(currentLang, duration_en, duration_es, duration_sr, duration_fi)
+  const longdescription = translator(currentLang, longdescription_en, longdescription_es, longdescription_sr, longdescription_fi) 
+  const theme = translator(currentLang, theme_en, theme_es, theme_sr, theme_fi)
   const level_translation = translator(currentLang, level_en, level_es, level_sr, level_fi)
   const claim_translation = translator(currentLang, claim_en, claim_es, claim_sr, claim_fi)
   const moreInfo_translation = translator(currentLang, moreInfo_en, moreInfo_es, moreInfo_sr, moreInfo_fi)
@@ -85,9 +84,9 @@ const escaperoomFull = ({ escaperoomname }) => {
   const resourcesFormatted = escaperoom.resources
     .map((resource, key) => <ResourceCard resource={resource} key={key} />);
 
-  const externalLink = escaperoom.externalLink || "#";
+  const externalLink = escaperoom.externalLink;
   const externalLinkText =
-    currentLang === "es" ? "Ir a la escaperoom" : "Play escaperoom";
+    currentLang === "es" ? "Jugar a la escaperoom" : "Play escaperoom";
 
   return (
     <div className="flex flex-col gap-4 items-center">
@@ -145,12 +144,6 @@ const escaperoomFull = ({ escaperoomname }) => {
               <HighlightedHeader string={t("escaperoomfull.littleBoxes.level")} variant={""} level="h6" className={"w-fit capitalize"}></HighlightedHeader>
               <div className="h-full flex items-center">
                 <Heading level="h4" className="text-center capitalize text-myPrimary">{level_translation}</Heading>
-              </div>
-            </div>
-            <div className="bg-primary/20 border border-myPrimary flex flex-col items-center py-2 gap-1">
-              <HighlightedHeader string={t("escaperoomfull.littleBoxes.other")} variant={""} level="h6" className={"w-fit capitalize"}></HighlightedHeader>
-              <div className="h-full flex items-center">
-                <Heading level="h4" className="text-center capitalize text-myPrimary">{moreInfo_translation}</Heading>
               </div>
             </div>
           </div>

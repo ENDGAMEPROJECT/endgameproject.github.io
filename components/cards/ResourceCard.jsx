@@ -20,7 +20,8 @@ const ResourceCard = ({ resource }) => {
         additionalInfo_sr = "Više informacija o ovom resursu",          // TODO: review translations
         additionalInfo_fi = "Lisätietoja tästä resurssista",            // TODO: review translations
         tag = "Resource tag",
-        resourceLink = "https://endgameproject.github.io"
+        resourceLink_es = "https://endgameproject.github.io",
+        resourceLink_en = "https://endgameproject.github.io",
     } = resource || {};
 
     // Fallback de títulos y descripciones
@@ -55,7 +56,7 @@ const ResourceCard = ({ resource }) => {
         currentLang === "es"
             ? "Leer recurso"
             : currentLang === "sr"
-                ? "Pročitati žalbu"                 // TODO: review translations
+                ? "Pročitaj materijal"                 // TODO: review translations
                 : currentLang === "fi"
                     ? "Lue aineisto"             // TODO: review translations
                     : "Read resource";
@@ -69,7 +70,8 @@ const ResourceCard = ({ resource }) => {
                     ? "Käyttötapa"             // TODO: review translations
                     : "How to use";
 
-    
+    const resourceLink =
+        currentLang === "es" ? resourceLink_es : resourceLink_en;
 
     return (
         <li className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
@@ -80,10 +82,7 @@ const ResourceCard = ({ resource }) => {
             <div className="flex gap-2">
                 <Badge variant="secondary" size="md" className="bg-primary/25">
                     {tag}
-                </Badge>
-                <Badge variant="secondary" size="md" className="bg-primary/50">
-                    {howtouse_translation}
-                </Badge>
+                </Badge>                
             </div>
             <div className="h-full w-fit">
                 <Button
