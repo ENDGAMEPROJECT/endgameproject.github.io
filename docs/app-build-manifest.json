@@ -11,11 +11,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/research/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/research/page.js"
-    ],
     "/escaperooms/[escaperoomname]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -26,10 +21,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/events/page.js"
     ],
-    "/_not-found/page": [
+    "/research/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/research/page.js"
     ]
   }
 }

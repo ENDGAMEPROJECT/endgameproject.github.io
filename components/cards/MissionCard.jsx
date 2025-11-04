@@ -4,12 +4,18 @@ import Heading from "../ui/Heading";
 import Text from "../ui/text";
 import { useTranslation } from "react-i18next";
 import { translator } from "@/lib/utils.js";
+import { ThemeContext } from "@/components/ThemeContext";
+import { useContext } from "react";
+
 
 const MissionCard = ({ mission }) => {
+  const { webTheme } = useContext(ThemeContext);
+
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
   let {
     icon,
+    iconLight,
     title,
     title_es,
     title_sr,
@@ -41,9 +47,10 @@ const MissionCard = ({ mission }) => {
     <li className="w-full p-6 sm:p-4 bg-background200 text-balance">
       {/* w-full p-4 bg-black flex items-center sm:flex-col */}
       <Image
-        className="!h-20  opacity-50 p-2"
+        className="!h-20 p-2 scale-[120%]"
         //  max-w-[200px]
-        src={icon || "placeholder.jpg"}
+        src={(webTheme == "light"? iconLight : icon) || "placeholder.jpg"}
+        // src= "placeholder.jpg"
         alt={title_translation || "Image"}
         fit="contain"
       />

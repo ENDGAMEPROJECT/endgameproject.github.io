@@ -1076,6 +1076,21 @@ video {
   --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.scale-100 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.scale-150 {
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.scale-\[120\%\] {
+  --tw-scale-x: 120%;
+  --tw-scale-y: 120%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1282,9 +1297,8 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(10 255 222 / var(--tw-border-opacity, 1));
 }
-.border-primary-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(93 254 227 / var(--tw-border-opacity, 1));
+.border-primary300 {
+  border-color: var(--primary300);
 }
 .border-primary400 {
   border-color: var(--primary400);
@@ -1302,9 +1316,6 @@ video {
 }
 .border-transparent {
   border-color: transparent;
-}
-.border-primary300 {
-  border-color: var(--primary300);
 }
 .border-b-gray-400 {
   --tw-border-opacity: 1;
@@ -1387,8 +1398,8 @@ video {
 .bg-grey400 {
   background-color: var(--grey400);
 }
-.bg-grey50 {
-  background-color: var(--grey50);
+.bg-grey900 {
+  background-color: var(--grey900);
 }
 .bg-myBackground {
   background-color: var(--background200);
@@ -1400,14 +1411,14 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(10 255 222 / var(--tw-bg-opacity, 1));
 }
-.bg-primary\/10 {
-  background-color: rgb(10 255 222 / 0.1);
+.bg-primary\/15 {
+  background-color: rgb(10 255 222 / 0.15);
 }
 .bg-primary\/20 {
   background-color: rgb(10 255 222 / 0.2);
 }
-.bg-primary\/30 {
-  background-color: rgb(10 255 222 / 0.3);
+.bg-primary\/25 {
+  background-color: rgb(10 255 222 / 0.25);
 }
 .bg-primary500 {
   background-color: var(--primary500);
@@ -1434,24 +1445,6 @@ video {
 }
 .bg-transparent {
   background-color: transparent;
-}
-.bg-primary\/15 {
-  background-color: rgb(10 255 222 / 0.15);
-}
-.bg-primary\/40 {
-  background-color: rgb(10 255 222 / 0.4);
-}
-.bg-primary\/25 {
-  background-color: rgb(10 255 222 / 0.25);
-}
-.bg-primary\/50 {
-  background-color: rgb(10 255 222 / 0.5);
-}
-.bg-grey950 {
-  background-color: var(--grey950);
-}
-.bg-grey900 {
-  background-color: var(--grey900);
 }
 .bg-opacity-0 {
   --tw-bg-opacity: 0;
@@ -1656,15 +1649,6 @@ video {
 .pt-\[5px\] {
   padding-top: 5px;
 }
-.pb-2 {
-  padding-bottom: 0.5rem;
-}
-.pb-1 {
-  padding-bottom: 0.25rem;
-}
-.pb-\[0\.5rem\] {
-  padding-bottom: 0.5rem;
-}
 .text-left {
   text-align: left;
 }
@@ -1790,9 +1774,8 @@ video {
   --tw-text-opacity: 1 !important;
   color: rgb(10 255 222 / var(--tw-text-opacity, 1)) !important;
 }
-.\!text-secondary-200 {
-  --tw-text-opacity: 1 !important;
-  color: rgb(92 173 255 / var(--tw-text-opacity, 1)) !important;
+.\!text-secondary200 {
+  color: var(--secondary200) !important;
 }
 .text-accent {
   --tw-text-opacity: 1;
@@ -1844,13 +1827,12 @@ video {
 .text-myText {
   color: var(--text);
 }
+.text-myTextInverse {
+  color: var(--textInverse);
+}
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(10 255 222 / var(--tw-text-opacity, 1));
-}
-.text-primary-300 {
-  --tw-text-opacity: 1;
-  color: rgb(93 254 227 / var(--tw-text-opacity, 1));
 }
 .text-primary-600 {
   --tw-text-opacity: 1;
@@ -1859,6 +1841,9 @@ video {
 .text-primary-foreground {
   --tw-text-opacity: 1;
   color: rgb(250 250 250 / var(--tw-text-opacity, 1));
+}
+.text-primary300 {
+  color: var(--primary300);
 }
 .text-primary400 {
   color: var(--primary400);
@@ -1885,15 +1870,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-.text-myTextInverse {
-  color: var(--textInverse);
-}
-.\!text-secondary200 {
-  color: var(--secondary200) !important;
-}
-.text-primary300 {
-  color: var(--primary300);
 }
 .underline {
   text-decoration-line: underline;
@@ -2820,16 +2796,6 @@ footer {
   border-color: var(--primary400);
 }
 
-.hover\:border-primary:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(10 255 222 / var(--tw-border-opacity, 1));
-}
-
-.hover\:border-secondary-400:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 128 255 / var(--tw-border-opacity, 1));
-}
-
 .hover\:border-secondary400:hover {
   border-color: var(--secondary400);
 }
@@ -2852,11 +2818,6 @@ footer {
   background-color: var(--background200);
 }
 
-.hover\:bg-black:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(9 9 9 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-grey100:hover {
   background-color: var(--grey100);
 }
@@ -2875,11 +2836,6 @@ footer {
 
 .hover\:bg-myPrimary:hover {
   background-color: var(--primary400);
-}
-
-.hover\:bg-primary:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(10 255 222 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-primary\/30:hover {
@@ -2952,18 +2908,13 @@ footer {
   color: rgb(93 254 227 / var(--tw-text-opacity, 1));
 }
 
-.hover\:text-secondary-300:hover {
-  --tw-text-opacity: 1;
-  color: rgb(50 152 254 / var(--tw-text-opacity, 1));
+.hover\:text-secondary300:hover {
+  color: var(--secondary300);
 }
 
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-secondary300:hover {
-  color: var(--secondary300);
 }
 
 .hover\:underline:hover {
@@ -3044,20 +2995,12 @@ footer {
   opacity: 0.5;
 }
 
-.group:hover .group-hover\:opacity-\[\.60\] {
-  opacity: .60;
+.group:hover .group-hover\:opacity-\[\.30\] {
+  opacity: .30;
 }
 
 .group:hover .group-hover\:opacity-\[1\] {
   opacity: 1;
-}
-
-.group:hover .group-hover\:opacity-\[\.20\] {
-  opacity: .20;
-}
-
-.group:hover .group-hover\:opacity-\[\.30\] {
-  opacity: .30;
 }
 
 .peer:disabled ~ .peer-disabled\:cursor-not-allowed {
