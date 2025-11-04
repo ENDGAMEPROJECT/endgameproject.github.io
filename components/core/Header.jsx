@@ -6,9 +6,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
+import { useContext } from "react";
 
 import LangSwitcher from "@/components/LangSwitcher";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
+import { ThemeContext } from "@/components/ThemeContext";
 import { activeRoutes } from "@/constants/routes";
 
 // icons
@@ -18,10 +20,12 @@ import Image from "../ui/image";
 import { endgameLogosPng } from "@/constants/assetsRoutes";
 
 export default function Header(props) {
+
   const [state, setState] = useState({ open: false });
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   const currentPath = usePathname();
+  const { webTheme } = useContext(ThemeContext);
 
   // classes
   const headerClasses = clsx(
@@ -70,13 +74,16 @@ export default function Header(props) {
     // " hover:text-primary-300"
   );
 
+  let endgameLogo;
+  webTheme == "light" ? endgameLogo = "logo_ENDGAME_main_lightBg.png" : endgameLogo = "logo_ENDGAME_main_darkBg.png";
+
   return (
     <header className={headerClasses + "z-50"} id="header_home">
       {/* route={routes.route} ?????*/}
       <a href="/" className="h-10 flex gap-2 w-fit">
         <Image
           // className="w-auto"
-          src={endgameLogosPng + "logo_ENDGAME_main_darkBg.png"}
+          src={endgameLogosPng + endgameLogo}
           alt="endgame logo"
           fit="contain"
         />

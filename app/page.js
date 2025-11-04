@@ -47,12 +47,16 @@ import {
 import { mission } from "@/constants/mission";
 import { partners } from "@/constants/partners";
 
+import { useContext, useEffect } from "react";
+import { ThemeContext } from "@/components/ThemeContext";
+
 // UI
 export default function Page() {
   //const [projects, setProjects] = useState(myprojectCards);
 
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+  const { webTheme } = useContext(ThemeContext);
 
   return (
     <main>
@@ -90,7 +94,7 @@ export default function Page() {
       <Heading level="h2" className="text-myPrimary">{t("home.aboutSection")}</Heading>
       <section className="standard_margin flex flex-col gap-24 bg-background300 text-myText">
         <article>
-          <Heading level="h3" className>{t("home.about.title")}</Heading> {/* ///////////////////////////////////////////////// */}
+          <Heading level="h3" className>{t("home.about.title")}</Heading> 
           <Heading level="subtitle" className="text-myText"> {t("home.about.content")}</Heading>
         </article>
         <article>
@@ -110,7 +114,7 @@ export default function Page() {
               })}
             </div>
             <ul className="flex flex-col gap-4">
-              <Heading level="h5" className="text-primary uppercase">{t("escaperooms.oncoming")}</Heading>
+              <Heading level="h5" className="text-myPrimary uppercase">{t("escaperooms.oncoming")}</Heading>
               <li className="flex justify-start gap-4 wrap">
                 <Text
                   type="pre"
@@ -155,9 +159,9 @@ export default function Page() {
             {t("home.partners.universities")}
           </Heading>
           <ul className="md:grid grid-cols-3 gap-8 items-end">
-            <PartnerCard partner={partners.uef} />
-            <PartnerCard partner={partners.upm} />
-            <PartnerCard partner={partners.bmu} />
+            <PartnerCard partner={partners.uef} webTheme={webTheme}/>
+            <PartnerCard partner={partners.upm} webTheme={webTheme}/>
+            <PartnerCard partner={partners.bmu} webTheme={webTheme}/>
           </ul>
           <Heading
             level="h5"
@@ -166,9 +170,9 @@ export default function Page() {
             {t("home.partners.agencies")}
           </Heading>
           <ul className="md:grid grid-cols-3 gap-8">
-            <PartnerCard partner={partners.mdt} />
-            <PartnerCard partner={partners.ftb} />
-            <PartnerCard partner={partners.fnt} />
+            <PartnerCard partner={partners.mdt} webTheme={webTheme}/>
+            <PartnerCard partner={partners.ftb} webTheme={webTheme}/>
+            <PartnerCard partner={partners.fnt} webTheme={webTheme}/>
           </ul>
         </article>
       </section>
@@ -184,7 +188,7 @@ export default function Page() {
             <Button
               className={
                 ButtonVariants({
-                  variant: "terciary",
+                  variant: "tertiary",
                   size: "lg",
                   radius: "rounded_sm",
                 }) + " hover:text-myPrimary"
@@ -228,7 +232,7 @@ export default function Page() {
                         </Badge>
                       )} */}
                       {event.country && (
-                        <Badge variant="primary" size="md" type="activity">
+                        <Badge variant="primary" size="md" type="activity" className="bg-accent/15">
                           {event.country}
                         </Badge>
                       )}
@@ -240,7 +244,7 @@ export default function Page() {
                       </CardTitle>
                       <CardSubtitle
                         level="h6"
-                        className="text-accent flex gap-2 items-center"
+                        className="text-accent flex gap-2 items-center border"
                       >
                         <EventSharp className="h-5 w-5" />
                         {event.date + (event.hour ? " - " + event.hour : "")}
@@ -314,7 +318,7 @@ export default function Page() {
                         </Badge>
                       )}
                       {publication.country && (
-                        <Badge variant="primary" size="lg" type="info">
+                        <Badge variant="primary" size="lg" type="info" className="bg-secondary/15">
                           {publication.country}
                         </Badge>
                       )}
@@ -326,7 +330,7 @@ export default function Page() {
                         </CardTitle>
 
                         {publication.date?.[0] && (
-                          <div className="flex items-center !text-secondary-200">
+                          <div className="flex items-center !text-secondary200">
                             <Text
                               type="small"
                               className="font-bold text-sm !text-current"

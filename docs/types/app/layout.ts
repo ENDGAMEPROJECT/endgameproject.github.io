@@ -1,4 +1,4 @@
-// File: C:\Users\barra\trabajo\endgame.github.io\app\layout.js
+// File: /Users/leo/Desktop/UPM/endgameproject.github.io/app/layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

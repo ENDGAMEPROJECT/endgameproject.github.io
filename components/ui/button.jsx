@@ -10,9 +10,9 @@ const ButtonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-grey50 text-myText shadow hover:bg-myForeground",
+        primary: "bg-grey900 text-myText shadow hover:bg-myForeground",
         secondary:
-        "bg-background400 text-gray300 hover:text-myForeground hover:bg-background200",
+        "bg-background400 text-gray400 hover:text-myText hover:bg-background200",
         tertiary:
         "border border-transparent bg-transparent text-myForeground shadow-none py-0",
         outline:

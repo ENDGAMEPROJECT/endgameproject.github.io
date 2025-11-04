@@ -1,6 +1,7 @@
 export const mission = [
   {
     icon: "ENDGAME_icon_placeholder.svg",
+    iconLight: "ENDGAME_icon_placeholder_lightBG.svg",
     title: "Identify",
     title_es: "Identificar",
     title_sr: "Identifikovati",
@@ -14,6 +15,7 @@ export const mission = [
   },
   {
     icon: "ENDGAME_icon_placeholder.svg",
+    iconLight: "ENDGAME_icon_placeholder_lightBG.svg",
     title: "Provide",
     title_es: "Proveer",
     title_sr: "Obezbediti",
@@ -28,6 +30,7 @@ export const mission = [
   },
   {
     icon: "ENDGAME_icon_placeholder.svg",
+    iconLight: "ENDGAME_icon_placeholder_lightBG.svg",
     title: "Train",
     title_es: "Educar",
     title_sr: "Obuka",
@@ -42,6 +45,7 @@ export const mission = [
   },
   {
     icon: "ENDGAME_icon_placeholder.svg",
+    iconLight: "ENDGAME_icon_placeholder_lightBG.svg",
     title: "Disseminate",
     title_es: "Difundir",
     title_sr: "Diseminacija",
@@ -56,6 +60,7 @@ export const mission = [
   },
   {
     icon: "ENDGAME_icon_placeholder.svg",
+    iconLight: "ENDGAME_icon_placeholder_lightBG.svg",
     title: "Assess",
     title_es: "Evaluar",
     title_sr: "Procena",

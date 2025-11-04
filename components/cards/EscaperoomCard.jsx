@@ -68,7 +68,7 @@ const EscaperoomCard = ({ escaperoom, seeDetails = true }) => {
         />
         <div className="h-[50dvh] flex justify-center items-center border border-myPrimary bg-background200 group">
           <Image
-            className="group-hover:opacity-[.60] transition duration-300 ease-in-out"
+            className="group-hover:opacity-[.30] transition duration-300 ease-in-out"
             src={image}
             alt={title_translation}
             fit="cover"
@@ -79,16 +79,11 @@ const EscaperoomCard = ({ escaperoom, seeDetails = true }) => {
             asChild
             variant="outline"
             size="xl"
-            className="group-hover:opacity-[1] absolute opacity-[0]  text-primary400 border-primary400 hover:bg-myPrimary hover:border-myPrimary hover:text-myTextInverse"
+            className="group-hover:opacity-[1] absolute opacity-[0]  text-primary400 border-primary400 bg-primary/15 hover:bg-myPrimary hover:border-myPrimary hover:text-myTextInverse"
           >
-            <Link
-              href={"#"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t("escaperooms.escaperoom.play-button")}
+            <div>{t("escaperooms.escaperoom.play-button")}
               <PlayArrowSharp />
-            </Link>
+            </div>
           </Button>
         </div>
         {seeDetails ==true? <Button

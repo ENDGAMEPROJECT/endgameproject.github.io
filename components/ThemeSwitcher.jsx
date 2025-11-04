@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { ThemeContext } from "@/components/ThemeContext";
 import ContrastIcon from '@mui/icons-material/Contrast';
 import clsx from "clsx";
 
@@ -8,22 +9,19 @@ import { Button, ButtonVariants } from "@/components/ui/button";
 
 
 export default function ThemeSwitcher() {
-    const [oscuro, setOscuro] = useState(true);
+    const { webTheme, setWebTheme } = useContext(ThemeContext);
 
 
-    useEffect(() => {
-        const html = document.querySelector("html")
-        if (html.classList.contains("dark")){
-            html.classList.remove("dark")
-        } else{
-            html.classList.add("dark")
-        }
-    }, [oscuro])
+    const changeTheme = () => {
+        let newTheme;
+        webTheme == "light" ?  newTheme = "dark": newTheme = "light";
+        setWebTheme(newTheme)
+    } 
 
     return (
         <div className="relative inline-block">
             <Button
-                onClick={() => setOscuro(!oscuro)}
+                onClick={() => changeTheme()}
                 variant="primary"
                 size="lg"
                 className={clsx(

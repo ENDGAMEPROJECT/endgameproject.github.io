@@ -127,7 +127,7 @@ function ResearchPage() {
 
   return (
     <main className="standard_margin max-w-[1080px] xl:!mx-auto">
-      <Heading level="h1" className={"text-secondary-400"}>
+      <Heading level="h1" className={"text-secondary400"}>
         {t("research.title")}
       </Heading>
       <div className="mt-20 grid md:grid-cols-2 gap-6">

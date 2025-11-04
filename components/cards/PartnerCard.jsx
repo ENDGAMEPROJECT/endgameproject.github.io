@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "../ui/image";
 import Heading from "../ui/Heading";
 import Link from "next/link";
 import HighlightedHeader from "../ui/highlightedHeader";
 
-const PartnerCard = ({ partner }, key) => {
+const PartnerCard = ({ partner, webTheme }, key ) => {
   const paddingLogoById = {
     uef: "p-5",
     upm: "p-3",
@@ -20,6 +20,16 @@ const PartnerCard = ({ partner }, key) => {
     // bmu: "pr-.5",
   };
   const customPaddingName = paddingNameById[partner.id] || "";
+
+  let logo;
+  let logoHorizontal;
+  if (webTheme == "light"){
+      logo = partner.logoLight;
+      logoHorizontal = partner.logoHorizontalLight
+    } else {
+      logo = partner.logo;
+      logoHorizontal = partner.logoHorizontal;
+    };
   
   return (
     <li className="mb-8 mx-auto w-[400px] md:w-full flex flex-col" key={key}>
@@ -44,7 +54,7 @@ const PartnerCard = ({ partner }, key) => {
           className={customPaddingLogo + " h-40 border border-myPrimary bg-myBackground"} // to do: add custom padding for visual balance
           // src={partner.logo}
           fit="contain"
-          src={partner.logoHorizontal ? partner.logoHorizontal : partner.logo} // cambiar cuando se metan los custom paddings
+          src={logoHorizontal ? logoHorizontal : logo} // cambiar cuando se metan los custom paddings
           alt={partner.logo + " logo"}
         />
       </Link>
