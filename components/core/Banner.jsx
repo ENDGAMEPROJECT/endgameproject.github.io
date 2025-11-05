@@ -84,7 +84,7 @@ const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
   <div className={"relative top-0 md:relative flex w-full z-0 h-[calc(80vh-5rem)]"}>
     <Image
       className="md:h-[calc(80vh-5rem)] opacity-80"
-      src="assets/images/bannerBg-placeholder.png"
+      src="/assets/images/bannerBg-placeholder.png"
       alt="background illustration"
       fit="cover"
     />
