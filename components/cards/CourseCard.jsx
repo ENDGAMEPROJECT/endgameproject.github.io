@@ -41,7 +41,7 @@ const Card = React.forwardRef(
       <CustomCard
         className={'p-6 bg-cover bg-center bg-no-repeat text-text bg-background-300 rounded-md'}
         style={{
-          backgroundImage: "url('assets/fondos/background_image.png')",
+          backgroundImage: "url('/assets/fondos/background_image.png')",
         }}
       >
         <header className="flex w-full justify-between items-center mb-2">

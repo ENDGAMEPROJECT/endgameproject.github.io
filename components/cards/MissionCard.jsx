@@ -49,7 +49,7 @@ const MissionCard = ({ mission }) => {
       <Image
         className="!h-20 p-2 scale-[120%]"
         //  max-w-[200px]
-        src={(webTheme == "light"? iconLight : icon) || "placeholder.jpg"}
+        src={(webTheme == "light"? iconLight : icon) || "/placeholder.jpg"}
         // src= "placeholder.jpg"
         alt={title_translation || "Image"}
         fit="contain"
