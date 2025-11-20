@@ -69,7 +69,7 @@ const escaperoomFull = ({ escaperoomname }) => {
 
   const title = translator(currentLang, title_en, title_es, title_sr, title_fi)
   const duration = translator(currentLang, duration_en, duration_es, duration_sr, duration_fi)
-  const longdescription = translator(currentLang, longdescription_en, longdescription_es, longdescription_sr, longdescription_fi) 
+  const longdescription = translator(currentLang, longdescription_en, longdescription_es, longdescription_fi, longdescription_sr) // !! Nota: a este hay que ponerle el serbio al final para que funcione bien por algún motivo
   const theme = translator(currentLang, theme_en, theme_es, theme_sr, theme_fi)
   const level_translation = translator(currentLang, level_en, level_es, level_sr, level_fi)
   const claim_translation = translator(currentLang, claim_en, claim_es, claim_sr, claim_fi)

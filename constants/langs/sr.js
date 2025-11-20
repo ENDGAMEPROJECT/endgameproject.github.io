@@ -47,7 +47,7 @@ export const sr = {
     },
   },
   escaperoomfull:{                     //TODO: Review escaperoomfull
-    escaperoomInfo: "Informacije o sobi za beg",
+    escaperoomInfo: "Informacije o escape sobi",
     relatedMaterials: "Povezani materijali",
     littleBoxes: {
             "theme": "tema",
@@ -66,10 +66,10 @@ export const sr = {
       past: "prošli",
     },
     event: {
-      "action-button": "detalji događaja",
+      "action-button": "Detalji događaja",
     },
     new: {
-      "action-button": "pročitaj",
+      "action-button": "Pročitaj",
     },
   },
   research: {

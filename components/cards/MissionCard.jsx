@@ -30,8 +30,8 @@ const MissionCard = ({ mission }) => {
   description_fi ??= description;
 
   // Selección de traducción según idioma
-  const description_translation = translator(currentLang, description, description_es, description_fi, description_sr)
-  const title_translation = translator(currentLang, title, title_es, title_fi, title_sr)
+  const description_translation = translator(currentLang, description, description_es, description_sr, description_fi)
+  const title_translation = translator(currentLang, title, title_es, title_sr, title_fi)
 
   // const title_translation = lang === "es" && title_es ? title_es : title;
   // const description_translation =

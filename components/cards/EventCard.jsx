@@ -44,8 +44,8 @@ const EventCard = ({ event }) => {
   const currentLang = i18n.language;
 
   //only english is compulsory, the rest are optional
-  const description_translation = translator(currentLang, description_en, description_es, description_fi, description_sr)
-  const title_translation = translator(currentLang, title_en, title_es, title_fi, title_sr)
+  const description_translation = translator(currentLang, description_en, description_es, description_sr, description_fi )
+  const title_translation = translator(currentLang, title_en, title_es, title_sr, title_fi)
 
   const dateFormatted = new Date(date).toLocaleDateString(currentLang, {
     year: "numeric",
