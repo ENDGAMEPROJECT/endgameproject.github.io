@@ -11,8 +11,8 @@ import PlayArrowSharp from "@mui/icons-material/PlayArrowSharp";
 
 // Components
 import { Badge, badgeVariants } from "../ui/badge";
-import Text from "@/components/ui/Text";
-import Image from "@/components/ui/Image";
+import Text from "@/components/ui/text";
+import Image from "@/components/ui/image";
 import { Button, ButtonVariants } from "../ui/button";
 
 import {
@@ -27,7 +27,7 @@ import {
 
 import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
 import HighlightedHeader from "../ui/highlightedHeader";
-import Heading from "../ui/Heading";
+import Heading from "../ui/heading";
 
 
 

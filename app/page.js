@@ -17,7 +17,7 @@ import EventSharp from "@mui/icons-material/EventSharp";
 // components
 import { Button, ButtonVariants } from "@/components/ui/button";
 import { Badge, BadgeVariants } from "@/components/ui/badge";
-import Heading from "@/components/ui/Heading";
+import Heading from "@/components/ui/heading";
 import { Divider, DividerVariants } from "@/components/ui/divider";
 import HighlightedHeader from "@/components/ui/highlightedHeader";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";

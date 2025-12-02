@@ -3,7 +3,7 @@ import * as React from "react";
 
 import { useTranslation } from "react-i18next";
 import { escaperooms } from "@/constants/escaperooms";
-import Heading from "@/components/ui/Heading";
+import Heading from "@/components/ui/heading";
 import EscaperoomCard from "@/components/cards/EscaperoomCard";
 
 export default function Escaperooms() {

@@ -7,7 +7,7 @@ import { researchlines } from "@/constants/researchlines";
 import { useTranslation } from "react-i18next";
 import PublicationCard from "@/components/cards/PublicationCard";
 import { Button, ButtonVariants } from "@/components/ui/button";
-import Heading from "@/components/ui/Heading";
+import Heading from "@/components/ui/heading";
 import Text from "@/components/ui/Text";
 import { Divider, DividerVariants } from "@/components/ui/divider";
 import { useRouter, useSearchParams } from "next/navigation";

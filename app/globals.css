@@ -254,19 +254,19 @@ footer {
   @apply w-full;
 }
 
-.news {
+.news, .events {
   h2 {
     @apply text-text font-title text-pretty;
     @apply text-24 sm:text-28 mb-2 font-medium mt-6;
   }
 
   p {
-    @apply font-main max-w-[70ch] !text-text/90;
+    @apply font-main max-w-[70ch] text-text/90 !text-myText;
     @apply text-18 sm:text-base text-pretty;
   }
 
   li {
-    @apply mb-2;
+    @apply mb-2 underline;
   }
 
   a {

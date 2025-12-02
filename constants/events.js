@@ -66,6 +66,7 @@ export const events = [
 
     // other
     externalLinkJoin: "",
+    externalLinkPlay: "#",
     keywords: ["Event Launch"],
     socialLinks: [
       {

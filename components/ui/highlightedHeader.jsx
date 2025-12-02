@@ -4,7 +4,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 
-import Heading from "./Heading";
+import Heading from "./heading";
 
 const wordVariants = cva("text-myTextInverse px-1.5", {
   variants: {

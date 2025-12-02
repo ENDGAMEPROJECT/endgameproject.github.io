@@ -8,7 +8,7 @@ import { escaperooms } from "@/constants/escaperooms";
 import HighlightedHeader from "@/components/ui/highlightedHeader";
 import Link from "next/link";
 import Text from "../components/ui/text";
-import Heading from "@/components/ui/Heading";
+import Heading from "@/components/ui/heading";
 import { Badge } from "./ui/badge";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import ResourceCard from "@/components/cards/ResourceCard";

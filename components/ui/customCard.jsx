@@ -7,7 +7,7 @@ import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 
 import { cn } from "@/lib/utils";
-import Heading from "@/components/ui/Heading";
+import Heading from "@/components/ui/heading";
 import Text from "../ui/text";
 import { Button, ButtonVariants } from "@/components/ui/button";
 

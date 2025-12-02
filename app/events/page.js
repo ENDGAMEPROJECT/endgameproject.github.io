@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { events } from "@/constants/events";
 
 // Components
-import Heading from "@/components/ui/Heading";
+import Heading from "@/components/ui/heading";
 import EventCard from "@/components/cards/EventCard";
 
 export default function Events() {

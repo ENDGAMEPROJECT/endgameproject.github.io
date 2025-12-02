@@ -7,7 +7,7 @@ import { events } from "@/constants/events";
 import HighlightedHeader from "@/components/ui/highlightedHeader";
 import Link from "next/link";
 import Text from "../components/ui/text";
-import Heading from "../components/ui/Heading";
+import Heading from "./ui/heading";
 import { Badge } from "./ui/badge";
 import { Button, ButtonVariants } from "@/components/ui/button";
 

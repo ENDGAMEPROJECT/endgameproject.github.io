@@ -7,7 +7,7 @@ import { events } from "@/constants/events";
 import HighlightedHeader from "@/components/ui/highlightedHeader";
 import Link from "next/link";
 import Text from "../components/ui/text";
-import Heading from "../components/ui/Heading";
+import Heading from "./ui/heading";
 import { Badge } from "./ui/badge";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Image from "@/components/ui/image";
@@ -202,12 +202,16 @@ const NewsFull = ({ eventname }) => {
 
       {imagePosition === "bottom" && (
       <Image
-        className={"w-full"}
+        className={"w-full max-w-"}
         fit="contain"
         src={image}
         alt={"imagen de la noticia"}
       />
       )}
+
+      {/* { externalLinkPlay && {
+        // componente 
+      }} */}
 
       {/* <Button
         asChild

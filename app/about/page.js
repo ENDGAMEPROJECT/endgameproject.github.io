@@ -9,7 +9,7 @@ import { mission } from "@/constants/mission";
 import { partners } from "@/constants/partners";
 
 // Components
-import Heading from "@/components/ui/Heading";
+import Heading from "@/components/ui/heading";
 import MissionCard from "@/components/cards/MissionCard";
 import PartnerCard from "@/components/cards/PartnerCard";
 import { Divider } from "@mui/material";

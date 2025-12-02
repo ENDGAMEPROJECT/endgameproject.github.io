@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 
 const ButtonVariants = cva(
-  "w-fit min-w-20 h-fit inline-flex gap-2 items-center justify-center font-semibold whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  "w-fit min-w-20 h-fit inline-flex gap-2 items-center justify-center font-title font-semibold capitalize whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -27,7 +27,7 @@ const ButtonVariants = cva(
         //   "bg-transparent text-primary-foreground underline-offset-4 underline hover:bg-secondary-100/60 shadow-none",
       },
       size: {
-        xl: 'px-6 py-2 text-2xl font-title border-2',
+        xl: 'px-6 py-2 text-2xl border-2',
         lg: "px-6 py-2 text-lg",
         md: "px-4 py-2 text-base",
         sm: "px-3 py-1.5 text-sm",

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Image from "../ui/image";
-import Heading from "../ui/Heading";
+import Heading from "../ui/heading";
 import Link from "next/link";
 import HighlightedHeader from "../ui/highlightedHeader";
 

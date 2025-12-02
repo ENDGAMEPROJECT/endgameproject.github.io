@@ -9,7 +9,7 @@ import FilterText from "./FilterText";
 import FilterDate from "./FilterDate";
 import FilterCategory from "./FilterCategory";
 import TabsResearchLineFilter from "./TabsResearchLineFilter";
-import { Divider } from "../ui/Divider";
+import { Divider } from "../ui/divider";
 
 export default function Filters({
   pathname,
