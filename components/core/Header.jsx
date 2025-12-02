@@ -89,7 +89,6 @@ export default function Header(props) {
         />
       </a>
       {/* menu container */}
-      <div className="w-full h-full min-h-[50px]"></div>
       <div className="relative w-fit flex gap-4 md:gap-8 items-center">
         {/* menu icons */}
         <div className="block md:hidden"> 
