@@ -68,6 +68,7 @@ const NewsFull = ({ eventname }) => {
     category,
     keywords,
     image,
+    imagePosition,
     externalLinkJoin,
     socialLinks,
   } = event;
@@ -145,6 +146,10 @@ const NewsFull = ({ eventname }) => {
   const categoryFormatted =
     category.charAt(0).toUpperCase() + category.slice(1);
 
+  if (!imagePosition) {
+    imagePosition = "top";
+  }
+
   return (
     <div className="flex flex-col gap-8 items-center standard_margin">
       {/* <Badge variant="primary" type="activity" size="xl">
@@ -174,16 +179,18 @@ const NewsFull = ({ eventname }) => {
         </div>
       )}
 
+      {imagePosition === "top" && (
       <Image
         className={"w-full"}
         fit="contain"
         src={image}
         alt={"imagen de la noticia"}
       />
+      )}
 
       <Heading
         className="text-base text-center text-balance text-accent-400 mt-4"
-        level="h4"
+        level="h5"
       >
         {description}
       </Heading>
@@ -192,6 +199,15 @@ const NewsFull = ({ eventname }) => {
         className="news"
         dangerouslySetInnerHTML={{ __html: eventBody }}
       />
+
+      {imagePosition === "bottom" && (
+      <Image
+        className={"w-full"}
+        fit="contain"
+        src={image}
+        alt={"imagen de la noticia"}
+      />
+      )}
 
       {/* <Button
         asChild

@@ -1,5 +1,100 @@
 export const events = [
   {
+    eventname: "PressNote011225",
+    category: "",
+    country: "International",
+    type: "news",
+    date: "12/01/25",
+    author: "",
+    title_en: "ENDGAME launches its first educational escape room to teach how to detect misinformation about food and health",
+    title_sr: "ENDGAME lansira svoju prvu edukativnu escape room igru za učenje prepoznavanja dezinformacija o hrani i zdravlju",
+    title_es: "ENDGAME lanza su primer escape room educativo para enseñar a detectar la desinformación sobre alimentación y salud",
+    description_en: "We have launched “The Click Trap,” an educational escape room designed to combat disinformation and strengthen media literacy among young people. It includes a teacher’s guide and will be piloted in schools across Spain, Finland, and Serbia, with versions available in multiple languages.",
+    description_sr: "Evropski projekat ENDGAME pokrenuo je “The Click Trap”, edukativnu escape room igru namenjenu borbi protiv dezinformacija i jačanju medijske pismenosti među mladima. Uz igru dolazi i vodič za nastavnike, a biće testirana u školama u Španiji, Finskoj i Srbiji, uz verzije dostupne na više jezika.",
+    description_es: "Lanzamos “The Click Trap”, un escape room educativo para combatir la desinformación y fortalecer la alfabetización mediática juvenil. Incluye una guía docente y será probado en colegios de España, Finlandia y Serbia, con versiones disponibles en varios idiomas.",
+    image: "/assets/images/EndgameBackground.png",
+    imagePosition: "bottom",
+    htmlbody_en: `    
+<p>The European project <b>ENDGAME</b> (Escaping New Disinformation through Gamified Cross-Border Media Literacy Education), led by the <b><a href="https://www.uef.fi/fi" target="_blank">University of Eastern Finland</a></b> (UEF, Finland) and consisting of the <b><a href="https://www.upm.es/" target="_blank">Technical University of Madrid</a></b> (UPM, Spain), the <b><a href="https://www.metropolitan.ac.rs/en/about-metropolitan-university/" target="_blank">Metropolitan University of Belgrade</a></b> (BMU, Serbia), <b><a href="https://faktabaari.fi/in-english/" target="_blank">Faktabaari</a></b> (Faktabaari, Finland), <b><a href="https://novinarska-skola.org.rs/" target="_blank">Novi Sad School of Journalism</a></b> (FNT, Serbia) and <b><a href="http://Maldita.es" target="_blank">Fundación Maldita.es</a></b> (Maldita.es, Spain), has developed an educational escape room, <a href="https://endgameproject.github.io/escaperooms/theClickTrap"><b>“The Click Trap”</b></a>, along with <a href="https://docs.google.com/document/d/1VSxRpjjeqkFae5qvW-HxNOaAEf7FfdkI/export?format=pdf" target="_blank" >a teacher’s guide</a> designed to help educators work on media literacy and critical thinking in the classroom. Both resources will be tested over the coming months in schools in Spain, Finland and Serbia. This is the first of the three escape rooms that the project will develop between 2025 and 2027.</p>
+<br/>
+<h2>A game to escape misinformation</h2>
+
+<p>In “The Click Trap”, the player takes on the role of a janitor who infiltrates the influencer agency “ConnectNow”, which is promoting <b>GlowUp+</b>, a dietary supplement with questionable health benefits. Over 45 minutes, with the help of Lena, an influencer from the agency who also wants to expose its bad practices, the player must gather the necessary information to dismantle this misinformation campaign before the evidence is destroyed.</p>
+
+<p>The escape room presents situations based on real cases of misinformation about food and health, a topic that is particularly sensitive among European youth. Throughout the game, students learn to recognise manipulation techniques, assess the reliability of sources and reflect on the economic factors that fuel misinformation.</p>
+<br/>
+<h2>A guide to bring the game into the classroom</h2>
+
+<p>The escape room is accompanied by <a href="https://docs.google.com/document/d/1VSxRpjjeqkFae5qvW-HxNOaAEf7FfdkI/export?format=pdf" target="_blank" > a didactic guide</a> providing context on what misinformation on social media is, along with activities to carry out before and after playing the game, designed to activate critical thinking, as well as a step-by-step explanation intended to support the integration of the escape room into classrooms and learning spaces across Europe.</p>
+
+<p>In the coming months, pilot tests of “The Click Trap” will be carried out in schools in Finland, Serbia and Spain to collect feedback and improve the experience. The project expects to reach nearly 1000 students across the three countries. In addition, the game is available on <a href="https://endgameproject.github.io/escaperooms/theClickTrap">the project’s website</a> in English, Spanish, Serbian and Finnish so it can be played virtually, helping increase the escape room’s impact across Europe.</p>
+  `, // html
+    htmlbody_sr: `
+    <p>Evropski projekat ENDGAME (Escaping New Disinformation through Gamified Cross-Border Media Literacy Education), koji predvodi <b><a href="https://www.uef.fi/fi" target="_blank">Univerzitet Istočne Finske (UEF, Finska)</a></b> a u kojem učestvuju <b><a href="https://www.upm.es/" target="_blank">Tehnički univerzitet u Madridu (UPM, Španija)</a></b>, <b><a href="https://www.metropolitan.ac.rs/en/about-metropolitan-university/" target="_blank">Metropolitan univerzitet Beograd </a></b> (BMU, Srbija), <b><a href="https://faktabaari.fi/in-english/" target="_blank">Faktabaari</a></b> (Faktabaari, Finska), <b><a href="https://novinarska-skola.org.rs/" target="_blank">Novosadska novinarska škola</a></b> (FNT, Srbija) i <b><a href="http://Maldita.es" target="_blank">Fundación Maldita.es</a></b> (Maldita.es, Španija), razvio je edukativnu escape room video igru, <a href="https://endgameproject.github.io/escaperooms/theClickTrap"><b>“The Click Trap”</b></a>, zajedno sa <a href="https://docs.google.com/document/d/1VSxRpjjeqkFae5qvW-HxNOaAEf7FfdkI/export?format=pdf" target="_blank" >vodičem za nastavnike</a> osmišljenim da pomogne edukatorima da rade na medijskoj pismenosti i kritičkom razmišljanju u učionici. Ova dva resursa biće testirana tokom narednih meseci u školama u Španiji, Finskoj i Srbiji. Ovo je prvi od tri escape room-a koje će biti razvijena na projektu između 2025. i 2027. godine.</p>
+<br/>
+<h2>Igra za razotkrivanje dezinformacija</h2>
+<p>U igri “The Click Trap”, igrač preuzima ulogu domara koji se infiltrira u influensersku agenciju “ConnectNow”, koja promoviše GlowUp+, dijetetski suplement sa sumnjivim zdravstvenim benefitima. Tokom 45 minuta, uz pomoć Lene, influenserke iz agencije koja takođe želi da razotkrije lošu praksu agencije, igrač mora prikupiti potrebne informacije kako bi razotkrio ovu kampanju dezinformacija pre nego što dokazi budu uništeni.</p>
+
+<p>Escape room prikazuje situacije zasnovane na stvarnim slučajevima dezinformacija o hrani i zdravlju, temi koja je posebno osetljiva među mladima u Evropi. Kroz igru, učenici uče da prepoznaju tehnike manipulacije, procene pouzdanost izvora i razmišljaju o ekonomskim faktorima koji podstiču širenje dezinformacija.</p>
+<br/>
+<h2>Vodič za primenu igre u učionici</h2>
+
+<p>Uz Escape room igru dolazi i <a href="https://docs.google.com/document/d/1VSxRpjjeqkFae5qvW-HxNOaAEf7FfdkI/export?format=pdf" target="_blank" >didaktički vodič</a> koji objašnjava prirodu dezinformacija na društvenim mrežama i nudi niz aktivnosti pre i posle igre, osmišljenih da podstaknu kritičko razmišljanje. Vodič takođe sadrži detaljno objašnjenje korak po korak, namenjeno podršci integrisanju escape room-a u učionice i obrazovne prostore širom Evrope. </p>
+
+<p>Tokom narednih meseci, pilot testiranje igre “The Click Trap” biće sprovedeno u školama u Finskoj, Srbiji i Španiji kako bi se prikupile povratne informacije i unapredilo korisničko iskustvo. Projekat očekuje da će obuhvatiti skoro 1000 učenika u tri zemlje. Pored toga, igra je dostupna na web sajtu web-sajtu projekta na engleskom, španskom, srpskom i finskom jeziku, tako da se može igrati virtuelno, što povećava njen uticaj širom Evrope.</p>
+`, // html
+    htmlbody_es: `
+    <p>El proyecto europeo <b>ENDGAME</b> (Escaping New Disinformation through Gamified Cross-Border Media Literacy Education), liderado por la <b><a href="https://www.uef.fi/fi" target="_blank">University of Eastern Finland (UEF, Finlandia)</a></b> y formado por la <b><a href="https://www.upm.es/" target="_blank">Universidad Politécnica de Madrid (UPM, España)</a></b>, la <b><a href="https://www.metropolitan.ac.rs/en/about-metropolitan-university/" target="_blank">Universidad Metropolitana de Belgrado</a></b> (BMU, Serbia), <b><a href="https://faktabaari.fi/in-english/" target="_blank">Faktabaari</a></b> (Faktabaari, Finlandia), la <b><a href="https://novinarska-skola.org.rs/" target="_blank">Escuela de Periodismo de Novi Sad</a></b> (FNT, Serbia) y <b><a href="http://Maldita.es" target="_blank">Fundación Maldita.es</a></b> (Maldita.es, España), ha desarrollado el escape room educativo <a href="https://endgameproject.github.io/escaperooms/theClickTrap"><b>“The Click Trap”</b></a>, acompañado de <a href="https://docs.google.com/document/d/1QMLHAEaBetoKYbuLx2xALDGbi1-96IgJ/export?format=pdf" target="_blank" >una guía para docentes</a> diseñada para ayudar a los educadores a trabajar la alfabetización mediática y el pensamiento crítico en el aula. Ambos recursos serán testeados durante los próximos meses en colegios de España, Finlandia y Serbia. Esta es el primero de tres escape rooms que el proyecto estará desarrollando entre 2025 y 2027.</p>
+<br/>
+<h2>Un juego para escapar de la desinformación</h2>
+<p>En “The Click Trap”  el jugador asume el papel de un conserje que se infiltra en la agencia de influencers "ConnectNow", la cual está promocionando GlowUp+, un suplemento dietético de dudosos beneficios para la salud. Durante 45 minutos, con la ayuda de Lena, una influencer que forma parte de la agencia pero que también quiere denunciar sus malas prácticas, el jugador deberá reunir la información necesaria para desmantelar esta campaña de desinformación antes de que se destruyan las pruebas.</p>
+
+<p>El escape room plantea situaciones basadas en casos reales de desinformación sobre alimentación y salud, un tema especialmente sensible entre la juventud europea. A lo largo del juego, el estudiantado aprenderá a reconocer técnicas de manipulación, evaluar la fiabilidad de las fuentes y a reflexionar sobre los factores económicos que fomentan la desinformación.
+
+<br/>
+<h2>Una guía para llevar el juego al aula</h2>
+
+<p>El escape room se acompaña de <a href="https://docs.google.com/document/d/1QMLHAEaBetoKYbuLx2xALDGbi1-96IgJ/export?format=pdf" target="_blank" >una guía didáctica</a> con contexto sobre qué es la desinformación en redes y con actividades para realizar antes y después del juego. Están diseñadas para activar el pensamiento crítico y una explicación paso a paso para la integración del escape room en aulas y espacios formativos de toda Europa. </p>
+<p>En los próximos meses se realizarán pruebas piloto de “The Click Trap” en colegios de Finlandia, Serbia y España para recabar opiniones y mejorar la experiencia. Se espera alcanzar cerca de 1000 estudiantes a lo largo del proyecto entre los tres países. Además, el juego se encuentra disponible en la página del proyecto en inglés, español, serbio y finalandés para que se pueda jugar de manera virtual y aumentar el impacto del escape room en toda Europa. </p>
+
+<br/>
+<h2>Pilotaje educativo en España</h2>
+<p>En España, el primer testeo de “The Click Trap” será en Toledo, en el IES Peñas Negras en Mora, donde el equipo de Maldita.es realizará sesiones presenciales con todas las clases de 1º de ESO. Este testeo, que tendrá lugar en Mora los días 9 y 10 de diciembre, permitirá evaluar de primera mano cómo el escape room contribuye a mejorar las competencias de pensamiento crítico del alumnado más joven y recoger sugerencias para optimizar la experiencia educativa. </p>
+
+<p>Cualquier centro educativo interesado en participar en el testeo del escape room puede ponerse en contacto con el equipo de <a href="https://maldita.es" target="_blank">Maldita.es</a> a través del correo <a href="mailto:educa@maldita.es">educa@maldita.es</a>.  Las sesiones se realizan de manera presencial y se priorizará la colaboración con centros ubicados en áreas accesibles para el equipo de Fundación Maldita.es.</p>
+`, // html
+
+    // other
+    externalLinkJoin: "",
+    keywords: ["Event Launch"],
+    socialLinks: [
+      {
+        name: "Instagram",
+        icon: `InstagramIcon`,
+        url: "https://www.instagram.com/endgame.project",
+        handle: "endgame.project",
+      },
+      {
+        name: "X (Twitter)",
+        icon: `TwitterIcon`,
+        url: "https://twitter.com/endgame_project",
+        handle: "endgame_project",
+      },
+      {
+        name: "TikTok",
+        icon: `TikTokIcon`,
+        url: "https://www.tiktok.com/@endgame.project",
+        handle: "@endgame.project",
+      },
+      {
+        name: "LinkedIn",
+        icon: `LinkedInIcon`,
+        url: "https://www.linkedin.com/company/end-game-project-477149364",
+        handle: "end-game-project",
+      },
+    ],
+  },
+  {
     eventname: "PressNote200525",
     category: "",
     country: "International",
@@ -17,7 +112,7 @@ export const events = [
     image: "/newsENDGAME_imagePlaceholder.png",
     htmlbody_en: `
   <p>
-    The European project <strong>ENDGAME</strong> – Escaping New Disinformation through Gamified cross-border Media literacy Education has officially kicked off with a consortium online meeting marking the launch of this 24-month initiative. Funded by the Creative Europe Programme (CREA-CROSS-2024-MEDIALITERACY), ENDGAME aims to empower European youth with the skills to critically engage with information, identify disinformation, and navigate digital media environments responsibly.
+    The European project <strong>ENDGAME</strong> – Escaping New Disinformation through Gamified cross-border Media literacy Education - has officially kicked off with a consortium online meeting marking the launch of this 24-month initiative. Funded by the Creative Europe Programme (CREA-CROSS-2024-MEDIALITERACY), ENDGAME aims to empower European youth with the skills to critically engage with information, identify disinformation, and navigate digital media environments responsibly.
   </p>
 
   <h2 className='news'>Project Partners</h2>
@@ -58,7 +153,7 @@ export const events = [
     <a href="https://sonsoles.me" target="_blank">https://sonsoles.me</a>
   </p>`, // html
     htmlbody_sr: `<p>
-    Evropski projekat ENDGAME – Escaping New Disinformation through Gamified cross-border Media literacy Education zvanično je započet konsorcijumskim online sastankom, čime je obeleženo pokretanje ove 24-mesečne inicijative. Finansiran kroz program Creative Europe (CREA-CROSS-2024-MEDIALITERACY), ENDGAME ima za cilj da opremi evropsku omladinu veštinama za kritičko sagledavanje informacija, prepoznavanje dezinformacija i odgovorno kretanje kroz digitalne medijske sadržaje.
+    Evropski projekat ENDGAME – Escaping New Disinformation through Gamified cross-border Media literacy Education - zvanično je započet konsorcijumskim online sastankom, čime je obeleženo pokretanje ove 24-mesečne inicijative. Finansiran kroz program Creative Europe (CREA-CROSS-2024-MEDIALITERACY), ENDGAME ima za cilj da opremi evropsku omladinu veštinama za kritičko sagledavanje informacija, prepoznavanje dezinformacija i odgovorno kretanje kroz digitalne medijske sadržaje.
   </p>
   <h2 className='news'>Projektni partneri:</h2>
   <ul>
@@ -95,7 +190,7 @@ export const events = [
   </p>
   `, // html
     htmlbody_es: `<p>
-      El proyecto europeo <strong>ENDGAME</strong> – Escaping New Disinformation through Gamified cross-border Media literacy Education ha comenzado oficialmente con una reunión en línea del consorcio que marca el lanzamiento de esta iniciativa de 24 meses. Financiado por el Programa Europa Creativa (CREA-CROSS-2024-MEDIALITERACY), ENDGAME tiene como objetivo empoderar a la juventud europea con las habilidades para participar críticamente con la información, identificar la desinformación y navegar por los entornos digitales de manera responsable.
+      El proyecto europeo <strong>ENDGAME</strong> – Escaping New Disinformation through Gamified cross-border Media literacy Education - ha comenzado oficialmente con una reunión en línea del consorcio que marca el lanzamiento de esta iniciativa de 24 meses. Financiado por el Programa Europa Creativa (CREA-CROSS-2024-MEDIALITERACY), ENDGAME tiene como objetivo empoderar a la juventud europea con las habilidades para participar críticamente con la información, identificar la desinformación y navegar por los entornos digitales de manera responsable.
     </p>
     <h2 className='news'>Socios del proyecto</h2>
     <ul>
@@ -131,7 +226,7 @@ export const events = [
     <a href="https://sonsoles.me" target="_blank">https://sonsoles.me</a>
   </p>`,
     htmlbody_fi: `<p>
-    Eurooppalainen hanke ENDGAME – Escaping New Disinformation through Gamified cross-border Media literacy Education on virallisesti käynnistynyt verkkotapaamisella, joka toimi lähtölaukauksena tälle 24 kuukautta kestävälle aloitteelle. EU:n Luovan Euroopan ohjelman (CREA-CROSS -2024-MEDIALITERACY) rahoittama ENDGAME pyrkii antamaan eurooppalaisille nuorille taidot kriittiseen informaation käsittelyyn, disinformaation tunnistamiseen sekä vastuulliseen navigointiin digitaalisen median ympäristöissä.
+    Eurooppalainen hanke ENDGAME – Escaping New Disinformation through Gamified cross-border Media literacy Education - on virallisesti käynnistynyt verkkotapaamisella, joka toimi lähtölaukauksena tälle 24 kuukautta kestävälle aloitteelle. EU:n Luovan Euroopan ohjelman (CREA-CROSS -2024-MEDIALITERACY) rahoittama ENDGAME pyrkii antamaan eurooppalaisille nuorille taidot kriittiseen informaation käsittelyyn, disinformaation tunnistamiseen sekä vastuulliseen navigointiin digitaalisen median ympäristöissä.
     </p>
     <h2 className='news'>Projektikumppanit</h2>
     <ul>
