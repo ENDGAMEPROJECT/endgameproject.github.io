@@ -10,7 +10,9 @@ export const partners = {
     name_sr: "Polytechnic University of Madrid",
     shortname: "UPM",
     logo: uniLogos + "upm_logo-vertical-color.png",
+    logoLight: uniLogos + "upm_logo-vertical-color.png",
     logoHorizontal: uniLogos + "upm_logo-horizontal-color.png",
+    logoHorizontalLight: uniLogos + "upm_logo-horizontal-color-lightBg.png",
     link: 'https://www.upm.es/',
   },
   uef: {
@@ -21,7 +23,9 @@ export const partners = {
     name_sr: "University of Eastern Finland",
     shortname: "UEF",
     logo: uniLogos + "uef_logo-vertical-darkBg.png",
+    logoLight: uniLogos + "uef_logo-vertical-lightBg.png",
     logoHorizontal: uniLogos + "uef_logo-horizontal-darkBg.png",
+    logoHorizontalLight: uniLogos + "uef_logo-horizontal-lightBg.png",
     link: 'https://www.uef.fi/',
   },
   bmu: {
@@ -32,7 +36,9 @@ export const partners = {
     name_sr: "Univerzitet Metropolitan Beograd",
     shortname: "BMU",
     logo: uniLogos + "bmu_logo-vertical-darkBg.png",
+    logoLight: uniLogos + "bmu_logo-vertical-lightBg.png",
     logoHorizontal: uniLogos + "bmu_logo-horizontal-darkBg.png",
+    logoHorizontalLight: uniLogos + "bmu_logo-horizontal-lightBg.png",
     link: 'https://www.metropolitan.ac.rs/',
   },
   //   agencies
@@ -40,19 +46,23 @@ export const partners = {
     id: 'mdt',
     name: "Maldita",
     logo: agenciesLogos + "maldita_logo-vertical-darkBg.png",
+    logoLight: agenciesLogos + "maldita_logo-vertical-lightBg.png",
     logoHorizontal: agenciesLogos + "malditaFundacion_logo-horizontal-darkBg.png",
+    logoHorizontalLight: agenciesLogos + "malditaFundacion_logo-horizontal-lightBg.png",
     link: 'https://maldita.es/',
   },
   ftb: {
     id: 'ftb',
     name: "Faktabaari",
     logo: agenciesLogos + "faktabaariEdu_logo-darkBg.png",
+    logoLight: agenciesLogos + "faktabaariEdu_logo-lightBg.png",
     link: 'https://faktabaari.fi/',
   },
   fnt: {
     id: 'fnt',
     name: "Fake News Tragač",
     logo: agenciesLogos + "fnt_logo-darkBg.png",
+    logoLight: agenciesLogos + "fnt_logo-lightBg.png",
     link: 'https://fakenews.rs/',
   },
 };

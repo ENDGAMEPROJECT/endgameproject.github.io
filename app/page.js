@@ -47,12 +47,16 @@ import {
 import { mission } from "@/constants/mission";
 import { partners } from "@/constants/partners";
 
+import { useContext, useEffect } from "react";
+import { ThemeContext } from "@/components/ThemeContext";
+
 // UI
 export default function Page() {
   //const [projects, setProjects] = useState(myprojectCards);
 
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+  const { webTheme } = useContext(ThemeContext);
 
   return (
     <main>
@@ -87,11 +91,11 @@ export default function Page() {
       <Divider size="xl" />
 
       {/* SECTION ABOUT */}
-      <Heading level="h1">{t("home.aboutSection")}</Heading>
-      <section className="standard_margin flex flex-col gap-24">
+      <Heading level="h2" className="text-myPrimary">{t("home.aboutSection")}</Heading>
+      <section className="standard_margin flex flex-col gap-24 bg-background300 text-myText">
         <article>
-          <Heading level="h3">{t("home.about.title")}</Heading>
-          <Heading level="subtitle"> {t("home.about.content")}</Heading>
+          <Heading level="h3" className>{t("home.about.title")}</Heading> 
+          <Heading level="subtitle" className="text-myText"> {t("home.about.content")}</Heading>
         </article>
         <article>
           <Heading level="h3">{t("home.mission.title")}</Heading>
@@ -110,7 +114,7 @@ export default function Page() {
               })}
             </div>
             <ul className="flex flex-col gap-4">
-              <Heading level="h5" className="text-primary uppercase">{t("escaperooms.oncoming")}</Heading>
+              <Heading level="h5" className="text-myPrimary uppercase">{t("escaperooms.oncoming")}</Heading>
               <li className="flex justify-start gap-4 wrap">
                 <Text
                   type="pre"
@@ -150,36 +154,35 @@ export default function Page() {
           <Heading level="h3">{t("home.partners.title")}</Heading>
           <Heading
             level="h5"
-            className="text-center mb-4 uppercase text-primary"
+            className="text-center mb-4 uppercase text-myPrimary"
           >
             {t("home.partners.universities")}
           </Heading>
           <ul className="md:grid grid-cols-3 gap-8 items-end">
-            <PartnerCard partner={partners.uef} />
-            <PartnerCard partner={partners.upm} />
-            <PartnerCard partner={partners.bmu} />
+            <PartnerCard partner={partners.uef} webTheme={webTheme}/>
+            <PartnerCard partner={partners.upm} webTheme={webTheme}/>
+            <PartnerCard partner={partners.bmu} webTheme={webTheme}/>
           </ul>
           <Heading
             level="h5"
-            className="text-center my-4 uppercase text-primary"
+            className="text-center my-4 uppercase text-myPrimary"
           >
             {t("home.partners.agencies")}
           </Heading>
           <ul className="md:grid grid-cols-3 gap-8">
-            <PartnerCard partner={partners.mdt} />
-            <PartnerCard partner={partners.ftb} />
-            <PartnerCard partner={partners.fnt} />
+            <PartnerCard partner={partners.mdt} webTheme={webTheme}/>
+            <PartnerCard partner={partners.ftb} webTheme={webTheme}/>
+            <PartnerCard partner={partners.fnt} webTheme={webTheme}/>
           </ul>
         </article>
       </section>
-      <Divider size="xl" />
       {/* LATEST CONTENT */}
       <section className="standard_margin" id="researchlines">
         <Divider size="md"></Divider>
-        <Heading level="h1">{t("home.latestContent.title")}</Heading>
+        <Heading level="h2" className="text-myPrimary">{t("home.latestContent.title")}</Heading>
         {/* EVENTS AND NEWS */}
         <section className="cards">
-          <header className="mb-4 w-full flex justify-between border-b border-primary">
+          <header className="mb-4 w-full flex justify-between border-b border-myPrimary">
             <Heading level="h4">{t("home.latestContent.events.title")}</Heading>
             <Button
               className={
@@ -187,7 +190,7 @@ export default function Page() {
                   variant: "tertiary",
                   size: "lg",
                   radius: "rounded_sm",
-                }) + " hover:text-primary"
+                }) + " hover:text-myPrimary"
               }
             >
               <Link
@@ -209,7 +212,7 @@ export default function Page() {
                 <Link
                   key={key}
                   href={`/events/${event.eventname}`}
-                  className="min-h-40 p-4 bg-black border border-transparent hover:border-accent transition-all duration-200 ease-in-out"
+                  className="min-h-40 p-4 bg-myBackground border border-transparent hover:border-accent400 transition-all duration-200 ease-in-out"
                   onClick={() => {
                     window.scrollTo({ top: 0 });
                   }}
@@ -228,7 +231,7 @@ export default function Page() {
                         </Badge>
                       )} */}
                       {event.country && (
-                        <Badge variant="primary" size="md" type="activity">
+                        <Badge variant="primary" size="md" type="activity" className="bg-accent/15">
                           {event.country}
                         </Badge>
                       )}
@@ -240,7 +243,7 @@ export default function Page() {
                       </CardTitle>
                       <CardSubtitle
                         level="h6"
-                        className="text-accent flex gap-2 items-center"
+                        className="text-accent flex gap-2 items-center border"
                       >
                         <EventSharp className="h-5 w-5" />
                         {event.date + (event.hour ? " - " + event.hour : "")}
@@ -252,7 +255,7 @@ export default function Page() {
                               key={index}
                               variant="secondary"
                               size="sm"
-                              className="text-accent-400 bg-accent/15"
+                              className="text-accent400 bg-accent/15"
                             >
                               {keyword}
                             </Badge>
@@ -270,8 +273,8 @@ export default function Page() {
         RESEARCH AND RESULTS 
         --------------------------------------------------------------------*/}
         <section className="cards mt-8">
-          <header className="mb-4 w-full flex justify-between border-b border-primary">
-            <Heading level="h4">
+          <header className="mb-4 w-full flex justify-between border-b border-myPrimary">
+            <Heading level="h4" className="text-myText">
               {t("home.latestContent.research.title")}
             </Heading>
             <Button
@@ -280,7 +283,7 @@ export default function Page() {
                   variant: "tertiary",
                   size: "lg",
                   radius: "rounded_sm",
-                }) + " hover:text-primary"
+                }) + " hover:text-myPrimary"
               }
             >
               <Link
@@ -301,12 +304,12 @@ export default function Page() {
                 <Link // aquí quizás no tiene sentido el link, ya que no habrá un single de publicación
                   key={key}
                   href={`/research`}
-                  className="min-h-40 p-4 bg-black border border-transparent hover:border-secondary transition-all duration-200 ease-in-out"
+                  className="min-h-40 p-4 bg-myBackground border border-transparent hover:border-secondary400 transition-all duration-200 ease-in-out"
                   onClick={() => {
                     window.scrollTo({ top: 0 });
                   }}
                 >
-                  <CustomCard className="bg-black">
+                  <CustomCard>
                     <CardHeader>
                       {publication.type && (
                         <Badge variant="type" size="lg" type="info">
@@ -314,7 +317,7 @@ export default function Page() {
                         </Badge>
                       )}
                       {publication.country && (
-                        <Badge variant="primary" size="lg" type="info">
+                        <Badge variant="primary" size="lg" type="info" className="bg-secondary/15">
                           {publication.country}
                         </Badge>
                       )}
@@ -326,7 +329,7 @@ export default function Page() {
                         </CardTitle>
 
                         {publication.date?.[0] && (
-                          <div className="flex items-center !text-secondary-200">
+                          <div className="flex items-center !text-secondary200">
                             <Text
                               type="small"
                               className="font-bold text-sm !text-current"

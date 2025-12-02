@@ -6,13 +6,13 @@ import { cva } from "class-variance-authority";
 
 import Heading from "./Heading";
 
-const wordVariants = cva("text-black px-1.5", {
+const wordVariants = cva("text-myTextInverse px-1.5", {
   variants: {
     variant: {
       // style
-      default: "bg-primary",
-      activity: "bg-accent",
-      info: "bg-secondary",
+      default: "bg-myPrimary",
+      activity: "bg-accent400",
+      info: "bg-secondary400",
     },
   },
   defaultVariants: {

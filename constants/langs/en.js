@@ -44,6 +44,7 @@ export const en = {
     oncoming: "On coming escaperooms",
     escaperoom: {
       "action-button": "See details",
+      "play-button": "Play"
     },
   },
   escaperoomfull:{

@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 // UI Components
 import { Badge, badgeVariants } from "../ui/badge";
-import Text from "../ui/Text";
+import Text from "../ui/text";
 import { Button } from "../ui/button";
 
 // Custom Card Components
@@ -85,7 +85,7 @@ const ResearchCard = ({ publication }) => {
 
   return (
     // 📦 Contenedor principal de la tarjeta
-    <CustomCard className="bg-black p-4">
+    <CustomCard className="bg-myBackground p-4">
       <CardHeader>
         {type && (
           <Badge variant="type" size="lg" type="info">
@@ -93,7 +93,7 @@ const ResearchCard = ({ publication }) => {
           </Badge>
         )}
         {country && (
-          <Badge variant="primary" size="lg" type="info">
+          <Badge variant="primary" size="lg" type="info" className="bg-secondary/15">
             {country}
           </Badge>
         )}
@@ -106,7 +106,7 @@ const ResearchCard = ({ publication }) => {
           </CardTitle>
 
           {date?.[0] && (
-            <div className="flex items-center !text-secondary-200">
+            <div className="flex items-center !text-secondary200">
               <Text type="small" className="font-bold text-sm !text-current">
                 {/* {t(`research.filter.${category}`)} */}
                 {category}
@@ -129,7 +129,7 @@ const ResearchCard = ({ publication }) => {
                   key={index}
                   variant="secondary"
                   size="sm"
-                  className="text-secondary-400 bg-secondary/15"
+                  className="text-secondary400 bg-secondary/15"
                 >
                   {keyword}
                 </Badge>
@@ -138,6 +138,7 @@ const ResearchCard = ({ publication }) => {
           )}
         </CardContent>
       </CardBody>
+      
 
       {publicationname && (
         <CardFooter className="p-0 flex-wrap">
@@ -148,7 +149,7 @@ const ResearchCard = ({ publication }) => {
               variant="outline"
               size="sm"
               radius="rounded_sm"
-              className="hover:bg-black hover:border-secondary-400 hover:text-secondary-300"
+              className="hover:bg-myBackground hover:border-secondary400 hover:text-secondary300"
             >
               <Link
                 rel="noopener noreferrer"
@@ -171,7 +172,7 @@ const ResearchCard = ({ publication }) => {
               size="sm"
               radius="rounded_sm"
               type='info'
-              className="hover:bg-black hover:bg-secondary-400 hover:text-black"
+              className="hover:bg-myBackground hover:bg-secondary-400 hover:text-black"
             >
               <Link download={downloadLinkJoin}
                 rel="noopener noreferrer"

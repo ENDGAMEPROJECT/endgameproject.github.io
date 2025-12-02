@@ -13,11 +13,19 @@ export async function getStaticPaths() {
 
 const nextConfig = {
   /**
-   * Enable static exports for the App Router.
+   * Enable static exports for the App Router. Only in production builds.
    *
    * @see https://nextjs.org/docs/app/building-your-application/deploying/static-exports
    */
-   output: "export",
+   ...(isProd
+    ? {
+        output: "export",
+        distDir: "docs",
+      }
+    : {
+        // En desarrollo se usa la carpeta por defecto .next
+        distDir: ".next",
+      }),
 
   /**
    * Set base path. This is the slug of your GitHub repository.
@@ -42,8 +50,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-
-  distDir: 'docs',
   
   /**
    * Environment variables

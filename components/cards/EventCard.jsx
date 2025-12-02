@@ -6,7 +6,7 @@ import { translator } from "@/lib/utils.js";
 
 // Components
 import { Badge, badgeVariants } from "../ui/badge";
-import Text from "../ui/Text";
+import Text from "../ui/text";
 import { Button } from "../ui/button";
 import {
   CustomCard,
@@ -54,7 +54,7 @@ const EventCard = ({ event }) => {
   });
 
   return (
-    <CustomCard className="bg-black p-4">
+    <CustomCard className="bg-myBackground p-4">
       <CardHeader>
         {type && (
           <Badge variant="type" size={"lg"} type="activity">
@@ -62,12 +62,12 @@ const EventCard = ({ event }) => {
           </Badge>
         )}
         {category && (
-          <Badge variant="primary" size={"lg"} type="activity">
+          <Badge variant="primary" size={"lg"} type="activity" className="bg-accent/15">
             {category}
           </Badge>
         )}
         {country && (
-          <Badge variant="primary" size={"lg"} type="activity">
+          <Badge variant="primary" size={"lg"} type="activity" className="bg-accent/15">
             {country}
           </Badge>
         )}
@@ -99,7 +99,7 @@ const EventCard = ({ event }) => {
                   key={index}
                   variant="secondary"
                   size="sm"
-                  className="text-accent-400 bg-accent/15"
+                  className="text-accent400 bg-accent/15"
                 >
                   {keyword}
                 </Badge>
@@ -115,7 +115,7 @@ const EventCard = ({ event }) => {
             variant="outline"
             size="sm"
             radius="rounded_sm"
-            className="hover:bg-black hover:border-accent-400 hover:text-accent-300"
+            className="hover:bg-myBackground hover:border-accent-400 hover:text-accent-300"
           >
             {/* <Link rel="noopener noreferrer" target="_blank" href={eventDetail}> */}
             <Link rel="noopener noreferrer" href={`/events/${eventname}`}>

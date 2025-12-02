@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 import { cn } from "@/lib/utils";
 import Heading from "@/components/ui/Heading";
-import Text from "../ui/Text";
+import Text from "../ui/text";
 import { Button, ButtonVariants } from "@/components/ui/button";
 
 
@@ -106,7 +106,7 @@ const CardDescription = React.forwardRef(
       <div className="pb-3">
         <Text
           ref={textRef}
-          className={clsx("text-text/80", {
+          className={clsx("text-myText/80", {
             "line-clamp-none": isExpanded,
             "line-clamp-3": !isExpanded,
           })}
@@ -119,7 +119,7 @@ const CardDescription = React.forwardRef(
           <Button
             size="sm"
             variant="link"
-            className="min-w-fit p-0 text-text hover:text-accent-100 underline underline-offset-2"
+            className="min-w-fit p-0 text-myText hover:text-accent100 underline underline-offset-2"
             onClick={toggleDescription}
           >
             {isExpanded

@@ -33,10 +33,10 @@ const Text = React.forwardRef(({ type = "p", children, className, ...props }, re
 
   // clsx, aplica clases según el valor del atributo level de manera dinámica
   const classes = clsx([
-    "font-main max-w-[70ch] text-text/90", // el color del texto no funciona sin el !
+    "font-main max-w-[70ch] !text-myText", // el color del texto no funciona sin el !
     {
       " text-18 sm:text-base text-pretty": type === "p",
-      "text-sm text-wrap leading-normal": type === "small",
+      " text-sm text-wrap leading-normal": type === "small",
       " text-18 sm:text-base": type === "short-p",
       " text-18 sm:text-base text-pretty": type === "pre",
     },

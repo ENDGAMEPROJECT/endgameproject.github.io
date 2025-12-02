@@ -44,6 +44,7 @@ export const sr = {
     oncoming: "O nadolazećim sobama za bekstvo",
     escaperoom: {
       "action-button": "Pogledaj detalje",
+      "play-button": "Igraj"
     },
   },
   escaperoomfull:{                     //TODO: Review escaperoomfull

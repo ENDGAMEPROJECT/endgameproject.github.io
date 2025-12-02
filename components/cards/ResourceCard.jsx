@@ -76,11 +76,11 @@ const ResourceCard = ({ resource }) => {
     return (
         <li className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex flex-col md:items-start items-center">
-                <Heading level="h5">{resourceName_translation}</Heading>
+                <Heading level="h5" >{resourceName_translation}</Heading>
                 <Text className="text-base w-fit">{additionalInfo_translation}</Text>
             </div>
             <div className="flex gap-2">
-                <Badge variant="secondary" size="md" className="bg-primary/10">
+                <Badge variant="secondary" size="md" className="bg-primary/25">
                     {tag}
                 </Badge>                
             </div>
@@ -89,7 +89,7 @@ const ResourceCard = ({ resource }) => {
                     variant="primary"
                     size="md"
                     type='primary'
-                    className="bg-primary"
+                    className="bg-myPrimary text-myTextInverse"
                 >
                     <Link rel="noopener noreferrer" href={resourceLink} className="flex items-center gap-1">
                         {buttonContent_translation}

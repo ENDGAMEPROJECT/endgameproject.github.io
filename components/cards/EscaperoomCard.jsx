@@ -6,6 +6,8 @@ import { translator } from "@/lib/utils.js";
 
 // assets
 import ArrowForwardSharp from "@mui/icons-material/ArrowForwardSharp";
+import PlayArrowSharp from "@mui/icons-material/PlayArrowSharp";
+
 
 // Components
 import { Badge, badgeVariants } from "../ui/badge";
@@ -27,10 +29,13 @@ import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
 import HighlightedHeader from "../ui/highlightedHeader";
 import Heading from "../ui/Heading";
 
+
+
 const EscaperoomCard = ({ escaperoom, seeDetails = true }) => {
   const {
     category,
-    theme,
+    theme_en,
+    theme_es,
     title_en,
     title_es,
     description_en,
@@ -53,22 +58,31 @@ const EscaperoomCard = ({ escaperoom, seeDetails = true }) => {
       className="flex gap-4 items-center w-full"
       target="_blank"     
     >
-      <CustomCard className="mb-8 gap-0 mx-auto md:w-full flex flex-col">
+      <CustomCard className="gap-0 mx-auto w-full flex flex-col">
         <HighlightedHeader
           level="h3"
           string={title_translation}
           // className={}
         />
-        <div className="h-[50dvh] flex justify-center items-center border border-primary bg-black">
-          <Image src={image}/>
-          {/* <Heading
-            level="h4"
-            className={
-              "text-primary bg-primary/20 border border-primary px-4 py-2"
-            }
+        <div className="h-[50dvh] flex justify-center items-center border border-myPrimary bg-background200 group">
+          <Image
+            className="group-hover:opacity-[.30] transition duration-300 ease-in-out"
+            src={image}
+            alt={title_translation}
+            fit="cover"
+          />
+          {/* Esto habrá que cambiarlo, juegar en el embed habría que pasarlo al detalle pq 
+          ahora con 1 ok pero luego con 3 va a ser un lío */}
+          <Button
+            asChild
+            variant="outline"
+            size="xl"
+            className="group-hover:opacity-[1] absolute opacity-[0]  text-primary400 border-primary400 bg-primary/15 hover:bg-myPrimary hover:border-myPrimary hover:text-myTextInverse"
           >
-            
-          </Heading> */}
+            <div>{t("escaperooms.escaperoom.play-button")}
+              <PlayArrowSharp />
+            </div>
+          </Button>
         </div>
         {seeDetails ==true? <Button
           className={
@@ -76,7 +90,7 @@ const EscaperoomCard = ({ escaperoom, seeDetails = true }) => {
               variant: "tertiary",
               size: "lg",
               radius: "rounded_sm",
-            }) + " w-full justify-end  bg-black text-primary hover:text-primary"
+            }) + " w-full justify-end  bg-myBackground text-myText hover:text-myPrimary"
           }
         >
           {t("escaperooms.escaperoom.action-button")}

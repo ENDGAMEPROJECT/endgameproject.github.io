@@ -5,8 +5,8 @@ import Filters from "@/components/filters/ResearchFilter";
 import { useTranslation } from "react-i18next";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
-import Text from "@/components/ui/Text";
-import { Divider, DividerVariants } from "@/components/ui/divider";
+import Text from "@/components/ui/text";
+import { Divider, DividerVariants } from "@/components/ui/Divider";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 import { publications } from "@/constants/results";
@@ -127,7 +127,7 @@ function ResearchPage() {
 
   return (
     <main className="standard_margin max-w-[1080px] xl:!mx-auto">
-      <Heading level="h1" className={"text-secondary-400"}>
+      <Heading level="h1" className={"text-secondary400"}>
         {t("research.title")}
       </Heading>
       <div className="mt-20 grid md:grid-cols-2 gap-6">

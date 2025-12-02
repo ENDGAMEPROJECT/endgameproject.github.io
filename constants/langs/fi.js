@@ -44,6 +44,7 @@ export const fi = {
     oncoming: "Tulossa olevat pakohuoneet",
     escaperoom: {
       "action-button": "Näytä tiedot",
+      "play-button": "Pelata"
     },
   },
   escaperoomfull:{                     //TODO: Review escaperoomfull

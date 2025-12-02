@@ -1,10 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
 
 * {
   /* border: 1px solid salmon; */
 }
+
 html {
   scroll-behavior: smooth;
   line-height: 1, 4%;
@@ -19,11 +21,13 @@ html {
 .standard_margin {
   @apply m-6;
   @apply sm:mx-8 md:mx-14 lg:mx-20 xl:mx-28 2xl:mx-32 3xl:mx-40;
-  @apply sm:my-6 md:my-8  lg:my-12;
+  @apply sm:my-6 md:my-8 lg:my-12;
 }
+
 .standard_margin-s {
   @apply m-4 sm:my-4 sm:mx-4 md:my-4 md:mx-10 lg:my-8 lg:mx-16 xl:mx-24 2xl:mx-32 3xl:mx-60;
 }
+
 .standard_margin-xl {
   @apply m-6 sm:my-6 sm:mx-12 md:my-12 md:mx-32 lg:my-24 lg:mx-40 xl:mx-72 2xl:mx-96;
 }
@@ -33,9 +37,11 @@ html {
 .standard_margin-x {
   @apply mx-6 sm:mx-8 md:mx-14 lg:mx-24 xl:mx-44 2xl:mx-72;
 }
+
 .standard_margin-xl-x {
   @apply m-6 sm:mx-12 md:mx-32 lg:mx-40 xl:mx-72 2xl:mx-96;
 }
+
 /* margen estandar pero solo en eje y (para elementos contenedores con otros elementos con margen dentro) */
 .standard_margin-y {
   @apply my-6 sm:my-6 md:my-8 lg:my-12 xl:my-44 2xl:my-72;
@@ -45,15 +51,19 @@ html {
 .standard_padding {
   @apply p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-12 lg:px-24 xl:px-44 2xl:px-72;
 }
+
 .standard_padding_xl {
   @apply p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-12 lg:px-24 xl:px-44 2xl:px-72;
 }
+
 .padding_home {
   @apply px-8 sm:p-12 md:px-20 lg:px-24 xl:px-32 2xl:px-48 py-6 sm:py-6 md:py-8 lg:py-12;
 }
+
 .padding_group_description {
   @apply p-4 px-6 sm:py-4 sm:px-4 md:py-4 md:px-10 lg:py-8 lg:px-16 xl:px-24 2xl:px-44 3xl:px-72;
 }
+
 .narrow_padding {
   @apply p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-10 xl:px-32 2xl:py-10 2xl:px-72;
 }
@@ -62,6 +72,7 @@ html {
 .gap_grid {
   @apply gap-3 sm:gap-4 md:gap-5 xl:gap-6;
 }
+
 /*esta clase es importante, porque los gaps con el responsive
 no son iguales, ni van in crecendo, porque la estructura
 del filter cambia de bloque a inline*/
@@ -76,40 +87,122 @@ main {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background600: #cccccc;
+    --background500: #d9d9d9;
+    --background400: #e6e6e6;
+    --background300: #f2f2f2;
+    --background200: #FAFAFA;
+    --foreground: #131313;
+    --text: #131313;
+    --textInverse: #fafafa;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --primary950: #D7FEF9;  /*50*/
+    --primary900: #B4FDF1; /*100*/
+    --primary800: #80FFEA; /*200*/
+    --primary700: #5DFEE3; /*300*/
+    --primary600: #0AFFDE; /*400*/
+    --primary500: #00D3C8; /*500*/
+    --primary400: #05BFBF; /*600*/   /*DEFAULT*/ 
+    --primary300: #0092A2; /*700*/
+    --primary200: #007E8A; /*800*/
+    --primary100: #00535C; /*900*/
+    --primary50:  #002e34; /*950*/
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --secondary950: #CCE7FF;  /*50*/
+    --secondary900: #99CFFF; /*100*/
+    --secondary800: #5CADFF; /*200*/
+    --secondary700: #3298FE; /*300*/
+    --secondary600: #0080FF; /*400*/
+    --secondary500: #0073E5; /*500*/
+    --secondary400: #0066CC; /*600*/   /*DEFAULT*/ 
+    --secondary300: #03509C; /*700*/
+    --secondary200: #06396C; /*800*/
+    --secondary100: #09233C; /*900*/
+    --secondary50:  #051625; /*950*/
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --accent950: #FEECCC;  /*50*/
+    --accent900: #FED99A; /*100*/
+    --accent800: #FEBD4D; /*200*/
+    --accent700: #FFA50B; /*300*/
+    --accent600: #FF8D0B; /*400*/
+    --accent500: #FF7D0B; /*500*/
+    --accent400: #FF5500; /*600*/   /*DEFAULT*/ 
+    --accent300: #C83B01; /*700*/
+    --accent200: #902703; /*800*/
+    --accent100: #591204; /*900*/
+    --accent50:  #2b0801; /*950*/
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --grey950: #E3E6E5;  /*50*/
+    --grey900: #CCD1D0; /*100*/
+    --grey800: #B6BDBC; /*200*/
+    --grey700: #9FA8A7; /*300*/
+    --grey600: #889392; /*400*/
+    --grey500: #727E7D; /*500*/
+    --grey400: #5E6766; /*600*/
+    --grey300: #495150; /*700*/
+    --grey200: #353A39; /*800*/
+    --grey100: #202323; /*900*/
+    --grey50:  #131313; /*950*/
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background600: #3a3e47;
+    --background500: #2c2e33;
+    --background400: #1d1e23;
+    --background300: #17181c;
+    --background200: #0a0b0c;
+
+    --foreground: #FAFAFA;
+    --text: #fafafa;
+    --textInverse: #131313;
+
+    --primary950: #002e34;
+    --primary900: #00535C;
+    --primary800: #007E8A;
+    --primary700: #0092A2;
+    --primary600: #05BFBF;
+    --primary500: #00D3C8;
+    --primary400: #0AFFDE;
+    --primary300: #5DFEE3;
+    --primary200: #80FFEA;
+    --primary100: #B4FDF1;
+    --primary50:  #D7FEF9;
+
+    --secondary950: #051625;
+    --secondary900: #09233C;
+    --secondary800: #06396C;
+    --secondary700: #03509C;
+    --secondary600: #0066CC;
+    --secondary500: #0073E5;
+    --secondary400: #0080FF;
+    --secondary300: #3298FE;
+    --secondary200: #5CADFF;
+    --secondary100: #99CFFF;
+    --secondary50:  #CCE7FF;
+
+    --accent950: #2b0801;  
+    --accent900: #591204; 
+    --accent800: #902703; 
+    --accent700: #C83B01; 
+    --accent600: #FF5500; 
+    --accent500: #FF7D0B; 
+    --accent400: #FF8D0B;
+    --accent300: #FFA50B; 
+    --accent200: #FEBD4D; 
+    --accent100: #FED99A; 
+    --accent50:  #FEECCC; 
+
+    --grey950: #131313;
+    --grey900: #202323;
+    --grey800: #353A39;
+    --grey700: #495150;
+    --grey600: #5E6766;
+    --grey500: #727E7D;
+    --grey400: #889392;
+    --grey300: #9FA8A7;
+    --grey200: #B6BDBC;
+    --grey100: #CCD1D0;
+    --grey50:  #E3E6E5;
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -166,11 +259,17 @@ footer {
     @apply text-text font-title text-pretty;
     @apply text-24 sm:text-28 mb-2 font-medium mt-6;
   }
+
   p {
     @apply font-main max-w-[70ch] !text-text/90;
     @apply text-18 sm:text-base text-pretty;
   }
-  li{
+
+  li {
     @apply mb-2;
+  }
+
+  a {
+    @apply text-accent400;
   }
 }

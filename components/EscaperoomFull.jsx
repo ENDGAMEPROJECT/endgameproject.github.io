@@ -90,7 +90,7 @@ const escaperoomFull = ({ escaperoomname }) => {
 
   return (
     <div className="flex flex-col gap-4 items-center">
-      <Badge variant="primary" type="" size="xl" className="text-base">
+      <Badge variant="primary" type="" size="xl" className="text-base bg-primary/15">
         {categoryFormatted}
       </Badge>
       {/* <Heading level="h5" className="w-full text-center text-primary">
@@ -108,10 +108,10 @@ const escaperoomFull = ({ escaperoomname }) => {
       <EscaperoomCard escaperoom={escaperoom} seeDetails={false}/>
       <Button
         asChild
-        variant="outline"
+        variant="primary"
         size="xl"
         type='primary'
-        className="mt-4 font-medium text-primary-300 border-primary-300 hover:bg-primary hover:text-black hover:border-primary uppercase"
+        className="mt-4 font-medium bg-myBackground text-primary300 border-primary300 hover:bg-myPrimary hover:text-myTextInverse hover:border-myPrimary uppercase"
       >
         <Link href={externalLink} target="_blank" rel="noopener noreferrer">
           {externalLinkText}
@@ -121,29 +121,29 @@ const escaperoomFull = ({ escaperoomname }) => {
 
       {/* *********ESCAPE ROOM INFO********* */}
       <section className="mb-4 w-full">
-        <header className="mb-4 w-full flex justify-between border-b border-primary">
-          <Heading level="h5" className="text-primary">{t("escaperoomfull.escaperoomInfo")}
+        <header className="mb-4 w-full flex justify-between border-b border-myPrimary">
+          <Heading level="h5" className="text-myPrimary">{t("escaperoomfull.escaperoomInfo")}
           </Heading>
         </header>
         <div className="w-full md:grid md:grid-cols-[2fr_1fr] flex flex-col gap-4">
           <Text className="text-base w-full">{longdescription}</Text>
           <div className="grid grid-cols-2 grid-rows-2 gap-4">
-            <div className="bg-primary/20 border border-primary flex flex-col items-center py-2 gap-1">
+            <div className="bg-primary/20 border border-myPrimary flex flex-col items-center py-2 gap-1">
               <HighlightedHeader string={t("escaperoomfull.littleBoxes.theme")} variant={""} level="h6" className={"w-fit capitalize"}></HighlightedHeader>
               <div className="h-full flex items-center">
-                <Heading level="h4" className="text-center capitalize text-primary">{theme}</Heading>
+                <Heading level="h4" className="text-center capitalize text-myPrimary">{theme}</Heading>
               </div>
             </div>
-            <div className="bg-primary/20 border border-primary flex flex-col items-center py-2 gap-1">
+            <div className="bg-primary/20 border border-myPrimary flex flex-col items-center py-2 gap-1">
               <HighlightedHeader string={t("escaperoomfull.littleBoxes.duration")} variant={""} level="h6" className={"w-fit capitalize"}></HighlightedHeader>
               <div className="h-full flex items-center">
-                <Heading level="h4" className="text-center capitalize text-primary">{duration}</Heading>
+                <Heading level="h4" className="text-center capitalize text-myPrimary">{duration}</Heading>
               </div>
             </div>
-            <div className="bg-primary/20 border border-primary flex flex-col items-center py-2 gap-1">
+            <div className="bg-primary/20 border border-myPrimary flex flex-col items-center py-2 gap-1">
               <HighlightedHeader string={t("escaperoomfull.littleBoxes.level")} variant={""} level="h6" className={"w-fit capitalize"}></HighlightedHeader>
               <div className="h-full flex items-center">
-                <Heading level="h4" className="text-center capitalize text-primary">{level_translation}</Heading>
+                <Heading level="h4" className="text-center capitalize text-myPrimary">{level_translation}</Heading>
               </div>
             </div>
           </div>
@@ -153,8 +153,8 @@ const escaperoomFull = ({ escaperoomname }) => {
 
       {/* *********RELATED MATERIALS********* */}
       <section className="mb-4 w-full">
-        <header className="mb-4 w-full flex justify-between border-b border-primary">
-          <Heading level="h5" className="text-primary">{t("escaperoomfull.relatedMaterials")}
+        <header className="mb-4 w-full flex justify-between border-b border-myPrimary">
+          <Heading level="h5" className="text-myPrimary">{t("escaperoomfull.relatedMaterials")}
           </Heading>
         </header>
         <div className="w-full flex flex-col gap-4">

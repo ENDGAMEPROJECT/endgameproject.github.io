@@ -1,6 +1,7 @@
 export const mission = [
   {
-    icon: "ENDGAME_icon_placeholder.svg",
+    icon: "/assets/images/icons/identify_darkBg.png",
+    iconLight: "/assets/images/icons/identify_lightBg.png",
     title: "Identify",
     title_es: "Identificar",
     title_sr: "Identifikovati",
@@ -13,7 +14,8 @@ export const mission = [
     description_fi: "Tunnistaa relevantteja, rajat ylittäviä aiheita medialukutaitoon liittyen.",
   },
   {
-    icon: "ENDGAME_icon_placeholder.svg",
+    icon: "/assets/images/icons/provide_darkBg.png",
+    iconLight: "/assets/images/icons/provide_lightBg.png",
     title: "Provide",
     title_es: "Proveer",
     title_sr: "Obezbediti",
@@ -27,7 +29,8 @@ export const mission = [
     description_fi: "Tarjota tehokas, innostava ja kestävä tapa opettaa uusia medialukutaitoja opetuksellisten pakopelien kautta.",
   },
   {
-    icon: "ENDGAME_icon_placeholder.svg",
+    icon: "/assets/images/icons/train_darkBg.png",
+    iconLight: "/assets/images/icons/train_lightBg.png",
     title: "Train",
     title_es: "Educar",
     title_sr: "Obuka",
@@ -41,7 +44,8 @@ export const mission = [
     description_fi: "Kouluttaa suuri määrä nuoria Euroopan kansalaisia uusissa medialukutaidoissa.",
   },
   {
-    icon: "ENDGAME_icon_placeholder.svg",
+    icon: "/assets/images/icons/disseminate_darkBg.png",
+    iconLight: "/assets/images/icons/disseminate_lightBg.png",
     title: "Disseminate",
     title_es: "Difundir",
     title_sr: "Diseminacija",
@@ -55,7 +59,8 @@ export const mission = [
     description_fi: "Levittää projektin aktiviteetteja ja tuloksia laajemmalle kansainväliselle yleisölle",
   },
   {
-    icon: "ENDGAME_icon_placeholder.svg",
+    icon: "/assets/images/icons/assess_darkBg.png",
+    iconLight: "/assets/images/icons/assess_lightBg.png",
     title: "Assess",
     title_es: "Evaluar",
     title_sr: "Procena",
