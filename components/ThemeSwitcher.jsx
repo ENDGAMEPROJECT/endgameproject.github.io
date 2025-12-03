@@ -22,14 +22,17 @@ export default function ThemeSwitcher() {
         <div className="relative inline-block">
             <Button
                 onClick={() => changeTheme()}
-                variant="primary"
-                size="lg"
-                className={clsx(
-                    "border font-medium h-[2.6rem] bg-myBackground hover:bg-myBackground text-myText border border-myText hover:text-myText ",
-                )}
+                className={
+                ButtonVariants({
+                  variant: "secondary",
+                  size: "lg",
+                  radius: "rounded_sm",
+                }) + "  !w-8 !min-w-4 border-red border font-medium h-[2.6rem] bg-myBackground hover:bg-myBackground text-myText border border-myText hover:text-myText"
+              }
+                
             // className="w-fit flex items-center gap-2 px-3 py-2 md:px-4 text-text rounded-sm hover:bg-grey100 dark:hover:bg-grey900"
             >
-                <ContrastIcon sx={{ fontSize: 18 }} className="mr-1" />
+                <ContrastIcon sx={{ fontSize: 20 }} className="" />
                 {/* <span>{lngs[i18n.language]?.abbreviation || "EN"}</span> */}
             </Button>
 

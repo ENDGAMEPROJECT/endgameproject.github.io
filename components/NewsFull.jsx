@@ -19,6 +19,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import TikTokIcon from "@mui/icons-material/MusicNote";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import PlayArrowSharp from "@mui/icons-material/PlayArrowSharp";
 
 /* eventinfo is like this:
 {
@@ -42,6 +43,8 @@ const NewsFull = ({ eventname }) => {
   //get event information from events.js
   const [event, setEvent] = useState(null);
 
+  const isMobile = window.innerWidth < 768; // A simple way to check
+
   useEffect(() => {
     const eventData = events.find((event) => event.eventname === eventname);
     setEvent(eventData);
@@ -60,6 +63,10 @@ const NewsFull = ({ eventname }) => {
     description_es,
     description_sr,
     description_fi,
+    warningMobile_es,
+    warningMobile_en,
+    warningMobile_sr,
+    warningMobile_fi,
     htmlbody_en,
     htmlbody_es,
     htmlbody_sr,
@@ -69,8 +76,10 @@ const NewsFull = ({ eventname }) => {
     keywords,
     image,
     imagePosition,
-    externalLinkJoin,
+    externalLinkPlay,
     socialLinks,
+    escaperoomTitle,
+    imageEscaperoom,
   } = event;
 
   //only english is compulsory, the rest are optional
@@ -102,7 +111,6 @@ const NewsFull = ({ eventname }) => {
     htmlbody_fi = htmlbody_en;
   }
 
-
   const currentLang = i18n.language;
 
   //set title depending on the language, if the language is not supported, set it to english
@@ -130,6 +138,14 @@ const NewsFull = ({ eventname }) => {
       : currentLang === "fi"
       ? htmlbody_fi
       : htmlbody_en;
+  const warningMobile =
+    currentLang === "es"
+      ? warningMobile_es
+      : currentLang === "sr"
+      ? warningMobile_sr
+      : currentLang === "fi"
+      ? warningMobile_fi
+      : warningMobile_en;
 
   const dateFormatted = new Date(date).toLocaleDateString(currentLang, {
     year: "numeric",
@@ -180,12 +196,12 @@ const NewsFull = ({ eventname }) => {
       )}
 
       {imagePosition === "top" && (
-      <Image
-        className={"w-full"}
-        fit="contain"
-        src={image}
-        alt={"imagen de la noticia"}
-      />
+        <Image
+          className={"w-full"}
+          fit="contain"
+          src={image}
+          alt={"imagen de la noticia"}
+        />
       )}
 
       <Heading
@@ -195,23 +211,65 @@ const NewsFull = ({ eventname }) => {
         {description}
       </Heading>
 
-      <div
-        className="news"
-        dangerouslySetInnerHTML={{ __html: eventBody }}
-      />
+      <div className="news" dangerouslySetInnerHTML={{ __html: eventBody }} />
 
       {imagePosition === "bottom" && (
-      <Image
-        className={"w-full max-w-"}
-        fit="contain"
-        src={image}
-        alt={"imagen de la noticia"}
-      />
+        <Image
+          className={"w-full max-w-"}
+          fit="contain"
+          src={image}
+          alt={"imagen de la noticia"}
+        />
       )}
 
-      {/* { externalLinkPlay && {
-        // componente 
-      }} */}
+      {externalLinkPlay && (
+        <div>
+          {isMobile ? (
+            // móvil
+            <div className=" flex justify-center items-center border border-primary700 bg-background100 group">
+              <p className="absolute text-primary400 z-50 m-auto w-[30ch] text-center font-bold">{warningMobile} </p>
+              <Image
+                    src={imageEscaperoom}
+                    className={
+                      "lg:w-[85ch] max-w- transition duration-300 ease-in-out opacity-15 cursor-not-allowed z-40"
+                    }
+                    fit="contain"
+                  />
+              </div>
+          ) : (
+            // desktop
+            <div>
+              <Link
+                href={externalLinkPlay}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <HighlightedHeader level="h3" string={escaperoomTitle} />
+                <div className="h-[50dvh] flex justify-center items-center border border-myPrimary bg-background200 group">
+                  <Image
+                    src={imageEscaperoom}
+                    className={
+                      "lg:w-[70ch] max-w- group-hover:opacity-[.30] transition duration-300 ease-in-out"
+                    }
+                    fit="contain"
+                  />
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="xl"
+                    className="group-hover:opacity-[1] absolute opacity-[0]  text-primary400 border-primary400 bg-primary/15 hover:bg-myPrimary hover:border-myPrimary hover:text-myTextInverse"
+                  >
+                    <div>
+                      {t("escaperooms.escaperoom.play-button")}
+                      <PlayArrowSharp />
+                    </div>
+                  </Button>
+                </div>
+              </Link>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* <Button
         asChild

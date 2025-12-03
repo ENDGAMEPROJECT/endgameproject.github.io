@@ -60,6 +60,7 @@ const EventFull = ({ eventname }) => {
     category,
     keywords,
     externalLinkJoin,
+    imageEscaperoom
   } = event;
 
   //only english is compulsory, the rest are optional

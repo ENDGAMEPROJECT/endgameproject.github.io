@@ -24,7 +24,7 @@ const Text = React.forwardRef(({ type = "p", children, className, ...props }, re
         Component = "p";
         break;
     case "pre":
-      Component = "pre";
+      Component = "p";
       break;
     default:
       Component = "p"; // Por defecto, usar h1 si no se especifica nivel válido

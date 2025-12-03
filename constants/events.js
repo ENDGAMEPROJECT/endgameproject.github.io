@@ -5,15 +5,19 @@ export const events = [
     country: "International",
     type: "news",
     date: "12/01/25",
-    author: "",
+    author: "", 
     title_en: "ENDGAME launches its first educational escape room to teach how to detect misinformation about food and health",
     title_sr: "ENDGAME lansira svoju prvu edukativnu escape room igru za učenje prepoznavanja dezinformacija o hrani i zdravlju",
     title_es: "ENDGAME lanza su primer escape room educativo para enseñar a detectar la desinformación sobre alimentación y salud",
     description_en: "We have launched “The Click Trap,” an educational escape room designed to combat disinformation and strengthen media literacy among young people. It includes a teacher’s guide and will be piloted in schools across Spain, Finland, and Serbia, with versions available in multiple languages.",
     description_sr: "Evropski projekat ENDGAME pokrenuo je “The Click Trap”, edukativnu escape room igru namenjenu borbi protiv dezinformacija i jačanju medijske pismenosti među mladima. Uz igru dolazi i vodič za nastavnike, a biće testirana u školama u Španiji, Finskoj i Srbiji, uz verzije dostupne na više jezika.",
     description_es: "Lanzamos “The Click Trap”, un escape room educativo para combatir la desinformación y fortalecer la alfabetización mediática juvenil. Incluye una guía docente y será probado en colegios de España, Finlandia y Serbia, con versiones disponibles en varios idiomas.",
-    image: "/assets/images/EndgameBackground.png",
-    imagePosition: "bottom",
+    imageEscaperoom: "/assets/images/EndgameBackground.png",
+    escaperoomTitle: "The Click Trap",
+    warningMobile_en: "To play the escape room, log in from a computer.",
+    warningMobile_sr: "Da biste igrali escape soba, povežite se sa računara.",
+    warningMobile_es: "Para poder jugar al escaperoom, conéctate desde un ordenador.",
+    warningMobile_fi: "To play the escape room, log in from a computer.",
     htmlbody_en: `    
 <p>The European project <b>ENDGAME</b> (Escaping New Disinformation through Gamified Cross-Border Media Literacy Education), led by the <b><a href="https://www.uef.fi/fi" target="_blank">University of Eastern Finland</a></b> (UEF, Finland) and consisting of the <b><a href="https://www.upm.es/" target="_blank">Technical University of Madrid</a></b> (UPM, Spain), the <b><a href="https://www.metropolitan.ac.rs/en/about-metropolitan-university/" target="_blank">Metropolitan University of Belgrade</a></b> (BMU, Serbia), <b><a href="https://faktabaari.fi/in-english/" target="_blank">Faktabaari</a></b> (Faktabaari, Finland), <b><a href="https://novinarska-skola.org.rs/" target="_blank">Novi Sad School of Journalism</a></b> (FNT, Serbia) and <b><a href="http://Maldita.es" target="_blank">Fundación Maldita.es</a></b> (Maldita.es, Spain), has developed an educational escape room, <b><a href="https://endgameproject.github.io/escaperooms/theClickTrap">“The Click Trap”</a></b>, along with <b><a href="https://docs.google.com/document/d/1VSxRpjjeqkFae5qvW-HxNOaAEf7FfdkI/export?format=pdf" target="_blank" >a teacher’s guide</a></b> designed to help educators work on media literacy and critical thinking in the classroom. Both resources will be tested over the coming months in schools in Spain, Finland and Serbia. This is the first of the three escape rooms that the project will develop between 2025 and 2027.</p>
 <br/>
@@ -66,7 +70,7 @@ export const events = [
 
     // other
     externalLinkJoin: "",
-    externalLinkPlay: "#",
+    externalLinkPlay: "https://play.unity.com/en/games/3e199a2b-03aa-44c1-9ecd-5f9a308280cc/webgl-builds",
     keywords: ["Event Launch"],
     socialLinks: [
       {
@@ -307,7 +311,7 @@ export const events = [
     description_en: `Are you an educator, media literacy expert, designer, or game developer aged 18 to 25 — or part of a civil society or media organization? Join us!
 We invite you to participate in an online international webinar on Tuesday, May 20, at 3:00 PM, where we will co-design the storyline and format of educational escape rooms using a participatory design approach.
 This two-hour session will bring together experts and young creatives to share their perspectives and collaboratively develop narratives, characters, and puzzles that help youth recognize disinformation and strengthen their critical thinking skills.
-Through a series of co-design workshops held at several stages of the project, we will define the narrative, format, and themes of the escape rooms in ways that are intrinsically motivating and engaging for the youth — going beyond traditional learning activities. We are committed to involving diverse groups — including individuals from different genders, ethnicities, abilities, and backgrounds — to ensure the visuals and storylines are inclusive, respectful, and relevant to a wide audience.`,
+Through a series of co-design workshops held at several stages of the project, we will define the narrative, format, and themes of the escape rooms in ways that are intrinsically motivating and engaging for the youth — going beyond traditional learning activities. We are committed to involving diverse groups — including individuals from different genders, ethnicities, abilities, and backgrounds — to ensure the visuals and storylines are inclusive, respectful, and relevant to a wide audience. `,
     description_sr: `Da li ste nastavnik, stručnjak za medijsku pismenost, dizajner ili developer igara uzrasta od 18 do 25 godina — ili deo organizacije civilnog društva ili medijske organizacije? Pridružite nam se!
 Pozivamo vas da učestvujete na međunarodnom vebinaru koji će se održati onlajn u utorak, 20. maja, u 15:00 časova, gde ćemo zajednički osmišljavati priču i format edukativnih soba za bekstvo koristeći pristup participativnog dizajna.
 Ova dvočasovna sesija okupiće stručnjake i mlade kreativce kako bi podelili svoje perspektive i zajedno razvili narative, likove i zagonetke koje pomažu mladima da prepoznaju dezinformacije i ojačaju svoje veštine kritičkog mišljenja.

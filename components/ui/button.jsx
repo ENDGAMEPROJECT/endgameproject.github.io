@@ -8,6 +8,11 @@ import { cva } from "class-variance-authority";
 const ButtonVariants = cva(
   "w-fit min-w-20 h-fit inline-flex gap-2 items-center justify-center font-title font-semibold capitalize whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
   {
+    defaultVariants: {
+  variant: "primary",
+  size: "md",
+  radius: "rounded_sm",
+},
     variants: {
       variant: {
         primary: "bg-grey900 text-myText shadow hover:bg-myForeground",
@@ -64,7 +69,7 @@ const Button = React.forwardRef(
     return (
       <Comp
         className={cn(
-          ButtonVariants({ variant, size, radius, className })
+          ButtonVariants({ variant, size, radius }),  className 
         )}
         ref={ref}
         {...props}

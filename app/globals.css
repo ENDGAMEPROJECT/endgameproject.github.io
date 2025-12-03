@@ -236,11 +236,14 @@ body {
 }
 
 /* 
-NEWWWWWWWWWWW ENDGAME
+NEW ENDGAME
 */
 footer {
   @apply p-6 md:py-8 md:px-12 lg:py-10 px-16 xl:px-20 xl:py-10;
   /* p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-10 xl:px-32 2xl:py-10 2xl:px-72; */
+}
+a, strong {
+  @apply font-main
 }
 
 .landing_cards {
@@ -256,7 +259,7 @@ footer {
 
 .news, .events {
   h2 {
-    @apply text-text font-title text-pretty;
+    @apply text-text font-title text-pretty !text-myText;
     @apply text-24 sm:text-28 mb-2 font-medium mt-6;
   }
 
@@ -266,10 +269,14 @@ footer {
   }
 
   li {
-    @apply mb-2 underline;
+    @apply mb-2;
   }
 
   a {
-    @apply text-accent400;
+    @apply text-accent400 underline;
+  }
+
+  strong {
+    @apply !text-myText
   }
 }

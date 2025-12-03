@@ -243,7 +243,7 @@ export default function Page() {
                       </CardTitle>
                       <CardSubtitle
                         level="h6"
-                        className="text-accent flex gap-2 items-center border"
+                        className="text-accent flex gap-2 items-center"
                       >
                         <EventSharp className="h-5 w-5" />
                         {event.date + (event.hour ? " - " + event.hour : "")}
