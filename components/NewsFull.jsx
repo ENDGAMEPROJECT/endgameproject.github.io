@@ -43,7 +43,20 @@ const NewsFull = ({ eventname }) => {
   //get event information from events.js
   const [event, setEvent] = useState(null);
 
-  const isMobile = window.innerWidth < 768; // A simple way to check
+  
+  // is the device a phone or desktop - dependending on the
+  // window size, the escaperoom link is available to play (on desktop), or not (on the phone)
+   const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+    // Aquí sí puedes usar `window`
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile(); // primera llamada
+ 
+  }, []);
+
+ // const isMobile = false;
 
   useEffect(() => {
     const eventData = events.find((event) => event.eventname === eventname);
@@ -223,15 +236,15 @@ const NewsFull = ({ eventname }) => {
       )}
 
       {externalLinkPlay && (
-        <div>
+      <div>
           {isMobile ? (
             // móvil
-            <div className=" flex justify-center items-center border border-primary700 bg-background100 group">
-              <p className="absolute text-primary400 z-50 m-auto w-[30ch] text-center font-bold">{warningMobile} </p>
+            <div className=" flex justify-center items-center border border-primary700 bg-background100 group cursor-not-allowed ">
+              <p className="absolute text-primary400 z-40 m-auto w-[25ch] text-center font-bold">{warningMobile} </p>
               <Image
                     src={imageEscaperoom}
                     className={
-                      "lg:w-[85ch] max-w- transition duration-300 ease-in-out opacity-15 cursor-not-allowed z-40"
+                      "lg:w-[85ch] max-w- transition duration-300 ease-in-out opacity-15 z-40"
                     }
                     fit="contain"
                   />
@@ -251,7 +264,7 @@ const NewsFull = ({ eventname }) => {
                     className={
                       "lg:w-[70ch] max-w- group-hover:opacity-[.30] transition duration-300 ease-in-out"
                     }
-                    fit="contain"
+                    fit="cover"
                   />
                   <Button
                     asChild
@@ -268,7 +281,7 @@ const NewsFull = ({ eventname }) => {
               </Link>
             </div>
           )}
-        </div>
+       </div>
       )}
 
       {/* <Button

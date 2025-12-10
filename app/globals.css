@@ -239,7 +239,7 @@ body {
 NEW ENDGAME
 */
 footer {
-  @apply p-6 md:py-8 md:px-12 lg:py-10 px-16 xl:px-20 xl:py-10;
+  @apply p-6 md:py-8 md:px-12 lg:py-10 lg:px-16 xl:px-20 xl:py-10;
   /* p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-10 xl:px-32 2xl:py-10 2xl:px-72; */
 }
 a, strong {

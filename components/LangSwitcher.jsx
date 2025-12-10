@@ -42,7 +42,7 @@ export default function LangSwitcher() {
       </Button>
 
       {open && (
-        <ul className="absolute right-0 z-10 mt-1 w-fit bg-myBackground border border-myPrimary rounded-sm shadow">
+        <ul className="absolute right-0 z-50 mt-1 w-fit bg-myBackground border border-myPrimary rounded-sm shadow">
           {Object.entries(lngs).map(
             ([lngKey, { abbreviation, nativeName }]) => (
               <li
