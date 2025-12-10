@@ -46,17 +46,17 @@ const NewsFull = ({ eventname }) => {
   
   // is the device a phone or desktop - dependending on the
   // window size, the escaperoom link is available to play (on desktop), or not (on the phone)
-   const [isMobile, setIsMobile] = useState(false);
-    useEffect(() => {
-    // Aquí sí puedes usar `window`
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile(); // primera llamada
+  //  const [isMobile, setIsMobile] = useState(false);
+  //   useEffect(() => {
+  //   // Aquí sí puedes usar `window`
+  //   const checkMobile = () => {
+  //     setIsMobile(window.innerWidth < 768);
+  //   };
+  //   checkMobile(); // primera llamada
  
-  }, []);
+  // }, []);
 
- // const isMobile = false;
+  const isMobile = false;
 
   useEffect(() => {
     const eventData = events.find((event) => event.eventname === eventname);
