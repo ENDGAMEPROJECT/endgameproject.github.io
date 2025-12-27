@@ -2,7 +2,7 @@
 import * as React from "react";
 
 import { useTranslation } from "react-i18next";
-import SEO from "@/components/SEO";
+import SEO from "@/components/SEOWrapper";
 import { getPageMetadata } from "@/constants/metadata";
 import { escaperooms } from "@/constants/escaperooms";
 import Heading from "@/components/ui/heading";

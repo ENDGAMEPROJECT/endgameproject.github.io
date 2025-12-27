@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { escaperooms } from "@/constants/escaperooms";
-import SEO from "@/components/SEO";
+import SEO from "@/components/SEOWrapper";
 import { getPageMetadata } from "@/constants/metadata";
 
 import { events } from "@/constants/events";

@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
-export default function SEO({ 
+function SEOContent({ 
   title, 
   description, 
   keywords,
@@ -85,3 +85,5 @@ export default function SEO({
 
   return null;
 }
+
+export default SEOContent;

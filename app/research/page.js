@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Filters from "@/components/filters/ResearchFilter";
 import { useTranslation } from "react-i18next";
-import SEO from "@/components/SEO";
+import SEO from "@/components/SEOWrapper";
 import { getPageMetadata } from "@/constants/metadata";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/heading";
