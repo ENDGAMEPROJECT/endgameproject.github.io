@@ -48,8 +48,9 @@ const mergedFi = deepMerge({ ...fi }, fi2);
     },
     detection: {
       // order and from where user language should be detected
-      order: ['localStorage', 'navigator'],
+      order: ['querystring', 'localStorage', 'navigator'],
       // keys or params to lookup language from
+      lookupQuerystring: 'lang',
       lookupLocalStorage: 'i18nextLng',
     }
   });

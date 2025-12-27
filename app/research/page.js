@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Filters from "@/components/filters/ResearchFilter";
 import { useTranslation } from "react-i18next";
+import SEO from "@/components/SEO";
+import { getPageMetadata } from "@/constants/metadata";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/heading";
 import Text from "@/components/ui/text";
@@ -23,6 +25,7 @@ export default function Research() {
 function ResearchPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+  const metadata = getPageMetadata('research', currentLang);
   // const router = useRouter(); // Hook para manipular la URL
   // let searchParams = useSearchParams();
 
@@ -126,7 +129,13 @@ function ResearchPage() {
   // };
 
   return (
-    <main className="standard_margin max-w-[1080px] xl:!mx-auto">
+    <>
+      <SEO 
+        title={metadata.title}
+        description={metadata.description}
+        keywords={metadata.keywords}
+      />
+      <main className="standard_margin max-w-[1080px] xl:!mx-auto">
       <Heading level="h1" className={"text-secondary400"}>
         {t("research.title")}
       </Heading>
@@ -136,6 +145,7 @@ function ResearchPage() {
         })}
       </div>
     </main>
+    </>
   );
 }
 

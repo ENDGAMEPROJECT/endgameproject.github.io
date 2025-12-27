@@ -27,8 +27,9 @@ const Outerpage = ({ children }) => {
 
     return (
         <html className={` ${dmSans.variable} ${spaceGrotesk.variable} ${webTheme}`}>
-            <GoogleAnalytics gaId="G-N132LLPSLM" />
-            <title>ENDGAME</title>
+            <head>
+                <GoogleAnalytics gaId="G-N132LLPSLM" />
+            </head>
             <body className="bg-background300 min-h-[70dvh] mx-auto">
                 <Header route={"/"} />
                 {/* <main className="min-h-[70dvh] mx-auto"> */}

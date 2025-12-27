@@ -4,6 +4,8 @@ import * as React from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { escaperooms } from "@/constants/escaperooms";
+import SEO from "@/components/SEO";
+import { getPageMetadata } from "@/constants/metadata";
 
 import { events } from "@/constants/events";
 import EventCard from "@/components/cards/EventCard";
@@ -57,9 +59,16 @@ export default function Page() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   const { webTheme } = useContext(ThemeContext);
+  const metadata = getPageMetadata('home', currentLang);
 
   return (
-    <main>
+    <>
+      <SEO 
+        title={metadata.title}
+        description={metadata.description}
+        keywords={metadata.keywords}
+      />
+      <main>
       <Banner className="relative flex flex-col ">
         <BannerImg className=""></BannerImg>
 
@@ -370,5 +379,6 @@ export default function Page() {
         <Divider size="md"></Divider>
       </section>
     </main>
+    </>
   );
 }

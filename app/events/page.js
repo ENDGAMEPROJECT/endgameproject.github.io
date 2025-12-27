@@ -2,6 +2,8 @@
 import * as React from "react";
 
 import { useTranslation } from "react-i18next";
+import SEO from "@/components/SEO";
+import { getPageMetadata } from "@/constants/metadata";
 
 // Data
 import { events } from "@/constants/events";
@@ -13,9 +15,16 @@ import EventCard from "@/components/cards/EventCard";
 export default function Events() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+  const metadata = getPageMetadata('events', currentLang);
 
   return (
-    <main className="standard_margin ">
+    <>
+      <SEO 
+        title={metadata.title}
+        description={metadata.description}
+        keywords={metadata.keywords}
+      />
+      <main className="standard_margin ">
       <Heading level="h1" className={"text-accent"}>
         {t("events.title")}
       </Heading>
@@ -25,5 +34,6 @@ export default function Events() {
         })}
       </div>
     </main>
+    </>
   );
 }
