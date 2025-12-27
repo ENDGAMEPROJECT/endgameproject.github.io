@@ -5,7 +5,9 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { escaperooms } from "@/constants/escaperooms";
 import SEO from "@/components/SEOWrapper";
+import StructuredData from "@/components/StructuredData";
 import { getPageMetadata } from "@/constants/metadata";
+import { homePageSchema } from "@/constants/schemas";
 
 import { events } from "@/constants/events";
 import EventCard from "@/components/cards/EventCard";
@@ -68,6 +70,7 @@ export default function Page() {
         description={metadata.description}
         keywords={metadata.keywords}
       />
+      <StructuredData data={homePageSchema} />
       <main>
       <Banner className="relative flex flex-col ">
         <BannerImg className=""></BannerImg>

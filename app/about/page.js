@@ -4,7 +4,9 @@ import * as React from "react";
 
 import { useTranslation } from "react-i18next";
 import SEO from "@/components/SEOWrapper";
+import StructuredData from "@/components/StructuredData";
 import { getPageMetadata } from "@/constants/metadata";
+import { aboutPageSchema } from "@/constants/schemas";
 
 // Data
 import { mission } from "@/constants/mission";
@@ -28,6 +30,7 @@ export default function About() {
         description={metadata.description}
         keywords={metadata.keywords}
       />
+      <StructuredData data={aboutPageSchema} />
       <main className="standard_margin ">
       {/* SECTION ABOUT */}
       <Heading level="h1">{t("home.aboutSection")}</Heading>

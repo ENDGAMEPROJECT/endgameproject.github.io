@@ -3,7 +3,9 @@ import * as React from "react";
 
 import { useTranslation } from "react-i18next";
 import SEO from "@/components/SEOWrapper";
+import StructuredData from "@/components/StructuredData";
 import { getPageMetadata } from "@/constants/metadata";
+import { eventsPageSchema } from "@/constants/schemas";
 
 // Data
 import { events } from "@/constants/events";
@@ -24,6 +26,7 @@ export default function Events() {
         description={metadata.description}
         keywords={metadata.keywords}
       />
+      <StructuredData data={eventsPageSchema} />
       <main className="standard_margin ">
       <Heading level="h1" className={"text-accent"}>
         {t("events.title")}
