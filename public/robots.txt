@@ -7,10 +7,6 @@ Allow: /
 # Sitemap
 Sitemap: https://endgameproject.github.io/sitemap.xml
 
-# Disallow crawling of build artifacts and system files
-Disallow: /_next/
-Disallow: /api/
-
 # Allow crawling of all language variants
 Allow: /*?lang=es
 Allow: /*?lang=en
