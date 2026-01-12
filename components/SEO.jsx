@@ -51,8 +51,8 @@ function SEOContent({
     if (keywords) setMetaTag('name', 'keywords', keywords);
     setMetaTag('http-equiv', 'Content-Language', lang);
     
-    // Canonical URL
-    setLinkTag('canonical', `${fullUrl}?lang=${lang}`);
+    // Canonical URL (sin parámetros de idioma para evitar duplicados)
+    setLinkTag('canonical', baseUrl + pathname);
     
     // Alternate URLs para cada idioma (hreflang)
     const languages = ['es', 'en', 'fi', 'sr'];

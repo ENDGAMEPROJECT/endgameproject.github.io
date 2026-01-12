@@ -13,6 +13,7 @@ import { Badge } from "./ui/badge";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import ResourceCard from "@/components/cards/ResourceCard";
 import EscaperoomCard from "@/components/cards/EscaperoomCard";
+import SEO from "@/components/SEOWrapper";
 
 // icons
 import NorthEastSharp from "@mui/icons-material/NorthEastSharp";
@@ -92,7 +93,13 @@ const escaperoomFull = ({ escaperoomname }) => {
      : "Play escaperoom";
 
   return (
-    <div className="flex flex-col gap-4 items-center">
+    <>
+      <SEO 
+        title={title}
+        description={longdescription}
+        keywords={keywordsFormatted}
+      />
+      <div className="flex flex-col gap-4 items-center">
       <Badge variant="primary" type="" size="xl" className="text-base bg-primary/15">
         {categoryFormatted}
       </Badge>
@@ -179,8 +186,8 @@ const escaperoomFull = ({ escaperoomname }) => {
         </div>
       )} */}
 
-
-    </div>
+      </div>
+    </>
   );
 };
 
