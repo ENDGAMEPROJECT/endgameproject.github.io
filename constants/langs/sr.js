@@ -50,6 +50,9 @@ export const sr = {
   escaperoomfull:{                     //TODO: Review escaperoomfull
     escaperoomInfo: "Informacije o escape sobi",
     relatedMaterials: "Povezani materijali",
+    playButton: "Igraj escaperoom",
+    alternativePlayMessage: "Druga opcija za igranje: ",
+    alternativePlayButton: "Igraj",
     littleBoxes: {
             "theme": "tema",
             "duration": "trajanje",

@@ -280,3 +280,7 @@ a, strong {
     @apply !text-myText
   }
 }
+
+.unity-footer {
+  color: white !important;
+}

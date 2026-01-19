@@ -86,11 +86,6 @@ const escaperoomFull = ({ escaperoomname }) => {
     .map((resource, key) => <ResourceCard resource={resource} key={key} />);
 
   const externalLink = escaperoom.externalLink;
-  const externalLinkText =
-    currentLang === "es" ? 
-    "Jugar a la escaperoom" : 
-    currentLang === "sr" ? "Igraj escaperoom"
-     : "Play escaperoom";
 
   return (
     <>
@@ -124,10 +119,27 @@ const escaperoomFull = ({ escaperoomname }) => {
         className="mt-4 font-medium bg-myBackground text-primary300 border-primary300 hover:bg-myPrimary hover:text-myTextInverse hover:border-myPrimary uppercase"
       >
         <Link href={externalLink} target="_blank" rel="noopener noreferrer">
-          {externalLinkText}
+          {t("escaperoomfull.playButton")}
           <NorthEastSharp />
         </Link>
       </Button>
+
+      {escaperoom.internalLink && (
+        <div className="mt-2 text-center">
+          <Text className="inline font-bold">{t("escaperoomfull.alternativePlayMessage")}</Text>
+          <Button
+            asChild
+            variant="primary"
+            size="lg"
+            type='primary'
+            className="mt-4 font-medium bg-myBackground text-primary300 border-2 border-primary300 hover:bg-myPrimary hover:text-myTextInverse hover:border-myPrimary uppercase"
+          >
+            <Link href={`/escaperooms/${escaperoomname}/play`}>
+              {t("escaperoomfull.alternativePlayButton")} <NorthEastSharp />
+            </Link>
+          </Button>
+        </div>
+      )}
 
       {/* *********ESCAPE ROOM INFO********* */}
       <section className="mb-4 w-full">

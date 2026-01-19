@@ -50,6 +50,9 @@ export const es = {
   escaperoomfull:{
     escaperoomInfo: "Información de la escaperoom",
     relatedMaterials: "Materiales relacionados",
+    playButton: "Jugar a la escaperoom",
+    alternativePlayMessage: "Otra opción para jugar: ",
+    alternativePlayButton: "Jugar",
     littleBoxes: {
             "theme": "tema",
             "duration": "duración",

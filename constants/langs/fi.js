@@ -50,6 +50,9 @@ export const fi = {
   escaperoomfull:{                     //TODO: Review escaperoomfull
     escaperoomInfo: "Pakohuoneen tiedot",
     relatedMaterials: "Aiheeseen liittyvät materiaalit",
+    playButton: "Pelaa pakohuone",
+    alternativePlayMessage: "Toinen vaihtoehto pelata: ",
+    alternativePlayButton: "Pelaa",
     littleBoxes: {
             "theme": "aihe",
             "duration": "kesto",
