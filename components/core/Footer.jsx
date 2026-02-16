@@ -14,6 +14,7 @@ import ArticleIcon from "@mui/icons-material/Article";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from "@mui/icons-material/X";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { useContext } from "react";
 import { ThemeContext } from "@/components/ThemeContext";
 
@@ -160,6 +161,28 @@ export default function Footer(props) {
               </i>
             </Button>
             <p className="text-myText" >TikTok</p>
+          </Link>
+          {/* LinkedIn */}
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/in/end-game-project-477149364/"
+            className={
+              "text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
+            }
+          >
+            <Button
+              href="#"
+              className={
+                ButtonVariants({
+                  variant: "default",
+                  size: "icon_sm",
+                  radius: "rounded_full",
+                }) + " p-[14px] rounded-full bg-blue-600/30 hover:bg-blue-600/60 mr-2"
+              }
+            >
+              <LinkedInIcon sx={{ fontSize: 20 }} />
+            </Button>
+            <p className="text-myText" >LinkedIn</p>
           </Link>
         </ul>
 
