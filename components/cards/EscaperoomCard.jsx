@@ -2,13 +2,17 @@
 import React from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { translator } from "@/lib/utils.js";
 
 // assets
 import ArrowForwardSharp from "@mui/icons-material/ArrowForwardSharp";
+import PlayArrowSharp from "@mui/icons-material/PlayArrowSharp";
+
 
 // Components
 import { Badge, badgeVariants } from "../ui/badge";
-import Text from "@/components/ui/Text";
+import Text from "@/components/ui/text";
+import Image from "@/components/ui/image";
 import { Button, ButtonVariants } from "../ui/button";
 
 import {
@@ -23,115 +27,77 @@ import {
 
 import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
 import HighlightedHeader from "../ui/highlightedHeader";
-import Heading from "../ui/Heading";
+import Heading from "../ui/heading";
 
-const EscaperoomCard = ({ escaperoom }) => {
+
+
+const EscaperoomCard = ({ escaperoom, seeDetails = true }) => {
   const {
     category,
-    theme,
+    theme_en,
+    theme_es,
     title_en,
     title_es,
     description_en,
     description_es,
     keywords,
     escaperoomname,
+    image
   } = escaperoom;
 
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  const title_translation =
-    currentLang === "es" && title_es ? title_es : title_en;
-  const description_translation =
-    currentLang === "es" && description_es ? description_es : description_en;
+  const title_translation = translator(currentLang, title_en, title_es);
+  // const description_translation = translator(currentLang, description_en, description_es);
 
   return (
-    // <CustomCard className="bg-black p-4">
-    //   <CardHeader>
-    //     {category && (
-    //       <Badge variant='primary' size={'lg'} >
-    //         {category}
-    //       </Badge>
-    //     )}
-    //   </CardHeader>
-    //   <CardBody>
-    //     <CardContent className="gap-1">
-    //       <HighlightedHeader
-    //       level="h5"
-    //       string={title_translation}
-    //       // className={}
-    //     />
-    //       {theme?.[0] && (
-    //         <div className="flex">
-    //           <CardSubtitle className='text-primary'>{theme}</CardSubtitle>
-    //         </div>
-    //       )}
-    //       {description_translation && (
-    //         <Text className="text-gray-300/90 mb-4 lg:pr-16" type="small">
-    //           {description_translation}
-    //         </Text>
-    //       )}
-    //       {Array.isArray(keywords) && (
-    //         <div className="flex flex-wrap gap-1.5">
-    //           {keywords.map((keyword, index) => (
-    //             <Badge
-    //               key={index}
-    //               variant='secondary'
-    //               size="sm"
-    //               className='text-primary-400 bg-primary/15'
-    //             >
-    //               {keyword}
-    //             </Badge>
-    //           ))}
-    //         </div>
-    //       )}
-    //     </CardContent>
-    //   </CardBody>
-    //   {escaperoomname && (
-    //     <CardFooter className='p-0'>
-    //       <Button asChild variant="outline" size="sm" radius="rounded_sm">
-    //         {/* <Link rel="noopener noreferrer" target="_blank" href={escaperoomDetail}> */}
-    //         <Link rel="noopener noreferrer" href={`/escaperooms/${escaperoomname}`}>
-    //           {t("escaperooms.escaperoom.action-button")}
-    //           <ArrowForwardSharpIcon />
-    //         </Link>
-    //       </Button>
-    //     </CardFooter>
-    //   )}
-    // </CustomCard>
-    <li className="mb-8 mx-auto md:w-full flex flex-col">
+    <CustomCard className="gap-0 mx-auto w-full flex flex-col">
       <HighlightedHeader
         level="h3"
         string={title_translation}
         // className={}
       />
-      <div className="h-[50dvh] flex justify-center items-center border border-primary bg-black">
-        <Heading level="h4" className={"text-primary bg-primary/20 border border-primary px-4 py-2"}>
-          15d : 20h : 10m : 56s
-        </Heading>
-      </div>
-      <Button
+      <Link
+        href={escaperoom.externalLink}
+        rel="noopener noreferrer"
+        target="_blank"
+        className="h-[50dvh] flex justify-center items-center border border-myPrimary bg-background200 group"
+      >
+        <Image
+          className="group-hover:opacity-[.30] transition duration-300 ease-in-out"
+          src={image}
+          alt={title_translation}
+          fit="cover"
+        />
+        <Button
+          asChild
+          variant="outline"
+          size="xl"
+          className="group-hover:opacity-[1] absolute opacity-[0]  text-primary400 border-primary400 bg-primary/15 hover:bg-myPrimary hover:border-myPrimary hover:text-myTextInverse"
+        >
+          <div>{t("escaperooms.escaperoom.play-button")}
+            <PlayArrowSharp />
+          </div>
+        </Button>
+      </Link>
+      {seeDetails ==true? <Button
+        asChild
         className={
           ButtonVariants({
             variant: "tertiary",
             size: "lg",
             radius: "rounded_sm",
-          }) + " w-full justify-end  bg-black text-primary hover:text-primary"
+          }) + " w-full justify-end  bg-myBackground text-myText hover:text-myPrimary"
         }
       >
-        <Link
-          href={`/escaperooms/${escaperoomname}`}
-          rel="noopener noreferrer"
-          className="flex gap-4 items-center"
-          onClick={() => {
-            window.scrollTo({ top: 0 });
-          }}
-        >
+        <Link href={`/escaperooms/${escaperoomname}`}>
           {t("escaperooms.escaperoom.action-button")}
           <ArrowForwardSharp className="w-7 h-7" />
         </Link>
-      </Button>
-    </li>
+      </Button>: null}
+
+    </CustomCard>
   );
 };
 

@@ -45,21 +45,6 @@ module.exports = {
         text: "#FAFAFA",
         "gray-10": "#FAFAFA",
         black: "#090909",
-        grey: { // deprecated, ir cambiando
-          DEFAULT: "#0AFFDE",
-          950: "#131313",
-          900: "#202323",
-          800: "#353A39",
-          700: "#495150",
-          600: "#5E6766",
-          500: "#727E7D",
-          400: "#889392",
-          300: "#9FA8A7",
-          200: "#B6BDBC",
-          100: "#CCD1D0",
-          50: "#E3E6E5",
-          10: "#FAFAFA",
-        },
         dark: {
           DEFAULT: "#0AFFDE",
           950: "#131313",
@@ -80,7 +65,7 @@ module.exports = {
           900: "#00535C",
           800: "#007E8A",
           700: "#0092A2",
-          600: "#05BFBF", // parimary for light bg
+          600: "#05BFBF", // primary for light bg
           500: "#00D3C8",
           400: "#0AFFDE", // primary for dark bg
           300: "#5DFEE3",
@@ -126,6 +111,69 @@ module.exports = {
           300: "#17181c",
           200: "#0a0b0c",
         },
+
+
+        myBackground: "var(--background200)",
+        background200: "var(--background200)",
+        background300: "var(--background300)",
+        background400: "var(--background400)",
+        background500: "var(--background500)",
+        background600: "var(--background600)",
+
+        myForeground: "var(--foreground)",
+        myText: "var(--text)",
+        myTextInverse: "var(--textInverse)",
+
+
+        myPrimary: "var(--primary400)",
+        primary50: "var(--primary50)",
+        primary100: "var(--primary100)",
+        primary200: "var(--primary200)",
+        primary300: "var(--primary300)",
+        primary400: "var(--primary400)",
+        primary500: "var(--primary500)",
+        primary600: "var(--primary600)",
+        primary700: "var(--primary700)",
+        primary800: "var(--primary800)",
+        primary900: "var(--primary900)",
+        primary950: "var(--primary950)",
+
+        secondary50: "var(--secondary50)",
+        secondary100: "var(--secondary100)",
+        secondary200: "var(--secondary200)",
+        secondary300: "var(--secondary300)",
+        secondary400: "var(--secondary400)",
+        secondary500: "var(--secondary500)",
+        secondary600: "var(--secondary600)",
+        secondary700: "var(--secondary700)",
+        secondary800: "var(--secondary800)",
+        secondary900: "var(--secondary900)",
+        secondary950: "var(--secondary950)",
+
+        accent50: "var(--accent50)",
+        accent100: "var(--accent100)",
+        accent200: "var(--accent200)",
+        accent300: "var(--accent300)",
+        accent400: "var(--accent400)",
+        accent500: "var(--accent500)",
+        accent600: "var(--accent600)",
+        accent700: "var(--accent700)",
+        accent800: "var(--accent800)",
+        accent900: "var(--accent900)",
+        accent950: "var(--accent950)",
+        
+        grey50: "var(--grey50)",
+        grey100: "var(--grey100)",
+        grey200: "var(--grey200)",
+        grey300: "var(--grey300)",
+        grey400: "var(--grey400)",
+        grey500: "var(--grey500)",
+        grey600: "var(--grey600)",
+        grey700: "var(--grey700)",
+        grey800: "var(--grey800)",
+        grey900: "var(--grey900)",
+        grey950: "var(--grey950)",
+        
       },
     },
     screens: {
@@ -137,6 +185,7 @@ module.exports = {
       "2xl": "1536px",
       "3xl": "1700px",
     },
+    darkmode: 'class'
   },
   plugins: [
     // require("@tailwindcss/line-clamp"),

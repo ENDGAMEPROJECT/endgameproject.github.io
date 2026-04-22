@@ -2,9 +2,9 @@ export const es = {
   nav: {
     home: "Home",
     about: "Sobre ENDGAME",
-    escaperooms: "Escaperooms",
+    escaperooms: "Escape rooms",
     events: "Eventos y noticias",
-    research: "resultados", // Investigación e impacto
+    research: "Resultados", // Investigación e impacto
   },
   header: {
     publicationstab: "Publicaciones",
@@ -12,7 +12,7 @@ export const es = {
   home: {
     title: "ENDGAME",
     description:
-      "Lucha contra la desinformación a través de escaperooms educativas",
+      "Lucha contra la desinformación a través de escape rooms educativas",
     aboutSection: "Qué es ENDGAME",
     about: {
       title: "Sobre el proyecto",
@@ -30,8 +30,8 @@ export const es = {
     latestContent: {
       title: "Novedades",
       events: {
-        title: "News and events",
-        button: "See all activity",
+        title: "Noticias y eventos",
+        button: "Ver toda la actividad",
       },
       research: {
         title: "Últimas publicaciones",
@@ -40,10 +40,25 @@ export const es = {
     },
   },
   escaperooms: {
-    title: "Escaperooms",
+    title: "Escape rooms",
+    oncoming: "Próximas escape rooms",
     escaperoom: {
       "action-button": "Ver detalles",
+      "play-button": "Jugar"
     },
+  },
+  escaperoomfull:{
+    escaperoomInfo: "Información de la escape room",
+    relatedMaterials: "Materiales relacionados",
+    playButton: "Jugar a la escape room",
+    alternativePlayMessage: "Otra opción para jugar: ",
+    alternativePlayButton: "Jugar",
+    littleBoxes: {
+            "theme": "tema",
+            "duration": "duración",
+            "level": "nivel",
+            "other": "otro"
+          }
   },
   events: {
     title: "Eventos y noticias",
@@ -63,8 +78,11 @@ export const es = {
   },
   research: {
     title: "Investigación e impacto",
-    button: "Leer publicación",
-    button2: "Ver más",
+    buttons: {
+      read: "Leer publicación",
+      download: "Descargar",
+      button2: "Ver más",
+    }
   },
   about: {
     title: "Sobre ENDGAME",
@@ -75,7 +93,7 @@ export const es = {
     projectDuration: "Duración",
     projectDurationContent: "marzo 2025 - febrero 2027",
     title1: "Secciones",
-    title2: "Síguenos en:",
+    title2: "Síguenos",
     title3: "Colaboran",
   },
   buttons: {

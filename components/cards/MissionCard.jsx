@@ -3,30 +3,62 @@ import Image from "../ui/image";
 import Heading from "../ui/heading";
 import Text from "../ui/text";
 import { useTranslation } from "react-i18next";
+import { translator } from "@/lib/utils.js";
+import { ThemeContext } from "@/components/ThemeContext";
+import { useContext } from "react";
+
 
 const MissionCard = ({ mission }) => {
+  const { webTheme } = useContext(ThemeContext);
+
   const { i18n } = useTranslation();
-  const lang = i18n.language;
+  const currentLang = i18n.language;
+  let {
+    icon,
+    iconLight,
+    title,
+    title_es,
+    title_sr,
+    title_fi,
+    description,
+    description_es,
+    description_sr,
+    description_fi,
+  } = mission;
 
-  const { icon, title, title_es, description, description_es } = mission;
+  // Fallback de títulos y descripciones
+  title_es ??= title;
+  title_sr ??= title;
+  title_fi ??= title;
 
-  const title_translation = lang === "es" && title_es ? title_es : title;
-  const description_translation =
-    lang === "es" && description_es ? description_es : description;
+  description_es ??= description;
+  description_sr ??= description;
+  description_fi ??= description;
+
+  // Selección de traducción según idioma
+  const description_translation = translator(currentLang, description, description_es, description_sr, description_fi)
+  const title_translation = translator(currentLang, title, title_es, title_sr, title_fi)
+
+  // const title_translation = lang === "es" && title_es ? title_es : title;
+  // const description_translation =
+  //   lang === "es" && description_es ? description_es : description;
 
   return (
-    <li className="w-full p-6 sm:p-4 bg-black"> 
-    {/* w-full p-4 bg-black flex items-center sm:flex-col */}
+    <li className="w-full p-6 sm:p-4 bg-background200 text-balance">
+      {/* w-full p-4 bg-black flex items-center sm:flex-col */}
       <Image
-        className="!h-20  opacity-50 p-2"
+        className="!h-20 p-2 scale-[120%]"
         //  max-w-[200px]
-        src={icon || "placeholder.jpg"}
+        src={(webTheme == "light"? iconLight : icon) || "/placeholder.jpg"}
+        // src= "placeholder.jpg"
         alt={title_translation || "Image"}
         fit="contain"
       />
       <div className="mt-4 place-content-center text-center">
         {/* mt-4 w-[120%] sm:place-content-center sm:text-center sm:w-full */}
-        <Heading level="h5" className="text-primary !text-20 text-pretty">{title_translation}</Heading>
+        <Heading level="h5" className="text-myPrimary !text-20 text-pretty">
+          {title_translation}
+        </Heading>
         <Text>{description_translation}</Text>
       </div>
     </li>

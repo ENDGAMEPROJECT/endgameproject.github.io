@@ -1,0 +1,14 @@
+# Robots.txt for ENDGAME Project
+# https://endgameproject.github.io
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://endgameproject.github.io/sitemap.xml
+
+# Allow crawling of all language variants
+Allow: /*?lang=es
+Allow: /*?lang=en
+Allow: /*?lang=fi
+Allow: /*?lang=sr

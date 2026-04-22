@@ -3,13 +3,17 @@
 import * as React from "react";
 
 import { useTranslation } from "react-i18next";
+import SEO from "@/components/SEOWrapper";
+import StructuredData from "@/components/StructuredData";
+import { getPageMetadata } from "@/constants/metadata";
+import { aboutPageSchema } from "@/constants/schemas";
 
 // Data
 import { mission } from "@/constants/mission";
 import { partners } from "@/constants/partners";
 
 // Components
-import Heading from "@/components/ui/Heading";
+import Heading from "@/components/ui/heading";
 import MissionCard from "@/components/cards/MissionCard";
 import PartnerCard from "@/components/cards/PartnerCard";
 import { Divider } from "@mui/material";
@@ -17,9 +21,17 @@ import { Divider } from "@mui/material";
 export default function About() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+  const metadata = getPageMetadata('about', currentLang);
 
   return (
-    <main className="standard_margin ">
+    <>
+      <SEO 
+        title={metadata.title}
+        description={metadata.description}
+        keywords={metadata.keywords}
+      />
+      <StructuredData data={aboutPageSchema} />
+      <main className="standard_margin ">
       {/* SECTION ABOUT */}
       <Heading level="h1">{t("home.aboutSection")}</Heading>
       <section className="flex flex-col gap-24">
@@ -58,5 +70,6 @@ export default function About() {
       </section>
       <Divider size="xl" />
     </main>
+    </>
   );
 }

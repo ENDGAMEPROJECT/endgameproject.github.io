@@ -1,34 +1,38 @@
 "use client";
 
 import * as React from "react";
-import clsx from "clsx";
 import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 
 const ButtonVariants = cva(
-  "w-fit min-w-20 h-fit inline-flex gap-2 items-center justify-center font-semibold whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  "w-fit min-w-20 h-fit inline-flex gap-2 items-center justify-center font-title font-semibold capitalize whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
   {
+    defaultVariants: {
+  variant: "primary",
+  size: "md",
+  radius: "rounded_sm",
+},
     variants: {
       variant: {
-        primary: "bg-grey-10 text-black shadow hover:bg-white",
+        primary: "bg-grey900 text-myText shadow hover:bg-myForeground",
         secondary:
-        "bg-background-400 text-gray-300 hover:text-white hover:bg-background-200",
+        "bg-background400 text-gray400 hover:text-myText hover:bg-background200",
         tertiary:
-        "border border-transparent bg-transparent text-text shadow-none py-0",
+        "border border-transparent bg-transparent text-myForeground shadow-none py-0",
         outline:
-          "border border-grey-10 bg-transparent text-grey-10 hover:bg-white/5 hover:text-white hover:border-white",
+          "border border-grey50 bg-transparent text-grey50 hover:bg-myForeground/5 hover:text-myForeground hover:border-myForeground",
         //for outline buttons over dark backgrounds
         // outlineForeground:
         //   "border border-input border-secondary text-secondary-100 shadow-sm hover:bg-primary/30 hover:text-accent-foreground",
         ghost:
-          "border border-transparent bg-transparent text-text hover:bg-white/10 shadow-none",
+          "border border-transparent bg-transparent text-myText hover:bg-myForeground/10 shadow-none",
         link: "bg-transparent hover:bg-transparent underline hover:scale-[103%] hover:spa shadow-none",
         // linkForeground:
         //   "bg-transparent text-primary-foreground underline-offset-4 underline hover:bg-secondary-100/60 shadow-none",
       },
       size: {
-        xl: 'px-6 py-2 text-2xl font-title border-2',
+        xl: 'px-6 py-2 text-2xl border-2',
         lg: "px-6 py-2 text-lg",
         md: "px-4 py-2 text-base",
         sm: "px-3 py-1.5 text-sm",
@@ -65,7 +69,7 @@ const Button = React.forwardRef(
     return (
       <Comp
         className={cn(
-          ButtonVariants({ variant, size, radius, className })
+          ButtonVariants({ variant, size, radius }),  className 
         )}
         ref={ref}
         {...props}

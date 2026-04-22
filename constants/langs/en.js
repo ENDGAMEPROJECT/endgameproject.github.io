@@ -2,7 +2,7 @@ export const en = {
   nav: {
     home: "Home",
     about: "About ENDGAME",
-    escaperooms: "Escaperooms",
+    escaperooms: "Escape rooms",
     events: "Events and news",
     research: "Results", // Research and impact
   },
@@ -17,7 +17,7 @@ export const en = {
     about: {
       title: "About the project",
       content:
-        "ENDGAME is an innovative European project aimed at ultivating critical thinking and responsible digital citizenship among European youth through educational escape rooms that simulate real-life scenarios of information consumption. We aim to immerse participants in time-sensitive, interactive, and challenging experiences, where they will develop their skills in identifying disinformation, recognizing AI-generated content, and understanding the implications of personal data exposure on social media platforms.",
+        "ENDGAME is an innovative European project aimed at cultivating critical thinking and responsible digital citizenship among European youth through educational escape rooms that simulate real-life scenarios of information consumption. We aim to immerse participants in time-sensitive, interactive, and challenging experiences, where they will develop their skills in identifying disinformation, recognizing AI-generated content, and understanding the implications of personal data exposure on social media platforms.",
     },
     mission: {
       title: "Our mission",
@@ -40,10 +40,25 @@ export const en = {
     },
   },
   escaperooms: { 
-    title: "Escaperooms",
+    title: "Escape rooms",
+    oncoming: "On coming escape rooms",
     escaperoom: {
       "action-button": "See details",
+      "play-button": "Play"
     },
+  },
+  escaperoomfull:{
+    escaperoomInfo: "Escape room info",
+    relatedMaterials: "Related materials",
+    playButton: "Play escape room",
+    alternativePlayMessage: "Another option to play: ",
+    alternativePlayButton: "Play",
+    littleBoxes: {
+            "theme": "theme",
+            "duration": "duration",
+            "level": "level",
+            "other": "other"
+          }
   },
   events: {
     title: "Events and news",
@@ -63,8 +78,11 @@ export const en = {
   },
   research: {
     title: "Research and impact",
-    button: "Read publication",
-    button2: "Load more",
+    buttons: {
+      read: "Read publication",
+      download: "Download",
+      button2: "Ver más",
+    }
   },
   about: {
     title: "About ENDGAME",

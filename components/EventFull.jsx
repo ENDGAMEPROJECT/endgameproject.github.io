@@ -7,9 +7,10 @@ import { events } from "@/constants/events";
 import HighlightedHeader from "@/components/ui/highlightedHeader";
 import Link from "next/link";
 import Text from "../components/ui/text";
-import Heading from "../components/ui/Heading";
+import Heading from "./ui/heading";
 import { Badge } from "./ui/badge";
 import { Button, ButtonVariants } from "@/components/ui/button";
+import SEO from "@/components/SEOWrapper";
 
 // icons
 import NorthEastSharp from "@mui/icons-material/NorthEastSharp";
@@ -60,6 +61,7 @@ const EventFull = ({ eventname }) => {
     category,
     keywords,
     externalLinkJoin,
+    imageEscaperoom
   } = event;
 
   //only english is compulsory, the rest are optional
@@ -98,7 +100,13 @@ const EventFull = ({ eventname }) => {
     category.charAt(0).toUpperCase() + category.slice(1);
 
   return (
-    <div className="flex flex-col gap-8 items-center">
+    <>
+      <SEO 
+        title={title}
+        description={description}
+        keywords={Array.isArray(keywords) ? keywords.join(", ") : ""}
+      />
+      <div className="flex flex-col gap-8 items-center">
       <Badge variant="primary" type="activity" size="xl">
         {categoryFormatted}
       </Badge>
@@ -141,6 +149,7 @@ const EventFull = ({ eventname }) => {
         </Link>
       </Button>
     </div>
+    </>
   );
 };
 

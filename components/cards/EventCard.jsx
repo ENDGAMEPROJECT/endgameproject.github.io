@@ -2,10 +2,11 @@
 import React from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { translator } from "@/lib/utils.js";
 
 // Components
 import { Badge, badgeVariants } from "../ui/badge";
-import Text from "../ui/Text";
+import Text from "../ui/text";
 import { Button } from "../ui/button";
 import {
   CustomCard,
@@ -22,13 +23,19 @@ import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
 import EventSharp from "@mui/icons-material/EventSharp";
 
 const EventCard = ({ event }) => {
-  const {
+  let {
     category,
+    type,
+    country,
     date,
     title_en,
     title_es,
+    title_sr,
+    title_fi,
     description_en,
     description_es,
+    description_sr,
+    description_fi,
     keywords,
     eventname,
   } = event;
@@ -36,10 +43,9 @@ const EventCard = ({ event }) => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  const title_translation =
-    currentLang === "es" && title_es ? title_es : title_en;
-  const description_translation =
-    currentLang === "es" && description_es ? description_es : description_en;
+  //only english is compulsory, the rest are optional
+  const description_translation = translator(currentLang, description_en, description_es, description_sr, description_fi )
+  const title_translation = translator(currentLang, title_en, title_es, title_sr, title_fi)
 
   const dateFormatted = new Date(date).toLocaleDateString(currentLang, {
     year: "numeric",
@@ -48,24 +54,38 @@ const EventCard = ({ event }) => {
   });
 
   return (
-    <CustomCard className="bg-black p-4">
+    <CustomCard className="bg-myBackground p-4">
       <CardHeader>
+        {type && (
+          <Badge variant="type" size={"lg"} type="activity">
+            {type}
+          </Badge>
+        )}
         {category && (
-          <Badge variant="primary" size={"lg"} type="activity">
+          <Badge variant="primary" size={"lg"} type="activity" className="bg-accent/15">
             {category}
           </Badge>
         )}
+        {country && (
+          <Badge variant="primary" size={"lg"} type="activity" className="bg-accent/15">
+            {country}
+          </Badge>
+        )}
       </CardHeader>
-      <CardBody>
-        <CardContent className="gap-1">
+      <CardBody className="h-full justify-start">
+        <CardContent className="gap-1 h-full justify-start">
           <CardTitle level="h5" className="text-pretty">
+            {/* flex: grow */}
             {title_translation}
           </CardTitle>
           {date?.[0] && (
             <div className="flex">
-              <CardSubtitle level="h5" className="text-accent flex gap-4 items-center">
+              <CardSubtitle
+                level="h5"
+                className="text-accent flex gap-4 items-center"
+              >
                 <EventSharp className="h-7 w-7" />
-                {dateFormatted}
+                {dateFormatted + (event.hour ? " - " + event.hour : "")}
               </CardSubtitle>
             </div>
           )}
@@ -79,7 +99,7 @@ const EventCard = ({ event }) => {
                   key={index}
                   variant="secondary"
                   size="sm"
-                  className="text-accent-400 bg-accent/15"
+                  className="text-accent400 bg-accent/15"
                 >
                   {keyword}
                 </Badge>
@@ -90,10 +110,20 @@ const EventCard = ({ event }) => {
       </CardBody>
       {eventname && (
         <CardFooter className="p-0 flex-wrap">
-          <Button asChild variant="outline" size="sm" radius="rounded_sm">
+          <Button
+            asChild
+            variant="outline"
+            size="sm"
+            radius="rounded_sm"
+            className="hover:bg-myBackground hover:border-accent-400 hover:text-accent-300"
+          >
             {/* <Link rel="noopener noreferrer" target="_blank" href={eventDetail}> */}
             <Link rel="noopener noreferrer" href={`/events/${eventname}`}>
-              {t("events.event.action-button")}
+              {t(
+                event.type === "Event"
+                  ? "events.event.action-button"
+                  : "events.new.action-button"
+              )}
               <ArrowForwardSharpIcon />
             </Link>
           </Button>
