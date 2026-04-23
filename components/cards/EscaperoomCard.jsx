@@ -52,7 +52,7 @@ const EscaperoomCard = ({ escaperoom, seeDetails = true }) => {
   // const description_translation = translator(currentLang, description_en, description_es);
 
   return (
-    <CustomCard className="gap-0 mx-auto w-full flex flex-col">
+    <CustomCard className="gap-0 mx-auto w-full flex flex-col !h-auto mb-4">
       <HighlightedHeader
         level="h3"
         string={title_translation}
