@@ -22,6 +22,8 @@ const ResourceCard = ({ resource }) => {
         tag = "Resource tag",
         resourceLink_es = "https://endgameproject.github.io",
         resourceLink_en = "https://endgameproject.github.io",
+        resourceLink_sr = "https://endgameproject.github.io",          // TODO: review translations
+        resourceLink_fi = "https://endgameproject.github.io"           // TODO: review translations
     } = resource || {};
 
     // Fallback de títulos y descripciones
@@ -71,7 +73,7 @@ const ResourceCard = ({ resource }) => {
                     : "How to use";
 
     const resourceLink =
-        currentLang === "es" ? resourceLink_es : resourceLink_en;
+        currentLang === "es" ? resourceLink_es : currentLang === "sr" ? resourceLink_sr : currentLang === "fi" ? resourceLink_fi : resourceLink_en;
 
     return (
         <li className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">

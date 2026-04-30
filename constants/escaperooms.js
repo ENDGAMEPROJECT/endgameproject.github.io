@@ -51,7 +51,9 @@ export const escaperooms = [
         additionalInfo_fi : "Opettajan opas kouluttajille pakohuonetoiminnan helpottamiseksi",
         tag : "Docs",
         resourceLink_es : "https://docs.google.com/document/d/1QMLHAEaBetoKYbuLx2xALDGbi1-96IgJ/export?format=pdf",
-        resourceLink_en : "https://docs.google.com/document/d/1VSxRpjjeqkFae5qvW-HxNOaAEf7FfdkI/export?format=pdf"
+        resourceLink_en : "https://docs.google.com/document/d/1VSxRpjjeqkFae5qvW-HxNOaAEf7FfdkI/export?format=pdf",
+        resourceLink_sr : "https://docs.google.com/document/d/12qFifhuwcQNbNqBXYILswF9QO9v3rBUm/export?format=pdf",
+        resourceLink_fi : "https://docs.google.com/document/d/1iyvRzLuXaPa4yJQ1ZCqmenchS8eRKSbM/export?format=pdf"
       }
     ]
   },
@@ -89,8 +91,7 @@ export const escaperooms = [
     claim_fi: "Estä väärän tiedon tulva ECHO:ssa: tunnista botit, tekoälysisältö ja tekoälyn väärinkäyttö.",
     claim_sr: "Zaustavite poplavu dezinformacija na ECHO-u: identificirajte botove, AI sadržaj i zloupotrebu AI.",
     externalLink: "https://endgameproject.github.io/ECHO/",
-    resources: []
-   /*resources:                                                      
+    resources:                                                      
     [
       {
         resourceName : "Teacher's Guide",
@@ -103,9 +104,11 @@ export const escaperooms = [
         additionalInfo_sr : "Vodič za nastavnike i edukatore kako bi se olakšala aktivnost u sobi za bekstvo",
         additionalInfo_fi : "Opettajan opas kouluttajille pakohuonetoiminnan helpottamiseksi",
         tag : "Docs",
-        resourceLink_es : "https://docs.google.com/document/d/1QMLHAEaBetoKYbuLx2xALDGbi1-96IgJ/export?format=pdf",
-        resourceLink_en : "https://docs.google.com/document/d/1VSxRpjjeqkFae5qvW-HxNOaAEf7FfdkI/export?format=pdf"
+        resourceLink_es : "https://docs.google.com/document/d/1PLDH2_rYHl3B7F3zOVdGRfWVNcF7Q7yi/export?format=pdf",
+        resourceLink_en : "https://docs.google.com/document/d/10tXAN9rPVgwpRZKBk67vHGyvjAvUeG-G/export?format=pdf",
+        resourceLink_sr : "https://docs.google.com/document/d/1K3T1eMKjAh_T394RzMdjjwaHXyYf3g5y/export?format=pdf",
+        resourceLink_fi : "https://docs.google.com/document/d/1H5o44V-bTfQyyESSkgTDPV1M7TtjNYE_/export?format=pdf"
       }
-    ]*/
+    ]
   },
 ];
