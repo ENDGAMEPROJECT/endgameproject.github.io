@@ -119,45 +119,10 @@ export default function Page() {
         </article>
         <article>
           <Heading level="h3">Escape rooms</Heading>
-          <div className="flex flex-col md:grid md:grid-cols-[2fr_1fr] gap-8">
-            <div>
-              {escaperooms.map((escaperoom, key) => {
-                return <EscaperoomCard escaperoom={escaperoom} key={key} />;
-              })}
-            </div>
-            <ul className="flex flex-col gap-4">
-              <Heading level="h5" className="text-myPrimary uppercase">{t("escaperooms.oncoming")}</Heading>
-              <li className="flex justify-start gap-4 wrap">
-                <Text
-                  type="pre"
-                  className="text-wrap"
-                ><HighlightedHeader
-                    level="h6"
-                    string="March '26"
-                    className="w-fit inline mr-4"
-                  />Escaperoom title to be anounced
-                <Text
-                  type="pre"
-                  className="text-primary inline mx-2 text-wrap"
-                >by FNE & Maldita · FI</Text>
-                </Text>
-              </li>
-              <li className="flex justify-start gap-4 wrap">
-                <Text
-                  type="pre"
-                  className="text-wrap"
-                ><HighlightedHeader
-                    level="h6"
-                    string="June '26"
-                    className="w-fit inline mr-4"
-                  />Escaperoom title to be anounced
-                <Text
-                  type="pre"
-                  className="text-primary inline mx-2 text-wrap"
-                >by UPM & Maldita · ES</Text>
-                </Text>
-              </li>
-            </ul>
+          <div className="grid md:grid-cols-2 gap-8">
+            {escaperooms.map((escaperoom, key) => {
+              return <EscaperoomCard escaperoom={escaperoom} key={key} />;
+            })}
           </div>
         </article>
 
