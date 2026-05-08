@@ -1,5 +1,116 @@
 export const events = [
   {
+    eventname: "PressNote080526",
+    category: "",
+    country: "International",
+    type: "news",
+    date: "05/08/26",
+    author: "",
+    title_en: "ENDGAME launches ECHO, its second educational escape room on AI-generated disinformation and bot accounts",
+    title_sr: "ENDGAME lansira ECHO, svoju drugu edukativnu escape room igru o dezinformacijama generisanim veštačkom inteligencijom i bot nalozima",
+    title_es: "ENDGAME lanza ECHO, su segundo escape room educativo sobre desinformación generada por IA y bots",
+    title_fi: "ENDGAME julkaisee ECHO-pakopelin – toinen opetuksellinen pakohuone tekoälyn tuottamasta disinformaatiosta ja bottitileistä",
+    description_en: "ENDGAME presents ECHO, a 20-minute educational escape room set on a fictional social media platform flooded with misinformation. Players act as moderators to identify bot accounts, AI-generated content, and misuses of AI. Teaching materials are now available for teachers to bring the experience directly into the classroom.",
+    description_sr: "ENDGAME predstavlja ECHO, edukativnu escape room igru u trajanju od 20 minuta smeštenu na izmišljenoj društvenoj mreži preplavjenoj dezinformacijama. Igrači preuzimaju ulogu moderatora i identifikuju bot naloge, sadržaj generisan veštačkom inteligencijom i zloupotrebe AI. Nastavni materijali su sada dostupni nastavnicima koji žele da iskustvo unesu u učionicu.",
+    description_es: "ENDGAME presenta ECHO, un escape room educativo de 20 minutos ambientado en una red social ficticia inundada de desinformación. Los jugadores actúan como moderadores para identificar cuentas bot, contenido generado por IA y usos indebidos de la inteligencia artificial. Los materiales didácticos ya están disponibles para que cualquier docente lo lleve al aula.",
+    description_fi: "ENDGAME esittelee ECHO-pakopelin – 20 minuutin opetuksellisen pakohuonepelin, joka sijoittuu kuvitteelliseen somealustaan, jota tulvii disinformaatio. Pelaajat toimivat moderaattoreina ja tunnistavat bottitilejä, tekoälyn tuottamaa sisältöä ja tekoälyn väärinkäyttöä. Opetusmateriaalit ovat nyt saatavilla opettajille luokkahuonekäyttöön.",
+    imageEscaperoom: "/assets/images/echo.png",
+    escaperoomTitle: "ECHO",
+    warningMobile_en: "To play the escape room, log in from a computer.",
+    warningMobile_sr: "Da biste igrali escape soba, povežite se sa računara.",
+    warningMobile_es: "Para poder jugar al escaperoom, conéctate desde un ordenador.",
+    warningMobile_fi: "To play the escape room, log in from a computer.",
+    htmlbody_en: `
+<p>The European project <b>ENDGAME</b> (Escaping New Disinformation through Gamified Cross-Border Media Literacy Education), led by the <b><a href="https://www.uef.fi/fi" target="_blank">University of Eastern Finland</a></b> (UEF, Finland) and consisting of the <b><a href="https://www.upm.es/" target="_blank">Technical University of Madrid</a></b> (UPM, Spain), the <b><a href="https://www.metropolitan.ac.rs/en/about-metropolitan-university/" target="_blank">Metropolitan University of Belgrade</a></b> (BMU, Serbia), <b><a href="https://faktabaari.fi/in-english/" target="_blank">Faktabaari</a></b> (Finland), <b><a href="https://novinarska-skola.org.rs/" target="_blank">Novi Sad School of Journalism</a></b> (FNT, Serbia) and <b><a href="http://Maldita.es" target="_blank">Fundación Maldita.es</a></b> (Spain), has launched its second educational escape room: <b><a href="https://endgameproject.github.io/ECHO/">"ECHO"</a></b>. The game is accompanied by <b><a href="https://docs.google.com/document/d/10tXAN9rPVgwpRZKBk67vHGyvjAvUeG-G/export?format=pdf" target="_blank">a teacher's guide</a></b> so that educators can use it directly in their classrooms. This is the second of three escape rooms the project will develop between 2025 and 2027.</p>
+<br/>
+<h2>A game to stop the flood of misinformation</h2>
+
+<p>In "ECHO", the player takes on the role of a moderator on the ECHO social media network, which is being flooded with misinformation. In around 20 minutes, players must identify bot accounts, AI-generated content, and misuses of artificial intelligence before false narratives spread further through the platform.</p>
+
+<p>The shorter format makes ECHO especially well suited for use at events, workshops, and public spaces, as well as in classrooms. The escape room addresses one of the most pressing media literacy challenges facing young people today: recognising the role of AI in the creation and spread of disinformation.</p>
+<br/>
+<h2>Teaching materials for the classroom</h2>
+
+<p>ECHO is accompanied by <b><a href="https://docs.google.com/document/d/10tXAN9rPVgwpRZKBk67vHGyvjAvUeG-G/export?format=pdf" target="_blank">a didactic guide</a></b> providing context on AI-generated disinformation, along with activities to carry out before and after playing the game, designed to deepen critical thinking and media literacy skills. Any teacher can now access these materials and integrate ECHO into their lessons.</p>
+
+<p>The game is available on <b><a href="https://endgameproject.github.io/ECHO/">the project's website</a></b> in multiple languages so it can be played virtually, helping increase the escape room's impact across Europe.</p>
+    `,
+    htmlbody_sr: `
+<p>Evropski projekat <b>ENDGAME</b> (Escaping New Disinformation through Gamified Cross-Border Media Literacy Education), koji predvodi <b><a href="https://www.uef.fi/fi" target="_blank">Univerzitet Istočne Finske (UEF, Finska)</a></b>, a u kojem učestvuju <b><a href="https://www.upm.es/" target="_blank">Tehnički univerzitet u Madridu (UPM, Španija)</a></b>, <b><a href="https://www.metropolitan.ac.rs/en/about-metropolitan-university/" target="_blank">Metropolitan univerzitet Beograd (BMU, Srbija)</a></b>, <b><a href="https://faktabaari.fi/in-english/" target="_blank">Faktabaari</a></b> (Finska), <b><a href="https://novinarska-skola.org.rs/" target="_blank">Novosadska novinarska škola (FNT, Srbija)</a></b> i <b><a href="http://Maldita.es" target="_blank">Fundación Maldita.es</a></b> (Španija), lansirao je svoju drugu edukativnu escape room igru: <b><a href="https://endgameproject.github.io/ECHO/">"ECHO"</a></b>. Uz igru dolazi i <b><a href="https://docs.google.com/document/d/1K3T1eMKjAh_T394RzMdjjwaHXyYf3g5y/export?format=pdf" target="_blank">vodič za nastavnike</a></b> koji im omogućava da je koriste direktno u učionicama. Ovo je druga od tri escape room igre koje projekat planira da razvije između 2025. i 2027. godine.</p>
+<br/>
+<h2>Igra za zaustavljanje poplave dezinformacija</h2>
+
+<p>U igri "ECHO", igrač preuzima ulogu moderatora na društvenoj mreži ECHO, koja je preplavljena dezinformacijama. Za oko 20 minuta, igrači moraju identifikovati bot naloge, sadržaj generisan veštačkom inteligencijom i zloupotrebe AI pre nego što lažne priče dalje šire platformom.</p>
+
+<p>Kraći format čini ECHO posebno pogodnim za upotrebu na događajima, radionicama i u javnim prostorima, kao i u učionicama. Escape room bavi se jednim od najhitnijih izazova medijske pismenosti s kojima se mladi danas suočavaju: prepoznavanjem uloge AI u stvaranju i širenju dezinformacija.</p>
+<br/>
+<h2>Nastavni materijali za učionicu</h2>
+
+<p>ECHO je praćen <b><a href="https://docs.google.com/document/d/1K3T1eMKjAh_T394RzMdjjwaHXyYf3g5y/export?format=pdf" target="_blank">didaktičkim vodičem</a></b> koji pruža kontekst o dezinformacijama generisanim veštačkom inteligencijom, zajedno sa aktivnostima pre i posle igranja osmišljenim za produbljivanje veština kritičkog razmišljanja i medijske pismenosti. Svaki nastavnik sada može pristupiti ovim materijalima i integrisati ECHO u svoje časove.</p>
+
+<p>Igra je dostupna na <b><a href="https://endgameproject.github.io/ECHO/">veb-sajtu projekta</a></b> na više jezika kako bi se mogla igrati virtuelno, čime se povećava njen uticaj širom Evrope.</p>
+    `,
+    htmlbody_es: `
+<p>El proyecto europeo <b>ENDGAME</b> (Escaping New Disinformation through Gamified Cross-Border Media Literacy Education), liderado por la <b><a href="https://www.uef.fi/fi" target="_blank">University of Eastern Finland (UEF, Finlandia)</a></b> y formado por la <b><a href="https://www.upm.es/" target="_blank">Universidad Politécnica de Madrid (UPM, España)</a></b>, la <b><a href="https://www.metropolitan.ac.rs/en/about-metropolitan-university/" target="_blank">Universidad Metropolitana de Belgrado (BMU, Serbia)</a></b>, <b><a href="https://faktabaari.fi/in-english/" target="_blank">Faktabaari</a></b> (Finlandia), la <b><a href="https://novinarska-skola.org.rs/" target="_blank">Escuela de Periodismo de Novi Sad (FNT, Serbia)</a></b> y <b><a href="http://Maldita.es" target="_blank">Fundación Maldita.es</a></b> (España), ha lanzado su segundo escape room educativo: <b><a href="https://endgameproject.github.io/ECHO/">"ECHO"</a></b>. El juego se acompaña de <b><a href="https://docs.google.com/document/d/1PLDH2_rYHl3B7F3zOVdGRfWVNcF7Q7yi/export?format=pdf" target="_blank">una guía para docentes</a></b> para que cualquier educador pueda utilizarlo directamente en el aula. Este es el segundo de los tres escape rooms que el proyecto desarrollará entre 2025 y 2027.</p>
+<br/>
+<h2>Un juego para detener la avalancha de desinformación</h2>
+
+<p>En "ECHO", el jugador asume el rol de moderador de la red social ECHO, que está siendo inundada por desinformación. En aproximadamente 20 minutos, los jugadores deben identificar cuentas bot, contenido generado por IA y usos indebidos de la inteligencia artificial antes de que las narrativas falsas se sigan propagando por la plataforma.</p>
+
+<p>El formato más corto hace que ECHO sea especialmente adecuado para su uso en eventos, talleres y espacios públicos, además de en el aula. El escape room aborda uno de los retos de alfabetización mediática más urgentes para los jóvenes de hoy: reconocer el papel de la IA en la creación y difusión de la desinformación.</p>
+<br/>
+<h2>Materiales didácticos para el aula</h2>
+
+<p>ECHO se acompaña de <b><a href="https://docs.google.com/document/d/1PLDH2_rYHl3B7F3zOVdGRfWVNcF7Q7yi/export?format=pdf" target="_blank">una guía didáctica</a></b> con contexto sobre la desinformación generada por IA y actividades para antes y después del juego, diseñadas para profundizar en las competencias de pensamiento crítico y alfabetización mediática. Cualquier docente puede acceder ahora a estos materiales e integrar ECHO en sus clases.</p>
+
+<p>El juego está disponible en <b><a href="https://endgameproject.github.io/ECHO/">la página del proyecto</a></b> en varios idiomas para que se pueda jugar de manera virtual, aumentando el impacto del escape room en toda Europa.</p>
+    `,
+    htmlbody_fi: `
+<p>Eurooppalainen hanke <b>ENDGAME</b> (Escaping New Disinformation through Gamified Cross-Border Media Literacy Education), jota koordinoi <b><a href="https://www.uef.fi/fi" target="_blank">Itä-Suomen yliopisto (UEF, Suomi)</a></b> ja johon osallistuvat <b><a href="https://www.upm.es/" target="_blank">Madridin teknillinen yliopisto (UPM, Espanja)</a></b>, <b><a href="https://www.metropolitan.ac.rs/en/about-metropolitan-university/" target="_blank">Belgradin metropoliamakorkeakoulu (BMU, Serbia)</a></b>, <b><a href="https://faktabaari.fi/in-english/" target="_blank">Faktabaari</a></b> (Suomi), <b><a href="https://novinarska-skola.org.rs/" target="_blank">Novi Sadin journalismikoulu (FNT, Serbia)</a></b> ja <b><a href="http://Maldita.es" target="_blank">Fundación Maldita.es</a></b> (Espanja), on julkaissut toisen opetuksellisen pakopelinsä: <b><a href="https://endgameproject.github.io/ECHO/">"ECHO"</a></b>. Pelin mukana tulee <b><a href="https://docs.google.com/document/d/1H5o44V-bTfQyyESSkgTDPV1M7TtjNYE_/export?format=pdf" target="_blank">opettajan opas</a></b>, jonka avulla opettajat voivat käyttää peliä suoraan luokkahuoneessa. Tämä on toinen kolmesta pakopelistä, jotka hanke kehittää vuosina 2025–2027.</p>
+<br/>
+<h2>Peli disinformaatiotulvan pysäyttämiseksi</h2>
+
+<p>"ECHO":ssa pelaaja ottaa moderaattorin roolin ECHO-sosiaalisen median alustalla, jota tulvii disinformaatio. Noin 20 minuutissa pelaajien on tunnistettava bottitilit, tekoälyn tuottama sisältö ja tekoälyn väärinkäyttö ennen kuin vääristelevät narratiivit leviävät entisestään alustalla.</p>
+
+<p>Lyhyempi formaatti tekee ECHOsta erityisen sopivan tapahtumiin, työpajoihin ja julkisiin tiloihin sekä luokkahuonekäyttöön. Pakopeli käsittelee yhtä kiireellisimmistä nuorten medialukutaidon haasteista tänä päivänä: tekoälyn roolin tunnistaminen disinformaation luomisessa ja levittämisessä.</p>
+<br/>
+<h2>Opetusmateriaalit luokkahuoneeseen</h2>
+
+<p>ECHOn mukana tulee <b><a href="https://docs.google.com/document/d/1H5o44V-bTfQyyESSkgTDPV1M7TtjNYE_/export?format=pdf" target="_blank">didaktinen opas</a></b>, joka tarjoaa kontekstin tekoälyn tuottamasta disinformaatiosta sekä ennen ja jälkeen pelin tehtäviä kriittisen ajattelun ja medialukutaidon syventämiseksi. Kuka tahansa opettaja voi nyt käyttää näitä materiaaleja ja integroida ECHOn oppitunteihinsa.</p>
+
+<p>Peli on saatavilla <b><a href="https://endgameproject.github.io/ECHO/">hankkeen verkkosivuilla</a></b> useilla kielillä, jotta sitä voidaan pelata virtuaalisesti ja lisätä pelin vaikutusta koko Euroopassa.</p>
+    `,
+    externalLinkJoin: "",
+    externalLinkPlay: "https://endgameproject.github.io/ECHO/",
+    keywords: ["Event Launch", "Educational Escape Room", "AI-generated Disinformation", "Bot Accounts"],
+    socialLinks: [
+      {
+        name: "Instagram",
+        icon: `InstagramIcon`,
+        url: "https://www.instagram.com/endgame.project",
+        handle: "endgame.project",
+      },
+      {
+        name: "X (Twitter)",
+        icon: `TwitterIcon`,
+        url: "https://twitter.com/endgame_project",
+        handle: "endgame_project",
+      },
+      {
+        name: "TikTok",
+        icon: `TikTokIcon`,
+        url: "https://www.tiktok.com/@endgame.project",
+        handle: "@endgame.project",
+      },
+      {
+        name: "LinkedIn",
+        icon: `LinkedInIcon`,
+        url: "https://www.linkedin.com/company/end-game-project-477149364",
+        handle: "end-game-project",
+      },
+    ],
+  },
+  {
     eventname: "PressNote011225",
     category: "",
     country: "International",
@@ -71,7 +182,7 @@ export const events = [
     // other
     externalLinkJoin: "",
     externalLinkPlay: "https://play.unity.com/en/games/3e199a2b-03aa-44c1-9ecd-5f9a308280cc/webgl-builds",
-    keywords: ["Event Launch"],
+    keywords: ["Event Launch", "Educational Escape Room", "Misinformation about Food and Health", "Media Literacy"],
     socialLinks: [
       {
         name: "Instagram",
