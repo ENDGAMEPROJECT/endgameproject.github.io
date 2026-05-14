@@ -187,7 +187,7 @@ const NewsFull = ({ eventname }) => {
         description={description}
         keywords={Array.isArray(keywords) ? keywords.join(", ") : ""}
       />
-      <div className="flex flex-col gap-8 items-center standard_margin">
+      <div className="flex flex-col gap-2 items-center standard_margin">
       {/* <Badge variant="primary" type="activity" size="xl">
         {categoryFormatted}
       </Badge> */}
@@ -231,8 +231,7 @@ const NewsFull = ({ eventname }) => {
         {description}
       </Heading>
 
-      <div className="news" dangerouslySetInnerHTML={{ __html: eventBody }} />
-
+<div className="news w-full md:px-[2%] lg:px-[5%] xl:px-[10%] 2xl:px-[12.5%] 3xl:px-[16%] [&_h2]:!mt-2" dangerouslySetInnerHTML={{ __html: eventBody }} />
       {imagePosition === "bottom" && (
         <Image
           className={"w-full max-w-"}
