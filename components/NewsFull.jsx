@@ -242,7 +242,7 @@ const NewsFull = ({ eventname }) => {
       )}
 
       {externalLinkPlay && (
-      <div>
+      <div className="w-full md:px-[2%] lg:px-[5%] xl:px-[10%] 2xl:px-[12.5%] 3xl:px-[16%]">
           {isMobile ? (
             // móvil
             <div className=" flex justify-center items-center border border-primary700 bg-background100 group cursor-not-allowed ">
