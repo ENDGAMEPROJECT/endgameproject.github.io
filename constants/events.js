@@ -9,7 +9,7 @@ export const events = [
     title_en: "ENDGAME launches its second educational escape room to teach how to detect AI-generated disinformation and climate misinformation",
     title_sr: "ENDGAME lansira svoju drugu edukativnu escape room igru za učenje prepoznavanja dezinformacija generisanih veštačkom inteligencijom i dezinformacija o klimatskim promenama",
     title_es: "ENDGAME lanza su segundo escape room educativo para enseñar a detectar la desinformación generada por IA y la desinformación climática",
-    title_fi: "ENDGAME lanseeraa toisen opetuksellisen pakohuonepelinsä, jossa opetetaan tunnistamaan tekoälyn tuottamaa disinformaatiota ja ilmastoa koskevia väärätietoja",
+    title_fi: "ENDGAME lanseeraa toisen opetuksellisen pakohuonepelinsä, jossa opetetaan tunnistamaan tekoälyn tuottamaa disinformaatiota ja ilmastoa koskevia vääriä tietoja",
     description_en: "",    
     description_sr: "",
     description_es: "",
