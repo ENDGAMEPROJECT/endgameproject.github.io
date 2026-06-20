@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, copyFileSync } from 'fs';
-import { join } from 'path';
+import path from 'path';
 import { fileURLToPath } from 'url';
 import { metadataByPage } from './constants/metadata.js';
 import {
@@ -47,7 +47,7 @@ export function injectMetaTags(html, metadata, canonicalUrl, schema) {
 
   const { title, description, keywords } = metadata;
   const schemaTag = schema
-    ? `<script type="application/ld+json">${JSON.stringify(schema)}</script>`
+    ? `<script type="application/ld+json">${JSON.stringify(schema).replace(/<\/script>/gi, '<\\/script>')}</script>`
     : '';
 
   const tags = [
@@ -72,10 +72,11 @@ export function injectMetaTags(html, metadata, canonicalUrl, schema) {
     schemaTag,
   ].join('');
 
-  return html.replace(
+  const result = html.replace(
     /(<meta charSet="utf-8"\/>|<meta charset="utf-8"\/>)/i,
     `$1${tags}`
   );
+  return result;
 }
 
 function shouldSkip(rel) {
@@ -90,7 +91,7 @@ function shouldSkip(rel) {
 
 function walkHtml(dir, results = []) {
   for (const entry of readdirSync(dir)) {
-    const full = join(dir, entry);
+    const full = path.join(dir, entry);
     if (statSync(full).isDirectory()) {
       walkHtml(full, results);
     } else if (entry.endsWith('.html')) {
@@ -101,14 +102,16 @@ function walkHtml(dir, results = []) {
 }
 
 async function main() {
-  const ogSrc = 'public/assets/images/bannerBg-placeholder.png';
-  const ogDest = 'docs/assets/images/og-image.png';
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  const docsDir = path.join(__dirname, 'docs');
+  const ogSrc = path.join(__dirname, 'public/assets/images/bannerBg-placeholder.png');
+  const ogDest = path.join(__dirname, 'docs/assets/images/og-image.png');
   if (!existsSync(ogDest)) {
     copyFileSync(ogSrc, ogDest);
     console.log(`Copied OG image → ${ogDest}`);
   }
 
-  const files = walkHtml('docs');
+  const files = walkHtml(docsDir);
   let count = 0;
 
   for (const file of files) {
@@ -126,6 +129,8 @@ async function main() {
       writeFileSync(file, injected, 'utf8');
       console.log(`Injected: ${rel}`);
       count++;
+    } else if (!html.includes('<title>')) {
+      console.warn(`Warning: no charset anchor found in ${rel}, skipping`);
     }
   }
 

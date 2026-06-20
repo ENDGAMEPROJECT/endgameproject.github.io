@@ -2,12 +2,13 @@
   "name": "GING-web",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build && node inject-seo.mjs && touch docs/.nojekyll",
     "start": "next start",
     "lint": "next lint",
-    "publications": "node transformPublications.js",
+    "publications": "node transformPublications.cjs",
     "deploy": "gh-pages -d docs"
   },
   "dependencies": {
