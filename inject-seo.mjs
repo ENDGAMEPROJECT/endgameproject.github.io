@@ -31,11 +31,11 @@ export function getPageInfo(filePath) {
   if (rel === 'escaperooms.html') return { key: 'escaperooms', canonical: `${BASE_URL}/escaperooms` };
 
   if (rel.startsWith('escaperooms/')) {
-    const slug = rel.replace('escaperooms/', '').replace('.html', '');
+    const slug = rel.replace('escaperooms/', '').replace(/\.html$/, '');
     return { key: 'escaperooms', canonical: `${BASE_URL}/escaperooms/${slug}` };
   }
   if (rel.startsWith('events/')) {
-    const slug = rel.replace('events/', '').replace('.html', '');
+    const slug = rel.replace('events/', '').replace(/\.html$/, '');
     return { key: 'events', canonical: `${BASE_URL}/events/${slug}` };
   }
 
@@ -82,6 +82,7 @@ function shouldSkip(rel) {
   return (
     rel.startsWith('superpowers/') ||
     rel.startsWith('play/') ||
+    rel.endsWith('/play.html') ||
     rel.startsWith('google') ||
     rel === '404.html'
   );
