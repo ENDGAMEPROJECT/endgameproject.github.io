@@ -63,7 +63,7 @@ export const eventsPageSchema = {
 
 export const escapeRoomsPageSchema = {
   '@context': 'https://schema.org',
-  '@type': 'EducationalActivityBase',
+  '@type': 'Course',
   'name': 'ENDGAME Escape Rooms',
   'url': 'https://endgameproject.github.io/escaperooms',
   'description': 'Experience interactive educational escape rooms designed to teach critical thinking',
