@@ -34,7 +34,7 @@ export const en = {
         button: "See all activity",
       },
       research: {
-        title: "Impact and resaerch",
+        title: "Impact and research",
         button: "See all publications",
       },
     },
