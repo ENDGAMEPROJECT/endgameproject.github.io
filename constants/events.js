@@ -1,5 +1,54 @@
 export const events = [
   {
+    eventname: "WebinarECHOTeachers",
+    category: "Webinar",
+    country: "Spain",
+    type: "Event",
+    date: "09/30/26",
+    hour: "17:30 UTC+2",
+    title_en:
+      "Discover ECHO: the escape room to teach how to detect AI-generated disinformation",
+    title_es:
+      "Descubre ECHO: el escape room para enseñar a detectar la desinformación generada por IA",
+    description_en:
+      "If you are a teacher or work with young people and you are concerned about how disinformation affects them, we invite you to discover the escape room ECHO in a one-hour online session.",
+    description_es:
+      "Si eres docente o trabajas con personas jóvenes y te preocupa cómo les afecta la desinformación, te invitamos a descubrir el escape room ECHO en una sesión online de una hora.",
+    htmlbody_en: `
+<br/><p>If you are a teacher or work with young people and you are concerned about how disinformation affects them, we invite you to discover the escape room <b>ECHO</b> 🧠 🤖. In a one-hour session, we will show you how to use this resource in the classroom or in your educational activities, one where students will learn by playing to identify AI-generated content, detect automated accounts and understand how these systems work while developing their critical thinking. 📱 🔎</p>
+<br/>
+<p>
+📅 30 September 2026<br/>
+🕠 17:30 h (CEST)<br/>
+💻 Online session<br/>
+Registration at: <a href="https://bit.ly/4pMjPvj" target="_blank" rel="noopener noreferrer">https://bit.ly/4pMjPvj</a>
+</p>
+<br/>
+<p>These materials are part of the European project <b>ENDGAME</b>.</p>
+    `,
+    htmlbody_es: `
+<br/>
+<p>Si eres docente o trabajas con personas jóvenes y te preocupa cómo les afecta la desinformación, te invitamos a descubrir el escape room <b>ECHO</b> 🧠 🤖. En una sesión de una hora, te enseñaremos a utilizar este recurso en el aula o en tus actividades educativas con el que el alumnado aprenderá jugando a identificar contenidos generados con IA, detectar cuentas automatizadas y comprender cómo funcionan estos sistemas mientras desarrollan su pensamiento crítico. 📱 🔎</p>
+<br/>
+<p>
+📅 30 de septiembre de 2026<br/>
+🕠 17:30 h (CEST)<br/>
+💻 Sesión online<br/>
+Inscripciones en: <a href="https://bit.ly/4pMjPvj" target="_blank" rel="noopener noreferrer">https://bit.ly/4pMjPvj</a>
+</p>
+<br/>
+<p>Estos materiales forman parte del proyecto europeo <b>ENDGAME</b>.</p>
+    `,
+    externalLinkJoin: "https://bit.ly/4pMjPvj",
+    keywords: [
+      "Webinar",
+      "Escape room",
+      "ECHO",
+      "Media literacy",
+      "Artificial intelligence",
+    ],
+  },
+  {
     eventname: "PressNote140526",
     category: "",
     country: "International",

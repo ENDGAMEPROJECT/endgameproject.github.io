@@ -56,6 +56,10 @@ const EventFull = ({ eventname }) => {
     description_es,
     description_sr,
     description_fi,
+    htmlbody_en,
+    htmlbody_es,
+    htmlbody_sr,
+    htmlbody_fi,
     date,
     hour,
     category,
@@ -83,12 +87,22 @@ const EventFull = ({ eventname }) => {
   if (!description_fi) {
     description_fi = description_en;
   }
+  if (!htmlbody_es) {
+    htmlbody_es = htmlbody_en;
+  }
+  if (!htmlbody_sr) {
+    htmlbody_sr = htmlbody_en;
+  }
+  if (!htmlbody_fi) {
+    htmlbody_fi = htmlbody_en;
+  }
 
   const currentLang = i18n.language;
 
   //set title depending on the language, if the language is not supported, set it to english
   const title = currentLang === "es" ? title_es : currentLang === "sr" ? title_sr : currentLang === "fi" ? title_fi : title_en;
   const description = currentLang === "es" ? description_es : currentLang === "sr" ? description_sr : currentLang === "fi" ? description_fi : description_en;
+  const eventBody = currentLang === "es" ? htmlbody_es : currentLang === "sr" ? htmlbody_sr : currentLang === "fi" ? htmlbody_fi : htmlbody_en;
 
   const dateFormatted = new Date(date).toLocaleDateString(currentLang, {
     year: "numeric",
@@ -106,7 +120,7 @@ const EventFull = ({ eventname }) => {
         description={description}
         keywords={Array.isArray(keywords) ? keywords.join(", ") : ""}
       />
-      <div className="flex flex-col gap-8 items-center">
+      <div className="flex flex-col gap-2 items-center standard_margin">
       <Badge variant="primary" type="activity" size="xl">
         {categoryFormatted}
       </Badge>
@@ -133,9 +147,16 @@ const EventFull = ({ eventname }) => {
           ))}
         </div>
       )}
-      <Text className="text-base" type="pre">
-        {description}
-      </Text>
+      {eventBody ? (
+        <div
+          className="events w-full md:px-[2%] lg:px-[5%] xl:px-[10%] 2xl:px-[12.5%] 3xl:px-[16%]"
+          dangerouslySetInnerHTML={{ __html: eventBody }}
+        />
+      ) : (
+        <Text className="text-base" type="pre">
+          {description}
+        </Text>
+      )}
 
       <Button
         asChild

@@ -25,6 +25,51 @@ export const publications = [
       "misinformation",
     ],
   },{
+    publicationname: "del310826",
+    category: "Deliverable",
+    type: "Report",
+    date: "08/31/26",
+    country: "International", // international o language: english??
+    authors:
+      "Maldita.es, Universidad Politécnica de Madrid (Spain); University of Eastern Finland, Faktabaari (Finland); Belgrade Metropolitan University (Serbia)",
+    title_en: "Set of materials related to media literacy contextualized to each region for escape room 3",
+    subtitle_en: "WP2. Identification and creation of contextualized media literacy scenarios",
+    title_es: "Set of materials related to media literacy contextualized to each region for escape room 3",
+    subtitle_es: "WP2. Identification and creation of contextualized media literacy scenarios",
+    title_sr: "Set of materials related to media literacy contextualized to each region for escape room 3",
+    subtitle_sr: "WP2. Identification and creation of contextualized media literacy scenarios",
+    title_fi: "Set of materials related to media literacy contextualized to each region for escape room 3",
+    subtitle_fi: "WP2. Identification and creation of contextualized media literacy scenarios",
+    downloadLinkJoin: "/ENDGAME_del310826.pdf",
+    keywords: [
+      "Materials for escape room 3",
+      "Media literacy",
+      "Contextualized scenarios",
+    ]
+  },{
+    publicationname: "del310126",
+    category: "Deliverable",
+    type: "Report",
+    date: "01/31/26",
+    country: "International", // international o language: english??
+    authors:
+      "Maldita.es, Universidad Politécnica de Madrid (Spain); University of Eastern Finland, Faktabaari (Finland); Belgrade Metropolitan University (Serbia)",
+    title_en: "Set of materials related to media literacy contextualized to each region for escape room 2",
+    subtitle_en: "WP2. Identification and creation of contextualized media literacy scenarios",
+    title_es: "Set of materials related to media literacy contextualized to each region for escape room 2",
+    subtitle_es: "WP2. Identification and creation of contextualized media literacy scenarios",
+    title_sr: "Set of materials related to media literacy contextualized to each region for escape room 2",
+    subtitle_sr: "WP2. Identification and creation of contextualized media literacy scenarios",
+    title_fi: "Set of materials related to media literacy contextualized to each region for escape room 2",
+    subtitle_fi: "WP2. Identification and creation of contextualized media literacy scenarios",
+    downloadLinkJoin: "/ENDGAME_del310126.pdf",
+    keywords: [
+      "Materials for escape room 2",
+      "Media literacy",
+      "Contextualized scenarios",
+    ]
+  },  
+  {
     publicationname: "dnr052725",
     category: "Deliverable",
     type: "Report",
