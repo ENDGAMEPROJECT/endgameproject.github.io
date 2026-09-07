@@ -7,37 +7,52 @@ export const events = [
     date: "09/30/26",
     hour: "17:30 UTC+2",
     title_en:
-      "Discover ECHO: the escape room to teach how to detect AI-generated disinformation",
+      "Online information session on the escape room “ECHO”: learn to spot AI on social media",
     title_es:
-      "Descubre ECHO: el escape room para enseñar a detectar la desinformación generada por IA",
+      "Sesión online informativa de la escape room “ECHO”: aprende a detectar la IA en redes sociales",
     description_en:
       "If you are a teacher or work with young people and you are concerned about how disinformation affects them, we invite you to discover the escape room ECHO in a one-hour online session.",
     description_es:
       "Si eres docente o trabajas con personas jóvenes y te preocupa cómo les afecta la desinformación, te invitamos a descubrir el escape room ECHO en una sesión online de una hora.",
     htmlbody_en: `
-<br/><p>If you are a teacher or work with young people and you are concerned about how disinformation affects them, we invite you to discover the escape room <b>ECHO</b> 🧠 🤖. In a one-hour session, we will show you how to use this resource in the classroom or in your educational activities, one where students will learn by playing to identify AI-generated content, detect automated accounts and understand how these systems work while developing their critical thinking. 📱 🔎</p>
 <br/>
+<p>Do you work with young people and are you interested in encouraging a critical and responsible use of artificial intelligence? On 30 September at 17:30 h we invite you to take part in a free online session where you will get to know <a href="https://endgameproject.github.io/ECHO/" target="_blank" rel="noopener noreferrer"><b>“ECHO”</b></a>, a new educational escape room developed by the European project <a href="https://endgameproject.github.io/" target="_blank" rel="noopener noreferrer"><b>ENDGAME</b></a>.</p>
+<br/>
+<p>Over the course of an hour, you will learn how to use this resource in the classroom or in other educational settings so that young people can discover how to identify AI-generated content, understand how these systems work and develop skills to detect disinformation on social media. The session will include a hands-on demonstration of the game and of the accompanying teaching guide, as well as different activities to work with students on issues such as climate disinformation, the importance of consulting reliable sources, the role of emotions in the spread of misleading content or the challenges of content moderation on digital platforms.</p>
+<br/>
+<p>Through the escape room, participants take on the role of content moderators on a fictional social network and must identify automated accounts, detect AI-generated content and flag potentially manipulated or misleading content.</p>
+<br/>
+<p><b>Practical information</b></p>
 <p>
-📅 30 September 2026<br/>
-🕠 17:30 h (CEST)<br/>
-💻 Online session<br/>
+Wednesday, 30 September 2026<br/>
+17:30 h (CEST)<br/>
+Format: Online<br/>
 Registration at: <a href="https://bit.ly/4pMjPvj" target="_blank" rel="noopener noreferrer">https://bit.ly/4pMjPvj</a>
 </p>
 <br/>
-<p>These materials are part of the European project <b>ENDGAME</b>.</p>
+<p>The session is aimed at secondary school teachers, youth workers, educators and any professional who works with young people and wants to incorporate new tools to address media literacy and artificial intelligence in their activities.</p>
+<br/>
+<p><a href="https://endgameproject.github.io/ECHO/" target="_blank" rel="noopener noreferrer"><b>“ECHO”</b></a> is the second of the three educational escape rooms that the European project <a href="https://endgameproject.github.io/" target="_blank" rel="noopener noreferrer"><b>ENDGAME</b></a> is developing to promote media literacy and critical thinking among young people. The session, organised by Fundación Maldita.es, is an opportunity to get to know this resource and discover how to include it in educational and recreational activities with young people.</p>
     `,
     htmlbody_es: `
 <br/>
-<p>Si eres docente o trabajas con personas jóvenes y te preocupa cómo les afecta la desinformación, te invitamos a descubrir el escape room <b>ECHO</b> 🧠 🤖. En una sesión de una hora, te enseñaremos a utilizar este recurso en el aula o en tus actividades educativas con el que el alumnado aprenderá jugando a identificar contenidos generados con IA, detectar cuentas automatizadas y comprender cómo funcionan estos sistemas mientras desarrollan su pensamiento crítico. 📱 🔎</p>
+<p>¿Trabajas con jóvenes y te interesa fomentar un uso crítico y responsable de la inteligencia artificial? El próximo 30 de septiembre a las 17:30 h te invitamos a participar en una sesión online gratuita en la que conocerás <a href="https://endgameproject.github.io/ECHO/" target="_blank" rel="noopener noreferrer"><b>“ECHO”</b></a>, un nuevo escape room educativo desarrollado por el proyecto europeo <a href="https://endgameproject.github.io/" target="_blank" rel="noopener noreferrer"><b>ENDGAME</b></a>.</p>
 <br/>
+<p>Durante una hora, conocerás cómo utilizar este recurso en el aula o en otros espacios educativos para que los jóvenes descubran cómo identificar contenidos generados con inteligencia artificial, comprender cómo funcionan estos sistemas y desarrollar habilidades para detectar la desinformación en redes sociales. La sesión incluirá una demostración práctica del juego y de la guía didáctica que lo acompaña, así como diferentes dinámicas para trabajar con el alumnado cuestiones como la desinformación climática, la importancia de consultar fuentes fiables, el papel de las emociones en la difusión de contenidos engañosos o los retos de la moderación de contenido en plataformas digitales.</p>
+<br/>
+<p>A través del escape room, los participantes asumen el papel de moderadores de contenido en una red social ficticia y deberán identificar cuentas automatizadas, detectar contenido generado mediante inteligencia artificial y señalar contenido potencialmente manipulado o engañoso.</p>
+<br/>
+<p><b>Información práctica</b></p>
 <p>
-📅 30 de septiembre de 2026<br/>
-🕠 17:30 h (CEST)<br/>
-💻 Sesión online<br/>
+Miércoles, 30 de septiembre de 2026<br/>
+17:30 h (CEST)<br/>
+Modalidad: Online<br/>
 Inscripciones en: <a href="https://bit.ly/4pMjPvj" target="_blank" rel="noopener noreferrer">https://bit.ly/4pMjPvj</a>
 </p>
 <br/>
-<p>Estos materiales forman parte del proyecto europeo <b>ENDGAME</b>.</p>
+<p>La sesión está dirigida a docentes de educación secundaria, técnicos y técnicas de juventud, educadores y cualquier profesional que trabaje con personas jóvenes y quiera incorporar nuevas herramientas para abordar la educación mediática y la inteligencia artificial en sus actividades.</p>
+<br/>
+<p><a href="https://endgameproject.github.io/ECHO/" target="_blank" rel="noopener noreferrer"><b>“ECHO”</b></a> es el segundo de los tres escape rooms educativos que el proyecto europeo <a href="https://endgameproject.github.io/" target="_blank" rel="noopener noreferrer"><b>ENDGAME</b></a> desarrolla para promover la alfabetización mediática y el pensamiento crítico entre los jóvenes. La sesión, organizada por Fundación Maldita.es, ofrece una oportunidad para conocer este recurso y descubrir cómo incorporarlo a actividades educativas y lúdicas con jóvenes.</p><br/>
     `,
     externalLinkJoin: "https://bit.ly/4pMjPvj",
     keywords: [
