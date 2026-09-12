@@ -70,6 +70,29 @@ export const publications = [
     ]
   },  
   {
+    publicationname: "del300625",
+    category: "Deliverable",
+    type: "Report",
+    date: "06/30/25",
+    country: "International", // international o language: english??
+    authors:
+      "Maldita.es, Universidad Politécnica de Madrid (Spain); University of Eastern Finland, Faktabaari (Finland); Belgrade Metropolitan University (Serbia)",
+    title_en: "Set of materials contextualized for escape room 1",
+    subtitle_en: "WP2. Identification and creation of contextualized media literacy scenarios",
+    title_es: "Set of materials contextualized for escape room 1",
+    subtitle_es: "WP2. Identification and creation of contextualized media literacy scenarios",
+    title_sr: "Set of materials contextualized for escape room 1",
+    subtitle_sr: "WP2. Identification and creation of contextualized media literacy scenarios",
+    title_fi: "Set of materials contextualized for escape room 1",
+    subtitle_fi: "WP2. Identification and creation of contextualized media literacy scenarios",
+    downloadLinkJoin: "/ENDGAME_del300625.pdf",
+    keywords: [
+      "Materials for escape room 1",
+      "Media literacy",
+      "Contextualized scenarios",
+    ]
+  },
+  {
     publicationname: "dnr052725",
     category: "Deliverable",
     type: "Report",

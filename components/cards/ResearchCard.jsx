@@ -176,7 +176,7 @@ const ResearchCard = ({ publication }) => {
             >
               <Link download={downloadLinkJoin}
                 rel="noopener noreferrer"
-                href={`/documents/${downloadLinkJoin}`}
+                href={`/documents${downloadLinkJoin}`}
               >
                 {t(
                   publication.type === "publication"
