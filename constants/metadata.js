@@ -89,6 +89,18 @@ export const metadataByPage = {
       keywords: 'radionice, događaji, participativni dizajn, obuka digitalne pismenosti, obrazovne aktivnosti',
     }
   },
+  simo: {
+    en: {
+      title: 'ENDGAME at SIMO Educación 2026 - Educational Escape Rooms',
+      description: 'Play the three ENDGAME educational escape rooms on media literacy, download their teacher guides and join our free live stream of LASTCHANCE.',
+      keywords: 'SIMO Educación, escape room, media literacy, teacher guide, scams, disinformation, educational games',
+    },
+    es: {
+      title: 'ENDGAME en SIMO Educación 2026 - Escape Rooms Educativas',
+      description: 'Juega a las tres escape rooms educativas de ENDGAME sobre alfabetización mediática, descarga sus guías didácticas y apúntate a nuestro streaming gratuito de LASTCHANCE.',
+      keywords: 'SIMO Educación, escape room, alfabetización mediática, guía didáctica, estafas, desinformación, juegos educativos',
+    },
+  },
   escaperooms: {
     en: {
       title: 'Escape Rooms - Interactive Learning Experiences',

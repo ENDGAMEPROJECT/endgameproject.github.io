@@ -76,7 +76,16 @@ const EventCard = ({ event }) => {
         <CardContent className="gap-1 h-full justify-start">
           <CardTitle level="h5" className="text-pretty">
             {/* flex: grow */}
-            {title_translation}
+            {eventname ? (
+              <Link
+                href={`/events/${eventname}`}
+                className="hover:text-accent-300 hover:underline"
+              >
+                {title_translation}
+              </Link>
+            ) : (
+              title_translation
+            )}
           </CardTitle>
           {date?.[0] && (
             <div className="flex">

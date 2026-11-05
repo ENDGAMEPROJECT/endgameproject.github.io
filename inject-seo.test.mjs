@@ -50,6 +50,12 @@ assert.deepStrictEqual(
   { key: 'events', canonical: 'https://endgameproject.github.io/events/PressNote011225' }
 );
 
+// Test 6b: simo page
+assert.deepStrictEqual(
+  getPageInfo('docs/simo.html'),
+  { key: 'simo', canonical: 'https://endgameproject.github.io/simo' }
+);
+
 // Test 7: unknown path falls back to home
 assert.deepStrictEqual(
   getPageInfo('docs/unknown/page.html'),

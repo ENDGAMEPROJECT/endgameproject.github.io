@@ -102,7 +102,27 @@ const ResearchCard = ({ publication }) => {
       <CardBody className="h-full justify-start">
         <CardContent className="gap-1 h-full justify-start">
           <CardTitle level="h5" className="text-pretty">
-            {title_translation}
+            {publicationname && externalLinkJoin ? (
+              <Link
+                rel="noopener noreferrer"
+                href={externalLinkJoin}
+                target="_blank"
+                className="hover:text-secondary300 hover:underline"
+              >
+                {title_translation}
+              </Link>
+            ) : publicationname && downloadLinkJoin ? (
+              <Link
+                download={downloadLinkJoin}
+                rel="noopener noreferrer"
+                href={`/documents${downloadLinkJoin}`}
+                className="hover:text-secondary300 hover:underline"
+              >
+                {title_translation}
+              </Link>
+            ) : (
+              title_translation
+            )}
           </CardTitle>
 
           {date?.[0] && (

@@ -120,7 +120,7 @@ export default function Page() {
         <article>
           <Heading level="h3">Escape rooms</Heading>
           <div className="grid md:grid-cols-2 gap-8">
-            {escaperooms.map((escaperoom, key) => {
+            {escaperooms.filter((escaperoom) => escaperoom.visible !== false).map((escaperoom, key) => {
               return <EscaperoomCard escaperoom={escaperoom} key={key} />;
             })}
           </div>
@@ -184,7 +184,7 @@ export default function Page() {
             </Button>
           </header>
           <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {events.slice(0, 3).map((event, key) => {
+            {events.filter((event) => event.visible !== false).slice(0, 3).map((event, key) => {
               return (
                 <Link
                   key={key}

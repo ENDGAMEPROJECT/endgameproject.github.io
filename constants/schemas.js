@@ -61,6 +61,15 @@ export const eventsPageSchema = {
   'organizer': baseOrganizationSchema
 };
 
+export const simoPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  'name': 'ENDGAME at SIMO Educación 2026',
+  'url': 'https://endgameproject.github.io/simo',
+  'description': 'ENDGAME educational escape rooms, teacher guides and upcoming live stream, presented at SIMO Educación 2026 (IFEMA Madrid)',
+  'publisher': baseOrganizationSchema
+};
+
 export const escapeRoomsPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'Course',

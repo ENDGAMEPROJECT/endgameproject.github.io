@@ -1,5 +1,76 @@
 export const events = [
   {
+    eventname: "StreamingLASTCHANCE",
+    category: "Webinar",
+    country: "Spain",
+    type: "Event",
+    date: "11/26/26",
+    hour: "18:00 UTC+1",
+    visible: false,
+    title_en:
+      "Online session about “LASTCHANCE”: an escape room about ads, scams & fraudulent websites",
+    title_es:
+      "Sesión online de “LASTCHANCE”: un escape room sobre anuncios, estafas y webs fraudulentas",
+    description_en:
+      "Streaming of a session of the educational escape room “LASTCHANCE”",
+    description_es:
+      "Streaming de una partida del escape room educativo “LASTCHANCE”",
+    htmlbody_en: `
+<br/>
+<p>Could you tell a genuine offer from a scam? Have you ever wondered why that exact ad pops up on your social media feed? On <b>Thursday 26 November at 18:00 h</b> we invite you to a free online session where we will play <a href="https://endgameproject.github.io/lastchance/" target="_blank" rel="noopener noreferrer"><b>“LASTCHANCE”</b></a> live and together, the new educational escape room developed by the European project <a href="https://endgameproject.github.io/" target="_blank" rel="noopener noreferrer"><b>ENDGAME</b></a>.</p>
+<br/>
+<p>In <b>“LASTCHANCE”</b> your mission is to help a friend who is about to fall into an online trap. To succeed, you will have to learn to recognise the most common scams, understand the strategies online ads use to grab our attention and spot the warning signs that give away a fraudulent website.</p>
+<br/>
+<p>A guide will lead the game step by step: introducing each challenge, giving hints when needed and discussing with attendees what we discover along the way. We will decide together how to solve each puzzle, so no previous experience is needed, just the desire to take part.</p>
+<br/>
+<p><b>Practical information</b></p>
+<p>
+Thursday, 26 November 2026<br/>
+18:00 h (Madrid time, CET)<br/>
+Format: Online<br/>
+Language: Spanish<br/>
+Free registration (you only need your name and email): <a href="TBD" target="_blank" rel="noopener noreferrer">link available soon</a>
+</p>
+<br/>
+<p>The session is designed for <b>young people</b> who want to test their digital instincts and for <b>teachers and educators</b> who want to see the escape room from start to finish before bringing it into their classrooms. After the session, any teacher will be able to use “LASTCHANCE” with their students.</p>
+<br/>
+<p><a href="https://endgameproject.github.io/lastchance/" target="_blank" rel="noopener noreferrer"><b>“LASTCHANCE”</b></a> is the third of the three educational escape rooms that the European project <a href="https://endgameproject.github.io/" target="_blank" rel="noopener noreferrer"><b>ENDGAME</b></a> is developing to promote media literacy and critical thinking among young people.</p>
+<br/>
+<p>If you have any questions about the session, feel free to email us at <a href="mailto:enrique.barra@upm.es">enrique.barra@upm.es</a>.</p><br/>
+    `,
+    htmlbody_es: `
+<br/>
+<p>¿Sabrías distinguir una oferta real de una estafa? ¿Te has preguntado alguna vez por qué te aparece justo ese anuncio en tus redes? El próximo <b>jueves 26 de noviembre a las 18:00 h</b> te invitamos a una sesión online gratuita en la que jugaremos en directo y de forma colaborativa a <a href="https://endgameproject.github.io/lastchance/" target="_blank" rel="noopener noreferrer"><b>“LASTCHANCE”</b></a>, el nuevo escape room educativo desarrollado por el proyecto europeo <a href="https://endgameproject.github.io/" target="_blank" rel="noopener noreferrer"><b>ENDGAME</b></a>.</p>
+<br/>
+<p>En <b>“LASTCHANCE”</b> tu misión es ayudar a un amigo que está a punto de caer en una trampa en internet. Para conseguirlo, tendrás que aprender a reconocer las estafas más habituales, entender las estrategias que utilizan los anuncios online para captar nuestra atención y detectar las señales que delatan a una web fraudulenta.</p>
+<br/>
+<p>Un guía irá conduciendo la partida paso a paso: presentará cada reto, dará pistas cuando haga falta y comentará con los asistentes lo que vamos descubriendo. Entre todos decidiremos cómo resolver cada enigma, así que no hace falta experiencia previa, solo ganas de participar.</p>
+<br/>
+<p><b>Información práctica</b></p>
+<p>
+Jueves, 26 de noviembre de 2026<br/>
+18:00 h (hora peninsular española, CET)<br/>
+Modalidad: Online<br/>
+Idioma: Castellano<br/>
+Inscripción gratuita (solo necesitas tu nombre y tu email): <a href="TBD" target="_blank" rel="noopener noreferrer">enlace disponible próximamente</a>
+</p>
+<br/>
+<p>La sesión está pensada para <b>jóvenes</b> que quieran poner a prueba su olfato digital y para <b>docentes y educadores</b> que quieran conocer el escape room de principio a fin antes de llevarlo a sus clases. Después de la sesión, cualquier docente podrá utilizar “LASTCHANCE” con su alumnado.</p>
+<br/>
+<p><a href="https://endgameproject.github.io/lastchance/" target="_blank" rel="noopener noreferrer"><b>“LASTCHANCE”</b></a> es el tercero de los tres escape rooms educativos que el proyecto europeo <a href="https://endgameproject.github.io/" target="_blank" rel="noopener noreferrer"><b>ENDGAME</b></a> desarrolla para promover la alfabetización mediática y el pensamiento crítico entre los jóvenes.</p>
+<br/>
+<p>Si tienes cualquier duda sobre la sesión, puedes escribirnos a <a href="mailto:enrique.barra@upm.es">enrique.barra@upm.es</a>.</p><br/>
+    `,
+    externalLinkJoin: "TBD",
+    keywords: [
+      "Webinar",
+      "Escape room",
+      "LASTCHANCE",
+      "Media literacy",
+      "Artificial intelligence",
+    ],
+  },
+  {
     eventname: "WebinarECHOTeachers",
     category: "Webinar",
     country: "Spain",

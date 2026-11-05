@@ -27,7 +27,7 @@ export default function Escaperooms() {
       <Heading level="h1">{t("escaperooms.title")}</Heading>
 
       <div className="mt-20 w-full flex gap-6">
-        {escaperooms.map((escaperoom, key) => {
+        {escaperooms.filter((escaperoom) => escaperoom.visible !== false).map((escaperoom, key) => {
           return <EscaperoomCard escaperoom={escaperoom} key={key} />;
         })}
       </div>

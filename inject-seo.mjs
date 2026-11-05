@@ -8,6 +8,7 @@ import {
   researchPageSchema,
   eventsPageSchema,
   escapeRoomsPageSchema,
+  simoPageSchema,
 } from './constants/schemas.js';
 
 const BASE_URL = 'https://endgameproject.github.io';
@@ -19,6 +20,7 @@ const schemaByKey = {
   research: researchPageSchema,
   events: eventsPageSchema,
   escaperooms: escapeRoomsPageSchema,
+  simo: simoPageSchema,
 };
 
 export function getPageInfo(filePath) {
@@ -28,6 +30,7 @@ export function getPageInfo(filePath) {
   if (rel === 'about.html')     return { key: 'about',       canonical: `${BASE_URL}/about` };
   if (rel === 'research.html')  return { key: 'research',    canonical: `${BASE_URL}/research` };
   if (rel === 'events.html')    return { key: 'events',      canonical: `${BASE_URL}/events` };
+  if (rel === 'simo.html')      return { key: 'simo',        canonical: `${BASE_URL}/simo` };
   if (rel === 'escaperooms.html') return { key: 'escaperooms', canonical: `${BASE_URL}/escaperooms` };
 
   if (rel.startsWith('escaperooms/')) {

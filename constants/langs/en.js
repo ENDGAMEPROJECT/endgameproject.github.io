@@ -99,5 +99,31 @@ export const en = {
   buttons: {
     toggleMore: 'See more',
     toggleLess: 'See less'
-  }
+  },
+  simo: {
+    intro: {
+      title: "Welcome to ENDGAME!",
+      text: "Thanks for visiting us at",
+      dates: "(IFEMA Madrid, 11, 12 and 13 November). Here you'll find everything we showed you at our stand: our educational escape rooms, their teacher's guides and our upcoming live stream.",
+    },
+    banner: {
+      tag: "Live stream · Free",
+      timezone: "Madrid time",
+      text: "We will play LASTCHANCE live and together, our new escape room about ads, scams and fraudulent websites, led by a guide. Perfect for young people and for teachers who want to see it from start to finish before using it in class. The session will be in Spanish.",
+      register: "Register",
+      registerSoon: "Registration (name and email only) will open very soon on the event page.",
+      moreInfo: "More information",
+    },
+    escaperooms: {
+      title: "Our escape rooms",
+      text: "Three free, online educational escape rooms to work on media literacy and critical thinking with young people. Each one comes with a teacher's guide to bring it into the classroom.",
+      play: "Play",
+      guide: "Teacher's guide",
+      moreInfo: "More info",
+    },
+    contact: {
+      text: "Any questions? Email us at",
+      text2: "and we'll give you support or help with whatever you need.",
+    },
+  },
 };

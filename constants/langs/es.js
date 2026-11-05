@@ -99,5 +99,31 @@ export const es = {
   buttons: {
     toggleMore: 'Ver más',
     toggleLess: 'Ver menos'
-  }
+  },
+  simo: {
+    intro: {
+      title: "¡Bienvenido/a a ENDGAME!",
+      text: "Gracias por visitarnos en",
+      dates: "(IFEMA Madrid, 11, 12 y 13 de noviembre). Aquí tienes todo lo que te contamos en nuestro stand: nuestras escape rooms educativas, sus guías didácticas y nuestro próximo streaming.",
+    },
+    banner: {
+      tag: "Streaming en directo · Gratis",
+      timezone: "hora de Madrid",
+      text: "Jugaremos en directo y entre todos a LASTCHANCE, nuestra nueva escape room sobre anuncios, estafas y webs fraudulentas, guiados por un ponente. Ideal para jóvenes y para docentes que quieran verla completa antes de llevarla a clase.",
+      register: "Inscríbete",
+      registerSoon: "La inscripción (solo nombre y email) se abrirá muy pronto en la página del evento.",
+      moreInfo: "Más información",
+    },
+    escaperooms: {
+      title: "Nuestras escape rooms",
+      text: "Tres escape rooms educativas, gratuitas y online para trabajar la alfabetización mediática y el pensamiento crítico con jóvenes. Cada una incluye una guía didáctica para llevarla al aula.",
+      play: "Jugar",
+      guide: "Guía didáctica",
+      moreInfo: "Más info",
+    },
+    contact: {
+      text: "¿Tienes cualquier duda? Escríbenos a",
+      text2: "y te damos soporte o te ayudamos en lo que necesites.",
+    },
+  },
 };

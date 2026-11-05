@@ -32,7 +32,7 @@ export default function Events() {
         {t("events.title")}
       </Heading>
       <div className="mt-20 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-        {events.map(( event , key) => {
+        {events.filter((event) => event.visible !== false).map(( event , key) => {
           return <EventCard event={event} key={key} />;
         })}
       </div>

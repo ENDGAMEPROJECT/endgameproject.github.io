@@ -111,4 +111,56 @@ export const escaperooms = [
       }
     ]
   },
+  {
+    escaperoomname: "lastchance",
+    visible: false, // hidden from /escaperooms and home listings; its own page /escaperooms/lastchance exists
+    category: "escaperoom",
+    theme_en: "media literacy",
+    theme_es: "alfabetización mediática",
+    theme_fi: "medialukutaito",
+    theme_sr: "medijska pismenost",
+    title_en: "LASTCHANCE",
+    title_es: "LASTCHANCE",
+    title_fi: "LASTCHANCE",
+    title_sr: "LASTCHANCE",
+    duration_en: "30 minutes",
+    duration_es: "30 minutos",
+    duration_fi: "30 minuuttia",
+    duration_sr: "30 minuta",
+    level_en: "intermediate",
+    level_es: "intermedio",
+    level_fi: "keskitaso",
+    level_sr: "srednji",
+    moreInfo_en: "more info",
+    moreInfo_es: "más info",
+    moreInfo_fi: "lisätietoja",
+    moreInfo_sr: "više informacija",
+    longdescription_en: "Your friend is about to fall for an online scam and you are their last chance to stop it. To help them, you will dive into a physical version of the internet, where tempting ads, too-good-to-be-true offers and websites that look legitimate but aren't are waiting for you. Gather clues, overcome challenges and learn to spot the tricks scammers and online advertising use to catch our attention… before it's too late for your friend.",
+    longdescription_es: "Tu amigo está a punto de caer en una estafa online y tú eres su última oportunidad para evitarlo. Para ayudarle, te adentrarás en una versión física de internet, donde te esperan anuncios tentadores, ofertas demasiado buenas para ser verdad y webs que parecen fiables pero no lo son. Recaba pistas, supera los retos y aprende a reconocer los trucos que usan los estafadores y la publicidad online para captar nuestra atención… antes de que sea demasiado tarde para tu amigo.",
+    keywords: ["escape room", "Media literacy", "scams", "online ads", "fraudulent websites"],
+    image: "/assets/images/lastchance.png",
+    claim_en: "Your friend's last chance: stop the online scam before it's too late.",
+    claim_es: "La última oportunidad de tu amigo: frena la estafa online antes de que sea tarde.",
+    externalLink: "https://endgameproject.github.io/lastchance/",
+    resources:
+    [
+      {
+        // TODO: same teacher's guide as ECHO for now; replace with the LASTCHANCE guide when available
+        resourceName : "Teacher's Guide",
+        resourceName_es : "Guía didáctica",
+        resourceName_en : "Teacher's Guide",
+        resourceName_sr : "Vodič za nastavnike",
+        resourceName_fi : "Opettajan opas",
+        additionalInfo : "Teacher's Guide for educators to facilitate the escaperoom activity",
+        additionalInfo_es : "Guía didáctica para educadores para facilitar la actividad de escaperoom",
+        additionalInfo_sr : "Vodič za nastavnike i edukatore kako bi se olakšala aktivnost u sobi za bekstvo",
+        additionalInfo_fi : "Opettajan opas kouluttajille pakohuonetoiminnan helpottamiseksi",
+        tag : "Docs",
+        resourceLink_es : "https://docs.google.com/document/d/1PLDH2_rYHl3B7F3zOVdGRfWVNcF7Q7yi/export?format=pdf",
+        resourceLink_en : "https://docs.google.com/document/d/10tXAN9rPVgwpRZKBk67vHGyvjAvUeG-G/export?format=pdf",
+        resourceLink_sr : "https://docs.google.com/document/d/1K3T1eMKjAh_T394RzMdjjwaHXyYf3g5y/export?format=pdf",
+        resourceLink_fi : "https://docs.google.com/document/d/1H5o44V-bTfQyyESSkgTDPV1M7TtjNYE_/export?format=pdf"
+      }
+    ]
+  },
 ];
