@@ -95,12 +95,12 @@ export default function Header(props) {
           {/* all routes acive -> lg:flex */}
           {!state.open ? (
             <MenuOutlinedIcon
-              sx={{ fontSize: 28 }}
+              sx={{ fontSize: 28, ...(webTheme == "light" && { color: "black" }) }}
               onClick={() => setState({ open: !state.open })}
             />
           ) : (
             <CloseOutlinedIcon
-              sx={{ fontSize: 24 }}
+              sx={{ fontSize: 24, ...(webTheme == "light" && { color: "black" }) }}
               onClick={() => setState({ open: !state.open })}
             />
           )}
