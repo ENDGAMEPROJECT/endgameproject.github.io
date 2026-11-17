@@ -5,7 +5,6 @@ import Heading from "../ui/heading";
 import Text from "../ui/text";
 import { useTranslation } from "react-i18next";
 import ArrowForwardSharp from "@mui/icons-material/ArrowForwardSharp";
-import Link from "next/link";
 
 const ResourceCard = ({ resource }) => {
     const { i18n } = useTranslation();
@@ -75,6 +74,8 @@ const ResourceCard = ({ resource }) => {
     const resourceLink =
         currentLang === "es" ? resourceLink_es : currentLang === "sr" ? resourceLink_sr : currentLang === "fi" ? resourceLink_fi : resourceLink_en;
 
+    const isExternal = /^https?:\/\//.test(resourceLink);
+
     return (
         <li className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex flex-col md:items-start items-center">
@@ -93,10 +94,17 @@ const ResourceCard = ({ resource }) => {
                     type='primary'
                     className="bg-myPrimary text-myTextInverse"
                 >
-                    <Link rel="noopener noreferrer" href={resourceLink} className="flex items-center gap-1">
+                    {/* Local files (e.g. /documents/...) are downloaded; external links open in a new tab */}
+                    <a
+                        href={resourceLink}
+                        {...(isExternal
+                            ? { target: "_blank", rel: "noopener noreferrer" }
+                            : { download: "" })}
+                        className="flex items-center gap-1"
+                    >
                         {buttonContent_translation}
-                        <ArrowForwardSharp /> 
-                    </Link>
+                        <ArrowForwardSharp />
+                    </a>
                 </Button>
             </div>
         </li>

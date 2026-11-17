@@ -50,10 +50,10 @@ export const escaperooms = [
         additionalInfo_sr : "Vodič za nastavnike i edukatore kako bi se olakšala aktivnost u sobi za bekstvo",
         additionalInfo_fi : "Opettajan opas kouluttajille pakohuonetoiminnan helpottamiseksi",
         tag : "Docs",
-        resourceLink_es : "https://docs.google.com/document/d/1QMLHAEaBetoKYbuLx2xALDGbi1-96IgJ/export?format=pdf",
-        resourceLink_en : "https://docs.google.com/document/d/1VSxRpjjeqkFae5qvW-HxNOaAEf7FfdkI/export?format=pdf",
-        resourceLink_sr : "https://docs.google.com/document/d/12qFifhuwcQNbNqBXYILswF9QO9v3rBUm/export?format=pdf",
-        resourceLink_fi : "https://docs.google.com/document/d/1iyvRzLuXaPa4yJQ1ZCqmenchS8eRKSbM/export?format=pdf"
+        resourceLink_es : "/documents/ER1/ES_ENDGAME_GuiaDidactica.pdf",
+        resourceLink_en : "/documents/ER1/EN_ENDGAME_TeachingMaterials.pdf",
+        resourceLink_sr : "/documents/ER1/SRB_ENDGAME_NastavniMaterijali.pdf",
+        resourceLink_fi : "/documents/ER1/FI_ENDGAME_OpettajanAineisto.pdf"
       }
     ]
   },
@@ -104,10 +104,10 @@ export const escaperooms = [
         additionalInfo_sr : "Vodič za nastavnike i edukatore kako bi se olakšala aktivnost u sobi za bekstvo",
         additionalInfo_fi : "Opettajan opas kouluttajille pakohuonetoiminnan helpottamiseksi",
         tag : "Docs",
-        resourceLink_es : "https://docs.google.com/document/d/1PLDH2_rYHl3B7F3zOVdGRfWVNcF7Q7yi/export?format=pdf",
-        resourceLink_en : "https://docs.google.com/document/d/10tXAN9rPVgwpRZKBk67vHGyvjAvUeG-G/export?format=pdf",
-        resourceLink_sr : "https://docs.google.com/document/d/1K3T1eMKjAh_T394RzMdjjwaHXyYf3g5y/export?format=pdf",
-        resourceLink_fi : "https://docs.google.com/document/d/1H5o44V-bTfQyyESSkgTDPV1M7TtjNYE_/export?format=pdf"
+        resourceLink_es : "/documents/ER2/ES_ENDGAME_ER2_TeachingMaterials.pdf",
+        resourceLink_en : "/documents/ER2/EN_ENDGAME_ER2_TeachingMaterials.pdf",
+        resourceLink_sr : "/documents/ER2/SR_ENDGAME_ER2_TeachingMaterials.pdf",
+        resourceLink_fi : "/documents/ER2/FI_ENDGAME_ER2_TeachingMaterials.pdf"
       }
     ]
   },
