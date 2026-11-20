@@ -1,5 +1,76 @@
 export const events = [
   {
+    eventname: "WebinarLastChanceTeachers",
+    category: "Webinar",
+    country: "Spain",
+    type: "Event",
+    date: "12/01/26",
+    hour: "17:30 UTC+1",
+    visible: true,
+    title_en:
+      "Online information session about the escape room “Last Chance”: escape from digital scams",
+    title_es:
+      "Sesión online informativa de la escape room “Last Chance”: escapa de las estafas digitales",
+    description_en:
+      "Discover how to use the educational escape room “Last Chance” in the classroom to help young people recognise online scams and misleading advertising.",
+    description_es:
+      "Descubre cómo utilizar en el aula el escape room educativo “Last Chance” para ayudar a los jóvenes a reconocer estafas online y publicidad engañosa.",
+    htmlbody_en: `
+<br/>
+<p>A striking ad, an offer that seems too good to be true or a link inviting you to click. On the internet, it is not always easy to tell a good opportunity from a scam. To help young people recognise these risks, the European project ENDGAME has developed the educational escape room <b>“Last Chance”</b>. On <b>1 December at 17:30 h</b>, we will show you how to use it in the classroom with your students.</p>
+<br/>
+<p>The story begins when a friend sees an ad for a tablet and you have to prove that it is a scam by exploring the internet. Players have 40 minutes to show their friend why they should not fall for it. Through different challenges, they will learn to detect manipulation techniques, recognise misleading advertising and avoid scams. Their mission is to stop their friend from buying the tablet before it is too late.</p>
+<br/>
+<p>In this session, organised by Fundación Maldita.es, we will present how the game works and its educational possibilities. We will explain how to bring it into the classroom or other learning settings to address disinformation and overexposure to online advertising in a practical and participatory way.</p>
+<br/>
+<p>The activity is aimed at secondary school teachers, youth workers, educators and any professional who works with young people and would like to use dynamic resources to encourage a more critical and conscious relationship with the digital environment.</p>
+<br/>
+<p><b>Practical information</b></p>
+<p>
+Date: Tuesday, 1 December 2026<br/>
+Time: 17:30 h (CET)<br/>
+Format: Online<br/>
+Duration: 1 hour<br/>
+Registration: <a href="https://bit.ly/4pMjPvj" target="_blank" rel="noopener noreferrer">https://bit.ly/4pMjPvj</a>
+</p>
+<br/>
+<p><b>“Last Chance”</b> is the third educational escape room created as part of the European project ENDGAME, which aims to promote media literacy and critical thinking among young people.</p>
+<br/>
+<p>ENDGAME brings together the University of Eastern Finland, Universidad Politécnica de Madrid, University of Metropolitan Belgrade, Avoin Yhteiskunta ry (Faktabaari), Novosadska Novinarska Skola and Fundación Maldita.es.</p>
+    `,
+    htmlbody_es: `
+<br/>
+<p>Un anuncio llamativo, una oferta que parece demasiado buena para ser verdad o un enlace que invita a hacer clic. En Internet, no siempre es fácil distinguir una buena oportunidad de una estafa. Para ayudar a los jóvenes a reconocer estos riesgos, el proyecto europeo ENDGAME ha desarrollado el escape room educativo <b>“Last Chance”</b>. El próximo <b>1 de diciembre a las 17:30 h</b> te mostramos cómo usarlo en el aula con tus estudiantes.</p>
+<br/>
+<p>La propuesta parte de la historia de un amigo o una amiga que ha visto un anuncio para comprar una tablet y tienes que demostrarle que es una estafa entrando en Internet. Los jugadores disponen de 40 minutos para enseñarle por qué no tiene que caer en ese timo. A través de diferentes retos, aprenderán a detectar técnicas de manipulación, reconocer publicidad engañosa y evitar estafas. Su misión es evitar que su amigo o amiga compre la tablet antes de que sea demasiado tarde.</p>
+<br/>
+<p>En esta sesión, organizada por Fundación Maldita.es, presentaremos el funcionamiento del juego y sus posibilidades educativas. Explicaremos cómo incorporarlo al aula o a otros espacios de aprendizaje para abordar, de manera práctica y participativa, la desinformación y la sobreexposición a contenidos publicitarios en Internet.</p>
+<br/>
+<p>La actividad está dirigida a docentes de educación secundaria, técnicos y técnicas de juventud, educadores y cualquier profesional que trabaje con personas jóvenes y quiera incorporar recursos dinámicos para fomentar una relación más crítica y consciente con el entorno digital.</p>
+<br/>
+<p><b>Información práctica</b></p>
+<p>
+Fecha: martes, 1 de diciembre de 2026<br/>
+Hora: 17:30 h (CET)<br/>
+Modalidad: online<br/>
+Duración: 1 hora<br/>
+Inscripciones: <a href="https://bit.ly/4pMjPvj" target="_blank" rel="noopener noreferrer">https://bit.ly/4pMjPvj</a>
+</p>
+<br/>
+<p><b>“Last Chance”</b> es el tercer escape room educativo creado en el marco del proyecto europeo ENDGAME, cuyo objetivo es promover la alfabetización mediática y el pensamiento crítico entre la juventud.</p>
+<br/>
+<p>En ENDGAME participan la University of Eastern Finland, la Universidad Politécnica de Madrid, la Universidad Metropolitana de Belgrado, Avoin Yhteiskunta ry (Faktabaari), Novosadska Novinarska Skola y Fundación Maldita.es.</p>
+    `,
+    externalLinkJoin: "https://bit.ly/4pMjPvj",
+    keywords: [
+      "Webinar",
+      "Escape room",
+      "Last Chance",
+      "Estafas digitales",
+      "Alfabetización mediática",
+    ],
+  },
+  {
     eventname: "StreamingLASTCHANCE",
     category: "Webinar",
     country: "Spain",
