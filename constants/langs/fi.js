@@ -50,6 +50,7 @@ export const fi = {
   escaperoomfull:{                     //TODO: Review escaperoomfull
     escaperoomInfo: "Pakohuoneen tiedot",
     relatedMaterials: "Aiheeseen liittyvät materiaalit",
+    learningObjectives: "Oppimistavoitteet",
     playButton: "Pelaa pakohuone",
     alternativePlayMessage: "Toinen vaihtoehto pelata: ",
     alternativePlayButton: "Pelaa",
@@ -78,6 +79,12 @@ export const fi = {
   },
   research: {
     title: "Tutkimus ja vaikutus",
+    sections: {
+      papers: "Artikkelit",
+      reports: "Raportit",
+      datasets: "Aineistot",
+      other: "Muut tulokset",
+    },
     buttons: {
       read: "Lue julkaisu",
       download: "Lataa",

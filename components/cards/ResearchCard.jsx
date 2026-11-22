@@ -24,6 +24,14 @@ import {
 import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
 import SaveAltSharpIcon from '@mui/icons-material/SaveAltSharp';
 
+// One badge colour per result type, so papers, reports and datasets are
+// distinguishable at a glance. Values are the Badge `type` variants.
+const TYPE_BADGE_COLOURS = {
+  paper: "info",      // secondary / blue
+  report: "activity", // accent / orange
+  dataset: "default", // primary / cyan
+};
+
 const ResearchCard = ({ publication }) => {
   // Desestructuración del objeto `publication`
   let {
@@ -48,6 +56,9 @@ const ResearchCard = ({ publication }) => {
 
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+
+  const badgeColour =
+    TYPE_BADGE_COLOURS[String(type ?? "").trim().toLowerCase()] ?? "info";
 
   // Fallback de títulos y descripciones
   title_es ??= title_en;
@@ -88,7 +99,7 @@ const ResearchCard = ({ publication }) => {
     <CustomCard className="bg-myBackground p-4">
       <CardHeader>
         {type && (
-          <Badge variant="type" size="lg" type="info">
+          <Badge variant="type" size="lg" type={badgeColour}>
             {type}
           </Badge>
         )}
@@ -124,6 +135,12 @@ const ResearchCard = ({ publication }) => {
               title_translation
             )}
           </CardTitle>
+
+          {subtitle_translation && (
+            <Text type="small" className="italic text-gray-300/90">
+              {subtitle_translation}
+            </Text>
+          )}
 
           {date?.[0] && (
             <div className="flex items-center !text-secondary200">

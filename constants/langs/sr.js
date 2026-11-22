@@ -50,6 +50,7 @@ export const sr = {
   escaperoomfull:{                     //TODO: Review escaperoomfull
     escaperoomInfo: "Informacije o escape sobi",
     relatedMaterials: "Povezani materijali",
+    learningObjectives: "Ciljevi učenja",
     playButton: "Igraj escaperoom",
     alternativePlayMessage: "Druga opcija za igranje: ",
     alternativePlayButton: "Igraj",
@@ -78,6 +79,12 @@ export const sr = {
   },
   research: {
     title: "Istraživanje i uticaj",
+    sections: {
+      papers: "Radovi",
+      reports: "Izveštaji",
+      datasets: "Skupovi podataka",
+      other: "Ostali rezultati",
+    },
     buttons: {
       read: "Pročitaj publikaciju",
       download: "Preuzmi",

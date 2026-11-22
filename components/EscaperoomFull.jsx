@@ -61,6 +61,7 @@ const escaperoomFull = ({ escaperoomname }) => {
     moreInfo_es, moreInfo_en, moreInfo_fi, moreInfo_sr,
     claim_en, claim_es, claim_fi, claim_sr,
     longdescription_en, longdescription_es, longdescription_fi, longdescription_sr,
+    learningObjectives_en, learningObjectives_es, learningObjectives_fi, learningObjectives_sr,
     theme_en, theme_es, theme_fi, theme_sr,
     category,
     keywords,
@@ -75,6 +76,7 @@ const escaperoomFull = ({ escaperoomname }) => {
   const level_translation = translator(currentLang, level_en, level_es, level_sr, level_fi)
   const claim_translation = translator(currentLang, claim_en, claim_es, claim_sr, claim_fi)
   const moreInfo_translation = translator(currentLang, moreInfo_en, moreInfo_es, moreInfo_sr, moreInfo_fi)
+  const learningObjectives = translator(currentLang, learningObjectives_en, learningObjectives_es, learningObjectives_sr, learningObjectives_fi)
 
 
   const categoryFormatted =
@@ -172,6 +174,23 @@ const escaperoomFull = ({ escaperoomname }) => {
         </div>
       </section>
 
+
+      {/* *********LEARNING OBJECTIVES********* */}
+      {Array.isArray(learningObjectives) && (learningObjectives.length > 0) && (
+      <section className="mb-4 w-full">
+        <header className="mb-4 w-full flex justify-between border-b border-myPrimary">
+          <Heading level="h5" className="text-myPrimary">{t("escaperoomfull.learningObjectives")}
+          </Heading>
+        </header>
+        <ul className="w-full flex flex-col gap-3">
+          {learningObjectives.map((objective, key) => (
+            <li key={key} className="flex gap-3 items-start">
+              <ArrowForwardSharp className="shrink-0 mt-1 text-myPrimary" fontSize="small" />
+              <Text className="text-base">{objective}</Text>
+            </li>
+          ))}
+        </ul>
+      </section>)}
 
       {/* *********RELATED MATERIALS********* */}
       {escaperoom.resources && (escaperoom.resources.length > 0) && (

@@ -50,6 +50,7 @@ export const es = {
   escaperoomfull:{
     escaperoomInfo: "Información de la escape room",
     relatedMaterials: "Materiales relacionados",
+    learningObjectives: "Objetivos de aprendizaje",
     playButton: "Jugar a la escape room",
     alternativePlayMessage: "Otra opción para jugar: ",
     alternativePlayButton: "Jugar",
@@ -78,6 +79,12 @@ export const es = {
   },
   research: {
     title: "Investigación e impacto",
+    sections: {
+      papers: "Artículos",
+      reports: "Informes",
+      datasets: "Conjuntos de datos",
+      other: "Otros resultados",
+    },
     buttons: {
       read: "Leer publicación",
       download: "Descargar",
