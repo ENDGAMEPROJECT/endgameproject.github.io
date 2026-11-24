@@ -26,7 +26,7 @@ export default function Escaperooms() {
       <main className="standard_margin ">
       <Heading level="h1">{t("escaperooms.title")}</Heading>
 
-      <div className="mt-20 w-full flex gap-6">
+      <div className="mt-10 md:mt-20 w-full grid gap-8 md:grid-cols-2 xl:grid-cols-3">
         {escaperooms.filter((escaperoom) => escaperoom.visible !== false).map((escaperoom, key) => {
           return <EscaperoomCard escaperoom={escaperoom} key={key} />;
         })}

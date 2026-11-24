@@ -119,7 +119,7 @@ export default function Page() {
         </article>
         <article>
           <Heading level="h3">Escape rooms</Heading>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
             {escaperooms.filter((escaperoom) => escaperoom.visible !== false).map((escaperoom, key) => {
               return <EscaperoomCard escaperoom={escaperoom} key={key} />;
             })}

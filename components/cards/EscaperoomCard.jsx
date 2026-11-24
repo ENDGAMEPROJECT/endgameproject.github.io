@@ -62,7 +62,7 @@ const EscaperoomCard = ({ escaperoom, seeDetails = true }) => {
         href={escaperoom.externalLink}
         rel="noopener noreferrer"
         target="_blank"
-        className="h-[50dvh] flex justify-center items-center border border-myPrimary bg-background200 group"
+        className="relative w-full aspect-[16/10] max-h-[60dvh] flex justify-center items-center overflow-hidden border border-myPrimary bg-background200 group"
       >
         <Image
           className="group-hover:opacity-[.30] transition duration-300 ease-in-out"
@@ -74,7 +74,7 @@ const EscaperoomCard = ({ escaperoom, seeDetails = true }) => {
           asChild
           variant="outline"
           size="xl"
-          className="group-hover:opacity-[1] absolute opacity-[0]  text-primary400 border-primary400 bg-primary/15 hover:bg-myPrimary hover:border-myPrimary hover:text-myTextInverse"
+          className="absolute opacity-100 md:opacity-0 md:group-hover:opacity-100 text-primary400 border-primary400 bg-primary/15 hover:bg-myPrimary hover:border-myPrimary hover:text-myTextInverse"
         >
           <div>{t("escaperooms.escaperoom.play-button")}
             <PlayArrowSharp />

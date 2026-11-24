@@ -165,7 +165,6 @@ export const escaperooms = [
   },
   {
     escaperoomname: "lastchance",
-    visible: false, // hidden from /escaperooms and home listings; its own page /escaperooms/lastchance exists
     category: "escaperoom",
     theme_en: "media literacy",
     theme_es: "alfabetización mediática",
@@ -241,7 +240,7 @@ export const escaperooms = [
       "Preneti ovo rasuđivanje na stvarnu odluku, sastavljajući dokaze u argument koji ubeđuje nekog drugog da ne padne na prevaru.",
     ],
     keywords: ["escape room", "Media literacy", "scams", "online ads", "fraudulent websites"],
-    image: "/assets/images/lastchance.png",
+    image: "/assets/images/er3map.png",
     claim_en: "Your friend's last chance: stop the online scam before it's too late.",
     claim_es: "La última oportunidad de tu amigo: frena la estafa online antes de que sea tarde.",
     externalLink: "https://endgameproject.github.io/lastchance/",
