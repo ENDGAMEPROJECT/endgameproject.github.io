@@ -247,7 +247,7 @@ export const escaperooms = [
     resources:
     [
       {
-        // TODO: same teacher's guide as ECHO for now; replace with the LASTCHANCE guide when available
+        // fi/sr use the EN guide until translated versions are available
         resourceName : "Teacher's Guide",
         resourceName_es : "Guía didáctica",
         resourceName_en : "Teacher's Guide",
@@ -258,10 +258,10 @@ export const escaperooms = [
         additionalInfo_sr : "Vodič za nastavnike i edukatore kako bi se olakšala aktivnost u sobi za bekstvo",
         additionalInfo_fi : "Opettajan opas kouluttajille pakohuonetoiminnan helpottamiseksi",
         tag : "Docs",
-        resourceLink_es : "https://docs.google.com/document/d/1PLDH2_rYHl3B7F3zOVdGRfWVNcF7Q7yi/export?format=pdf",
-        resourceLink_en : "https://docs.google.com/document/d/10tXAN9rPVgwpRZKBk67vHGyvjAvUeG-G/export?format=pdf",
-        resourceLink_sr : "https://docs.google.com/document/d/1K3T1eMKjAh_T394RzMdjjwaHXyYf3g5y/export?format=pdf",
-        resourceLink_fi : "https://docs.google.com/document/d/1H5o44V-bTfQyyESSkgTDPV1M7TtjNYE_/export?format=pdf"
+        resourceLink_es : "/documents/ER3/ES_ENDGAME_ER3_TeachingMaterials.pdf",
+        resourceLink_en : "/documents/ER3/EN_ENDGAME_ER3_TeachingMaterials.pdf",
+        resourceLink_sr : "/documents/ER3/EN_ENDGAME_ER3_TeachingMaterials.pdf",
+        resourceLink_fi : "/documents/ER3/EN_ENDGAME_ER3_TeachingMaterials.pdf"
       }
     ]
   },
