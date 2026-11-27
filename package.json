@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node inject-seo.mjs && touch docs/.nojekyll",
+    "build": "next build && node inject-seo.mjs && node -e \"require('fs').writeFileSync('docs/.nojekyll', '')\"",
     "start": "next start",
     "lint": "next lint",
     "publications": "node transformPublications.cjs",
