@@ -56,6 +56,7 @@ export const fi = {
     alternativePlayButton: "Pelaa",
     littleBoxes: {
             "theme": "aihe",
+            "themes": "aiheet",
             "duration": "kesto",
             "level": "vaikeustaso",
             "other": "toinen"

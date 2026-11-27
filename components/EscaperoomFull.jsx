@@ -63,6 +63,7 @@ const escaperoomFull = ({ escaperoomname }) => {
     longdescription_en, longdescription_es, longdescription_fi, longdescription_sr,
     learningObjectives_en, learningObjectives_es, learningObjectives_fi, learningObjectives_sr,
     theme_en, theme_es, theme_fi, theme_sr,
+    tags_en, tags_es, tags_fi, tags_sr,
     category,
     keywords,
   } = escaperoom;
@@ -73,6 +74,9 @@ const escaperoomFull = ({ escaperoomname }) => {
   const duration = translator(currentLang, duration_en, duration_es, duration_sr, duration_fi)
   const longdescription = translator(currentLang, longdescription_en, longdescription_es, longdescription_sr, longdescription_fi) 
   const theme = translator(currentLang, theme_en, theme_es, theme_sr, theme_fi)
+  const tags = translator(currentLang, tags_en, tags_es, tags_sr, tags_fi)
+  // the theme always goes first, followed by the escape room's own tags
+  const themes = [theme, ...(Array.isArray(tags) ? tags : [])].filter(Boolean)
   const level_translation = translator(currentLang, level_en, level_es, level_sr, level_fi)
   const claim_translation = translator(currentLang, claim_en, claim_es, claim_sr, claim_fi)
   const moreInfo_translation = translator(currentLang, moreInfo_en, moreInfo_es, moreInfo_sr, moreInfo_fi)
@@ -151,13 +155,24 @@ const escaperoomFull = ({ escaperoomname }) => {
         </header>
         <div className="w-full md:grid md:grid-cols-[2fr_1fr] flex flex-col gap-4">
           <Text className="text-base w-full">{longdescription}</Text>
-          <div className="grid grid-cols-2 grid-rows-2 gap-4">
-            <div className="bg-primary/20 border border-myPrimary flex flex-col items-center py-2 gap-1">
-              <HighlightedHeader string={t("escaperoomfull.littleBoxes.theme")} variant={""} level="h6" className={"w-fit capitalize"}></HighlightedHeader>
-              <div className="h-full flex items-center">
-                <Heading level="h4" className="text-center capitalize text-myPrimary">{theme}</Heading>
+          <div className="grid grid-cols-2 auto-rows-auto gap-4 h-fit">
+            {themes.length > 0 && (
+              <div className="col-span-2 flex flex-col items-start gap-2 pb-4 border-b border-grey400">
+                <h6 className="text-28 font-bold text-myText capitalize">{t("escaperoomfull.littleBoxes.themes")}</h6>
+                <div className="flex flex-wrap justify-start gap-2">
+                  {themes.map((tag, index) => (
+                    <Badge
+                      key={index}
+                      variant="secondary"
+                      size="sm"
+                      className="text-primary400 bg-primary/15 text-[18px] px-2 py-[3px]"
+                    >
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
             <div className="bg-primary/20 border border-myPrimary flex flex-col items-center py-2 gap-1">
               <HighlightedHeader string={t("escaperoomfull.littleBoxes.duration")} variant={""} level="h6" className={"w-fit capitalize"}></HighlightedHeader>
               <div className="h-full flex items-center">

@@ -56,6 +56,7 @@ export const en = {
     alternativePlayButton: "Play",
     littleBoxes: {
             "theme": "theme",
+            "themes": "themes",
             "duration": "duration",
             "level": "level",
             "other": "other"

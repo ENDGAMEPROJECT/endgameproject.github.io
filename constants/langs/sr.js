@@ -56,6 +56,7 @@ export const sr = {
     alternativePlayButton: "Igraj",
     littleBoxes: {
             "theme": "tema",
+            "themes": "teme",
             "duration": "trajanje",
             "level": "nivo",
             "other": "drugi"
